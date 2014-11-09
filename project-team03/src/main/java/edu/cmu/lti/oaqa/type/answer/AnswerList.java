@@ -12,7 +12,7 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A ranked list of candidate answers.
- * Updated by JCasGen Sun Nov 09 16:10:15 EST 2014
+ * Updated by JCasGen Sun Nov 09 16:21:00 EST 2014
  * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
  * @generated */
 public class AnswerList extends TOP {

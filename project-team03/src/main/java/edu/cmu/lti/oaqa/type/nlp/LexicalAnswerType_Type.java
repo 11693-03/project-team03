@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** The lexical answer type found in the question.
- * Updated by JCasGen Sun Nov 09 16:10:15 EST 2014
+ * Updated by JCasGen Sun Nov 09 16:21:01 EST 2014
  * @generated */
 public class LexicalAnswerType_Type extends Annotation_Type {
   /** @generated 

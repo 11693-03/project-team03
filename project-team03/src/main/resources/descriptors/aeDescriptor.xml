@@ -12,6 +12,9 @@
     <delegateAnalysisEngine key="conceptRetrieveDescriptor">
       <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/conceptRetrieveDescriptor.xml"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="tripleRetrieveDescriptor">
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/tripleRetrieveDescriptor.xml"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>aeDescriptor</name>
@@ -25,6 +28,7 @@
         <node>initialAnnotatorDescriptor</node>
         <node>conceptRetrieveDescriptor</node>
         <node>documentRetrieveDescriptor</node>
+      <node>tripleRetrieveDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>
