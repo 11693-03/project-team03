@@ -19,10 +19,12 @@ import edu.cmu.lti.oaqa.type.retrieval.Document;
 public class DocumentRetrieve extends JCasAnnotator_ImplBase {
   GoPubMedService service;
   public static final String uriPrefix = "http://www.ncbi.nlm.nih.gov/pubmed/";
-  public void initialize(UimaContext aContext) throws ResourceInitializationException {
+  public static String Properties = "ProjectProperties";
+  public void initialize(UimaContext aContext) throws ResourceInitializationException{
     super.initialize(aContext);
+    String properties = (String) aContext.getConfigParameterValue((Properties)); 
     try {
-      service = new GoPubMedService("project.properties");
+      service = new GoPubMedService(properties);
     } catch (Exception e) {
     }
   }

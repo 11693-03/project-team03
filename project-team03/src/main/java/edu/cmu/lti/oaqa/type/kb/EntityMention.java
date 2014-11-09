@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** A named entity mention that identify or define the named entity concept.
- * Updated by JCasGen Sun Nov 09 15:59:15 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/initialAnnotatorDescriptor.xml
+ * Updated by JCasGen Sun Nov 09 16:10:15 EST 2014
+ * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
  * @generated */
 public class EntityMention extends ConceptMention {
   /** @generated

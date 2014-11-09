@@ -24,10 +24,12 @@ import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 
 public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   GoPubMedService service;
+  public static String Properties = "ProjectProperties";
   public void initialize(UimaContext aContext) throws ResourceInitializationException{
     super.initialize(aContext);
+    String properties = (String) aContext.getConfigParameterValue((Properties)); 
     try {
-      service = new GoPubMedService("project.properties");
+      service = new GoPubMedService(properties);
     } catch (Exception e) {
     }
   }
