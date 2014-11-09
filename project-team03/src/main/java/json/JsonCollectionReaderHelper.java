@@ -67,6 +67,7 @@ public class JsonCollectionReaderHelper {
 								.replaceAll("\\s+", " ")));
 		System.out.println("concepts");
 		System.out.println(inputs.get(0).getConcepts());
+		System.out.println(inputs.get(0).getDocuments());
 	}
 
 	public static void addQuestionToIndex(Question input, String source,

@@ -23,7 +23,7 @@ public class GoPubMedServiceExample {
     for (OntologyServiceResponse.Finding finding : diseaseOntologyResult.getFindings()) {
       System.out.println(" > " + finding.getConcept().getLabel() + " "
               + finding.getConcept().getUri());
-    }
+    }/*
     OntologyServiceResponse.Result geneOntologyResult = service.findGeneOntologyEntitiesPaged(text,
             0, 10);
     System.out.println("Gene ontology: " + geneOntologyResult.getFindings().size());
@@ -62,6 +62,6 @@ public class GoPubMedServiceExample {
       }
     }
     PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(text, 0);
-    System.out.println(pubmedResult.getSize());
+    System.out.println(pubmedResult.getSize());*/
   }
 }

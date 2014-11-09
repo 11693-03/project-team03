@@ -1,25 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <implementationName></implementationName>
+  <implementationName>edu.cmu.lti.oaqa.pipeline.Consumer</implementationName>
   <processingResourceMetaData>
     <name>casConsumerDescriptor</name>
-    <description></description>
+    <description/>
     <version>1.0</version>
-    <vendor></vendor>
-    <configurationParameters></configurationParameters>
-    <configurationParameterSettings></configurationParameterSettings>
-    <typeSystemDescription></typeSystemDescription>
-    <typePriorities></typePriorities>
-    <fsIndexCollection></fsIndexCollection>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription/>
+    <typePriorities/>
+    <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs></inputs>
-        <outputs></outputs>
-        <languagesSupported></languagesSupported>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
       </capability>
     </capabilities>
+  <operationalProperties>
+      <modifiesCas>false</modifiesCas>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
   </processingResourceMetaData>
-  <externalResourceDependencies></externalResourceDependencies>
-  <resourceManagerConfiguration></resourceManagerConfiguration>
+  <resourceManagerConfiguration/>
 </casConsumerDescription>
