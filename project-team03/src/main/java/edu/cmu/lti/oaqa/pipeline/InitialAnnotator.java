@@ -10,7 +10,7 @@ import util.TypeUtil;
 import edu.cmu.lti.oaqa.type.input.Question;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 
-public class Annotator extends JCasAnnotator_ImplBase{
+public class InitialAnnotator extends JCasAnnotator_ImplBase{
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {

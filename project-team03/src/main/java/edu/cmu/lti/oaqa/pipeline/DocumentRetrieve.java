@@ -1,7 +1,6 @@
 package edu.cmu.lti.oaqa.pipeline;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
@@ -14,7 +13,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import util.TypeFactory;
 import edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService;
 import edu.cmu.lti.oaqa.bio.bioasq.services.PubMedSearchServiceResponse;
-//import edu.cmu.lti.oaqa.type.retrieval.Document;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.Document;
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="initialAnnotatorDescriptor">
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/initialAnnotatorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="documentRetrieveDescriptor">
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/documentRetrieveDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="conceptRetrieveDescriptor">
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/conceptRetrieveDescriptor.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="tripleRetrieveDescriptor">
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/tripleRetrieveDescriptor.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>aeDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>initialAnnotatorDescriptor</node>
+        <node>conceptRetrieveDescriptor</node>
+        <node>documentRetrieveDescriptor</node>
+        <node>tripleRetrieveDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>
