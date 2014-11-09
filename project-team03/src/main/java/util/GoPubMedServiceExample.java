@@ -15,7 +15,7 @@ public class GoPubMedServiceExample {
   public static void main(String[] args) throws ClientProtocolException, IOException,
           ConfigurationException {
     // String text = "Is Rheumatoid Arthritis more common in men or women?";
-    String text = "Are there any DNMT3 proteins present in plants";
+    String text = "Is Rheumatoid Arthritis more common in men or women?";
     GoPubMedService service = new GoPubMedService(args[0]);
     OntologyServiceResponse.Result diseaseOntologyResult = service
             .findDiseaseOntologyEntitiesPaged(text, 0);
@@ -50,7 +50,7 @@ public class GoPubMedServiceExample {
               + finding.getConcept().getUri());
     }
     LinkedLifeDataServiceResponse.Result linkedLifeDataResult = service
-            .findLinkedLifeDataEntitiesPaged(text, 0);
+            .findLinkedLifeDataEntitiesPaged(text, 0,1);
     System.out.println("LinkedLifeData: " + linkedLifeDataResult.getEntities().size());
     for (LinkedLifeDataServiceResponse.Entity entity : linkedLifeDataResult.getEntities()) {
       System.out.println(" > " + entity.getEntity());

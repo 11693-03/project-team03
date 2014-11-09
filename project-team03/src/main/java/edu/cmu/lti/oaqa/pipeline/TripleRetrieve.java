@@ -10,6 +10,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.TOP;
+import org.apache.uima.resource.ConfigurableResource_ImplBase;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import util.TypeFactory;
@@ -27,11 +28,12 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
   
   private GoPubMedService service;
   
+  public static final String PARAM_PROPERTIES = "ProjectProperties";
   @Override
   public void initialize(UimaContext aContext) throws ResourceInitializationException {
     super.initialize(aContext);
     try {
-      service = new GoPubMedService("project.properties");
+      service = new GoPubMedService((String) aContext.getConfigParameterValue(PARAM_PROPERTIES));
     } catch (ConfigurationException e) {
       System.out.println("Unable to start GoPubMedService");
       e.printStackTrace();
@@ -49,7 +51,7 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
     
     try {
       LinkedLifeDataServiceResponse.Result linkedLifeDataResult = service
-              .findLinkedLifeDataEntitiesPaged(keywords, 0, 1);
+              .findLinkedLifeDataEntitiesPaged(keywords, 0, 1);//temporary set parameter
       int rank = 1;
       for (LinkedLifeDataServiceResponse.Entity entity : linkedLifeDataResult.getEntities()) {
           LinkedLifeDataServiceResponse.Relation relation = entity.getRelations().get(0);
