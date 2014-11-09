@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <implementationName></implementationName>
+  <processingResourceMetaData>
+    <name>casConsumerDescriptor</name>
+    <description></description>
+    <version>1.0</version>
+    <vendor></vendor>
+    <configurationParameters></configurationParameters>
+    <configurationParameterSettings></configurationParameterSettings>
+    <typeSystemDescription></typeSystemDescription>
+    <typePriorities></typePriorities>
+    <fsIndexCollection></fsIndexCollection>
+    <capabilities>
+      <capability>
+        <inputs></inputs>
+        <outputs></outputs>
+        <languagesSupported></languagesSupported>
+      </capability>
+    </capabilities>
+  </processingResourceMetaData>
+  <externalResourceDependencies></externalResourceDependencies>
+  <resourceManagerConfiguration></resourceManagerConfiguration>
+</casConsumerDescription>
