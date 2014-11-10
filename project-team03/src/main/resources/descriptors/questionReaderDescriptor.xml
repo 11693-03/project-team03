@@ -23,13 +23,19 @@
         </value>
       </nameValuePair>
     </configurationParameterSettings>
-    <typeSystemDescription/>
+    <typeSystemDescription>
+      <imports>
+        <import location="/home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml"/>
+      </imports>
+    </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
         <inputs/>
-        <outputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.oaqa.type.input.Question</type>
+        </outputs>
         <languagesSupported/>
       </capability>
     </capabilities>

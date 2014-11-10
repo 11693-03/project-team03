@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** 
- * Updated by JCasGen Sun Nov 09 16:21:01 EST 2014
+ * Updated by JCasGen Sun Nov 09 19:55:47 EST 2014
  * @generated */
 public class Relation_Type extends Concept_Type {
   /** @generated 

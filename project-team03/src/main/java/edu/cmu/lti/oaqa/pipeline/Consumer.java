@@ -59,5 +59,4 @@ public class Consumer extends CasConsumer_ImplBase {
       e.printStackTrace();
     }
   }
-
 }

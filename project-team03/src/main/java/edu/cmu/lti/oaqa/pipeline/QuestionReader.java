@@ -38,16 +38,14 @@ public class QuestionReader extends CollectionReader_ImplBase {
 	private List<Question> inputs;
 
 	private String mInputPath;
-
 	private int mCurrentIndex;
 
 	public void initialize() throws ResourceInitializationException {
 		mInputPath = ((String) getConfigParameterValue(PARAM_INPUTPATH)).trim();
 		mCurrentIndex = 0;
-
 		// extract the input questions from file
-		inputs = TrainingSet.load(getClass().getResourceAsStream(mInputPath))
-				.stream().collect(toList());
+		System.out.println(mInputPath);
+		inputs = TestSet.load(getClass().getResourceAsStream(mInputPath)).stream().collect(toList());
 		// trim question texts
 		inputs.stream()
 				.filter(input -> input.getBody() != null)

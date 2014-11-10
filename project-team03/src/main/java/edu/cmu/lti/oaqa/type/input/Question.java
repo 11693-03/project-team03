@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** The Question and any associated meta-data.
- * Updated by JCasGen Sun Nov 09 16:21:00 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
+ * Updated by JCasGen Sun Nov 09 19:55:47 EST 2014
+ * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/questionReaderDescriptor.xml
  * @generated */
 public class Question extends Annotation {
   /** @generated
