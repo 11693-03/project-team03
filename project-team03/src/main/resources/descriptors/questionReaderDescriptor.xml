@@ -19,13 +19,13 @@
       <nameValuePair>
         <name>InputFile</name>
         <value>
-          <string>/BioASQ-SampleData1B.json</string>
+          <string>/questions.json</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
-        <import location="/home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml"/>
+        <import location="../type/OAQATypes.xml"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>
