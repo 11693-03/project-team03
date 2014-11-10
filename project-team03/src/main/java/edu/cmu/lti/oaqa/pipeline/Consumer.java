@@ -47,30 +47,15 @@ public class Consumer extends CasConsumer_ImplBase {
 
   JsonCollectionReaderHelper jsHelper;
 
-  // five kinds of evaluations
-  List<Double[]> precisions;
-
-  List<Double[]> recalls;
-
-  List<Double[]> fmeasures;
-
-  List<Double[]> maps;
-
-  List<Double[]> gmaps;
-
-  File goldenFile;
 
   @Override
   public void initialize() throws ResourceInitializationException {
-    // precisions = new ArrayList<Double[]>();
-    // recalls = new ArrayList<Double[]>();
-    // fmeasures = new ArrayList<Double[]>();
-    // maps = new ArrayList<Double[]>();
-    // gmaps = new ArrayList<Double[]>();
 
+    // read goldStandard by JsonCollectionReader
     jsHelper = new JsonCollectionReaderHelper();
     goldStandards = jsHelper.testRun();
 
+    //for each question, we store the documents, concepts, triple info corresponding to each question
     docMaps = new HashMap<String, List<String>>();
     conceptMaps = new HashMap<String, List<String>>();
     tripleMaps = new HashMap<String, List<Triple>>();
@@ -98,26 +83,20 @@ public class Consumer extends CasConsumer_ImplBase {
     }
     String curQId = TypeUtil.getQuestion(jcas).getId();
 
-    Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
-    LinkedList<ConceptSearchResult> conceptList = new LinkedList<ConceptSearchResult>();
-    conceptList.addAll(concepts);
-
+    // For the documents:
     Collection<Document> documents = TypeUtil.getRankedDocuments(jcas);
     LinkedList<Document> documentList = new LinkedList<Document>();
     documentList.addAll(documents);
-
-    Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);
-    LinkedList<TripleSearchResult> tripleList = new LinkedList<TripleSearchResult>();
-    tripleList.addAll(triples);
-
+    
     List<String> docResult = docMaps.get(curQId);
-    int tp = 0;
     int docTotalPositive = 0;
     double totalPrecision=0.0;
     double docPrecision=0.0;
-
+    
+    System.out.println("pppppp"+curQId);
     for (int i = 0; i < documentList.size(); i++) {
-      System.out.println("**********"+documentList.get(i).getUri());
+   
+
       if (docResult.contains(documentList.get(i).getUri())) {
         docTotalPositive++;
         totalPrecision+=(docTotalPositive*1.0)/((i+1)*1.0); 
@@ -129,9 +108,47 @@ public class Consumer extends CasConsumer_ImplBase {
     else{
       docPrecision=totalPrecision/(docTotalPositive*1.0);
     }
-    System.out.println("totalPrecision"+totalPrecision);
-    System.out.println("docPositive"+docTotalPositive);
-    System.out.println("docPrecision"+docPrecision);
+
+
+    
+ // For the Concepts:
+    Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
+    LinkedList<ConceptSearchResult> conceptList = new LinkedList<ConceptSearchResult>();
+    conceptList.addAll(concepts);
+    
+    
+    List<String> collectionResult = conceptMaps.get(curQId);
+    int conceptTotalPositive = 0;
+    double concepttotalPrecision=0.0;
+    double conceptPrecision=0.0;
+    
+    System.out.println("pppppp"+curQId);
+    for (int i = 0; i < conceptList.size(); i++) {
+
+      if (collectionResult.contains(conceptList.get(i).getUri())) {
+        conceptTotalPositive++;
+        concepttotalPrecision+=(conceptTotalPositive*1.0)/((i+1)*1.0); 
+      }  
+    }
+    if(conceptTotalPositive == 0){
+      conceptPrecision = 0.0;
+    }
+    else{
+      conceptPrecision=concepttotalPrecision/(conceptTotalPositive*1.0);
+    }
+
+    if(conceptPrecision>0)
+      System.err.println("hahaaaaaaaaaaaaaaaaa");
+    
+    
+    //For collection
+    Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);
+    LinkedList<TripleSearchResult> tripleList = new LinkedList<TripleSearchResult>();
+    tripleList.addAll(triples);
+
+    
+   
+     
       
   }
 }
