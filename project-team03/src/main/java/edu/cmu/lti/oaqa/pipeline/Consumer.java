@@ -1,23 +1,15 @@
 package edu.cmu.lti.oaqa.pipeline;
 
-<<<<<<< HEAD
 import org.apache.uima.cas.CAS;
 import org.apache.uima.collection.CasConsumer_ImplBase;
 import org.apache.uima.resource.ResourceProcessException;
-=======
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import json.JsonCollectionReaderHelper;
-import json.gson.TestQuestion;
-
-import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
-import org.apache.uima.collection.CasConsumer_ImplBase;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.resource.ResourceProcessException;
 
 import edu.cmu.lti.oaqa.type.input.Question;
 
@@ -67,14 +59,5 @@ public class Consumer extends CasConsumer_ImplBase {
       e.printStackTrace();
     }
   }
->>>>>>> origin/master
 
-public class Consumer extends CasConsumer_ImplBase {
-
-  @Override
-  public void processCas(CAS aCAS) throws ResourceProcessException {
-    // TODO Auto-generated method stub
-    
-  }
-  
 }
