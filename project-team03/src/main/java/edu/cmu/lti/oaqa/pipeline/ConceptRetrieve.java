@@ -49,7 +49,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         String label = null;
         List<String>uris = new LinkedList<String>();
         for (OntologyServiceResponse.Finding finding : uniprotResult.getFindings()) {
-          if(label!=null)
+          if(label==null)
             label = finding.getConcept().getLabel();
           ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
                   aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
@@ -60,6 +60,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         }
         concept.setUris(Utils.createStringList(aJCas,uris));
         concept.setName(label);
+        System.out.println(label);
         concept.addToIndexes(aJCas);
         
       } catch (IOException e) {

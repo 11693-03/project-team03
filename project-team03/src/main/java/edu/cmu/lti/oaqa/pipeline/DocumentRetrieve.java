@@ -45,7 +45,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
         }
       } catch (IOException e) {
         e.printStackTrace();
-      }      
+      }
     }
   }
 }

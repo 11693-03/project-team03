@@ -4,16 +4,16 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="initialAnnotatorDescriptor">
-      <import location="./initialAnnotatorDescriptor.xml"/>
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/initialAnnotatorDescriptor.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="documentRetrieveDescriptor">
-      <import location="./documentRetrieveDescriptor.xml"/>
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/documentRetrieveDescriptor.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="conceptRetrieveDescriptor">
-      <import location="./conceptRetrieveDescriptor.xml"/>
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/conceptRetrieveDescriptor.xml"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="tripleRetrieveDescriptor">
-      <import location="./tripleRetrieveDescriptor.xml"/>
+      <import location="/home/micz/project-team03/project-team03/src/main/resources/descriptors/tripleRetrieveDescriptor.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
