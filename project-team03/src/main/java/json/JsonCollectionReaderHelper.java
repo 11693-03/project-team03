@@ -46,6 +46,7 @@ public class JsonCollectionReaderHelper {
 			e.printStackTrace();
 		}*/
 		Object value = filePath;
+		//to tell the input path is a single string or a list of strings.
 		if (String.class.isAssignableFrom(value.getClass())) {
 			inputs = TestSet
 					.load(getClass().getResourceAsStream(
