@@ -1,0 +1,7 @@
+/target/
+*.*~
+AAE.xml
+Cpe.Descriptor.xml
+GoPubMedServiceExample.java
+pom.xml
+project.properties
