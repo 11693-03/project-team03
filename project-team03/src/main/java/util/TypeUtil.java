@@ -69,6 +69,10 @@ public class TypeUtil {
             .collect(toCollection(ArrayList::new));
   }
 
+  public static Collection<ConceptSearchResult> getRankedSearchResultByScore(JCas jcas, int hitsize){
+    return rankedSearchResultsByScore(JCasUtil.select(jcas, ConceptSearchResult.class), hitsize);
+  }
+  
   public static Collection<ConceptSearchResult> getRankedConceptSearchResults(JCas jcas) {
     return rankedSearchResultsByRank(JCasUtil.select(jcas, ConceptSearchResult.class));
   }

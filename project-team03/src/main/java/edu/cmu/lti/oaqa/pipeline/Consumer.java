@@ -19,6 +19,7 @@ import json.gson.TestQuestion;
 import json.gson.Triple;
 
 import org.apache.uima.cas.CASException;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.jcas.tcas.Annotation;
@@ -47,7 +48,6 @@ public class Consumer extends CasConsumer_ImplBase {
 
   JsonCollectionReaderHelper jsHelper;
 
-
   @Override
   public void initialize() throws ResourceInitializationException {
 
@@ -55,7 +55,8 @@ public class Consumer extends CasConsumer_ImplBase {
     jsHelper = new JsonCollectionReaderHelper();
     goldStandards = jsHelper.testRun();
 
-    //for each question, we store the documents, concepts, triple info corresponding to each question
+    // for each question, we store the documents, concepts, triple info corresponding to each
+    // question
     docMaps = new HashMap<String, List<String>>();
     conceptMaps = new HashMap<String, List<String>>();
     tripleMaps = new HashMap<String, List<Triple>>();
@@ -71,14 +72,12 @@ public class Consumer extends CasConsumer_ImplBase {
   @Override
   public void processCas(CAS aCAS) throws ResourceProcessException {
 
-    // TODO Auto-generated method stub
     outputPath = "/MyOutput.json";// the path of output file
 
     JCas jcas = null;
     try {
       jcas = aCAS.getJCas();
     } catch (CASException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
     String curQId = TypeUtil.getQuestion(jcas).getId();
@@ -87,68 +86,59 @@ public class Consumer extends CasConsumer_ImplBase {
     Collection<Document> documents = TypeUtil.getRankedDocuments(jcas);
     LinkedList<Document> documentList = new LinkedList<Document>();
     documentList.addAll(documents);
-    
+
     List<String> docResult = docMaps.get(curQId);
     int docTotalPositive = 0;
-    double totalPrecision=0.0;
-    double docPrecision=0.0;
-    
-    System.out.println("pppppp"+curQId);
+    double totalPrecision = 0.0;
+    double docPrecision = 0.0;
     for (int i = 0; i < documentList.size(); i++) {
-   
-
-      if (docResult.contains(documentList.get(i).getUri())) {
+      if (docResult.contains(documentList.get(i))) {
         docTotalPositive++;
-        totalPrecision+=(docTotalPositive*1.0)/((i+1)*1.0); 
-      }  
+        totalPrecision += (docTotalPositive * 1.0) / ((i + 1) * 1.0);
+      }
     }
-    if(docTotalPositive == 0){
+    if (docTotalPositive == 0) {
       docPrecision = 0.0;
+    } else {
+      docPrecision = totalPrecision / (docTotalPositive * 1.0);
     }
-    else{
-      docPrecision=totalPrecision/(docTotalPositive*1.0);
-    }
+    System.out.println("docPrecision:" + docPrecision);
 
-
-    
- // For the Concepts:
+    // For the Concepts:
     Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
+
     LinkedList<ConceptSearchResult> conceptList = new LinkedList<ConceptSearchResult>();
     conceptList.addAll(concepts);
-    
-    
-    List<String> collectionResult = conceptMaps.get(curQId);
-    int conceptTotalPositive = 0;
-    double concepttotalPrecision=0.0;
-    double conceptPrecision=0.0;
-    
-    System.out.println("pppppp"+curQId);
+
     for (int i = 0; i < conceptList.size(); i++) {
+      // System.err.println("Concept "+(i+1)+":"+conceptList.get(i));
+    }
 
+    List<String> collectionResult = conceptMaps.get(curQId);
+    System.out.println("curID:" + curQId);
+    int conceptTotalPositive = 0;
+    double concepttotalPrecision = 0.0;
+    double conceptPrecision = 0.0;
+
+    for (int i = 0; i < conceptList.size(); i++) {
       if (collectionResult.contains(conceptList.get(i).getUri())) {
+        System.out.println(i + ":" + conceptList.get(i).getUri());
         conceptTotalPositive++;
-        concepttotalPrecision+=(conceptTotalPositive*1.0)/((i+1)*1.0); 
-      }  
+        concepttotalPrecision += (conceptTotalPositive * 1.0) / ((i + 1) * 1.0);
+      }
     }
-    if(conceptTotalPositive == 0){
+    if (conceptTotalPositive == 0) {
       conceptPrecision = 0.0;
-    }
-    else{
-      conceptPrecision=concepttotalPrecision/(conceptTotalPositive*1.0);
+    } else {
+      conceptPrecision = concepttotalPrecision / (conceptTotalPositive * 1.0);
     }
 
-    if(conceptPrecision>0)
-      System.err.println("hahaaaaaaaaaaaaaaaaa");
-    
-    
-    //For collection
+    System.out.println("ConceptPrecision:" + conceptPrecision);
+
+    // For collection
     Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);
     LinkedList<TripleSearchResult> tripleList = new LinkedList<TripleSearchResult>();
     tripleList.addAll(triples);
 
-    
-   
-     
-      
   }
 }

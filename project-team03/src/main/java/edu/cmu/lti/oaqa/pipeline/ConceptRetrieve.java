@@ -2,6 +2,8 @@ package edu.cmu.lti.oaqa.pipeline;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -14,6 +16,7 @@ import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import util.TypeFactory;
+import util.TypeUtil;
 import util.Utils;
 import edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService;
 import edu.cmu.lti.oaqa.bio.bioasq.services.OntologyServiceResponse;
@@ -42,26 +45,126 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       String text = query.getText();
       try {
         OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(text, 0);
-        //OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(text, 0);
-        int rank = 0;
         Concept concept = new Concept(aJCas);
         String label = null;
         List<String>uris = new LinkedList<String>();
         for (OntologyServiceResponse.Finding finding : uniprotResult.getFindings()) {
+          if(finding.getScore()<0.1)
+            break;
           if(label==null)
             label = finding.getConcept().getLabel();
           ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
                   aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
-                  finding.getConcept().getLabel(),rank++, text, 
+                  finding.getConcept().getLabel(), 0, text, 
                   finding.getConcept().getTermId(),new ArrayList<>());
           uris.add(finding.getConcept().getUri());
           conceptSR.addToIndexes(aJCas);
+          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
         }
         concept.setUris(Utils.createStringList(aJCas,uris));
         concept.setName(label);
-        System.out.println(label);
         concept.addToIndexes(aJCas);
+
+       
         
+        
+        concept = new Concept(aJCas);
+        OntologyServiceResponse.Result diseaseOntologyResult = service
+                .findDiseaseOntologyEntitiesPaged(text, 0);
+        uris = new LinkedList<String>();
+        for (OntologyServiceResponse.Finding finding : diseaseOntologyResult.getFindings()) {
+          if(finding.getScore()<0.1)
+            break;
+          if(label==null)
+            label = finding.getConcept().getLabel();
+          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
+                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  finding.getConcept().getLabel(), 0, text, 
+                  finding.getConcept().getTermId(),new ArrayList<>());
+          uris.add(finding.getConcept().getUri());
+          conceptSR.addToIndexes(aJCas);
+          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+        }
+        concept.setUris(Utils.createStringList(aJCas,uris));
+        concept.setName(label);
+        concept.addToIndexes(aJCas);
+
+        uris = new LinkedList<String>();
+        concept = new Concept(aJCas);
+        OntologyServiceResponse.Result geneOntologyResult = service.findGeneOntologyEntitiesPaged(text,
+                0, 10);
+        System.out.println("Gene ontology: " + geneOntologyResult.getFindings().size());
+        for (OntologyServiceResponse.Finding finding : geneOntologyResult.getFindings()) {
+          if(finding.getScore()<0.1)
+            break;
+          if(label==null)
+            label = finding.getConcept().getLabel();
+          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
+                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  finding.getConcept().getLabel(), 0, text, 
+                  finding.getConcept().getTermId(),new ArrayList<>());
+          uris.add(finding.getConcept().getUri());
+          conceptSR.addToIndexes(aJCas);
+          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+        }
+        concept.setUris(Utils.createStringList(aJCas,uris));
+        concept.setName(label);
+        concept.addToIndexes(aJCas);
+
+        
+        uris = new LinkedList<String>();
+        concept = new Concept(aJCas);
+        OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(text, 0);
+        System.out.println("Jochem: " + jochemResult.getFindings().size());
+        for (OntologyServiceResponse.Finding finding : jochemResult.getFindings()) {
+          if(finding.getScore()<0.1)
+            break;
+          if(label==null)
+            label = finding.getConcept().getLabel();
+          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
+                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  finding.getConcept().getLabel(), 0, text, 
+                  finding.getConcept().getTermId(),new ArrayList<>());
+          uris.add(finding.getConcept().getUri());
+          conceptSR.addToIndexes(aJCas);
+          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+        }
+        concept.setUris(Utils.createStringList(aJCas,uris));
+        concept.setName(label);
+        concept.addToIndexes(aJCas);
+
+
+        uris = new LinkedList<String>();
+        concept = new Concept(aJCas);
+        OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(text, 0);
+        System.out.println("MeSH: " + meshResult.getFindings().size());
+        for (OntologyServiceResponse.Finding finding : meshResult.getFindings()) {
+          if(finding.getScore()<0.1)
+            break;
+          if(label==null)
+            label = finding.getConcept().getLabel();
+          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
+                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  finding.getConcept().getLabel(), 0, text, 
+                  finding.getConcept().getTermId(),new ArrayList<>());
+          uris.add(finding.getConcept().getUri());
+          conceptSR.addToIndexes(aJCas);
+          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+          }
+        concept.setUris(Utils.createStringList(aJCas,uris));
+        concept.setName(label);
+        concept.addToIndexes(aJCas);
+
+        Collection<ConceptSearchResult> aa = TypeUtil.getRankedConceptSearchResults(aJCas);
+        int rank = 1;
+        Iterator<ConceptSearchResult> it = TypeUtil.getRankedSearchResultByScore(aJCas,aa.size()).iterator();
+        while(it.hasNext()){
+          ConceptSearchResult sr =  it.next();
+          sr.removeFromIndexes(aJCas);
+          sr.setRank(rank++);         
+          sr.addToIndexes(aJCas);
+        }
+        //System.err.println("CAS size(in consumer):"+aa.size());
       } catch (IOException e) {
         e.printStackTrace();
       }

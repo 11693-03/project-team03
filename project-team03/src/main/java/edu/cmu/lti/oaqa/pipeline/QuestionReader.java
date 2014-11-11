@@ -18,9 +18,10 @@ import org.apache.uima.collection.CollectionReader_ImplBase;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
-
-
 import org.apache.uima.util.ProgressImpl;
+
+import util.TypeUtil;
+import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 
 /**
  * A simple collection reader that reads documents/questions from a directory in
@@ -45,7 +46,7 @@ public class QuestionReader extends CollectionReader_ImplBase {
 		mCurrentIndex = 0;
 		// extract the input questions from file
 		System.out.println(mInputPath);
-		inputs = TestSet.load(getClass().getResourceAsStream(mInputPath)).stream().collect(toList());
+		inputs = TrainingSet.load(getClass().getResourceAsStream(mInputPath)).stream().collect(toList());
 		// trim question texts
 		inputs.stream()
 				.filter(input -> input.getBody() != null)
@@ -55,7 +56,7 @@ public class QuestionReader extends CollectionReader_ImplBase {
 	}
 
 	@Override
-	public void getNext(CAS aCAS) throws IOException, CollectionException {
+	public void getNext(CAS aCAS) throws IOException, CollectionException {	  
 		JCas jcas;
 		try{
 			jcas = aCAS.getJCas();

@@ -1,5 +1,7 @@
 package edu.cmu.lti.oaqa.pipeline;
 
+import java.util.Collection;
+
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
@@ -9,6 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.type.input.Question;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
+import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 
 public class InitialAnnotator extends JCasAnnotator_ImplBase{
 
@@ -18,6 +21,6 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
       AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
       atomic.setOriginalText(question.getText());
       atomic.setText(question.getText().replace("?", ""));
-      atomic.addToIndexes(aJCas);          
+      atomic.addToIndexes(aJCas);        
   }  
 }
