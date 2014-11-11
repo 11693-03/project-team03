@@ -323,7 +323,7 @@ public class TypeFactory {
     ret.setSearchId(searchId);
     ret.setCandidateAnswers(FSCollectionFactory.createFSArray(jcas, candidateAnswers));
     ret.setTitle(title);
-    ret.setDocId(title);
+    ret.setDocId(docId);
     return ret;
   }
 

@@ -19,17 +19,23 @@
       <nameValuePair>
         <name>InputFile</name>
         <value>
-          <string>/BioASQ-SampleData1B.json</string>
+          <string>/questions.json</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
-    <typeSystemDescription/>
+    <typeSystemDescription>
+      <imports>
+        <import location="../type/OAQATypes.xml"/>
+      </imports>
+    </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
         <inputs/>
-        <outputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.oaqa.type.input.Question</type>
+        </outputs>
         <languagesSupported/>
       </capability>
     </capabilities>

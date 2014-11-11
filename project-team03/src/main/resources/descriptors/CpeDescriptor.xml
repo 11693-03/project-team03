@@ -5,14 +5,6 @@
             <descriptor>
                 <import location="questionReaderDescriptor.xml"/>
             </descriptor>
-            <configurationParameterSettings>
-                <nameValuePair>
-                    <name>InputFile</name>
-                    <value>
-                        <string>/BioASQ-SampleData1B-1.json</string>
-                    </value>
-                </nameValuePair>
-            </configurationParameterSettings>
         </collectionIterator>
     </collectionReader>
     <casProcessors casPoolSize="3" processingUnitThreadCount="1">

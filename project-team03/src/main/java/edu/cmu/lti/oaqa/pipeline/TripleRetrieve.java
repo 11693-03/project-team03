@@ -38,7 +38,6 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
       System.out.println("Unable to start GoPubMedService");
       e.printStackTrace();
     }
-   
   }
 
   @Override
@@ -62,7 +61,6 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
           searchResult.setTriple(triple);
           searchResult.addToIndexes();
       }
-      
     } catch (ClientProtocolException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
@@ -70,7 +68,5 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
-    
   }
-
 }
