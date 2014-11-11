@@ -20,6 +20,13 @@ import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 import edu.cmu.lti.oaqa.type.retrieval.Document;
 
+/**
+ *  This class retrieves documents related to the query, 
+ *  using apis provided by PubMed
+ *  @author Michael Zhuang
+ *
+ ***/
+
 public class DocumentRetrieve extends JCasAnnotator_ImplBase {
   GoPubMedService service;
   public static final String uriPrefix = "http://www.ncbi.nlm.nih.gov/pubmed/";

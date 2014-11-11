@@ -100,10 +100,10 @@ public class JsonCollectionReaderHelper {
 
     // add answers to CAS index
     if (input instanceof TestQuestion) {
-      System.err.println("I'm Test question");
+      //System.err.println("I'm Test question");
       // test question should not have ideal or exact answers
     } else if (input instanceof TrainingQuestion) {
-      System.err.println("I'm Training question");
+      //System.err.println("I'm Training question");
       List<String> summaryVariants = ((TrainingQuestion) input).getIdealAnswer();
       if (summaryVariants != null) {
         TypeFactory.createSummary(jcas, summaryVariants).addToIndexes();

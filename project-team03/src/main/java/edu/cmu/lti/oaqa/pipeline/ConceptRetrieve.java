@@ -24,6 +24,14 @@ import edu.cmu.lti.oaqa.type.kb.Concept;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 
+
+/**
+ *  This class retrieves concepts related to the query, 
+ *  using apis provided by Mesh, Jochem, Uniprot, DiseaseOntology, etc
+ *  @author Michael Zhuang
+ *   
+ * 
+ ***/
 public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   GoPubMedService service;
   public static String Properties = "ProjectProperties";

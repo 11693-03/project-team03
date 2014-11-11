@@ -14,7 +14,13 @@ import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 
 public class InitialAnnotator extends JCasAnnotator_ImplBase{
-
+/**
+ *  This class receives Question type in JCas, 
+ *  remove the question mark, and create a new type AtomicQuestion, 
+ *  containing the original query and the modficated query.
+ *  @author Michael Zhuang 
+ * 
+ **/
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
       Question question = TypeUtil.getQuestion(aJCas);
