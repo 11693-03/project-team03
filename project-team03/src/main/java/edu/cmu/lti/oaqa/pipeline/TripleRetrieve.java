@@ -50,16 +50,17 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
     
     try {
       LinkedLifeDataServiceResponse.Result linkedLifeDataResult = service
-              .findLinkedLifeDataEntitiesPaged(keywords, 0, 1);//temporary set parameter
+              .findLinkedLifeDataEntitiesPaged(keywords, 0,4);//temporary set parameter
       int rank = 1;
       for (LinkedLifeDataServiceResponse.Entity entity : linkedLifeDataResult.getEntities()) {
-          LinkedLifeDataServiceResponse.Relation relation = entity.getRelations().get(0);
+          for(LinkedLifeDataServiceResponse.Relation relation :entity.getRelations()){
           Triple triple = TypeFactory.createTriple(aJCas, relation.getSubj(), relation.getPred(), relation.getObj());
           triple.addToIndexes();
           TripleSearchResult searchResult = new TripleSearchResult(aJCas);
           searchResult.setRank(rank++);
           searchResult.setTriple(triple);
           searchResult.addToIndexes();
+          System.out.println("sub: "+triple.getSubject()+"\nobj: "+triple.getObject()+"\npred: "+triple.getPredicate());}
       }
     } catch (ClientProtocolException e) {
       // TODO Auto-generated catch block
