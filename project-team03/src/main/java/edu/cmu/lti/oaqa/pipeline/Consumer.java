@@ -102,7 +102,7 @@ public class Consumer extends CasConsumer_ImplBase {
     } else {
       docPrecision = totalPrecision / (docTotalPositive * 1.0);
     }
-    System.out.println("docPrecision:" + docPrecision);
+    //System.out.println("docPrecision:" + docPrecision);
 
     // For the Concepts:
     Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
@@ -115,14 +115,14 @@ public class Consumer extends CasConsumer_ImplBase {
     }
 
     List<String> collectionResult = conceptMaps.get(curQId);
-    System.out.println("curID:" + curQId);
+    //System.out.println("curID:" + curQId);
     int conceptTotalPositive = 0;
     double concepttotalPrecision = 0.0;
     double conceptPrecision = 0.0;
 
     for (int i = 0; i < conceptList.size(); i++) {
       if (collectionResult.contains(conceptList.get(i).getUri())) {
-        System.out.println(i + ":" + conceptList.get(i).getUri());
+        //System.out.println(i + ":" + conceptList.get(i).getUri());
         conceptTotalPositive++;
         concepttotalPrecision += (conceptTotalPositive * 1.0) / ((i + 1) * 1.0);
       }
@@ -133,7 +133,7 @@ public class Consumer extends CasConsumer_ImplBase {
       conceptPrecision = concepttotalPrecision / (conceptTotalPositive * 1.0);
     }
 
-    System.out.println("ConceptPrecision:" + conceptPrecision);
+    //System.out.println("ConceptPrecision:" + conceptPrecision);
 
     // For collection
     Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);

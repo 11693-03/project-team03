@@ -9,6 +9,8 @@ import java.util.List;
 import json.JsonCollectionReaderHelper;
 import json.gson.Question;
 import json.gson.TestSet;
+import json.gson.TrainingSet;
+
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.collection.CollectionException;

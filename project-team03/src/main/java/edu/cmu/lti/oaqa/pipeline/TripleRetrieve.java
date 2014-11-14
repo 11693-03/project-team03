@@ -60,7 +60,8 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
           searchResult.setRank(rank++);
           searchResult.setTriple(triple);
           searchResult.addToIndexes();
-          System.out.println("sub: "+triple.getSubject()+"\nobj: "+triple.getObject()+"\npred: "+triple.getPredicate());}
+          //System.out.println("sub: "+triple.getSubject()+"\nobj: "+triple.getObject()+"\npred: "+triple.getPredicate());
+          }
       }
     } catch (ClientProtocolException e) {
       // TODO Auto-generated catch block
