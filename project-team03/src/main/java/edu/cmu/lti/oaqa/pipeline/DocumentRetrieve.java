@@ -52,6 +52,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
         for(PubMedSearchServiceResponse.Document docs : pubmedResult.getDocuments()){
           Document doc = TypeFactory.createDocument(aJCas, uriPrefix+docs.getPmid(), text,
                   rank++, text, docs.getTitle(), docs.getPmid());
+          //System.out.println(docs.getPmid());
           doc.addToIndexes();
         }
       } catch (IOException e) {
