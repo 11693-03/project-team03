@@ -86,13 +86,15 @@ public class Consumer extends CasConsumer_ImplBase {
     Collection<Document> documents = TypeUtil.getRankedDocuments(jcas);
     LinkedList<Document> documentList = new LinkedList<Document>();
     documentList.addAll(documents);
-
+    
     List<String> docResult = docMaps.get(curQId);
+
     int docTotalPositive = 0;
     double totalPrecision = 0.0;
     double docPrecision = 0.0;
     for (int i = 0; i < documentList.size(); i++) {
-      if (docResult.contains(documentList.get(i))) {
+      if (docResult.contains(documentList.get(i).getUri())) {
+        //System.out.println(documentList.get(i).getRank()+":"+documentList.get(i).getUri());
         docTotalPositive++;
         totalPrecision += (docTotalPositive * 1.0) / ((i + 1) * 1.0);
       }
@@ -110,10 +112,6 @@ public class Consumer extends CasConsumer_ImplBase {
     LinkedList<ConceptSearchResult> conceptList = new LinkedList<ConceptSearchResult>();
     conceptList.addAll(concepts);
 
-    for (int i = 0; i < conceptList.size(); i++) {
-      // System.err.println("Concept "+(i+1)+":"+conceptList.get(i));
-    }
-
     List<String> collectionResult = conceptMaps.get(curQId);
     System.out.println("curID:" + curQId);
     int conceptTotalPositive = 0;
@@ -122,7 +120,7 @@ public class Consumer extends CasConsumer_ImplBase {
 
     for (int i = 0; i < conceptList.size(); i++) {
       if (collectionResult.contains(conceptList.get(i).getUri())) {
-        System.out.println(i + ":" + conceptList.get(i).getUri());
+        //System.out.println(i + ":" + conceptList.get(i).getUri());
         conceptTotalPositive++;
         concepttotalPrecision += (conceptTotalPositive * 1.0) / ((i + 1) * 1.0);
       }
@@ -139,6 +137,7 @@ public class Consumer extends CasConsumer_ImplBase {
     Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);
     LinkedList<TripleSearchResult> tripleList = new LinkedList<TripleSearchResult>();
     tripleList.addAll(triples);
-
+    
+    System.out.println("--------------I'm a hualiliful segmentation line-------------");
   }
 }

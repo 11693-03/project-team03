@@ -45,7 +45,6 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   }
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
-    
     FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
     
     if(iter.isValid() && iter.hasNext()){
@@ -73,9 +72,6 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         concept.setName(label);
         concept.addToIndexes(aJCas);
 
-       
-        
-        
         concept = new Concept(aJCas);
         OntologyServiceResponse.Result diseaseOntologyResult = service
                 .findDiseaseOntologyEntitiesPaged(text, 0);
@@ -101,7 +97,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         concept = new Concept(aJCas);
         OntologyServiceResponse.Result geneOntologyResult = service.findGeneOntologyEntitiesPaged(text,
                 0, 10);
-        System.out.println("Gene ontology: " + geneOntologyResult.getFindings().size());
+        //System.out.println("Gene ontology: " + geneOntologyResult.getFindings().size());
         for (OntologyServiceResponse.Finding finding : geneOntologyResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
@@ -119,11 +115,10 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         concept.setName(label);
         concept.addToIndexes(aJCas);
 
-        
         uris = new LinkedList<String>();
         concept = new Concept(aJCas);
         OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(text, 0);
-        System.out.println("Jochem: " + jochemResult.getFindings().size());
+        //System.out.println("Jochem: " + jochemResult.getFindings().size());
         for (OntologyServiceResponse.Finding finding : jochemResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
@@ -145,7 +140,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         uris = new LinkedList<String>();
         concept = new Concept(aJCas);
         OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(text, 0);
-        System.out.println("MeSH: " + meshResult.getFindings().size());
+        //System.out.println("MeSH: " + meshResult.getFindings().size());
         for (OntologyServiceResponse.Finding finding : meshResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
@@ -178,5 +173,4 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       }
     }
   }
-
 }

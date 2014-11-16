@@ -59,7 +59,14 @@ public class TypeUtil {
     IntStream.range(0, sorted.size()).forEach(rank -> sorted.get(rank).setRank(rank));
     return sorted;
   }
-
+  public static final Comparator<Document> Document_SCORE_COMPARATOR = Comparator
+          .comparing(Document::getScore).reversed();
+  public static <T extends Document> List<T> rankedDocumentByScore(Collection<T> results, int hitSize){
+    List<T> sorted = results.stream().sorted(SEARCH_RESULT_SCORE_COMPARATOR).limit(hitSize)
+            .collect(toList());
+    IntStream.range(0, sorted.size()).forEach(rank -> sorted.get(rank).setRank(rank));
+    return sorted;
+  }
   public static final Comparator<SearchResult> SEARCH_RESULT_RANK_COMPARATOR = Comparator
           .comparing(SearchResult::getRank);
 
@@ -80,7 +87,9 @@ public class TypeUtil {
   public static Collection<TripleSearchResult> getRankedTripleSearchResults(JCas jcas) {
     return rankedSearchResultsByRank(JCasUtil.select(jcas, TripleSearchResult.class));
   }
-
+  public static Collection<Document> getRankedDocumentByScore(JCas jcas, int hitSize){
+    return rankedDocumentByScore(JCasUtil.select(jcas, Document.class), hitSize);
+  }
   public static Collection<Document> getRankedDocuments(JCas jcas) {
     return rankedSearchResultsByRank(JCasUtil.select(jcas, Document.class));
   }

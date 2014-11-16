@@ -2,6 +2,7 @@ package edu.cmu.lti.oaqa.pipeline;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 import org.apache.uima.UimaContext;
@@ -12,6 +13,9 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.resource.ResourceInitializationException;
 
+import util.MyLemmatizer;
+import util.MyUtils;
+import util.NERLingpipe;
 import util.TypeFactory;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService;
@@ -46,16 +50,44 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
     if (iter.isValid() && iter.hasNext()) {
       AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
       String text = query.getText();
+      String[] tokens = text.split("\\s+");
+      HashMap<String, Integer> qVector = new HashMap<String, Integer>();
+      for(String t : tokens){
+        if(!qVector.containsKey(t))
+          qVector.put(t, 1);
+        qVector.put(t, qVector.get(t)+1);
+      }
+      MyUtils ins = MyUtils.getInstance();
+      MyLemmatizer lem = MyLemmatizer.getInstance();
+      NERLingpipe ling = NERLingpipe.getInstance();
       try {
-        PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(text, 0);
-        int rank = 1;
+        PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(text, 0, 200);
         for(PubMedSearchServiceResponse.Document docs : pubmedResult.getDocuments()){
+//          if(docs.getPmid().equals("22853635")){
+//            System.out.println("found!");
+//          }
+          double score = ins.computeCosineSimilarity(qVector, ling.extractKeywords(lem.lemmatize(docs.getTitle())));
           Document doc = TypeFactory.createDocument(aJCas, uriPrefix+docs.getPmid(), text,
-                  rank++, text, docs.getTitle(), docs.getPmid());
+                  0, text, docs.getTitle(), docs.getPmid());
+          if(score < 0.1)
+             continue;
+          System.out.println(score);
+          doc.setScore(score);
           doc.addToIndexes();
         }
       } catch (IOException e) {
         e.printStackTrace();
+      } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+      }
+      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, 200);
+      LinkedList<Document> documentList = new LinkedList<Document>();
+      documentList.addAll(documents);
+      int rank = 1;
+      for(Document d : documentList){
+        d.removeFromIndexes();
+        d.setRank(rank++);
+        d.addToIndexes(aJCas);
       }
     }
   }
