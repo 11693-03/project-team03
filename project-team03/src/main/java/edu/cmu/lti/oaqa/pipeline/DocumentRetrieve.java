@@ -66,12 +66,13 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
 //          if(docs.getPmid().equals("22853635")){
 //            System.out.println("found!");
 //          }
-          double score = ins.computeCosineSimilarity(qVector, ling.extractKeywords(lem.lemmatize(docs.getTitle())));
+          String keywords = ling.extractKeywords(lem.lemmatize(docs.getTitle()));
+          double score = ins.computeCosineSimilarity(qVector, keywords);
           Document doc = TypeFactory.createDocument(aJCas, uriPrefix+docs.getPmid(), text,
                   0, text, docs.getTitle(), docs.getPmid());
           if(score < 0.1)
              continue;
-          System.out.println(score);
+          //System.out.println(score);
           doc.setScore(score);
 
           doc.addToIndexes();

@@ -47,7 +47,6 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
             AtomicQueryConcept.type);
     AtomicQueryConcept query = (AtomicQueryConcept) interator.next();
     String keywords = query.getText();
-    
     try {
       LinkedLifeDataServiceResponse.Result linkedLifeDataResult = service
               .findLinkedLifeDataEntitiesPaged(keywords, 0,4);//temporary set parameter

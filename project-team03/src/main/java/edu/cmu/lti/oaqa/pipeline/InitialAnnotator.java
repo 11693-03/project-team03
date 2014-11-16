@@ -38,10 +38,10 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
       NERLingpipe ling = NERLingpipe.getInstance();
       try {
         modificatedQuery = ling.extractKeywords(modificatedQuery);
-        System.out.println(originalQuery+"->"+modificatedQuery);
       } catch (ClassNotFoundException | IOException e) {
         e.printStackTrace();
       }
+      System.out.println(originalQuery+"->"+modificatedQuery);
       atomic.setText(modificatedQuery);
       atomic.addToIndexes(aJCas);        
   }  

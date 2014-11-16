@@ -56,7 +56,7 @@ public class MyLemmatizer {
       for (String s: lemmas) {
         if(s.startsWith("-"))
           continue;
-        sb.append(s.toLowerCase());
+        sb.append(s);
         sb.append(' ');
       }
       
