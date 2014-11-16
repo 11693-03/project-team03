@@ -73,6 +73,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
              continue;
           System.out.println(score);
           doc.setScore(score);
+
           doc.addToIndexes();
         }
       } catch (IOException e) {

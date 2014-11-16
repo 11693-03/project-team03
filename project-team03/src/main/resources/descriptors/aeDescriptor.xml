@@ -15,6 +15,9 @@
   <delegateAnalysisEngine key="tripleRetrieveDescriptor">
       <import location="./tripleRetrieveDescriptor.xml"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="snippetDescriptor">
+      <import location="./snippetDescriptor.xml"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>aeDescriptor</name>
@@ -29,6 +32,7 @@
         <node>conceptRetrieveDescriptor</node>
         <node>documentRetrieveDescriptor</node>
       <node>tripleRetrieveDescriptor</node>
+      <node>snippetDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>

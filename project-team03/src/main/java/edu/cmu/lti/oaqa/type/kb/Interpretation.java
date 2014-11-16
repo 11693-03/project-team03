@@ -12,8 +12,8 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A container that integrates Concepts and ConceptMentions.
- * Updated by JCasGen Sun Nov 09 19:55:47 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/questionReaderDescriptor.xml
+ * Updated by JCasGen Sat Nov 15 18:48:31 EST 2014
+ * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
  * @generated */
 public class Interpretation extends TOP {
   /** @generated
