@@ -48,7 +48,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
             json += line;
           }
           SectionSet sectionSet = SectionSet.load(json);
-          System.out.println(sectionSet);
+          //System.out.println(sectionSet);
         }
       } catch (IOException e) {
         e.printStackTrace();
