@@ -7,6 +7,8 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import json.gson.SectionSet;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -40,10 +42,13 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
         HttpEntity entity = response.getEntity();
         if (entity != null) {
           BufferedReader buffer = new BufferedReader(new InputStreamReader(entity.getContent()));
+          String json = "";
           String line;
           while ((line = buffer.readLine()) != null) {
-           // System.out.println(line);
+            json += line;
           }
+          SectionSet sectionSet = SectionSet.load(json);
+          //System.out.println(sectionSet);
         }
       } catch (IOException e) {
         e.printStackTrace();
