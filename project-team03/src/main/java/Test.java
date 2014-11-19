@@ -2,7 +2,6 @@ import java.util.HashMap;
 
 import util.MyLemmatizer;
 import util.MyUtils;
-import util.RemoveStopWords;
 
 
 public class Test {
@@ -10,11 +9,8 @@ public class Test {
 
     MyUtils ins = MyUtils.getInstance();
     MyLemmatizer lem = MyLemmatizer.getInstance();
-    RemoveStopWords rem = RemoveStopWords.getInstance();
     String doc = "Gender and the treatment of immune-mediated chronic inflammatory diseases: rheumatoid arthritis, inflammatory bowel disease and psoriasis: an observational study.";
     String doc2 = "Is Rheumatoid Arthritis more common in men or women";
-    doc = rem.processStr(doc);
-    doc2 = rem.processStr(doc2);
     doc = lem.lemmatize(doc);
     doc2 = lem.lemmatize(doc2);
     

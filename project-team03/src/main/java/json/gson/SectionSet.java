@@ -26,7 +26,12 @@ public class SectionSet {
     this.title = text;
     this.sections = sections;
   }
-  
+  public String getTitle(){
+    return title;
+  }
+  public List<String> getSections(){
+    return sections;
+  }
   public static SectionSet load(String json){
     return new Gson().fromJson(json, SectionSet.class);
   }

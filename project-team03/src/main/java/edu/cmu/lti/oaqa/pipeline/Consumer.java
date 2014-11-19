@@ -138,6 +138,6 @@ public class Consumer extends CasConsumer_ImplBase {
     LinkedList<TripleSearchResult> tripleList = new LinkedList<TripleSearchResult>();
     tripleList.addAll(triples);
     
-    System.out.println("--------------I'm a hualiliful segmentation line-------------");
+    //System.out.println("--------------I'm a hualiliful segmentation line-------------");
   }
 }

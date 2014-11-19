@@ -5,6 +5,11 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -16,6 +21,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import util.MyLemmatizer;
 import util.MyUtils;
 import util.NERLingpipe;
+import util.TokenizerLingpipe;
 import util.TypeFactory;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService;
@@ -43,6 +49,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
     } catch (Exception e) {
     }
   }
+  private CloseableHttpClient httpClient;
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -58,31 +65,40 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
         qVector.put(t, qVector.get(t)+1);
       }
       MyUtils ins = MyUtils.getInstance();
-      MyLemmatizer lem = MyLemmatizer.getInstance();
-      NERLingpipe ling = NERLingpipe.getInstance();
+//      MyLemmatizer lem = MyLemmatizer.getInstance();
+//      NERLingpipe ling = NERLingpipe.getInstance();
+      TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
+      //httpClient = HttpClients.createDefault();
       try {
         PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(text, 0, 200);
         for(PubMedSearchServiceResponse.Document docs : pubmedResult.getDocuments()){
 //          if(docs.getPmid().equals("22853635")){
 //            System.out.println("found!");
 //          }
-          String keywords = ling.extractKeywords(lem.lemmatize(docs.getTitle()));
+          String url = uriPrefix+docs.getPmid();
+          //HttpGet httpGet = new HttpGet(url);
+          //CloseableHttpResponse response = httpClient.execute(httpGet);
+          //HttpEntity entity = response.getEntity();
+          //if (entity == null) {
+          //  continue;
+          //}
+          String keywords = docs.getTitle();
+          //keywords = lem.lemmatize(keywords);
+          //keywords = ling.extractKeywords(keywords);
+          keywords = tokenizer.tokenize(keywords);
           double score = ins.computeCosineSimilarity(qVector, keywords);
-          Document doc = TypeFactory.createDocument(aJCas, uriPrefix+docs.getPmid(), text,
+          Document doc = TypeFactory.createDocument(aJCas, url, text,
                   0, text, docs.getTitle(), docs.getPmid());
           if(score < 0.1)
              continue;
           //System.out.println(score);
           doc.setScore(score);
-
           doc.addToIndexes();
         }
       } catch (IOException e) {
         e.printStackTrace();
-      } catch (ClassNotFoundException e) {
-        e.printStackTrace();
       }
-      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, 200);
+      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, 50);
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);
       int rank = 1;

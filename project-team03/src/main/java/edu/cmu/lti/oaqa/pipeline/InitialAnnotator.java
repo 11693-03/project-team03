@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 import util.MyLemmatizer;
 import util.NERLingpipe;
-import util.RemoveStopWords;
+import util.TokenizerLingpipe;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.type.input.Question;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
@@ -31,16 +31,17 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
       AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
       String originalQuery = question.getText();
       atomic.setOriginalText(originalQuery);
-      RemoveStopWords ins = RemoveStopWords.getInstance();
-      String modificatedQuery = ins.processStr(originalQuery.replace("?", ""));
-      MyLemmatizer mLem = MyLemmatizer.getInstance();
-      modificatedQuery = mLem.lemmatize(modificatedQuery);
-      NERLingpipe ling = NERLingpipe.getInstance();
-      try {
-        modificatedQuery = ling.extractKeywords(modificatedQuery);
-      } catch (ClassNotFoundException | IOException e) {
-        e.printStackTrace();
-      }
+      TokenizerLingpipe ins = TokenizerLingpipe.getInstance();
+      String modificatedQuery = originalQuery.replace("?", "");
+      modificatedQuery = ins.tokenize(modificatedQuery);
+      //MyLemmatizer mLem = MyLemmatizer.getInstance();
+      //modificatedQuery = mLem.lemmatize(modificatedQuery);
+//      NERLingpipe ling = NERLingpipe.getInstance();
+//      try {
+//        modificatedQuery = ling.extractKeywords(modificatedQuery);
+//      } catch (ClassNotFoundException | IOException e) {
+//        e.printStackTrace();
+//      }
       System.out.println(originalQuery+"->"+modificatedQuery);
       atomic.setText(modificatedQuery);
       atomic.addToIndexes(aJCas);        

@@ -2,6 +2,8 @@ package util;
 import com.aliasi.chunk.Chunk;
 import com.aliasi.chunk.Chunker;
 import com.aliasi.chunk.Chunking;
+import com.aliasi.tokenizer.Tokenizer;
+import com.aliasi.tokenizer.TokenizerFactory;
 import com.aliasi.util.AbstractExternalizable;
 
 import java.io.File;
@@ -82,6 +84,7 @@ public class NERLingpipe {
     }
     return begin2end;
   }
+  
   public String extractKeywords(String text) throws ClassNotFoundException, IOException{
     //System.out.println(text);
     Map<Integer, Integer> begin2end = getGeneSpans(text);

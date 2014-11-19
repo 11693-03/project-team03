@@ -17,9 +17,7 @@ public class MyUtils {
   }
   public double computeCosineSimilarity(Map<String, Integer> queryVector,
           String docTitle) {
-    RemoveStopWords ins = RemoveStopWords.getInstance();
-    String nTitle = ins.processStr(docTitle);
-    String[] tokens = nTitle.split("\\s+");
+    String[] tokens = docTitle.split("\\s+");
     HashMap<String, Integer> docVector = new HashMap<String, Integer>();
     for(String t : tokens){
       if(!docVector.containsKey(t))

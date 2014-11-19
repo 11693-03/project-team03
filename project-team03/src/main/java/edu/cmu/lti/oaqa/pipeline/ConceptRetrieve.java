@@ -3,6 +3,7 @@ package edu.cmu.lti.oaqa.pipeline;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -15,6 +16,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.resource.ResourceInitializationException;
 
+import util.MyUtils;
+import util.TokenizerLingpipe;
 import util.TypeFactory;
 import util.TypeUtil;
 import util.Utils;
@@ -46,10 +49,19 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
-    
+
+    TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
+    MyUtils ins = MyUtils.getInstance();
     if(iter.isValid() && iter.hasNext()){
       AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
       String text = query.getText();
+      String[] tokens = text.split("\\s+");
+      HashMap<String, Integer> qVector = new HashMap<String, Integer>();
+      for(String t : tokens){
+        if(!qVector.containsKey(t))
+          qVector.put(t, 1);
+        qVector.put(t, qVector.get(t)+1);
+      }
       try {
         OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(text, 0);
         Concept concept = new Concept(aJCas);
@@ -60,8 +72,11 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
             break;
           if(label==null)
             label = finding.getConcept().getLabel();
+          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
+          double score = ins.computeCosineSimilarity(qVector, keyword);
+          
           ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  aJCas, concept, finding.getConcept().getUri(),score, 
                   finding.getConcept().getLabel(), 0, text, 
                   finding.getConcept().getTermId(),new ArrayList<>());
           uris.add(finding.getConcept().getUri());
@@ -81,8 +96,11 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
             break;
           if(label==null)
             label = finding.getConcept().getLabel();
+          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
+          double score = ins.computeCosineSimilarity(qVector, keyword);
+          
           ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  aJCas, concept, finding.getConcept().getUri(),score, 
                   finding.getConcept().getLabel(), 0, text, 
                   finding.getConcept().getTermId(),new ArrayList<>());
           uris.add(finding.getConcept().getUri());
@@ -103,8 +121,11 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
             break;
           if(label==null)
             label = finding.getConcept().getLabel();
+          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
+          double score = ins.computeCosineSimilarity(qVector, keyword);
+          
           ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  aJCas, concept, finding.getConcept().getUri(),score, 
                   finding.getConcept().getLabel(), 0, text, 
                   finding.getConcept().getTermId(),new ArrayList<>());
           uris.add(finding.getConcept().getUri());
@@ -124,8 +145,11 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
             break;
           if(label==null)
             label = finding.getConcept().getLabel();
+          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
+          double score = ins.computeCosineSimilarity(qVector, keyword);
+          
           ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  aJCas, concept, finding.getConcept().getUri(),score, 
                   finding.getConcept().getLabel(), 0, text, 
                   finding.getConcept().getTermId(),new ArrayList<>());
           uris.add(finding.getConcept().getUri());
@@ -146,8 +170,11 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
             break;
           if(label==null)
             label = finding.getConcept().getLabel();
+          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
+          double score = ins.computeCosineSimilarity(qVector, keyword);
+          
           ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),finding.getScore(), 
+                  aJCas, concept, finding.getConcept().getUri(),score, 
                   finding.getConcept().getLabel(), 0, text, 
                   finding.getConcept().getTermId(),new ArrayList<>());
           uris.add(finding.getConcept().getUri());
