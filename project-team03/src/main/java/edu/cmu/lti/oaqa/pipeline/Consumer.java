@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import json.JsonCollectionReaderHelper;
+import json.gson.Snippet;
 import json.gson.TestQuestion;
 import json.gson.Triple;
 
@@ -25,11 +26,13 @@ import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 
+import util.MyUtils;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.type.input.Question;
 import edu.cmu.lti.oaqa.type.kb.Concept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 import edu.cmu.lti.oaqa.type.retrieval.Document;
+import edu.cmu.lti.oaqa.type.retrieval.Passage;
 import edu.cmu.lti.oaqa.type.retrieval.TripleSearchResult;
 
 public class Consumer extends CasConsumer_ImplBase {
@@ -43,6 +46,8 @@ public class Consumer extends CasConsumer_ImplBase {
   Map<String, List<String>> conceptMaps;
 
   Map<String, List<Triple>> tripleMaps;
+  
+  Map<String, List<Snippet>> snippetMaps;
 
   List<TestQuestion> goldStandards;
 
@@ -60,11 +65,13 @@ public class Consumer extends CasConsumer_ImplBase {
     docMaps = new HashMap<String, List<String>>();
     conceptMaps = new HashMap<String, List<String>>();
     tripleMaps = new HashMap<String, List<Triple>>();
+    snippetMaps = new HashMap<String, List<Snippet>>();
 
     for (int i = 0; i < goldStandards.size(); i++) {
       docMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getDocuments());
       conceptMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getConcepts());
       tripleMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getTriples());
+      snippetMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getSnippets());
     }
 
   }
@@ -139,5 +146,19 @@ public class Consumer extends CasConsumer_ImplBase {
     tripleList.addAll(triples);
     
     //System.out.println("--------------I'm a hualiliful segmentation line-------------");
+    Collection<Passage> snippets = TypeUtil.getRankedPassages(jcas);
+    LinkedList<Passage> snippetList = new LinkedList<Passage>();
+    snippetList.addAll(snippets);
+    LinkedList<Snippet> test = new LinkedList<Snippet>();
+    for(Passage p:snippetList)
+      test.add(new Snippet(p.getUri(), p.getText(), p.getOffsetInBeginSection(), p.getOffsetInEndSection(),
+              p.getBeginSection(), p.getEndSection()));
+    List<Snippet> gold = snippetMaps.get(curQId);
+    System.out.println("snippets golden standard size:"+gold.size());
+    double precision = MyUtils.calcSnippetPrecision(gold, test);
+    double recall = MyUtils.calcSnippetRecall(gold, test);
+    System.out.println("snippet precision:"+precision);
+    System.out.println("snippet recall:"+recall);
+    
   }
 }
