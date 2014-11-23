@@ -1,0 +1,230 @@
+Parsing CPE Descriptor
+Instantiating CPE
+Running CPE
+/questions.json
+To abort processing, type "abort" and press enter.
+CPM Initialization Complete
+Is Rheumatoid Arthritis more common in men or women?->rheumatoid arthritis common men women 
+Are there any DNMT3 proteins present in plants?->dnmt3 proteins present plants 
+docPrecision:0.011627906976744186
+ConceptPrecision:1.0
+snippets golden standard size:16
+snippet precision:0.0
+snippet recall:0.0
+What is the most prominent sequence consensus for the polyadenylation site?->prominent sequence consensus polyadenylation site 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:5
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.0
+What is the function of the mammalian gene Irg1?->function mammalian gene irg1 
+ConceptPrecision:0.0
+snippets golden standard size:7
+snippet precision:0.0
+snippet recall:0.0
+Is thrombophilia related to increased risk of miscarriage?->thrombophilia related increased risk miscarriage 
+docPrecision:0.7142857142857144
+ConceptPrecision:0.047619047619047616
+snippets golden standard size:18
+snippet precision:0.0
+snippet recall:0.0
+Which extra thyroid tissues have thyrotropin (TSH) receptors?->extra thyroid tissues thyrotropin tsh receptors 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:17
+snippet precision:0.0
+snippet recall:0.0
+What is the methyl donor of DNA (cytosine-5)-methyltransferases?->methyl donor dna cytosine 5 methyltransferases 
+docPrecision:0.0
+ConceptPrecision:0.02857142857142857
+snippets golden standard size:6
+snippet precision:0.0
+snippet recall:0.0
+Super-SILAC is a method used in quantitative proteomics. What is the super-SILAC mix? (SILAC: Stable Isotopic labelling by aminoacids in cell culture)->super silac method used quantitative proteomics super silac mix silac stable isotopic labelling aminoacids cell culture 
+docPrecision:0.5442982456140351
+ConceptPrecision:0.0
+snippets golden standard size:7
+snippet precision:0.0
+snippet recall:0.0
+Tumors of which three organs are classically associated with the multiple endocrine neoplasia type 1 syndrome?->tumors three organs classically associated multiple endocrine neoplasia type 1 syndrome 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:9
+snippet precision:0.0
+snippet recall:0.0
+What is the mechanism of action of anticoagulant medication Dabigatran?->mechanism action anticoagulant medication dabigatran 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:37
+snippet precision:0.0
+snippet recall:0.0
+Is Mammaprint approved by the United States Food and Drug Administration?->mammaprint approved united states food drug administration 
+docPrecision:0.0
+ConceptPrecision:0.3333333333333333
+snippets golden standard size:12
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.0
+ConceptPrecision:0.0
+Which acetylcholinesterase inhibitors are used for treatment of myasthenia gravis?->acetylcholinesterase inhibitors used treatment myasthenia gravis 
+snippets golden standard size:7
+snippet precision:0.0
+snippet recall:0.0
+Which medication should be administered when managing patients with suspected acute opioid overdose?->medication administered managing patients suspected acute opioid overdose 
+docPrecision:0.031834276956094344
+ConceptPrecision:1.0
+snippets golden standard size:13
+snippet precision:0.0
+snippet recall:0.0
+Does the Oncotype DX test work with paraffin embedded tissues?->oncotype dx test work paraffin embedded tissues 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:14
+snippet precision:0.0
+snippet recall:0.0
+Is depression associated with poor prognosis of brain tumor patients?->depression associated poor prognosis brain tumor patients 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:10
+snippet precision:0.0
+snippet recall:0.0
+What is known about the reimbursement of Viagra->known reimbursement viagra 
+docPrecision:0.0
+ConceptPrecision:0.16666666666666666
+snippets golden standard size:8
+snippet precision:0.0
+snippet recall:0.0
+Does HER2 under-expression lead to favorable response to trastuzumab?->her2 expression lead favorable response trastuzumab 
+docPrecision:0.0
+ConceptPrecision:0.2
+snippets golden standard size:24
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.0
+Can Alzheimer's disease related miRNAs be detected in patients' blood?->can alzheimer s disease related mirnas detected patients blood 
+ConceptPrecision:0.25
+snippets golden standard size:14
+snippet precision:0.0
+snippet recall:0.0
+Which antiepileptic drug is most strongly associated with spina bifida?->antiepileptic drug strongly associated spina bifida 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:14
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.0
+ConceptPrecision:1.0
+snippets golden standard size:11
+snippet precision:0.0
+snippet recall:0.0
+Where in the cell do we find the protein Cep135?->cell find protein cep135 
+In which isochores are Alu elements enriched?->isochores alu elements enriched 
+docPrecision:1.0
+ConceptPrecision:0.017543859649122806
+snippets golden standard size:17
+snippet precision:0.0
+snippet recall:0.0
+Which forms of cancer is the Tpl2 gene associated with?->forms cancer tpl2 gene associated 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:13
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.0
+What is the INSURE procedure in premature babies.->insure procedure premature babies 
+ConceptPrecision:0.03125
+snippets golden standard size:15
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.7877551020408163
+Which species may be used for the biotechnological production of itaconic acid?->species may used biotechnological production itaconic acid 
+ConceptPrecision:0.0
+snippets golden standard size:17
+snippet precision:0.0
+snippet recall:0.0
+What is the role of TRH in hypertension?->role trh hypertension 
+docPrecision:1.0
+ConceptPrecision:1.0
+snippets golden standard size:23
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.2700757575757575
+ConceptPrecision:0.22370905238552297
+snippets golden standard size:18
+Which histone marks are deposited by Set7?->histone marks deposited set7 
+snippet precision:0.0
+snippet recall:0.0
+Are there any desmins present in plants?->desmins present plants 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:6
+snippet precision:0.0
+snippet recall:0.0
+Is it possible to detect survivin protein expression in normal human adult tissues?->possible detect survivin protein expression normal human adult tissues 
+docPrecision:0.0
+ConceptPrecision:0.2
+snippets golden standard size:11
+snippet precision:0.0
+snippet recall:0.0
+How do histone methyltransferases cause histone modification?->histone methyltransferases cause histone modification 
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:11
+snippet precision:0.0
+snippet recall:0.0
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:26
+snippet precision:0.0
+snippet recall:0.0
+Completed 29 documents
+Total Time Elapsed: 11987 ms 
+Initialization Time: 1493 ms
+Processing Time: 10494 ms
+
+
+ ------------------ PERFORMANCE REPORT ------------------
+
+Component Name: questionReaderDescriptor
+Event Type: Process
+Duration: 98ms (0.93%)
+Result: success
+Component Name: aeDescriptor
+Event Type: Analysis
+Duration: 10381ms (98.36%)
+Sub-events:
+	Component Name: tripleRetrieveDescriptor
+	Event Type: Analysis
+	Duration: 376ms (3.56%)
+
+	Component Name: conceptRetrieveDescriptorxml
+	Event Type: Analysis
+	Duration: 1649ms (15.62%)
+
+	Component Name: initialDescriptor
+	Event Type: Analysis
+	Duration: 39ms (0.37%)
+
+	Component Name: documentRetrieveDescriptor
+	Event Type: Analysis
+	Duration: 510ms (4.83%)
+
+	Component Name: snippetDescriptor
+	Event Type: Analysis
+	Duration: 7796ms (73.87%)
+
+	Component Name: Fixed Flow Controller
+	Event Type: Analysis
+	Duration: 7ms (0.07%)
+
+Component Name: aeDescriptor
+Event Type: End of Batch
+Duration: 0ms (0%)
+Component Name: casConsumerDescriptor
+Event Type: Analysis
+Duration: 75ms (0.71%)
+Component Name: casConsumerDescriptor
+Event Type: End of Batch
+Duration: 0ms (0%)
+
