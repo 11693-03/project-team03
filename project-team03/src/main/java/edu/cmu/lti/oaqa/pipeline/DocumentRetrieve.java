@@ -49,7 +49,6 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
     } catch (Exception e) {
     }
   }
-  private CloseableHttpClient httpClient;
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
@@ -57,13 +56,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
     if (iter.isValid() && iter.hasNext()) {
       AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
       String text = query.getText();
-      String[] tokens = text.split("\\s+");
-      HashMap<String, Integer> qVector = new HashMap<String, Integer>();
-      for(String t : tokens){
-        if(!qVector.containsKey(t))
-          qVector.put(t, 1);
-        qVector.put(t, qVector.get(t)+1);
-      }
+      
       MyUtils ins = MyUtils.getInstance();
 //      MyLemmatizer lem = MyLemmatizer.getInstance();
 //      NERLingpipe ling = NERLingpipe.getInstance();
@@ -72,23 +65,14 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       try {
         PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(text, 0, 200);
         for(PubMedSearchServiceResponse.Document docs : pubmedResult.getDocuments()){
-//          if(docs.getPmid().equals("22853635")){
-//            System.out.println("found!");
-//          }
           String url = uriPrefix+docs.getPmid();
-          //HttpGet httpGet = new HttpGet(url);
-          //CloseableHttpResponse response = httpClient.execute(httpGet);
-          //HttpEntity entity = response.getEntity();
-          //if (entity == null) {
-          //  continue;
-          //}
           String keywords = docs.getTitle();
           //keywords = lem.lemmatize(keywords);
           //keywords = ling.extractKeywords(keywords);
           keywords = tokenizer.tokenize(keywords);
-          double score = ins.computeCosineSimilarity(qVector, keywords);
+          double score = ins.computeCosineSimilarity(text, keywords);
           Document doc = TypeFactory.createDocument(aJCas, url, text,
-                  0, text, docs.getTitle(), docs.getPmid());
+                  999, text, docs.getTitle(), docs.getPmid());
           if(score < 0.1)
              continue;
           //System.out.println(score);
@@ -98,6 +82,8 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       } catch (IOException e) {
         e.printStackTrace();
       }
+
+      System.out.println("Processing document retrieval");
       Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, 50);
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);

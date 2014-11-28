@@ -145,6 +145,7 @@ public class Consumer extends CasConsumer_ImplBase {
     LinkedList<TripleSearchResult> tripleList = new LinkedList<TripleSearchResult>();
     tripleList.addAll(triples);
     
+
     //System.out.println("--------------I'm a hualiliful segmentation line-------------");
     Collection<Passage> snippets = TypeUtil.getRankedPassages(jcas);
     LinkedList<Passage> snippetList = new LinkedList<Passage>();
@@ -152,7 +153,7 @@ public class Consumer extends CasConsumer_ImplBase {
     LinkedList<Snippet> test = new LinkedList<Snippet>();
     for(Passage p:snippetList)
       test.add(new Snippet(p.getUri(), p.getText(), p.getOffsetInBeginSection(), p.getOffsetInEndSection(),
-              p.getBeginSection(), p.getEndSection()));
+              p.getBeginSection(), p.getEndSection(),p.getTitle(), p.getScore()));
     List<Snippet> gold = snippetMaps.get(curQId);
     System.out.println("snippets golden standard size:"+gold.size());
     double precision = MyUtils.calcSnippetPrecision(gold, test);
@@ -160,5 +161,8 @@ public class Consumer extends CasConsumer_ImplBase {
     System.out.println("snippet precision:"+precision);
     System.out.println("snippet recall:"+recall);
     
+
+    System.out.println("Done");
+
   }
 }

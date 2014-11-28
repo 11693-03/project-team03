@@ -62,6 +62,7 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
           //System.out.println("sub: "+triple.getSubject()+"\nobj: "+triple.getObject()+"\npred: "+triple.getPredicate());
           }
       }
+      System.out.println("Processing triple retrieval");
     } catch (ClientProtocolException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
