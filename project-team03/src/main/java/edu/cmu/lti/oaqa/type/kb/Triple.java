@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A triple, e.g., and RDF triple.
- * Updated by JCasGen Sat Nov 15 18:48:31 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
+ * Updated by JCasGen Fri Nov 28 15:46:42 EST 2014
+ * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
  * @generated */
 public class Triple extends TOP {
   /** @generated

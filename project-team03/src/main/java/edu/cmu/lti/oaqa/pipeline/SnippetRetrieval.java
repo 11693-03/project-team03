@@ -53,10 +53,8 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     Collection<Document> docList = TypeUtil.getRankedDocuments(aJCas);
     List<String> pmids = new LinkedList<String>();
     for (Document doc : docList) {
-      if(doc.getRank()==999)
-        break;
       pmids.add(doc.getDocId());
-      System.out.println("docID:"+doc.getDocId()+"rank:"+doc.getRank());
+      System.out.println(doc.getDocId()+doc.getRank());
     }
     httpClient = HttpClients.createDefault();
     SentenceChunker ins = SentenceChunker.getInstance();

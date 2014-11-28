@@ -28,9 +28,7 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
       Question question = TypeUtil.getQuestion(aJCas);
-      AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
       String originalQuery = question.getText();
-      atomic.setOriginalText(originalQuery);
       TokenizerLingpipe ins = TokenizerLingpipe.getInstance();
       String modificatedQuery = originalQuery.replace("?", "");
       modificatedQuery = ins.tokenize(modificatedQuery);
@@ -43,7 +41,11 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
 //        e.printStackTrace();
 //      }
       System.out.println(originalQuery+"->"+modificatedQuery);
-      atomic.setText(modificatedQuery);
-      atomic.addToIndexes(aJCas);        
+      for(String token : modificatedQuery.split("\\s+")){
+        AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
+        atomic.setOriginalText(originalQuery);
+        atomic.setText(token);
+        atomic.addToIndexes(aJCas);
+      }        
   }  
 }

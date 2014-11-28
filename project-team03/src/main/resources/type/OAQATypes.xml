@@ -735,5 +735,22 @@
       <description/>
       <supertypeName>edu.cmu.lti.oaqa.type.kb.Concept</supertypeName>
     </typeDescription>
+  <typeDescription>
+      <name>edu.cmu.lti.oaqa.type.retrieval.FinalQuery</name>
+      <description/>
+      <supertypeName>uima.cas.TOP</supertypeName>
+      <features>
+        <featureDescription>
+          <name>queryWIthOp</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>queryWithoutOp</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
   </types>
 </typeSystemDescription>

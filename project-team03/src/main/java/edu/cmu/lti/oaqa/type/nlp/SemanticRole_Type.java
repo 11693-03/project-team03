@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** A semantic role label.
- * Updated by JCasGen Sat Nov 15 18:48:31 EST 2014
+ * Updated by JCasGen Fri Nov 28 15:46:42 EST 2014
  * @generated */
 public class SemanticRole_Type extends Annotation_Type {
   /** @generated 

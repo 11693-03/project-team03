@@ -84,13 +84,16 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       }
 
       System.out.println("Processing document retrieval");
-      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, 50);
+      
+      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, TypeUtil.getRankedDocuments(aJCas).size());
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);
       int rank = 1;
       for(Document d : documentList){
         d.removeFromIndexes();
         d.setRank(rank++);
+        if(rank>51)
+          continue;
         d.addToIndexes(aJCas);
       }
     }

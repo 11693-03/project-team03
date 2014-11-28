@@ -1,5 +1,8 @@
 package util;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import edu.smu.tspell.wordnet.*;
 
 /**
@@ -9,6 +12,32 @@ import edu.smu.tspell.wordnet.*;
  * java TestJAWS airplane
  */
 public class JAWSApi {
+  private JAWSApi(){
+    System.setProperty("wordnet.database.dir", "src/main/resources/dict");    
+  }
+  private static JAWSApi instance = null;
+  public static JAWSApi getInstance(){
+    if(instance==null)
+      instance = new JAWSApi();
+    return instance;
+  }
+  public List<String> getSynonyms(String text, int num) {
+    WordNetDatabase database = WordNetDatabase.getFileInstance();
+    Synset[] synsets = database.getSynsets(text);
+    List<String> syn = new LinkedList<String>();
+    if (synsets.length > 0) {
+      for (int i = 0; i < synsets.length; i++) {
+        System.out.println("");
+        String[] wordForms = synsets[i].getWordForms();
+        for (int j = 1; j < Math.min(wordForms.length, num + 1); j++) {
+          syn.add(wordForms[j]);
+        }
+      }
+      return syn;
+    } else {
+      return null;
+    }
+  }
 
   /**
    * Main entry point. The command-line arguments are concatenated together (separated by spaces)
@@ -47,5 +76,4 @@ public class JAWSApi {
       System.err.println("You must specify " + "a word form for which to retrieve synsets.");
     }
   }
-
 }
