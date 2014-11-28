@@ -14,13 +14,6 @@ public class Test {
     doc = lem.lemmatize(doc);
     doc2 = lem.lemmatize(doc2);
     
-    String[] tokens = doc.split("\\s+");
-    HashMap<String, Integer> qVector = new HashMap<String, Integer>();
-    for(String t : tokens){
-      if(!qVector.containsKey(t))
-        qVector.put(t, 1);
-      qVector.put(t, qVector.get(t)+1);
-    }
-    System.out.println(ins.computeCosineSimilarity(qVector, doc2));
+    System.out.println(ins.computeCosineSimilarity(doc, doc2));
   }
 }

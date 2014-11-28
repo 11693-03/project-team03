@@ -50,154 +50,78 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
 
-    TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
-    MyUtils ins = MyUtils.getInstance();
     if(iter.isValid() && iter.hasNext()){
       AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
       String text = query.getText();
-      String[] tokens = text.split("\\s+");
-      HashMap<String, Integer> qVector = new HashMap<String, Integer>();
-      for(String t : tokens){
-        if(!qVector.containsKey(t))
-          qVector.put(t, 1);
-        qVector.put(t, qVector.get(t)+1);
-      }
+      List<OntologyServiceResponse.Finding> findings = new LinkedList<OntologyServiceResponse.Finding>();
       try {
         OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(text, 0);
-        Concept concept = new Concept(aJCas);
-        String label = null;
-        List<String>uris = new LinkedList<String>();
         for (OntologyServiceResponse.Finding finding : uniprotResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
-          if(label==null)
-            label = finding.getConcept().getLabel();
-          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
-          double score = ins.computeCosineSimilarity(qVector, keyword);
-          
-          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),score, 
-                  finding.getConcept().getLabel(), 0, text, 
-                  finding.getConcept().getTermId(),new ArrayList<>());
-          uris.add(finding.getConcept().getUri());
-          conceptSR.addToIndexes(aJCas);
+          findings.add(finding);
           //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
         }
-        concept.setUris(Utils.createStringList(aJCas,uris));
-        concept.setName(label);
-        concept.addToIndexes(aJCas);
 
-        concept = new Concept(aJCas);
         OntologyServiceResponse.Result diseaseOntologyResult = service
                 .findDiseaseOntologyEntitiesPaged(text, 0);
-        uris = new LinkedList<String>();
         for (OntologyServiceResponse.Finding finding : diseaseOntologyResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
-          if(label==null)
-            label = finding.getConcept().getLabel();
-          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
-          double score = ins.computeCosineSimilarity(qVector, keyword);
-          
-          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),score, 
-                  finding.getConcept().getLabel(), 0, text, 
-                  finding.getConcept().getTermId(),new ArrayList<>());
-          uris.add(finding.getConcept().getUri());
-          conceptSR.addToIndexes(aJCas);
-          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+          findings.add(finding);
         }
-        concept.setUris(Utils.createStringList(aJCas,uris));
-        concept.setName(label);
-        concept.addToIndexes(aJCas);
-
-        uris = new LinkedList<String>();
-        concept = new Concept(aJCas);
+        
         OntologyServiceResponse.Result geneOntologyResult = service.findGeneOntologyEntitiesPaged(text,
                 0, 10);
-        //System.out.println("Gene ontology: " + geneOntologyResult.getFindings().size());
         for (OntologyServiceResponse.Finding finding : geneOntologyResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
-          if(label==null)
-            label = finding.getConcept().getLabel();
-          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
-          double score = ins.computeCosineSimilarity(qVector, keyword);
-          
-          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),score, 
-                  finding.getConcept().getLabel(), 0, text, 
-                  finding.getConcept().getTermId(),new ArrayList<>());
-          uris.add(finding.getConcept().getUri());
-          conceptSR.addToIndexes(aJCas);
-          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+          findings.add(finding);
         }
-        concept.setUris(Utils.createStringList(aJCas,uris));
-        concept.setName(label);
-        concept.addToIndexes(aJCas);
-
-        uris = new LinkedList<String>();
-        concept = new Concept(aJCas);
+        
         OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(text, 0);
-        //System.out.println("Jochem: " + jochemResult.getFindings().size());
         for (OntologyServiceResponse.Finding finding : jochemResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
-          if(label==null)
-            label = finding.getConcept().getLabel();
-          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
-          double score = ins.computeCosineSimilarity(qVector, keyword);
-          
-          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),score, 
-                  finding.getConcept().getLabel(), 0, text, 
-                  finding.getConcept().getTermId(),new ArrayList<>());
-          uris.add(finding.getConcept().getUri());
-          conceptSR.addToIndexes(aJCas);
-          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+          findings.add(finding);
         }
-        concept.setUris(Utils.createStringList(aJCas,uris));
-        concept.setName(label);
-        concept.addToIndexes(aJCas);
-
-
-        uris = new LinkedList<String>();
-        concept = new Concept(aJCas);
+        
         OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(text, 0);
-        //System.out.println("MeSH: " + meshResult.getFindings().size());
         for (OntologyServiceResponse.Finding finding : meshResult.getFindings()) {
           if(finding.getScore()<0.1)
             break;
-          if(label==null)
-            label = finding.getConcept().getLabel();
-          String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
-          double score = ins.computeCosineSimilarity(qVector, keyword);
-          
-          ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
-                  aJCas, concept, finding.getConcept().getUri(),score, 
-                  finding.getConcept().getLabel(), 0, text, 
-                  finding.getConcept().getTermId(),new ArrayList<>());
-          uris.add(finding.getConcept().getUri());
-          conceptSR.addToIndexes(aJCas);
-          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
-          }
-        concept.setUris(Utils.createStringList(aJCas,uris));
-        concept.setName(label);
-        concept.addToIndexes(aJCas);
-
-        Collection<ConceptSearchResult> aa = TypeUtil.getRankedConceptSearchResults(aJCas);
+          findings.add(finding);
+        }
+        
+        createConceptFromFindings(text, aJCas, findings);
         int rank = 1;
-        Iterator<ConceptSearchResult> it = TypeUtil.getRankedSearchResultByScore(aJCas,aa.size()).iterator();
+        Iterator<ConceptSearchResult> it = TypeUtil.getRankedSearchResultByScore(aJCas,findings.size()).iterator();
         while(it.hasNext()){
           ConceptSearchResult sr =  it.next();
           sr.removeFromIndexes(aJCas);
           sr.setRank(rank++);         
           sr.addToIndexes(aJCas);
         }
-        //System.err.println("CAS size(in consumer):"+aa.size());
       } catch (IOException e) {
         e.printStackTrace();
       }
+    }
+  }
+  private void createConceptFromFindings(String query, JCas aJCas,List<OntologyServiceResponse.Finding>findings){
+    TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
+    MyUtils ins = MyUtils.getInstance();
+    
+    Concept concept = new Concept(aJCas);
+    for(OntologyServiceResponse.Finding finding : findings){
+      String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
+      double score = ins.computeCosineSimilarity(query, keyword);
+        
+      ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
+              aJCas, concept, finding.getConcept().getUri().replace("2014", "2012"),score, 
+              finding.getConcept().getLabel(), 0, query, 
+              finding.getConcept().getTermId(),new ArrayList<>());
+      
+      conceptSR.addToIndexes(aJCas);
     }
   }
 }

@@ -1,7 +1,8 @@
 package json.gson;
 
-public final class Snippet {
-
+public final class Snippet implements Comparable<Snippet>{
+  private String title;
+  private double conf;
   private String document;
 
   private String text;
@@ -15,8 +16,10 @@ public final class Snippet {
   private String endSection;
 
   public Snippet(String document, String text, int offsetInBeginSection, int offsetInEndSection,
-          String beginSection, String endSection) {
+          String beginSection, String endSection, String title, double conf) {
     super();
+    this.title = title;
+    this.conf = conf;
     this.document = document;
     this.text = text;
     this.offsetInBeginSection = offsetInBeginSection;
@@ -73,7 +76,9 @@ public final class Snippet {
       return false;
     return true;
   }
-
+  public String getTitle(){
+    return title;
+  }
   public String getDocument() {
     return document;
   }
@@ -120,6 +125,16 @@ public final class Snippet {
 
   public void setEndSection(String endSection) {
     this.endSection = endSection;
+  }
+
+
+  @Override
+  public int compareTo(Snippet o) {
+    if(this.conf > o.conf)
+      return -1;
+    else if(this.conf == o.conf)
+      return 0;
+    return 1;
   }
 
 }
