@@ -72,7 +72,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
           keywords = tokenizer.tokenize(keywords);
           double score = ins.computeCosineSimilarity(text, keywords);
           Document doc = TypeFactory.createDocument(aJCas, url, text,
-                  0, text, docs.getTitle(), docs.getPmid());
+                  999, text, docs.getTitle(), docs.getPmid());
           if(score < 0.1)
              continue;
           //System.out.println(score);
@@ -82,6 +82,8 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       } catch (IOException e) {
         e.printStackTrace();
       }
+
+      System.out.println("Processing document retrieval");
       Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, 50);
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);

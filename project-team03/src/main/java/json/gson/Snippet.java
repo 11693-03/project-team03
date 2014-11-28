@@ -126,7 +126,9 @@ public final class Snippet implements Comparable<Snippet>{
   public void setEndSection(String endSection) {
     this.endSection = endSection;
   }
-
+  public double getConf(){
+    return conf;
+  }
 
   @Override
   public int compareTo(Snippet o) {

@@ -49,7 +49,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
-
+    
     if(iter.isValid() && iter.hasNext()){
       AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
       String text = query.getText();
@@ -70,7 +70,6 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
             break;
           findings.add(finding);
         }
-        
         OntologyServiceResponse.Result geneOntologyResult = service.findGeneOntologyEntitiesPaged(text,
                 0, 10);
         for (OntologyServiceResponse.Finding finding : geneOntologyResult.getFindings()) {
@@ -92,7 +91,8 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
             break;
           findings.add(finding);
         }
-        
+
+        System.out.println("Processing concept retrieval");
         createConceptFromFindings(text, aJCas, findings);
         int rank = 1;
         Iterator<ConceptSearchResult> it = TypeUtil.getRankedSearchResultByScore(aJCas,findings.size()).iterator();

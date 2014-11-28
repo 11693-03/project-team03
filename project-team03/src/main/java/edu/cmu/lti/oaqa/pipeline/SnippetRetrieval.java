@@ -3,6 +3,7 @@ package edu.cmu.lti.oaqa.pipeline;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -24,17 +25,20 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.TOP;
 
+import edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.Document;
 import edu.cmu.lti.oaqa.type.retrieval.Passage;
 import util.MyUtils;
 import util.SentenceChunker;
 import util.TokenizerLingpipe;
+import util.TypeFactory;
 import util.TypeUtil;
 
 public class SnippetRetrieval extends JCasAnnotator_ImplBase {
   private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
-  //private static final String PREFIX = "http://www.ncbi.nlm.nih.gov/pubmed/";
+
+  // private static final String PREFIX = "http://www.ncbi.nlm.nih.gov/pubmed/";
 
   private CloseableHttpClient httpClient;
 
@@ -43,14 +47,16 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     FSIterator<TOP> qIter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
     String qText = null;
     if (qIter.isValid() && qIter.hasNext()) {
-      AtomicQueryConcept query = (AtomicQueryConcept)qIter.next();
-     qText = query.getText();
+      AtomicQueryConcept query = (AtomicQueryConcept) qIter.next();
+      qText = query.getText();
     }
     Collection<Document> docList = TypeUtil.getRankedDocuments(aJCas);
     List<String> pmids = new LinkedList<String>();
     for (Document doc : docList) {
+      if(doc.getRank()==999)
+        break;
       pmids.add(doc.getDocId());
-      //System.out.println("docID:"+doc.getDocId());
+      System.out.println("docID:"+doc.getDocId()+"rank:"+doc.getRank());
     }
     httpClient = HttpClients.createDefault();
     SentenceChunker ins = SentenceChunker.getInstance();
@@ -68,44 +74,43 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
           while ((line = buffer.readLine()) != null) {
             json += line;
           }
-          //System.out.println("json:"+json);
+          System.out.println("json:"+json);
           SectionSet sectionSet = SectionSet.load(json);
-          List<String>sections = sectionSet.getSections();
-          for(int i = 0; i < sections.size(); i++){
+          List<String> sections = sectionSet.getSections();
+          for (int i = 0; i < sections.size(); i++) {
             HashMap<Integer, Integer> r = ins.chunk(sections.get(i));
             Iterator<Integer> iter = r.keySet().iterator();
-            while(iter.hasNext()){
+            while (iter.hasNext()) {
               int begin = iter.next();
               int end = r.get(begin);
               double conf = evaluateSimilarity(qText, sections.get(i).substring(begin, end));
-              if(conf < 0.1)
+              if (conf < 0.1)
                 continue;
-              Snippet snippet = new Snippet(pmid,sections.get(i).substring(begin, end),
-                      begin,end,"sections."+String.valueOf(i),"sections."+String.valueOf(i),
+              Snippet snippet = new Snippet(pmid, sections.get(i).substring(begin, end), begin,
+                      end, "sections." + String.valueOf(i), "sections." + String.valueOf(i),
                       sectionSet.getTitle(), conf);
-                snippets.add(snippet);
-            }            
+              snippets.add(snippet);
+            }
           }
-          //System.out.println("Snippet:"+sectionSet);
+          // System.out.println("Snippet:"+sectionSet);
         }
       } catch (IOException e) {
         e.printStackTrace();
       }
       Collections.sort(snippets);
-      for(Snippet snippet : snippets){
-        Passage p = new Passage(aJCas);
-        p.setDocId(snippet.getDocument());
-        p.setTitle(snippet.getTitle());
-        p.setOffsetInBeginSection(snippet.getOffsetInBeginSection());
-        p.setOffsetInEndSection(snippet.getOffsetInEndSection());
-        p.setBeginSection(snippet.getBeginSection());
-        p.setEndSection(snippet.getEndSection());
-        p.setText(snippet.getText());
+      int rank = 1;
+      for (Snippet snippet : snippets) {
+        Passage p = TypeFactory.createPassage(aJCas, null, snippet.getConf(), snippet.getText(),
+                rank++, qText, null, new ArrayList<CandidateAnswerVariant>(), snippet.getTitle(), pmid,
+                snippet.getOffsetInBeginSection(), snippet.getOffsetInEndSection(),
+                snippet.getBeginSection(), snippet.getEndSection(), null);
         p.addToIndexes(aJCas);
       }
     }
+    System.out.println("Processing snippet retrieval");
   }
-  private double evaluateSimilarity(String query, String snippet){
+
+  private double evaluateSimilarity(String query, String snippet) {
     TokenizerLingpipe ins = TokenizerLingpipe.getInstance();
     snippet = ins.tokenize(snippet);
     MyUtils cosEval = MyUtils.getInstance();
