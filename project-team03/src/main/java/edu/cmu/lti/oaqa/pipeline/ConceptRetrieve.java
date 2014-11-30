@@ -52,11 +52,13 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
     FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(FinalQuery.type);
     
     if(iter.isValid() && iter.hasNext()){
+
       FinalQuery query = (FinalQuery)iter.next();
       //String queryText = query.getQueryWithoutOp();
       String queryText = query.getQueryWithOp();
       //String queryText = query.getOriginalQuery();
       System.out.println("query:"+queryText);
+
       List<OntologyServiceResponse.Finding> findings = new LinkedList<OntologyServiceResponse.Finding>();
       try {
         OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(queryText, 0);
@@ -102,7 +104,9 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   private void createConceptFromFindings(String query, JCas aJCas,List<OntologyServiceResponse.Finding>findings){
     TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
     MyUtils ins = MyUtils.getInstance();
+
     
+
     for(OntologyServiceResponse.Finding finding : findings){
       if(finding.getScore() < 0.1)
         continue;
@@ -110,10 +114,12 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
 //      System.out.println("concept.lable:"+finding.getConcept().getLabel());
       String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
       double score = ins.computeCosineSimilarity(query, keyword);
+
       score += ins.computeCosineSimilarity(finding.getMatchedLabel(), query);
       score /= 2.0;
       Concept concept = new Concept(aJCas);
       concept.setName(finding.getConcept().getLabel());
+
       ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
               aJCas, concept, finding.getConcept().getUri().replace("2014", "2012"),score, 
               finding.getConcept().getLabel(), 0, query, 
@@ -121,5 +127,6 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       
       conceptSR.addToIndexes(aJCas);
     }
+    
   }
 }

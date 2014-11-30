@@ -69,6 +69,9 @@ public class TypeUtil {
   }
   public static final Comparator<SearchResult> SEARCH_RESULT_RANK_COMPARATOR = Comparator
           .comparing(SearchResult::getRank);
+  
+  public static final Comparator<Answer> ANSWER_RANK_COMPARATOR = Comparator
+          .comparing(Answer::getRank);
 
   private static <T extends SearchResult> Collection<T> rankedSearchResultsByRank(
           Collection<T> results) {
@@ -100,6 +103,16 @@ public class TypeUtil {
 
   public static Collection<Answer> getAnswers(JCas jcas) {
     return JCasUtil.select(jcas, Answer.class);
+  }
+  
+  public static Collection<Answer> getAnswersByRank(JCas jcas) {
+    return getAnswersByRank(JCasUtil.select(jcas, Answer.class));
+  }
+  
+  private static Collection<Answer> getAnswersByRank(
+          Collection<Answer> results) {
+    return results.stream().sorted(ANSWER_RANK_COMPARATOR)
+            .collect(toCollection(ArrayList::new));
   }
 
   public static Range<Integer> spanRange(Annotation annotation) {

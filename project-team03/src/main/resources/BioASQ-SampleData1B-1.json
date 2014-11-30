@@ -159,4 +159,76 @@
         ], 
         "type": "factoid"
     }
+    {
+        "body": "Are there any DNMT3 proteins present in plants?", 
+        "concepts": [
+            "http://www.uniprot.org/uniprot/CMT1_ARATH", 
+            "http://www.uniprot.org/uniprot/CMT2_ARATH", 
+            "http://www.uniprot.org/uniprot/CMT3_ARATH"
+        ], 
+        "documents": [
+            "http://www.ncbi.nlm.nih.gov/pubmed/21150311", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/21060858", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/10781108", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/15946751", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/20505370", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/23021223", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/22058406", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/18488247", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/17660570", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/11487702", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/11459824", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/15282033", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/12151602", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/12121623", 
+            "http://www.ncbi.nlm.nih.gov/pubmed/9584105"
+        ], 
+        "exact_answer": "Yes.", 
+        "id": "511a16f9df1ebcce7d000005", 
+        "ideal_answer": "Yes. The plant DOMAINS REARRANGED METHYLTRANSFERASE2 (DRM2) is a homolog of the mammalian de novo methyltransferase DNMT3. DRM2 contains a novel arrangement of the motifs required for DNA methyltransferase catalytic activity.", 
+        "snippets": [
+            {
+                "beginSection": "sections.0", 
+                "document": "http://www.ncbi.nlm.nih.gov/pubmed/21150311", 
+                "endSection": "sections.0", 
+                "offsetInBeginSection": 0, 
+                "offsetInEndSection": 151, 
+                "text": "De novo DNA methylation in Arabidopsis thaliana is catalyzed by the methyltransferase DRM2, a homolog of the mammalian de novo methyltransferase DNMT3."
+            }, 
+            {
+                "beginSection": "sections.0", 
+                "document": "http://www.ncbi.nlm.nih.gov/pubmed/21060858", 
+                "endSection": "sections.0", 
+                "offsetInBeginSection": 1131, 
+                "offsetInEndSection": 1666, 
+                "text": "Three functional classes of DNA methyltransferase exist in A.thaliana; METHYLTRANSFERASE1 (MET1) (orthologous to mammalian Dnmt1) which maintains CG methylation, CHROMOMETHYLASE3 (CMT3) (plant specific) which maintains methylation in non-CG sequence contexts and DOMAINS REARRANGED METHYLTRANSFERASE2 (DRM2) (orthologous to Dnmt3a/Dnmt3b) which both de novo methylates DNA and maintains non-CG methylation redundantly with CMT3 [2]. The drm2 mutation blocks all de novo DNA methylation driven by repeat containing transgenes [15]\u2013[17]."
+            }, 
+            {
+                "beginSection": "sections.0", 
+                "document": "http://www.ncbi.nlm.nih.gov/pubmed/21060858", 
+                "endSection": "sections.0", 
+                "offsetInBeginSection": 2763, 
+                "offsetInEndSection": 2909, 
+                "text": "The mammalian DRM2 orthologs, Dnmt3a and Dnmt3b, are required to de novo methylate integrated retroviral sequences and imprinted genes [38], [39]."
+            }, 
+            {
+                "beginSection": "sections.0", 
+                "document": "http://www.ncbi.nlm.nih.gov/pubmed/10781108", 
+                "endSection": "sections.0", 
+                "offsetInBeginSection": 387, 
+                "offsetInEndSection": 851, 
+                "text": "Here we describe DNA methyltransferase genes from both Arabidopsis and maize that show a high level of sequence similarity to Dnmt3, suggesting that they encode plant de novo methyltransferases. Relative to all known eukaryotic methyltransferases, these plant proteins contain a novel arrangement of the motifs required for DNA methyltransferase catalytic activity. The N termini of these methyltransferases contain a series of ubiquitin-associated (UBA) domains. "
+            }, 
+            {
+                "beginSection": "sections.0", 
+                "document": "http://www.ncbi.nlm.nih.gov/pubmed/15946751", 
+                "endSection": "sections.0", 
+                "offsetInBeginSection": 365, 
+                "offsetInEndSection": 519, 
+                "text": "BLASTX searches and phylogenetic analysis suggested that five cDNAs belonged to four classes (Dnmt1, Dnmt2, CMT and Dnmt3) of DNA methyltransferase genes."
+            }
+        ], 
+        "type": "yesno"
+    }, 
+
 ]}

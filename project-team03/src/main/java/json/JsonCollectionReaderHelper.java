@@ -145,5 +145,21 @@ public class JsonCollectionReaderHelper {
         return "UNCLASSIFIED";
     }
   }
+  
+  public static QuestionType convertQuestionType(String type) {
+    switch (type) {
+      case "FACTOID":
+        return QuestionType.factoid;
+      case "LIST":
+        return QuestionType.list;
+      case "OPINION":
+        return QuestionType.summary;
+      case "YES_NO":
+        return QuestionType.yesno;
+      default:
+        return QuestionType.list;
+    }
+  }
+  
 
 }

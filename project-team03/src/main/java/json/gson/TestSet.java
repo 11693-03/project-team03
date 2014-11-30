@@ -54,7 +54,7 @@ public class TestSet {
 
   public static String dump(List<? extends TestQuestion> answers) {
     TestSet output = new TestSet(answers);
-    return gson.toJson(output, TestSet.class);
+    return gson.toJson(output);
   }
 
   @Override

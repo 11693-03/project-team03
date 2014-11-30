@@ -75,6 +75,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
           //keywords = lem.lemmatize(keywords);
           //keywords = ling.extractKeywords(keywords);
           keywords = tokenizer.tokenize(keywords);
+
           double score = 0;
           score += ins.computeCosineSimilarity(keywords,query.getQueryWithoutOp());
           if(docs.getMeshHeading()!=null){
@@ -94,8 +95,10 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       }
 
       System.out.println("Processing document retrieval");
+
       
       Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, TypeUtil.getRankedDocuments(aJCas).size());
+
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);
       int rank = 1;
