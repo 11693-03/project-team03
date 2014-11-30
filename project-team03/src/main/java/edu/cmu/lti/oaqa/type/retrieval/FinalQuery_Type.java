@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
- * Updated by JCasGen Sat Nov 29 22:36:17 EST 2014
+ * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
  * @generated */
 public class FinalQuery_Type extends TOP_Type {
   /** @generated 

@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** An abstract normalized entity, which may have various surface forms (alternative representations).
- * Updated by JCasGen Sat Nov 29 22:36:17 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
+ * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
+ * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
  * @generated */
 public class Entity extends Concept {
   /** @generated

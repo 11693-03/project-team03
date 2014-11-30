@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** The phrase in the question that indicates the answer variable.
- * Updated by JCasGen Sat Nov 29 22:36:17 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
+ * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
+ * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
  * @generated */
 public class Focus extends Annotation {
   /** @generated
