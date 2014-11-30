@@ -8,7 +8,7 @@ Adding annotator tokenize
 Adding annotator ssplit
 Adding annotator pos
 Loading default properties from tagger edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger
-Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.6 sec].
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.9 sec].
 Adding annotator lemma
 Is Rheumatoid Arthritis more common in men or women?->rheumatoid arthritis common man woman 
 query:(rheumatoid OR creaky) AND (arthritis) AND (common OR commons) AND (man OR adult male) AND (woman OR adult female)
@@ -723,11 +723,11 @@ http://ur.lti.cs.cmu.edu:30002/pmc/21039385
 Processing snippet retrieval
 docPrecision:0.0
 ConceptPrecision:0.5
-Which extra thyroid tissues have thyrotropin (TSH) receptors?->extra thyroid tissue thyrotropin tsh receptor 
 snippets golden standard size:17
 snippet precision:0.0
 snippet recall:0.0
 Done
+Which extra thyroid tissues have thyrotropin (TSH) receptors?->extra thyroid tissue thyrotropin tsh receptor 
 query:(extra OR spear carrier) AND (thyroid OR thyroidal) AND (tissue OR tissue paper) AND (thyrotropin OR thyrotropic hormone) AND (tsh OR thyrotropic hormone) AND (receptor OR sensory receptor)
 In Annotator Concept 
 In Annotator Concept 
@@ -1017,3 +1017,104 @@ snippet recall:0.0
 Done
 Super-SILAC is a method used in quantitative proteomics. What is the super-SILAC mix? (SILAC: Stable Isotopic labelling by aminoacids in cell culture)->super silac method use quantitative proteomic super silac mix silac stable isotopic labeling aminoacid cell culture 
 query:(super OR exceedingly) AND (silac) AND (method) AND (use OR usage) AND (quantitative) AND (proteomic) AND (super OR exceedingly) AND (silac) AND (mix OR premix) AND (silac) AND (stable OR stalls) AND (isotopic) AND (labeling OR label) AND (aminoacid) AND (cell OR electric cell) AND (culture OR civilization)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????

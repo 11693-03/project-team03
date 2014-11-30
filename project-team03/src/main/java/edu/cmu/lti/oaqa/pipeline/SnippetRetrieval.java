@@ -15,6 +15,7 @@ import json.gson.SectionSet;
 import json.gson.Snippet;
 
 import org.apache.http.HttpEntity;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -61,7 +62,13 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
       //System.out.println(doc.getDocId()+doc.getRank());
 
     }
-    httpClient = HttpClients.createDefault();
+    RequestConfig defaultRequestConfig = RequestConfig.custom()
+            .setSocketTimeout(5000)
+            .setConnectTimeout(5000)
+            .setConnectionRequestTimeout(5000)
+            .setStaleConnectionCheckEnabled(true)
+            .build();
+    httpClient = HttpClients.custom().setDefaultRequestConfig(defaultRequestConfig).build();
     SentenceChunker ins = SentenceChunker.getInstance();
     for (String pmid : pmids) {
       String url = PREFIX + pmid;
