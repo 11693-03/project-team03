@@ -166,6 +166,94 @@ http://ur.lti.cs.cmu.edu:30002/pmc/24045692
 http://ur.lti.cs.cmu.edu:30002/pmc/23470089
 http://ur.lti.cs.cmu.edu:30002/pmc/23434568
 http://ur.lti.cs.cmu.edu:30002/pmc/23429352
+http://ur.lti.cs.cmu.edu:30002/pmc/23315865
+http://ur.lti.cs.cmu.edu:30002/pmc/22906022
+http://ur.lti.cs.cmu.edu:30002/pmc/22581277
+http://ur.lti.cs.cmu.edu:30002/pmc/24315477
+http://ur.lti.cs.cmu.edu:30002/pmc/24261753
+http://ur.lti.cs.cmu.edu:30002/pmc/24082910
+http://ur.lti.cs.cmu.edu:30002/pmc/23826419
+http://ur.lti.cs.cmu.edu:30002/pmc/23818218
+http://ur.lti.cs.cmu.edu:30002/pmc/23728498
+http://ur.lti.cs.cmu.edu:30002/pmc/23548118
+http://ur.lti.cs.cmu.edu:30002/pmc/23423442
+http://ur.lti.cs.cmu.edu:30002/pmc/23418544
+http://ur.lti.cs.cmu.edu:30002/pmc/23335202
+http://ur.lti.cs.cmu.edu:30002/pmc/23322461
+http://ur.lti.cs.cmu.edu:30002/pmc/23095111
+http://ur.lti.cs.cmu.edu:30002/pmc/23091349
+http://ur.lti.cs.cmu.edu:30002/pmc/23052404
+http://ur.lti.cs.cmu.edu:30002/pmc/24252399
+http://ur.lti.cs.cmu.edu:30002/pmc/23983001
+http://ur.lti.cs.cmu.edu:30002/pmc/24020899
+http://ur.lti.cs.cmu.edu:30002/pmc/23974974
+http://ur.lti.cs.cmu.edu:30002/pmc/23505543
+http://ur.lti.cs.cmu.edu:30002/pmc/23463543
+http://ur.lti.cs.cmu.edu:30002/pmc/23457383
+http://ur.lti.cs.cmu.edu:30002/pmc/23453575
+http://ur.lti.cs.cmu.edu:30002/pmc/23378461
+http://ur.lti.cs.cmu.edu:30002/pmc/23295158
+http://ur.lti.cs.cmu.edu:30002/pmc/23090369
+http://ur.lti.cs.cmu.edu:30002/pmc/22684205
+http://ur.lti.cs.cmu.edu:30002/pmc/22616846
+http://ur.lti.cs.cmu.edu:30002/pmc/22574709
+http://ur.lti.cs.cmu.edu:30002/pmc/23754822
+http://ur.lti.cs.cmu.edu:30002/pmc/22828565
+http://ur.lti.cs.cmu.edu:30002/pmc/24005313
+http://ur.lti.cs.cmu.edu:30002/pmc/23729801
+http://ur.lti.cs.cmu.edu:30002/pmc/23727609
+http://ur.lti.cs.cmu.edu:30002/pmc/23553100
+http://ur.lti.cs.cmu.edu:30002/pmc/23547218
+http://ur.lti.cs.cmu.edu:30002/pmc/23505241
+http://ur.lti.cs.cmu.edu:30002/pmc/23949637
+http://ur.lti.cs.cmu.edu:30002/pmc/22615458
+http://ur.lti.cs.cmu.edu:30002/pmc/24187108
+http://ur.lti.cs.cmu.edu:30002/pmc/23791462
+http://ur.lti.cs.cmu.edu:30002/pmc/23190940
+http://ur.lti.cs.cmu.edu:30002/pmc/22766304
+http://ur.lti.cs.cmu.edu:30002/pmc/22766134
+http://ur.lti.cs.cmu.edu:30002/pmc/24313359
+http://ur.lti.cs.cmu.edu:30002/pmc/23703358
+http://ur.lti.cs.cmu.edu:30002/pmc/23555300
+http://ur.lti.cs.cmu.edu:30002/pmc/23434196
+http://ur.lti.cs.cmu.edu:30002/pmc/23332236
+http://ur.lti.cs.cmu.edu:30002/pmc/23526031
+http://ur.lti.cs.cmu.edu:30002/pmc/23437951
+http://ur.lti.cs.cmu.edu:30002/pmc/23257132
+http://ur.lti.cs.cmu.edu:30002/pmc/23010097
+http://ur.lti.cs.cmu.edu:30002/pmc/22743847
+http://ur.lti.cs.cmu.edu:30002/pmc/23465067
+http://ur.lti.cs.cmu.edu:30002/pmc/22697086
+http://ur.lti.cs.cmu.edu:30002/pmc/23954014
+http://ur.lti.cs.cmu.edu:30002/pmc/24286116
+http://ur.lti.cs.cmu.edu:30002/pmc/23489410
+http://ur.lti.cs.cmu.edu:30002/pmc/22753659
+http://ur.lti.cs.cmu.edu:30002/pmc/23450725
+http://ur.lti.cs.cmu.edu:30002/pmc/22532638
+http://ur.lti.cs.cmu.edu:30002/pmc/22824166
+http://ur.lti.cs.cmu.edu:30002/pmc/23786396
+http://ur.lti.cs.cmu.edu:30002/pmc/23294500
+http://ur.lti.cs.cmu.edu:30002/pmc/24115082
+http://ur.lti.cs.cmu.edu:30002/pmc/22776467
+http://ur.lti.cs.cmu.edu:30002/pmc/23253237
+http://ur.lti.cs.cmu.edu:30002/pmc/24297381
+http://ur.lti.cs.cmu.edu:30002/pmc/24286492
+http://ur.lti.cs.cmu.edu:30002/pmc/24060261
+http://ur.lti.cs.cmu.edu:30002/pmc/22662593
+http://ur.lti.cs.cmu.edu:30002/pmc/23904473
+http://ur.lti.cs.cmu.edu:30002/pmc/24108586
+http://ur.lti.cs.cmu.edu:30002/pmc/23819623
+http://ur.lti.cs.cmu.edu:30002/pmc/22791744
+http://ur.lti.cs.cmu.edu:30002/pmc/22984173
+http://ur.lti.cs.cmu.edu:30002/pmc/23681398
+http://ur.lti.cs.cmu.edu:30002/pmc/23418383
+http://ur.lti.cs.cmu.edu:30002/pmc/23137833
+http://ur.lti.cs.cmu.edu:30002/pmc/23992256
+http://ur.lti.cs.cmu.edu:30002/pmc/24022986
+http://ur.lti.cs.cmu.edu:30002/pmc/23300035
+http://ur.lti.cs.cmu.edu:30002/pmc/23497529
+http://ur.lti.cs.cmu.edu:30002/pmc/22531929
+http://ur.lti.cs.cmu.edu:30002/pmc/23065319
 Processing snippet retrieval
 Loading BioCreative tagging module...
 docPrecision:0.06666666666666667
@@ -176,3 +264,756 @@ snippet recall:0.0
 Done
 Are there any DNMT3 proteins present in plants?->dnmt3 protein present plant 
 query:(dnmt3) AND (protein) AND (present OR nowadays) AND (plant OR works)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+http://ur.lti.cs.cmu.edu:30002/pmc/22088914
+Processing snippet retrieval
+docPrecision:0.0
+ConceptPrecision:0.0
+snippets golden standard size:5
+snippet precision:0.0
+snippet recall:0.0
+Done
+What is the most prominent sequence consensus for the polyadenylation site?->prominent sequence consensus polyadenylation site 
+query:(prominent OR salient) AND (sequence OR chronological sequence) AND (consensus) AND (polyadenylation) AND (site OR land site)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+Processing snippet retrieval
+docPrecision:0.0
+ConceptPrecision:0.8333333333333333
+snippets golden standard size:7
+snippet precision:0.0
+snippet recall:0.0
+Done
+What is the function of the mammalian gene Irg1?->function mammalian gene irg1 
+query:(function OR mathematical function) AND (mammalian) AND (gene OR cistron) AND (irg1)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+http://ur.lti.cs.cmu.edu:30002/pmc/23609450
+http://ur.lti.cs.cmu.edu:30002/pmc/16415166
+http://ur.lti.cs.cmu.edu:30002/pmc/12893884
+http://ur.lti.cs.cmu.edu:30002/pmc/19014335
+http://ur.lti.cs.cmu.edu:30002/pmc/7721348
+http://ur.lti.cs.cmu.edu:30002/pmc/21424586
+http://ur.lti.cs.cmu.edu:30002/pmc/23610393
+http://ur.lti.cs.cmu.edu:30002/pmc/11356686
+http://ur.lti.cs.cmu.edu:30002/pmc/22698585
+http://ur.lti.cs.cmu.edu:30002/pmc/14500577
+http://ur.lti.cs.cmu.edu:30002/pmc/23931757
+Processing snippet retrieval
+docPrecision:0.7142857142857144
+ConceptPrecision:1.0
+snippets golden standard size:18
+snippet precision:0.0
+snippet recall:0.0
+Done
+Is thrombophilia related to increased risk of miscarriage?->thrombophilia related increase risk miscarriage 
+query:(thrombophilia) AND (related OR tie in) AND (increase OR gain) AND (risk OR jeopardy) AND (miscarriage OR abortion)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+http://ur.lti.cs.cmu.edu:30002/pmc/21039385
+Processing snippet retrieval
+docPrecision:0.0
+ConceptPrecision:0.5
+Which extra thyroid tissues have thyrotropin (TSH) receptors?->extra thyroid tissue thyrotropin tsh receptor 
+snippets golden standard size:17
+snippet precision:0.0
+snippet recall:0.0
+Done
+query:(extra OR spear carrier) AND (thyroid OR thyroidal) AND (tissue OR tissue paper) AND (thyrotropin OR thyrotropic hormone) AND (tsh OR thyrotropic hormone) AND (receptor OR sensory receptor)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+http://ur.lti.cs.cmu.edu:30002/pmc/12045258
+http://ur.lti.cs.cmu.edu:30002/pmc/20464711
+http://ur.lti.cs.cmu.edu:30002/pmc/8320423
+http://ur.lti.cs.cmu.edu:30002/pmc/22125104
+http://ur.lti.cs.cmu.edu:30002/pmc/19553036
+http://ur.lti.cs.cmu.edu:30002/pmc/7794253
+http://ur.lti.cs.cmu.edu:30002/pmc/11399468
+http://ur.lti.cs.cmu.edu:30002/pmc/9167947
+http://ur.lti.cs.cmu.edu:30002/pmc/18400223
+http://ur.lti.cs.cmu.edu:30002/pmc/14669949
+http://ur.lti.cs.cmu.edu:30002/pmc/12515285
+Processing snippet retrieval
+docPrecision:0.0
+ConceptPrecision:0.016129032258064516
+snippets golden standard size:6
+snippet precision:0.0
+snippet recall:0.0
+Done
+What is the methyl donor of DNA (cytosine-5)-methyltransferases?->methyl donor dna cytosine 5 methyltransferase 
+query:(methyl OR methyl group) AND (donor OR giver) AND (dna OR desoxyribonucleic acid) AND (cytosine) AND (methyltransferase)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+http://ur.lti.cs.cmu.edu:30002/pmc/24205358
+http://ur.lti.cs.cmu.edu:30002/pmc/1584813
+http://ur.lti.cs.cmu.edu:30002/pmc/16855792
+http://ur.lti.cs.cmu.edu:30002/pmc/7578083
+http://ur.lti.cs.cmu.edu:30002/pmc/8441637
+http://ur.lti.cs.cmu.edu:30002/pmc/1535704
+http://ur.lti.cs.cmu.edu:30002/pmc/3622512
+http://ur.lti.cs.cmu.edu:30002/pmc/8289281
+http://ur.lti.cs.cmu.edu:30002/pmc/19401269
+http://ur.lti.cs.cmu.edu:30002/pmc/8065896
+http://ur.lti.cs.cmu.edu:30002/pmc/1473145
+http://ur.lti.cs.cmu.edu:30002/pmc/11234382
+http://ur.lti.cs.cmu.edu:30002/pmc/11087417
+http://ur.lti.cs.cmu.edu:30002/pmc/1868079
+http://ur.lti.cs.cmu.edu:30002/pmc/8918941
+http://ur.lti.cs.cmu.edu:30002/pmc/9288926
+http://ur.lti.cs.cmu.edu:30002/pmc/21735817
+http://ur.lti.cs.cmu.edu:30002/pmc/23030620
+http://ur.lti.cs.cmu.edu:30002/pmc/17259861
+http://ur.lti.cs.cmu.edu:30002/pmc/8441638
+http://ur.lti.cs.cmu.edu:30002/pmc/24141114
+http://ur.lti.cs.cmu.edu:30002/pmc/23561294
+http://ur.lti.cs.cmu.edu:30002/pmc/15195996
+http://ur.lti.cs.cmu.edu:30002/pmc/15273274
+http://ur.lti.cs.cmu.edu:30002/pmc/7782299
+http://ur.lti.cs.cmu.edu:30002/pmc/8484730
+http://ur.lti.cs.cmu.edu:30002/pmc/22438930
+http://ur.lti.cs.cmu.edu:30002/pmc/7794383
+http://ur.lti.cs.cmu.edu:30002/pmc/9461031
+http://ur.lti.cs.cmu.edu:30002/pmc/7607467
+http://ur.lti.cs.cmu.edu:30002/pmc/6513830
+http://ur.lti.cs.cmu.edu:30002/pmc/23183753
+http://ur.lti.cs.cmu.edu:30002/pmc/8625314
+http://ur.lti.cs.cmu.edu:30002/pmc/8645558
+http://ur.lti.cs.cmu.edu:30002/pmc/22260147
+http://ur.lti.cs.cmu.edu:30002/pmc/22483275
+http://ur.lti.cs.cmu.edu:30002/pmc/6260781
+http://ur.lti.cs.cmu.edu:30002/pmc/110783
+http://ur.lti.cs.cmu.edu:30002/pmc/764884
+http://ur.lti.cs.cmu.edu:30002/pmc/17440941
+http://ur.lti.cs.cmu.edu:30002/pmc/17107663
+http://ur.lti.cs.cmu.edu:30002/pmc/21949694
+http://ur.lti.cs.cmu.edu:30002/pmc/1877725
+http://ur.lti.cs.cmu.edu:30002/pmc/23408989
+http://ur.lti.cs.cmu.edu:30002/pmc/12538347
+http://ur.lti.cs.cmu.edu:30002/pmc/19451595
+http://ur.lti.cs.cmu.edu:30002/pmc/6208029
+http://ur.lti.cs.cmu.edu:30002/pmc/22945834
+http://ur.lti.cs.cmu.edu:30002/pmc/7691071
+http://ur.lti.cs.cmu.edu:30002/pmc/9219564
+http://ur.lti.cs.cmu.edu:30002/pmc/22558281
+Processing snippet retrieval
+docPrecision:0.31805555555555554
+ConceptPrecision:0.01847457627118644
+snippets golden standard size:7
+snippet precision:0.0
+snippet recall:0.0
+Done
+Super-SILAC is a method used in quantitative proteomics. What is the super-SILAC mix? (SILAC: Stable Isotopic labelling by aminoacids in cell culture)->super silac method use quantitative proteomic super silac mix silac stable isotopic labeling aminoacid cell culture 
+query:(super OR exceedingly) AND (silac) AND (method) AND (use OR usage) AND (quantitative) AND (proteomic) AND (super OR exceedingly) AND (silac) AND (mix OR premix) AND (silac) AND (stable OR stalls) AND (isotopic) AND (labeling OR label) AND (aminoacid) AND (cell OR electric cell) AND (culture OR civilization)

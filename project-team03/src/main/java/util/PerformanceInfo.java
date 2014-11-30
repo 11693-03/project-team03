@@ -10,9 +10,16 @@ public class PerformanceInfo {
 
   private List<Double> tripleList;
   
+  private List<Double> answerPrecisionList;
+  
+  private List<Double> answerRecalList;
+  
+  
   private double docMAP;
   private double conceptMAP;
   private double tripleMAP;
+  private double answerMAP;
+  private double answerMAR;
   
   public PerformanceInfo() {
     docList = new LinkedList<Double>();
@@ -66,6 +73,16 @@ public class PerformanceInfo {
   public double getTripleMAP(){
     return tripleMAP;
   }
+  
+  public double getAnswerMAP(){
+    return answerMAP;
+  }
+  
+  public double getAnswerMAR(){
+    return answerMAR;
+  }
+  
+  
 
 
 }

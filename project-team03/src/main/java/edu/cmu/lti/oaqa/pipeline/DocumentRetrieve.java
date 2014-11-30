@@ -104,7 +104,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       for(Document d : documentList){
         d.removeFromIndexes();
         d.setRank(rank++);
-        if(rank>51)
+        if(rank>200)
           continue;
         d.addToIndexes(aJCas);
       }
