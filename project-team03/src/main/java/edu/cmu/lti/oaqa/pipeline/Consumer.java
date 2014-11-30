@@ -54,15 +54,15 @@ public class Consumer extends CasConsumer_ImplBase {
   Map<String, List<String>> conceptMaps;
 
   Map<String, List<Triple>> tripleMaps;
-  
+
   Map<String, List<Snippet>> snippetMaps;
 
   List<TestQuestion> goldStandards;
 
   JsonCollectionReaderHelper jsHelper;
-  
+
   List<TestListQuestion> answers;
-  
+
   ListAnswerSet answerSet;
 
   @Override
@@ -86,7 +86,6 @@ public class Consumer extends CasConsumer_ImplBase {
       snippetMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getSnippets());
     }
     answers = new LinkedList<TestListQuestion>();
-    
 
   }
 
@@ -107,21 +106,19 @@ public class Consumer extends CasConsumer_ImplBase {
     QuestionType type = JsonCollectionReaderHelper.convertQuestionType(question.getQuestionType());
     
 
-    // For the documents:
+    /** Compute Documents Performance **/
     Collection<Document> documents = TypeUtil.getRankedDocuments(jcas);
     LinkedList<Document> documentList = new LinkedList<Document>();
     documentList.addAll(documents);
-    
     LinkedList<String> docUriList = new LinkedList<String>();
     for(Document doc :documentList)
       docUriList.add(doc.getUri());
-    
-    
     List<String> docResult = docMaps.get(curQId);
     //System.out.println(documentList.size());
     int docTotalPositive = 0;
     double totalPrecision = 0.0;
     double docPrecision = 0.0;
+    double docRecall=0.0;
     for (int i = 0; i < documentList.size(); i++) {
       if (docResult.contains(documentList.get(i).getUri())) {
 //        System.out.println(documentList.get(i).getRank()+":"+documentList.get(i).getUri());
@@ -134,11 +131,13 @@ public class Consumer extends CasConsumer_ImplBase {
     } else {
       docPrecision = totalPrecision / (docTotalPositive * 1.0);
     }
-    System.out.println("docPrecision:" + docPrecision);
-
-    // For the Concepts:
+    docRecall = docTotalPositive/docResult.size();
+    System.out.println("docAPrecision:" + docPrecision);
+    System.out.println("docRecall:" + docRecall);
+    
+    
+    /** Compute concepts performance **/
     Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
-
     LinkedList<ConceptSearchResult> conceptList = new LinkedList<ConceptSearchResult>();
     conceptList.addAll(concepts);
     LinkedList<String> conceptUriList = new LinkedList<String>();
@@ -167,7 +166,7 @@ public class Consumer extends CasConsumer_ImplBase {
 
     System.out.println("ConceptPrecision:" + conceptPrecision);
 
-    // For collection
+    /** compute triple performance **/
     Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);
     LinkedList<TripleSearchResult> tripleSRList = new LinkedList<TripleSearchResult>();
     tripleSRList.addAll(triples);
@@ -207,9 +206,10 @@ public class Consumer extends CasConsumer_ImplBase {
     TestListQuestion answer = new TestListQuestion(curQId,body,type,docUriList,test,conceptUriList,tripleList,"pseudo ideal answer",exactAnswer);
     answers.add(answer);
   }
-  
+
   @Override
-  public void destroy(){
+  public void destroy() {
+    //output results
     answerSet = new ListAnswerSet(answers);
     String output = answerSet.dump();
     try {

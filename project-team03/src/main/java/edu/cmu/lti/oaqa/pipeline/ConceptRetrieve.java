@@ -79,11 +79,11 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         for (OntologyServiceResponse.Finding finding : geneOntologyResult.getFindings()) {
           findings.add(finding);
         }
-       /* OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(queryText, 0);
+        OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(queryText, 0);
         
         for (OntologyServiceResponse.Finding finding : jochemResult.getFindings()) {
           findings.add(finding);
-        }*/
+        }
         System.out.println("????");
         OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : meshResult.getFindings()) {

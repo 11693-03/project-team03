@@ -8,7 +8,7 @@ Adding annotator tokenize
 Adding annotator ssplit
 Adding annotator pos
 Loading default properties from tagger edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger
-Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.9 sec].
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.5 sec].
 Adding annotator lemma
 Is Rheumatoid Arthritis more common in men or women?->rheumatoid arthritis common man woman 
 query:(rheumatoid OR creaky) AND (arthritis) AND (common OR commons) AND (man OR adult male) AND (woman OR adult female)
@@ -112,1009 +112,188 @@ In Annotator Concept
 In Annotator Concept 
 In Annotator Concept 
 In Annotator Concept 
-????
-Processing concept retrieval
-Processing document retrieval
-Processing triple retrieval
-http://ur.lti.cs.cmu.edu:30002/pmc/23996293
-http://ur.lti.cs.cmu.edu:30002/pmc/23670331
-http://ur.lti.cs.cmu.edu:30002/pmc/24217671
-http://ur.lti.cs.cmu.edu:30002/pmc/22545356
-http://ur.lti.cs.cmu.edu:30002/pmc/23774408
-http://ur.lti.cs.cmu.edu:30002/pmc/23755969
-http://ur.lti.cs.cmu.edu:30002/pmc/23525531
-http://ur.lti.cs.cmu.edu:30002/pmc/23445704
-http://ur.lti.cs.cmu.edu:30002/pmc/23238605
-http://ur.lti.cs.cmu.edu:30002/pmc/22879462
-http://ur.lti.cs.cmu.edu:30002/pmc/22833513
-http://ur.lti.cs.cmu.edu:30002/pmc/22577060
-http://ur.lti.cs.cmu.edu:30002/pmc/23900228
-http://ur.lti.cs.cmu.edu:30002/pmc/23584985
-http://ur.lti.cs.cmu.edu:30002/pmc/23217568
-http://ur.lti.cs.cmu.edu:30002/pmc/22873530
-http://ur.lti.cs.cmu.edu:30002/pmc/22749821
-http://ur.lti.cs.cmu.edu:30002/pmc/22740421
-http://ur.lti.cs.cmu.edu:30002/pmc/23591348
-http://ur.lti.cs.cmu.edu:30002/pmc/23983768
-http://ur.lti.cs.cmu.edu:30002/pmc/23873887
-http://ur.lti.cs.cmu.edu:30002/pmc/23610983
-http://ur.lti.cs.cmu.edu:30002/pmc/23478596
-http://ur.lti.cs.cmu.edu:30002/pmc/23290983
-http://ur.lti.cs.cmu.edu:30002/pmc/22799756
-http://ur.lti.cs.cmu.edu:30002/pmc/22795504
-http://ur.lti.cs.cmu.edu:30002/pmc/22709494
-http://ur.lti.cs.cmu.edu:30002/pmc/22651246
-http://ur.lti.cs.cmu.edu:30002/pmc/22555877
-http://ur.lti.cs.cmu.edu:30002/pmc/23731644
-http://ur.lti.cs.cmu.edu:30002/pmc/24245495
-http://ur.lti.cs.cmu.edu:30002/pmc/24241034
-http://ur.lti.cs.cmu.edu:30002/pmc/23982537
-http://ur.lti.cs.cmu.edu:30002/pmc/23938142
-http://ur.lti.cs.cmu.edu:30002/pmc/23884026
-http://ur.lti.cs.cmu.edu:30002/pmc/23827409
-http://ur.lti.cs.cmu.edu:30002/pmc/23826623
-http://ur.lti.cs.cmu.edu:30002/pmc/23673438
-http://ur.lti.cs.cmu.edu:30002/pmc/23646852
-http://ur.lti.cs.cmu.edu:30002/pmc/23340834
-http://ur.lti.cs.cmu.edu:30002/pmc/22997721
-http://ur.lti.cs.cmu.edu:30002/pmc/22941131
-http://ur.lti.cs.cmu.edu:30002/pmc/22776021
-http://ur.lti.cs.cmu.edu:30002/pmc/22537824
-http://ur.lti.cs.cmu.edu:30002/pmc/24261761
-http://ur.lti.cs.cmu.edu:30002/pmc/24187110
-http://ur.lti.cs.cmu.edu:30002/pmc/24045692
-http://ur.lti.cs.cmu.edu:30002/pmc/23470089
-http://ur.lti.cs.cmu.edu:30002/pmc/23434568
-http://ur.lti.cs.cmu.edu:30002/pmc/23429352
-http://ur.lti.cs.cmu.edu:30002/pmc/23315865
-http://ur.lti.cs.cmu.edu:30002/pmc/22906022
-http://ur.lti.cs.cmu.edu:30002/pmc/22581277
-http://ur.lti.cs.cmu.edu:30002/pmc/24315477
-http://ur.lti.cs.cmu.edu:30002/pmc/24261753
-http://ur.lti.cs.cmu.edu:30002/pmc/24082910
-http://ur.lti.cs.cmu.edu:30002/pmc/23826419
-http://ur.lti.cs.cmu.edu:30002/pmc/23818218
-http://ur.lti.cs.cmu.edu:30002/pmc/23728498
-http://ur.lti.cs.cmu.edu:30002/pmc/23548118
-http://ur.lti.cs.cmu.edu:30002/pmc/23423442
-http://ur.lti.cs.cmu.edu:30002/pmc/23418544
-http://ur.lti.cs.cmu.edu:30002/pmc/23335202
-http://ur.lti.cs.cmu.edu:30002/pmc/23322461
-http://ur.lti.cs.cmu.edu:30002/pmc/23095111
-http://ur.lti.cs.cmu.edu:30002/pmc/23091349
-http://ur.lti.cs.cmu.edu:30002/pmc/23052404
-http://ur.lti.cs.cmu.edu:30002/pmc/24252399
-http://ur.lti.cs.cmu.edu:30002/pmc/23983001
-http://ur.lti.cs.cmu.edu:30002/pmc/24020899
-http://ur.lti.cs.cmu.edu:30002/pmc/23974974
-http://ur.lti.cs.cmu.edu:30002/pmc/23505543
-http://ur.lti.cs.cmu.edu:30002/pmc/23463543
-http://ur.lti.cs.cmu.edu:30002/pmc/23457383
-http://ur.lti.cs.cmu.edu:30002/pmc/23453575
-http://ur.lti.cs.cmu.edu:30002/pmc/23378461
-http://ur.lti.cs.cmu.edu:30002/pmc/23295158
-http://ur.lti.cs.cmu.edu:30002/pmc/23090369
-http://ur.lti.cs.cmu.edu:30002/pmc/22684205
-http://ur.lti.cs.cmu.edu:30002/pmc/22616846
-http://ur.lti.cs.cmu.edu:30002/pmc/22574709
-http://ur.lti.cs.cmu.edu:30002/pmc/23754822
-http://ur.lti.cs.cmu.edu:30002/pmc/22828565
-http://ur.lti.cs.cmu.edu:30002/pmc/24005313
-http://ur.lti.cs.cmu.edu:30002/pmc/23729801
-http://ur.lti.cs.cmu.edu:30002/pmc/23727609
-http://ur.lti.cs.cmu.edu:30002/pmc/23553100
-http://ur.lti.cs.cmu.edu:30002/pmc/23547218
-http://ur.lti.cs.cmu.edu:30002/pmc/23505241
-http://ur.lti.cs.cmu.edu:30002/pmc/23949637
-http://ur.lti.cs.cmu.edu:30002/pmc/22615458
-http://ur.lti.cs.cmu.edu:30002/pmc/24187108
-http://ur.lti.cs.cmu.edu:30002/pmc/23791462
-http://ur.lti.cs.cmu.edu:30002/pmc/23190940
-http://ur.lti.cs.cmu.edu:30002/pmc/22766304
-http://ur.lti.cs.cmu.edu:30002/pmc/22766134
-http://ur.lti.cs.cmu.edu:30002/pmc/24313359
-http://ur.lti.cs.cmu.edu:30002/pmc/23703358
-http://ur.lti.cs.cmu.edu:30002/pmc/23555300
-http://ur.lti.cs.cmu.edu:30002/pmc/23434196
-http://ur.lti.cs.cmu.edu:30002/pmc/23332236
-http://ur.lti.cs.cmu.edu:30002/pmc/23526031
-http://ur.lti.cs.cmu.edu:30002/pmc/23437951
-http://ur.lti.cs.cmu.edu:30002/pmc/23257132
-http://ur.lti.cs.cmu.edu:30002/pmc/23010097
-http://ur.lti.cs.cmu.edu:30002/pmc/22743847
-http://ur.lti.cs.cmu.edu:30002/pmc/23465067
-http://ur.lti.cs.cmu.edu:30002/pmc/22697086
-http://ur.lti.cs.cmu.edu:30002/pmc/23954014
-http://ur.lti.cs.cmu.edu:30002/pmc/24286116
-http://ur.lti.cs.cmu.edu:30002/pmc/23489410
-http://ur.lti.cs.cmu.edu:30002/pmc/22753659
-http://ur.lti.cs.cmu.edu:30002/pmc/23450725
-http://ur.lti.cs.cmu.edu:30002/pmc/22532638
-http://ur.lti.cs.cmu.edu:30002/pmc/22824166
-http://ur.lti.cs.cmu.edu:30002/pmc/23786396
-http://ur.lti.cs.cmu.edu:30002/pmc/23294500
-http://ur.lti.cs.cmu.edu:30002/pmc/24115082
-http://ur.lti.cs.cmu.edu:30002/pmc/22776467
-http://ur.lti.cs.cmu.edu:30002/pmc/23253237
-http://ur.lti.cs.cmu.edu:30002/pmc/24297381
-http://ur.lti.cs.cmu.edu:30002/pmc/24286492
-http://ur.lti.cs.cmu.edu:30002/pmc/24060261
-http://ur.lti.cs.cmu.edu:30002/pmc/22662593
-http://ur.lti.cs.cmu.edu:30002/pmc/23904473
-http://ur.lti.cs.cmu.edu:30002/pmc/24108586
-http://ur.lti.cs.cmu.edu:30002/pmc/23819623
-http://ur.lti.cs.cmu.edu:30002/pmc/22791744
-http://ur.lti.cs.cmu.edu:30002/pmc/22984173
-http://ur.lti.cs.cmu.edu:30002/pmc/23681398
-http://ur.lti.cs.cmu.edu:30002/pmc/23418383
-http://ur.lti.cs.cmu.edu:30002/pmc/23137833
-http://ur.lti.cs.cmu.edu:30002/pmc/23992256
-http://ur.lti.cs.cmu.edu:30002/pmc/24022986
-http://ur.lti.cs.cmu.edu:30002/pmc/23300035
-http://ur.lti.cs.cmu.edu:30002/pmc/23497529
-http://ur.lti.cs.cmu.edu:30002/pmc/22531929
-http://ur.lti.cs.cmu.edu:30002/pmc/23065319
-Processing snippet retrieval
-Loading BioCreative tagging module...
-docPrecision:0.06666666666666667
-ConceptPrecision:0.6428571428571428
-snippets golden standard size:16
-snippet precision:0.0
-snippet recall:0.0
-Done
-Are there any DNMT3 proteins present in plants?->dnmt3 protein present plant 
-query:(dnmt3) AND (protein) AND (present OR nowadays) AND (plant OR works)
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-????
-Processing concept retrieval
-Processing document retrieval
-Processing triple retrieval
-http://ur.lti.cs.cmu.edu:30002/pmc/22088914
-Processing snippet retrieval
-docPrecision:0.0
-ConceptPrecision:0.0
-snippets golden standard size:5
-snippet precision:0.0
-snippet recall:0.0
-Done
-What is the most prominent sequence consensus for the polyadenylation site?->prominent sequence consensus polyadenylation site 
-query:(prominent OR salient) AND (sequence OR chronological sequence) AND (consensus) AND (polyadenylation) AND (site OR land site)
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-????
-Processing concept retrieval
-Processing document retrieval
-Processing triple retrieval
-Processing snippet retrieval
-docPrecision:0.0
-ConceptPrecision:0.8333333333333333
-snippets golden standard size:7
-snippet precision:0.0
-snippet recall:0.0
-Done
-What is the function of the mammalian gene Irg1?->function mammalian gene irg1 
-query:(function OR mathematical function) AND (mammalian) AND (gene OR cistron) AND (irg1)
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-????
-Processing concept retrieval
-Processing document retrieval
-Processing triple retrieval
-http://ur.lti.cs.cmu.edu:30002/pmc/23609450
-http://ur.lti.cs.cmu.edu:30002/pmc/16415166
-http://ur.lti.cs.cmu.edu:30002/pmc/12893884
-http://ur.lti.cs.cmu.edu:30002/pmc/19014335
-http://ur.lti.cs.cmu.edu:30002/pmc/7721348
-http://ur.lti.cs.cmu.edu:30002/pmc/21424586
-http://ur.lti.cs.cmu.edu:30002/pmc/23610393
-http://ur.lti.cs.cmu.edu:30002/pmc/11356686
-http://ur.lti.cs.cmu.edu:30002/pmc/22698585
-http://ur.lti.cs.cmu.edu:30002/pmc/14500577
-http://ur.lti.cs.cmu.edu:30002/pmc/23931757
-Processing snippet retrieval
-docPrecision:0.7142857142857144
-ConceptPrecision:1.0
-snippets golden standard size:18
-snippet precision:0.0
-snippet recall:0.0
-Done
-Is thrombophilia related to increased risk of miscarriage?->thrombophilia related increase risk miscarriage 
-query:(thrombophilia) AND (related OR tie in) AND (increase OR gain) AND (risk OR jeopardy) AND (miscarriage OR abortion)
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-????
-Processing concept retrieval
-Processing document retrieval
-Processing triple retrieval
-http://ur.lti.cs.cmu.edu:30002/pmc/21039385
-Processing snippet retrieval
-docPrecision:0.0
-ConceptPrecision:0.5
-snippets golden standard size:17
-snippet precision:0.0
-snippet recall:0.0
-Done
-Which extra thyroid tissues have thyrotropin (TSH) receptors?->extra thyroid tissue thyrotropin tsh receptor 
-query:(extra OR spear carrier) AND (thyroid OR thyroidal) AND (tissue OR tissue paper) AND (thyrotropin OR thyrotropic hormone) AND (tsh OR thyrotropic hormone) AND (receptor OR sensory receptor)
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-????
-Processing concept retrieval
-Processing document retrieval
-Processing triple retrieval
-http://ur.lti.cs.cmu.edu:30002/pmc/12045258
-http://ur.lti.cs.cmu.edu:30002/pmc/20464711
-http://ur.lti.cs.cmu.edu:30002/pmc/8320423
-http://ur.lti.cs.cmu.edu:30002/pmc/22125104
-http://ur.lti.cs.cmu.edu:30002/pmc/19553036
-http://ur.lti.cs.cmu.edu:30002/pmc/7794253
-http://ur.lti.cs.cmu.edu:30002/pmc/11399468
-http://ur.lti.cs.cmu.edu:30002/pmc/9167947
-http://ur.lti.cs.cmu.edu:30002/pmc/18400223
-http://ur.lti.cs.cmu.edu:30002/pmc/14669949
-http://ur.lti.cs.cmu.edu:30002/pmc/12515285
-Processing snippet retrieval
-docPrecision:0.0
-ConceptPrecision:0.016129032258064516
-snippets golden standard size:6
-snippet precision:0.0
-snippet recall:0.0
-Done
-What is the methyl donor of DNA (cytosine-5)-methyltransferases?->methyl donor dna cytosine 5 methyltransferase 
-query:(methyl OR methyl group) AND (donor OR giver) AND (dna OR desoxyribonucleic acid) AND (cytosine) AND (methyltransferase)
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-????
-Processing concept retrieval
-Processing document retrieval
-Processing triple retrieval
-http://ur.lti.cs.cmu.edu:30002/pmc/24205358
-http://ur.lti.cs.cmu.edu:30002/pmc/1584813
-http://ur.lti.cs.cmu.edu:30002/pmc/16855792
-http://ur.lti.cs.cmu.edu:30002/pmc/7578083
-http://ur.lti.cs.cmu.edu:30002/pmc/8441637
-http://ur.lti.cs.cmu.edu:30002/pmc/1535704
-http://ur.lti.cs.cmu.edu:30002/pmc/3622512
-http://ur.lti.cs.cmu.edu:30002/pmc/8289281
-http://ur.lti.cs.cmu.edu:30002/pmc/19401269
-http://ur.lti.cs.cmu.edu:30002/pmc/8065896
-http://ur.lti.cs.cmu.edu:30002/pmc/1473145
-http://ur.lti.cs.cmu.edu:30002/pmc/11234382
-http://ur.lti.cs.cmu.edu:30002/pmc/11087417
-http://ur.lti.cs.cmu.edu:30002/pmc/1868079
-http://ur.lti.cs.cmu.edu:30002/pmc/8918941
-http://ur.lti.cs.cmu.edu:30002/pmc/9288926
-http://ur.lti.cs.cmu.edu:30002/pmc/21735817
-http://ur.lti.cs.cmu.edu:30002/pmc/23030620
-http://ur.lti.cs.cmu.edu:30002/pmc/17259861
-http://ur.lti.cs.cmu.edu:30002/pmc/8441638
-http://ur.lti.cs.cmu.edu:30002/pmc/24141114
-http://ur.lti.cs.cmu.edu:30002/pmc/23561294
-http://ur.lti.cs.cmu.edu:30002/pmc/15195996
-http://ur.lti.cs.cmu.edu:30002/pmc/15273274
-http://ur.lti.cs.cmu.edu:30002/pmc/7782299
-http://ur.lti.cs.cmu.edu:30002/pmc/8484730
-http://ur.lti.cs.cmu.edu:30002/pmc/22438930
-http://ur.lti.cs.cmu.edu:30002/pmc/7794383
-http://ur.lti.cs.cmu.edu:30002/pmc/9461031
-http://ur.lti.cs.cmu.edu:30002/pmc/7607467
-http://ur.lti.cs.cmu.edu:30002/pmc/6513830
-http://ur.lti.cs.cmu.edu:30002/pmc/23183753
-http://ur.lti.cs.cmu.edu:30002/pmc/8625314
-http://ur.lti.cs.cmu.edu:30002/pmc/8645558
-http://ur.lti.cs.cmu.edu:30002/pmc/22260147
-http://ur.lti.cs.cmu.edu:30002/pmc/22483275
-http://ur.lti.cs.cmu.edu:30002/pmc/6260781
-http://ur.lti.cs.cmu.edu:30002/pmc/110783
-http://ur.lti.cs.cmu.edu:30002/pmc/764884
-http://ur.lti.cs.cmu.edu:30002/pmc/17440941
-http://ur.lti.cs.cmu.edu:30002/pmc/17107663
-http://ur.lti.cs.cmu.edu:30002/pmc/21949694
-http://ur.lti.cs.cmu.edu:30002/pmc/1877725
-http://ur.lti.cs.cmu.edu:30002/pmc/23408989
-http://ur.lti.cs.cmu.edu:30002/pmc/12538347
-http://ur.lti.cs.cmu.edu:30002/pmc/19451595
-http://ur.lti.cs.cmu.edu:30002/pmc/6208029
-http://ur.lti.cs.cmu.edu:30002/pmc/22945834
-http://ur.lti.cs.cmu.edu:30002/pmc/7691071
-http://ur.lti.cs.cmu.edu:30002/pmc/9219564
-http://ur.lti.cs.cmu.edu:30002/pmc/22558281
-Processing snippet retrieval
-docPrecision:0.31805555555555554
-ConceptPrecision:0.01847457627118644
-snippets golden standard size:7
-snippet precision:0.0
-snippet recall:0.0
-Done
-Super-SILAC is a method used in quantitative proteomics. What is the super-SILAC mix? (SILAC: Stable Isotopic labelling by aminoacids in cell culture)->super silac method use quantitative proteomic super silac mix silac stable isotopic labeling aminoacid cell culture 
-query:(super OR exceedingly) AND (silac) AND (method) AND (use OR usage) AND (quantitative) AND (proteomic) AND (super OR exceedingly) AND (silac) AND (mix OR premix) AND (silac) AND (stable OR stalls) AND (isotopic) AND (labeling OR label) AND (aminoacid) AND (cell OR electric cell) AND (culture OR civilization)
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-In Annotator Concept 
-????
+Nov 30, 2014 4:41:06 PM org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl callAnalysisComponentProcess(407)
+SEVERE: Exception occurred
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.google.gson.Gson.fromJson(Gson.java:770)
+	at com.google.gson.Gson.fromJson(Gson.java:719)
+	at com.google.gson.Gson.fromJson(Gson.java:691)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.throwServerSideException(GoPubMedService.java:157)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.postRequest(GoPubMedService.java:151)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findOntologyEntitiesPaged(GoPubMedService.java:136)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:100)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:106)
+	at edu.cmu.lti.oaqa.pipeline.ConceptRetrieve.process(ConceptRetrieve.java:82)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:387)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:183)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:145)
+	at com.google.gson.Gson.fromJson(Gson.java:805)
+	... 19 more
+
+Nov 30, 2014 4:41:06 PM org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl processAndOutputNewCASes(275)
+SEVERE: Exception occurred
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.google.gson.Gson.fromJson(Gson.java:770)
+	at com.google.gson.Gson.fromJson(Gson.java:719)
+	at com.google.gson.Gson.fromJson(Gson.java:691)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.throwServerSideException(GoPubMedService.java:157)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.postRequest(GoPubMedService.java:151)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findOntologyEntitiesPaged(GoPubMedService.java:136)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:100)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:106)
+	at edu.cmu.lti.oaqa.pipeline.ConceptRetrieve.process(ConceptRetrieve.java:82)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:387)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:183)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:145)
+	at com.google.gson.Gson.fromJson(Gson.java:805)
+	... 19 more
+
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.google.gson.Gson.fromJson(Gson.java:770)
+	at com.google.gson.Gson.fromJson(Gson.java:719)
+	at com.google.gson.Gson.fromJson(Gson.java:691)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.throwServerSideException(GoPubMedService.java:157)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.postRequest(GoPubMedService.java:151)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findOntologyEntitiesPaged(GoPubMedService.java:136)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:100)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:106)
+	at edu.cmu.lti.oaqa.pipeline.ConceptRetrieve.process(ConceptRetrieve.java:82)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:387)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:183)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:145)
+	at com.google.gson.Gson.fromJson(Gson.java:805)
+	... 19 more
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit process
+SEVERE: The container aeDescriptor returned the following error message: Annotator processing failed.     (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit maybeLogSevereException(2502)
+SEVERE: Thread: [Procesing Pipeline#1 Thread]::, message: Annotator processing failed.    
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.google.gson.Gson.fromJson(Gson.java:770)
+	at com.google.gson.Gson.fromJson(Gson.java:719)
+	at com.google.gson.Gson.fromJson(Gson.java:691)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.throwServerSideException(GoPubMedService.java:157)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.postRequest(GoPubMedService.java:151)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findOntologyEntitiesPaged(GoPubMedService.java:136)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:100)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:106)
+	at edu.cmu.lti.oaqa.pipeline.ConceptRetrieve.process(ConceptRetrieve.java:82)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:387)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:183)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:145)
+	at com.google.gson.Gson.fromJson(Gson.java:805)
+	... 19 more
+
+org.apache.uima.analysis_engine.AnalysisEngineProcessException: Annotator processing failed.    
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:391)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.processAndOutputNewCASes(PrimitiveAnalysisEngine_impl.java:296)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.processUntilNextOutputCas(ASB_impl.java:567)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl$AggregateCasIterator.<init>(ASB_impl.java:409)
+	at org.apache.uima.analysis_engine.asb.impl.ASB_impl.process(ASB_impl.java:342)
+	at org.apache.uima.analysis_engine.impl.AggregateAnalysisEngine_impl.processAndOutputNewCASes(AggregateAnalysisEngine_impl.java:267)
+	at org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase.process(AnalysisEngineImplBase.java:267)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:897)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.Gson.fromJson(Gson.java:817)
+	at com.google.gson.Gson.fromJson(Gson.java:770)
+	at com.google.gson.Gson.fromJson(Gson.java:719)
+	at com.google.gson.Gson.fromJson(Gson.java:691)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.throwServerSideException(GoPubMedService.java:157)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.postRequest(GoPubMedService.java:151)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findOntologyEntitiesPaged(GoPubMedService.java:136)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:100)
+	at edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService.findJochemEntitiesPaged(GoPubMedService.java:106)
+	at edu.cmu.lti.oaqa.pipeline.ConceptRetrieve.process(ConceptRetrieve.java:82)
+	at org.apache.uima.analysis_component.JCasAnnotator_ImplBase.process(JCasAnnotator_ImplBase.java:48)
+	at org.apache.uima.analysis_engine.impl.PrimitiveAnalysisEngine_impl.callAnalysisComponentProcess(PrimitiveAnalysisEngine_impl.java:375)
+	... 8 more
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:387)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:183)
+	at com.google.gson.internal.bind.MapTypeAdapterFactory$Adapter.read(MapTypeAdapterFactory.java:145)
+	at com.google.gson.Gson.fromJson(Gson.java:805)
+	... 19 more
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.container.ProcessingContainer_Impl process
+SEVERE: The CPM stopped because the configured error threshold 0 was exceeded. (Thread Name: [Procesing Pipeline#1 Thread]::) Component Name: aeDescriptor 
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit process
+SEVERE: The CPM is terminating. The current component is aeDescriptor. (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit process
+WARNING: The CPM cannot be stopped by force. The current container is aeDescriptor. (Thread Name: [Procesing Pipeline#1 Thread]::) Reason: The CAS processor aeDescriptor is configured to stop the CPM when excessive errors are encountered.  (Thread Name: [Procesing Pipeline#1 Thread]::)
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.ProcessingUnit maybeLogSevereException(2502)
+SEVERE: Thread: [Procesing Pipeline#1 Thread]::, message: 
+org.apache.uima.collection.base_cpm.AbortCPMException: 
+	at org.apache.uima.collection.impl.cpm.container.ProcessingContainer_Impl.incrementCasProcessorErrors(ProcessingContainer_Impl.java:804)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.processNext(ProcessingUnit.java:1041)
+	at org.apache.uima.collection.impl.cpm.engine.ProcessingUnit.run(ProcessingUnit.java:577)
+
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The collection reader thread state is: 1001 (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The CPM processing unit is 0 and processing state 2003. (Thread Name: [Procesing Pipeline#1 Thread]::)
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The CAS consumer thread state is 2001. (Thread Name: [Procesing Pipeline#1 Thread]::) 
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The application stopped the CPM. (Thread Name: [Procesing Pipeline#1 Thread]::)
+Nov 30, 2014 4:41:06 PM org.apache.uima.collection.impl.cpm.engine.CPMEngine process
+INFO: The CPM engine is stopping. An end-of-file token is added to the worker queue. (Thread Name: [Procesing Pipeline#1 Thread]::) Forced stop: true
+Aborted
