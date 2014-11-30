@@ -32,8 +32,8 @@ import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 /**
  *  This class retrieves concepts related to the query, 
  *  using apis provided by Mesh, Jochem, Uniprot, DiseaseOntology, etc
- *  @author Michael Zhuang
- *   
+ *  
+ *  @author Michael Zhuang   
  * 
  ***/
 public class ConceptRetrieve extends JCasAnnotator_ImplBase{
@@ -103,12 +103,16 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       }
     }
   }
+  /**
+   *   Create concepts from findings. 
+   *   Use cosine similarity to compute the relevance between the query and concept's label
+   *   and concept's matched lable.
+   *   @author Michael Zhuang
+   * 
+   ***/
   private void createConceptFromFindings(String query, JCas aJCas,List<OntologyServiceResponse.Finding>findings){
     TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
     MyUtils ins = MyUtils.getInstance();
-
-    
-
     for(OntologyServiceResponse.Finding finding : findings){
       if(finding.getScore() < 0.1)
         continue;

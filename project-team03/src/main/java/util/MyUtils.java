@@ -8,6 +8,11 @@ import java.util.Map;
 
 import json.gson.Snippet;
 
+
+/**
+ * 
+ * 
+ **/
 public class MyUtils {
 
   private static MyUtils instance = null;

@@ -19,6 +19,16 @@ import edu.cmu.lti.oaqa.type.retrieval.ComplexQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 import edu.cmu.lti.oaqa.type.retrieval.QueryOperator;
 
+
+/**
+ *  This class extract all tokens and their synonyms from complexQueryConcept,
+ *  and use AND, OR to combine all the words together as the FinalQuery.
+ *  For comparion, we also stored the original query, query without operator, and 
+ *  keyword in the FinalQuery.
+ *  
+ *  @author Michael Zhuang
+ * 
+ ***/
 public class QueryCombiner extends JCasAnnotator_ImplBase{
 
   @Override

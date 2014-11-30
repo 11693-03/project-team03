@@ -26,7 +26,10 @@ import edu.cmu.lti.oaqa.type.retrieval.Document;
 import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 
 /**
- * This class retrieves documents related to the query, using apis provided by PubMed
+ * This class retrieves documents related to the query, 
+ * using apis provided by PubMed.
+ * It also computes the relevance between the documents we retrieved and 
+ * the queries. The relevance score will be used for ranking.
  * 
  * @author Michael Zhuang
  *

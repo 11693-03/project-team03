@@ -22,7 +22,7 @@ import edu.stanford.nlp.util.CoreMap;
 /**
  * This class annotates the input sentence by calling the Stanford Core NLP.
  * 
- * @author Qiankun Zhuang
+ * @author Michael Zhuang
  */
 public class StanfordNER{
   /**

@@ -17,6 +17,15 @@ import edu.cmu.lti.oaqa.type.answer.Answer;
 import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 import edu.cmu.lti.oaqa.type.retrieval.Passage;
 
+/**
+ *  This class use Abner named entity recognizer to extract 
+ *  certain phrases from the snippets we retrieved as the candidate answer.
+ *  Then we use wordNet again to find synonyms of each candidate answer 
+ *  as its variants.
+ *  
+ *  @author Michael Zhuang
+ * 
+ **/
 public class AnswerExtractor extends JCasAnnotator_ImplBase{
   private final static int numOfSyn = 3;
   private boolean isExistedInQuestion(String namedEntity, String query){
@@ -33,13 +42,10 @@ public class AnswerExtractor extends JCasAnnotator_ImplBase{
       query = fq.getOriginalQuery();
 //      query = fq.getQueryWithOp();
 //      query = fq.getQueryWithoutOp();
-    }
-    
+    }    
     FSIterator<TOP> Iter = aJCas.getJFSIndexRepository().getAllIndexedFS(Passage.type);
-    
     AbnerAnnotator ner = AbnerAnnotator.getInstance();
-    JAWSApi syn = JAWSApi.getInstance();
-    
+    JAWSApi syn = JAWSApi.getInstance();    
     while(Iter.isValid() && Iter.hasNext()){
       Passage p = (Passage) Iter.next();
       String text = p.getText();
