@@ -135,7 +135,7 @@ public class Consumer extends CasConsumer_ImplBase {
       docPrecision = totalPrecision / (docTotalPositive * 1.0);
     }
     System.out.println("docPrecision:" + docPrecision);
-
+    System.out.println("docRecall:"+(double)docTotalPositive/(double)docResult.size());
     // For the Concepts:
     Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
 

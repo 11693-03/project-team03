@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** A search result.
- * Updated by JCasGen Sat Nov 29 22:36:17 EST 2014
+ * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
  * @generated */
 public class SearchResult_Type extends TOP_Type {
   /** @generated 

@@ -14,6 +14,8 @@ import java.util.List;
 import json.gson.SectionSet;
 import json.gson.Snippet;
 
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -56,7 +58,6 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     Collection<Document> docList = TypeUtil.getRankedDocuments(aJCas);
     List<String> pmids = new LinkedList<String>();
     for (Document doc : docList) {
-
       pmids.add(doc.getDocId());
       //System.out.println(doc.getDocId()+doc.getRank());
 
@@ -65,11 +66,13 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     SentenceChunker ins = SentenceChunker.getInstance();
     for (String pmid : pmids) {
       String url = PREFIX + pmid;
-      System.out.println(url);
+      //System.out.println(url);
       HttpGet httpGet = new HttpGet(url);
+      
       List<Snippet> snippets = new LinkedList<Snippet>();
       try {
         CloseableHttpResponse response = httpClient.execute(httpGet);
+        
         HttpEntity entity = response.getEntity();
         if (entity != null) {
           BufferedReader buffer = new BufferedReader(new InputStreamReader(entity.getContent()));
@@ -97,6 +100,18 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
             }
           }
            System.out.println("Snippet:"+sectionSet);
+        }else if(response.getAllHeaders()!=null){
+          //Header[] headers = response.getAllHeaders();
+          //System.out.println(response.getLocale());
+//          for(Header h : headers){
+//            System.out.println(h.getName()+":"+h.getValue());
+//            for(HeaderElement e : h.getElements()){
+//              System.out.println("element:"+e.getName()+":"+e.getValue());
+//            }
+//          }
+          //System.out.println("status:"+response.getStatusLine());
+          
+        }else{
         }
       } catch (IOException e) {
         e.printStackTrace();

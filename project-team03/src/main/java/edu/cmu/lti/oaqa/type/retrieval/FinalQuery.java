@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** 
- * Updated by JCasGen Sat Nov 29 22:36:17 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
+ * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
+ * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
  * @generated */
 public class FinalQuery extends TOP {
   /** @generated
@@ -150,6 +150,28 @@ public class FinalQuery extends TOP {
     if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryID == null)
       jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
     jcasType.ll_cas.ll_setStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryID, v);}    
+   
+    
+  //*--------------*
+  //* Feature: keyword
+
+  /** getter for keyword - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public String getKeyword() {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_keyword == null)
+      jcasType.jcas.throwFeatMissing("keyword", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_keyword);}
+    
+  /** setter for keyword - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setKeyword(String v) {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_keyword == null)
+      jcasType.jcas.throwFeatMissing("keyword", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    jcasType.ll_cas.ll_setStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_keyword, v);}    
   }
 
     
