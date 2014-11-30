@@ -13,6 +13,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 import util.AbnerAnnotator;
 import util.MyLemmatizer;
 import util.NERLingpipe;
+import util.StanfordNER;
 import util.TokenizerLingpipe;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.type.input.Question;
@@ -31,16 +32,17 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
       Question question = TypeUtil.getQuestion(aJCas);
       String originalQuery = question.getText();
-      Vector<String>keyWords = AbnerAnnotator.getInstance().getGeneSpan(originalQuery);
-      StringBuffer sb = new StringBuffer();
-      for(String v : keyWords){
-        sb.append(v+" ");
-      }
+      
       TokenizerLingpipe ins = TokenizerLingpipe.getInstance();
       String modificatedQuery = originalQuery.replace("?", "");
       modificatedQuery = ins.tokenize(modificatedQuery);
       MyLemmatizer mLem = MyLemmatizer.getInstance();
       modificatedQuery = mLem.lemmatize(modificatedQuery);
+      Vector<String>keyWords = StanfordNER.getInstance().getGeneSpans(modificatedQuery);
+      StringBuffer sb = new StringBuffer();
+      for(String v : keyWords){
+        sb.append(v+" OR ");
+      }
 //      NERLingpipe ling = NERLingpipe.getInstance();
 //      try {
 //        modificatedQuery = ling.extractKeywords(modificatedQuery);
@@ -52,7 +54,7 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
         if(token.length()<=1)
           continue;
         AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
-        atomic.setOriginalText(sb.toString().trim());
+        atomic.setOriginalText(sb.toString().substring(0, sb.lastIndexOf(" ")).trim());
         atomic.setText(token);
         atomic.addToIndexes(aJCas);
 //        if(!token.equals(mLem.lemmatize(token).trim())){

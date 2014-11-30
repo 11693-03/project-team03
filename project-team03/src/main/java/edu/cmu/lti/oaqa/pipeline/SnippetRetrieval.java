@@ -40,10 +40,10 @@ import util.TypeFactory;
 import util.TypeUtil;
 
 public class SnippetRetrieval extends JCasAnnotator_ImplBase {
-  private static final String PREFIX = "http://ur.lti.cs.cmu.edu:30002/pmc/";
+  private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
 
   private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
-
+  private static final int timedout = 3000;
   private CloseableHttpClient httpClient;
 
   @Override
@@ -60,13 +60,11 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     List<String> pmids = new LinkedList<String>();
     for (Document doc : docList) {
       pmids.add(doc.getDocId());
-      //System.out.println(doc.getDocId()+doc.getRank());
-
     }
     RequestConfig defaultRequestConfig = RequestConfig.custom()
-            .setSocketTimeout(1000)
-            .setConnectTimeout(1000)
-            .setConnectionRequestTimeout(1000)
+            .setSocketTimeout(timedout)
+            .setConnectTimeout(timedout)
+            .setConnectionRequestTimeout(timedout)
             .setStaleConnectionCheckEnabled(true)
             .build();
     httpClient = HttpClients.custom().setDefaultRequestConfig(defaultRequestConfig).build();
@@ -88,7 +86,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
           while ((line = buffer.readLine()) != null) {
             json += line;
           }
-          System.out.println("json:" + json);
+          //System.out.println("json:" + json);
           SectionSet sectionSet = SectionSet.load(json);
           List<String> sections = sectionSet.getSections();
           for (int i = 0; i < sections.size(); i++) {
@@ -106,22 +104,12 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
               snippets.add(snippet);
             }
           }
-           System.out.println("Snippet:"+sectionSet);
-        }else if(response.getAllHeaders()!=null){
-          //Header[] headers = response.getAllHeaders();
-          //System.out.println(response.getLocale());
-//          for(Header h : headers){
-//            System.out.println(h.getName()+":"+h.getValue());
-//            for(HeaderElement e : h.getElements()){
-//              System.out.println("element:"+e.getName()+":"+e.getValue());
-//            }
-//          }
-          //System.out.println("status:"+response.getStatusLine());
-          
-        }else{
+           //System.out.println("Snippet:"+sectionSet);
+        }else {
+          System.out.println("status:"+response.getStatusLine());
         }
       } catch (IOException e) {
-        e.printStackTrace();
+        //e.printStackTrace();
       }
       Collections.sort(snippets);
       int rank = 1;

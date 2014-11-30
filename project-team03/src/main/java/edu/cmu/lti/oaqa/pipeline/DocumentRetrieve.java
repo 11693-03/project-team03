@@ -6,11 +6,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Vector;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -19,10 +14,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import util.AbnerAnnotator;
-import util.MyLemmatizer;
 import util.MyUtils;
-import util.NERLingpipe;
 import util.TokenizerLingpipe;
 import util.TypeFactory;
 import util.TypeUtil;
@@ -63,10 +55,9 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
     FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(FinalQuery.type);
     if (iter.isValid() && iter.hasNext()) {
       FinalQuery query = (FinalQuery) iter.next();
-      // String queryText = query.getQueryWithOp();
-      String queryText = query.getOriginalQuery();
-       //String queryText = query.getQueryWithoutOp();
-      
+       String queryText = query.getQueryWithOp();
+      //String queryText = query.getOriginalQuery();
+      //String queryText = query.getQueryWithoutOp();
       MyUtils ins = MyUtils.getInstance();
       TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
       Collection<Document> documents = null;
@@ -80,15 +71,13 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
             // System.out.println("Title:"+docs.getTitle());
             // System.out.println("Mesh Headings:"+docs.getMeshHeading());
             // System.out.println("Mesh Annotation:"+docs.getMeshAnnotations());
-            // keywords = lem.lemmatize(keywords);
-            // keywords = ling.extractKeywords(keywords);
             keywords = tokenizer.tokenize(keywords);
 
             double score = 0;
-            score += ins.computeCosineSimilarity(keywords, query.getQueryWithoutOp());
+            score += ins.computeCosineSimilarity(keywords, query.getKeyword());
             if (docs.getMeshHeading() != null) {
               score += ins
-                      .computeCosineSimilarity(docs.getMeshHeading(), query.getQueryWithoutOp());
+                      .computeCosineSimilarity(docs.getMeshHeading(), query.getKeyword());
               score /= 2.0;
             }
             Document doc = TypeFactory.createDocument(aJCas, url, docs.getTitle(), 999,
@@ -100,16 +89,14 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
         } catch (IOException e) {
           e.printStackTrace();
         }
-
         System.out.println("Processing document retrieval");
-
         documents = TypeUtil.getRankedDocumentByScore(aJCas, TypeUtil.getRankedDocuments(aJCas)
                 .size());
         if(queryText.equals(query.getKeyword()))
           break;
         else
           queryText = query.getKeyword();
-        System.out.println(queryText);
+        System.out.println("KEYWORD:"+queryText);
       } while (documents.size()==0);
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);
