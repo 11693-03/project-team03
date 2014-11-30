@@ -4,9 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PerformanceInfo {
-  private List<Double> docList;
+  private List<Double> docPrecisionList;
 
-  private List<Double> conceptList;
+  private List<Double> conceptPrecisionList;
 
   private List<Double> tripleList;
   
@@ -22,40 +22,43 @@ public class PerformanceInfo {
   private double answerMAR;
   
   public PerformanceInfo() {
-    docList = new LinkedList<Double>();
-    conceptList = new LinkedList<Double>();
+    docPrecisionList = new LinkedList<Double>();
+    conceptPrecisionList = new LinkedList<Double>();
     tripleList = new LinkedList<Double>();
+    answerPrecisionList = new LinkedList<Double>();
+    answerRecalList = new LinkedList<Double>();
   }
 
   public void addDocAP(double precision) {
-    docList.add(precision);
+    docPrecisionList.add(precision);
   }
 
   public void addConceptAP(double precision) {
-    docList.add(precision);
+    conceptPrecisionList.add(precision);
   }
 
   public void addTripleAP(double precision) {
-    docList.add(precision);
+    docPrecisionList.add(precision);
   }
 
   private double computeMAP(List<Double> list) {
+    System.err.println("listsize"+list.size());
     if (list.size() == 0)
       return 0;
     double total = 0;
     for (Double d : list)
       total += d;
-
+    
     return total / list.size();
 
   }
 
   public void setDocMap() {
-    docMAP = computeMAP(docList);
+    docMAP = computeMAP(docPrecisionList);
   }
 
   public void setConceptMap() {
-    conceptMAP = computeMAP(conceptList);
+    conceptMAP = computeMAP(conceptPrecisionList);
   }
 
   public void setTripleMap() {
@@ -63,14 +66,17 @@ public class PerformanceInfo {
   }
   
   public double getDocMAP(){
+    this.setDocMap();
     return docMAP;
   }
   
   public double getConceptMAP(){
+    this.setConceptMap();
     return conceptMAP;
   }
   
   public double getTripleMAP(){
+    this.setTripleMap();
     return tripleMAP;
   }
   

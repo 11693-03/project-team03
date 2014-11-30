@@ -34,6 +34,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.util.FSCollectionFactory;
 
 import util.MyUtils;
+import util.PerformanceInfo;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.type.answer.Answer;
 import edu.cmu.lti.oaqa.type.input.Question;
@@ -64,6 +65,8 @@ public class Consumer extends CasConsumer_ImplBase {
   List<TestListQuestion> answers;
 
   ListAnswerSet answerSet;
+  
+  PerformanceInfo metrics;
 
   @Override
   public void initialize() throws ResourceInitializationException {
@@ -78,7 +81,7 @@ public class Consumer extends CasConsumer_ImplBase {
     conceptMaps = new HashMap<String, List<String>>();
     tripleMaps = new HashMap<String, List<Triple>>();
     snippetMaps = new HashMap<String, List<Snippet>>();
-
+    metrics = new PerformanceInfo();
     for (int i = 0; i < goldStandards.size(); i++) {
       docMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getDocuments());
       conceptMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getConcepts());
@@ -131,7 +134,7 @@ public class Consumer extends CasConsumer_ImplBase {
     } else {
       docPrecision = totalPrecision / (docTotalPositive * 1.0);
     }
-
+    metrics.addDocAP(docPrecision);
     System.out.println("docPrecision:" + docPrecision);
     System.out.println("docRecall:"+(double)docTotalPositive/(double)docResult.size());
     // For the Concepts:
@@ -161,7 +164,7 @@ public class Consumer extends CasConsumer_ImplBase {
     } else {
       conceptPrecision = concepttotalPrecision / (conceptTotalPositive * 1.0);
     }
-
+    metrics.addConceptAP(conceptPrecision);
     System.out.println("ConceptPrecision:" + conceptPrecision);
 
     /** compute triple performance **/
@@ -203,6 +206,9 @@ public class Consumer extends CasConsumer_ImplBase {
     
     TestListQuestion answer = new TestListQuestion(curQId,body,type,docUriList,test,conceptUriList,tripleList,"pseudo ideal answer",exactAnswer);
     answers.add(answer);
+
+    System.out.println("current doc MAP = "+ metrics.getDocMAP());
+    System.out.println("current concept MAP = "+metrics.getConceptMAP());
   }
 
   @Override
@@ -210,6 +216,9 @@ public class Consumer extends CasConsumer_ImplBase {
     //output results
     answerSet = new ListAnswerSet(answers);
     String output = answerSet.dump();
+    System.out.println("final doc MAP = "+ metrics.getDocMAP());
+    System.out.println("final concept MAP = "+metrics.getConceptMAP());
+    
     try {
       PrintWriter out = new PrintWriter(outputPath);
       out.println(output);
