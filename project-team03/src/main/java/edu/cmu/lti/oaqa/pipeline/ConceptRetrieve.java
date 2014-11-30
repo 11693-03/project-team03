@@ -64,23 +64,27 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : uniprotResult.getFindings()) {
           findings.add(finding);
-          //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
+          System.err.println("In Annotator Concept ");
         }
-
+        
         OntologyServiceResponse.Result diseaseOntologyResult = service
                 .findDiseaseOntologyEntitiesPaged(queryText, 0);
+        
         for (OntologyServiceResponse.Finding finding : diseaseOntologyResult.getFindings()) {
           findings.add(finding);
         }
         OntologyServiceResponse.Result geneOntologyResult = service.
                 findGeneOntologyEntitiesPaged(queryText,0, 10);
+        
         for (OntologyServiceResponse.Finding finding : geneOntologyResult.getFindings()) {
           findings.add(finding);
         }
-        OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(queryText, 0);
+       /* OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(queryText, 0);
+        
         for (OntologyServiceResponse.Finding finding : jochemResult.getFindings()) {
           findings.add(finding);
-        }
+        }*/
+        System.out.println("????");
         OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : meshResult.getFindings()) {
           findings.add(finding);

@@ -11,7 +11,11 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** An abstract normalized entity, which may have various surface forms (alternative representations).
+<<<<<<< HEAD
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
+=======
+ * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
+>>>>>>> origin/master
  * @generated */
 public class Entity_Type extends Concept_Type {
   /** @generated 

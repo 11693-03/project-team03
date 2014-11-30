@@ -17,6 +17,7 @@ import json.gson.Snippet;
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
 import org.apache.http.HttpEntity;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -39,7 +40,7 @@ import util.TypeFactory;
 import util.TypeUtil;
 
 public class SnippetRetrieval extends JCasAnnotator_ImplBase {
-  private static final String PREFIX = "http://localhost:30002/pmc/";
+  private static final String PREFIX = "http://ur.lti.cs.cmu.edu:30002/pmc/";
 
   private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
 
@@ -62,7 +63,13 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
       //System.out.println(doc.getDocId()+doc.getRank());
 
     }
-    httpClient = HttpClients.createDefault();
+    RequestConfig defaultRequestConfig = RequestConfig.custom()
+            .setSocketTimeout(1000)
+            .setConnectTimeout(1000)
+            .setConnectionRequestTimeout(1000)
+            .setStaleConnectionCheckEnabled(true)
+            .build();
+    httpClient = HttpClients.custom().setDefaultRequestConfig(defaultRequestConfig).build();
     SentenceChunker ins = SentenceChunker.getInstance();
     for (String pmid : pmids) {
       String url = PREFIX + pmid;
