@@ -28,14 +28,12 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
       Question question = TypeUtil.getQuestion(aJCas);
-      AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
       String originalQuery = question.getText();
-      atomic.setOriginalText(originalQuery);
       TokenizerLingpipe ins = TokenizerLingpipe.getInstance();
       String modificatedQuery = originalQuery.replace("?", "");
       modificatedQuery = ins.tokenize(modificatedQuery);
-      //MyLemmatizer mLem = MyLemmatizer.getInstance();
-      //modificatedQuery = mLem.lemmatize(modificatedQuery);
+      MyLemmatizer mLem = MyLemmatizer.getInstance();
+      modificatedQuery = mLem.lemmatize(modificatedQuery);
 //      NERLingpipe ling = NERLingpipe.getInstance();
 //      try {
 //        modificatedQuery = ling.extractKeywords(modificatedQuery);
@@ -43,7 +41,20 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
 //        e.printStackTrace();
 //      }
       System.out.println(originalQuery+"->"+modificatedQuery);
-      atomic.setText(modificatedQuery);
-      atomic.addToIndexes(aJCas);        
+      for(String token : modificatedQuery.split("\\s+")){
+        if(token.length()<=1)
+          continue;
+        AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
+        atomic.setOriginalText(originalQuery);
+        atomic.setText(token);
+        atomic.addToIndexes(aJCas);
+//        if(!token.equals(mLem.lemmatize(token).trim())){
+//          token = mLem.lemmatize(token).trim();
+//          atomic = new AtomicQueryConcept(aJCas);
+//          atomic.setOriginalText(originalQuery);
+//          atomic.setText(token);
+//          atomic.addToIndexes(aJCas);
+//        }
+      }        
   }  
 }

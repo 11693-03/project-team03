@@ -18,6 +18,7 @@ import edu.cmu.lti.oaqa.bio.bioasq.services.GoPubMedService;
 import edu.cmu.lti.oaqa.bio.bioasq.services.LinkedLifeDataServiceResponse;
 import edu.cmu.lti.oaqa.type.kb.Triple;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
+import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 import edu.cmu.lti.oaqa.type.retrieval.TripleSearchResult;
 /**
  * 
@@ -44,9 +45,11 @@ public class TripleRetrieve extends JCasAnnotator_ImplBase{
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
     FSIterator<TOP> interator = aJCas.getJFSIndexRepository().getAllIndexedFS(
-            AtomicQueryConcept.type);
-    AtomicQueryConcept query = (AtomicQueryConcept) interator.next();
-    String keywords = query.getText();
+            FinalQuery.type);
+    FinalQuery query = (FinalQuery) interator.next();
+//    String keywords = query.getQueryWithOp();
+//    String keywords = query.getQueryWithoutOp();
+    String keywords = query.getOriginalQuery();
     try {
       LinkedLifeDataServiceResponse.Result linkedLifeDataResult = service
               .findLinkedLifeDataEntitiesPaged(keywords, 0,4);//temporary set parameter

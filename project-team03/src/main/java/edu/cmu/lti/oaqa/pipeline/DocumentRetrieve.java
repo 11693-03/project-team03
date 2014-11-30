@@ -29,6 +29,7 @@ import edu.cmu.lti.oaqa.bio.bioasq.services.PubMedSearchServiceResponse;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 import edu.cmu.lti.oaqa.type.retrieval.Document;
+import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 
 /**
  *  This class retrieves documents related to the query, 
@@ -52,28 +53,37 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
-    FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
+    FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(FinalQuery.type);
     if (iter.isValid() && iter.hasNext()) {
-      AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
-      String text = query.getText();
-      
+      FinalQuery query = (FinalQuery)iter.next();
+      String queryText = query.getQueryWithOp();
+//      String queryText = query.getQueryWithoutOp();
       MyUtils ins = MyUtils.getInstance();
 //      MyLemmatizer lem = MyLemmatizer.getInstance();
 //      NERLingpipe ling = NERLingpipe.getInstance();
       TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
       //httpClient = HttpClients.createDefault();
       try {
-        PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(text, 0, 200);
+        PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(queryText, 0, 200);
         for(PubMedSearchServiceResponse.Document docs : pubmedResult.getDocuments()){
           String url = uriPrefix+docs.getPmid();
           String keywords = docs.getTitle();
+//          System.out.println("Title:"+docs.getTitle());
+//          System.out.println("Mesh Headings:"+docs.getMeshHeading());
+//          System.out.println("Mesh Annotation:"+docs.getMeshAnnotations());
           //keywords = lem.lemmatize(keywords);
           //keywords = ling.extractKeywords(keywords);
           keywords = tokenizer.tokenize(keywords);
-          double score = ins.computeCosineSimilarity(text, keywords);
-          Document doc = TypeFactory.createDocument(aJCas, url, text,
-                  999, text, docs.getTitle(), docs.getPmid());
-          if(score < 0)
+
+          double score = 0;
+          score += ins.computeCosineSimilarity(keywords,query.getQueryWithoutOp());
+          if(docs.getMeshHeading()!=null){
+            score += ins.computeCosineSimilarity(docs.getMeshHeading(), query.getQueryWithoutOp());
+            score /= 2.0;
+          }            
+          Document doc = TypeFactory.createDocument(aJCas, url, query.getOriginalQuery(),
+                  999, query.getOriginalQuery(), docs.getTitle(), docs.getPmid());
+          if(score < 0.01)
              continue;
           //System.out.println(score);
           doc.setScore(score);
@@ -84,13 +94,18 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       }
 
       System.out.println("Processing document retrieval");
-      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas,300);
+
+      
+      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, TypeUtil.getRankedDocuments(aJCas).size());
+
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);
       int rank = 1;
       for(Document d : documentList){
         d.removeFromIndexes();
         d.setRank(rank++);
+        if(rank>51)
+          continue;
         d.addToIndexes(aJCas);
       }
     }

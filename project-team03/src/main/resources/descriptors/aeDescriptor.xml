@@ -15,8 +15,17 @@
   <delegateAnalysisEngine key="tripleRetrieveDescriptor">
       <import location="./tripleRetrieveDescriptor.xml"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="ComplexQueryConstructorDescriptor">
+      <import location="./ComplexQueryConstructorDescriptor.xml"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="queryCombinerDescriptor">
+      <import location="./queryCombinerDescriptor.xml"/>
+    </delegateAnalysisEngine>
   <delegateAnalysisEngine key="snippetDescriptor">
       <import location="./snippetDescriptor.xml"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="answerExtractorDescriptor">
+      <import location="./answerExtractorDescriptor.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
@@ -29,10 +38,13 @@
     <flowConstraints>
       <fixedFlow>
         <node>initialAnnotatorDescriptor</node>
-        <node>conceptRetrieveDescriptor</node>
-        <node>documentRetrieveDescriptor</node>
+        <node>ComplexQueryConstructorDescriptor</node>
+        <node>queryCombinerDescriptor</node>
+      <node>conceptRetrieveDescriptor</node>
+      <node>documentRetrieveDescriptor</node>
       <node>tripleRetrieveDescriptor</node>
       <node>snippetDescriptor</node>
+      <node>answerExtractorDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <fsIndexCollection/>

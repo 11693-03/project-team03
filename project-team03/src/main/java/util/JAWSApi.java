@@ -1,5 +1,10 @@
 package util;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 import edu.smu.tspell.wordnet.*;
 
 /**
@@ -9,6 +14,43 @@ import edu.smu.tspell.wordnet.*;
  * java TestJAWS airplane
  */
 public class JAWSApi {
+  private JAWSApi(){
+    System.setProperty("wordnet.database.dir", "src/main/resources/dict");    
+  }
+  private static JAWSApi instance = null;
+  public static JAWSApi getInstance(){
+    if(instance==null)
+      instance = new JAWSApi();
+    return instance;
+  }
+  public List<String> getSynonyms(String text, int num) {
+    WordNetDatabase database = WordNetDatabase.getFileInstance();
+    Synset[] synsets = database.getSynsets(text);
+    List<String> res = new LinkedList<String>();
+    res.add(text);
+    HashSet<String> syn = new HashSet<String>();
+    int id = 0;
+    if (synsets.length > 0) {
+      for (int i = 0; i < synsets.length; i++) {
+        String[] wordForms = synsets[i].getWordForms();
+        for (int j = 1; j <  wordForms.length; j++) {
+          if(!syn.contains(wordForms[j]) && (!wordForms[j].equals(text)) && wordForms[j].length()>1){
+            syn.add(wordForms[j].toLowerCase());
+            id++;
+            if(id==num)
+              break;
+          }          
+        }
+        if(id==num)
+          break;
+      }
+      Iterator<String> iter = syn.iterator();
+      while(iter.hasNext()){
+        res.add(iter.next());
+      }
+    }
+    return res;
+  }
 
   /**
    * Main entry point. The command-line arguments are concatenated together (separated by spaces)
@@ -17,7 +59,7 @@ public class JAWSApi {
   public static void main(String[] args) {
     System.setProperty("wordnet.database.dir", "src/main/resources/dict");
     args = new String[1];
-    args[0] = "shit";
+    args[0] = "carbon dioxide";
     if (args.length > 0) {
       // Concatenate the command-line arguments
       StringBuffer buffer = new StringBuffer();
@@ -47,5 +89,4 @@ public class JAWSApi {
       System.err.println("You must specify " + "a word form for which to retrieve synsets.");
     }
   }
-
 }
