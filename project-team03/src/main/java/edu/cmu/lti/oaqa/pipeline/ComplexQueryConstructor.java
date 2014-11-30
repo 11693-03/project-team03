@@ -15,6 +15,7 @@ import edu.cmu.lti.oaqa.type.retrieval.ComplexQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.QueryOperator;
 
 public class ComplexQueryConstructor extends JCasAnnotator_ImplBase {
+  private static int numOfSynonym = 1;
   @Override
   public void process(JCas aJCas) {
     FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
@@ -23,14 +24,13 @@ public class ComplexQueryConstructor extends JCasAnnotator_ImplBase {
       String queryToken = query.getText();
       ComplexQueryConcept cqc = new ComplexQueryConcept(aJCas);
       QueryOperator v = new QueryOperator(aJCas);
-      List<String> syn = JAWSApi.getInstance().getSynonyms(queryToken, 1);
+      List<String> syn = JAWSApi.getInstance().getSynonyms(queryToken, numOfSynonym);
       v.setArgs(Utils.createStringList(aJCas, syn));
-      v.setName("OR");
+      v.setName("SYNONYM");
       cqc.setOperator(v);
       cqc.addToIndexes(aJCas);
     }
   }
-
   public static void main(String[] args) {
 
   }

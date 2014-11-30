@@ -26,6 +26,7 @@ import edu.cmu.lti.oaqa.bio.bioasq.services.OntologyServiceResponse;
 import edu.cmu.lti.oaqa.type.kb.Concept;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
+import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 
 
 /**
@@ -48,52 +49,43 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   }
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
-    FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
+    FSIterator<TOP> iter = aJCas.getJFSIndexRepository().getAllIndexedFS(FinalQuery.type);
     
     if(iter.isValid() && iter.hasNext()){
-      AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
-      String text = query.getText();
+      FinalQuery query = (FinalQuery)iter.next();
+      //String queryText = query.getQueryWithoutOp();
+      String queryText = query.getQueryWithOp();
+      //String queryText = query.getOriginalQuery();
+      System.out.println("query:"+queryText);
       List<OntologyServiceResponse.Finding> findings = new LinkedList<OntologyServiceResponse.Finding>();
       try {
-        OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(text, 0);
+        OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : uniprotResult.getFindings()) {
-          if(finding.getScore()<0.1)
-            break;
           findings.add(finding);
           //System.err.println("In Annotator Concept "+rank+":"+conceptSR);
         }
 
         OntologyServiceResponse.Result diseaseOntologyResult = service
-                .findDiseaseOntologyEntitiesPaged(text, 0);
+                .findDiseaseOntologyEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : diseaseOntologyResult.getFindings()) {
-          if(finding.getScore()<0.1)
-            break;
           findings.add(finding);
         }
-        OntologyServiceResponse.Result geneOntologyResult = service.findGeneOntologyEntitiesPaged(text,
-                0, 10);
+        OntologyServiceResponse.Result geneOntologyResult = service.
+                findGeneOntologyEntitiesPaged(queryText,0, 10);
         for (OntologyServiceResponse.Finding finding : geneOntologyResult.getFindings()) {
-          if(finding.getScore()<0.1)
-            break;
           findings.add(finding);
         }
-        
-        OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(text, 0);
+        OntologyServiceResponse.Result jochemResult = service.findJochemEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : jochemResult.getFindings()) {
-          if(finding.getScore()<0.1)
-            break;
           findings.add(finding);
         }
-        
-        OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(text, 0);
+        OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : meshResult.getFindings()) {
-          if(finding.getScore()<0.1)
-            break;
           findings.add(finding);
         }
 
         System.out.println("Processing concept retrieval");
-        createConceptFromFindings(text, aJCas, findings);
+        createConceptFromFindings(query.getOriginalQuery(), aJCas, findings);
         int rank = 1;
         Iterator<ConceptSearchResult> it = TypeUtil.getRankedSearchResultByScore(aJCas,findings.size()).iterator();
         while(it.hasNext()){
@@ -111,11 +103,17 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
     TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
     MyUtils ins = MyUtils.getInstance();
     
-    Concept concept = new Concept(aJCas);
     for(OntologyServiceResponse.Finding finding : findings){
+      if(finding.getScore() < 0.1)
+        continue;
+//      System.out.println("Matched Lable:"+finding.getMatchedLabel());
+//      System.out.println("concept.lable:"+finding.getConcept().getLabel());
       String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
       double score = ins.computeCosineSimilarity(query, keyword);
-        
+      score += ins.computeCosineSimilarity(finding.getMatchedLabel(), query);
+      score /= 2.0;
+      Concept concept = new Concept(aJCas);
+      concept.setName(finding.getConcept().getLabel());
       ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
               aJCas, concept, finding.getConcept().getUri().replace("2014", "2012"),score, 
               finding.getConcept().getLabel(), 0, query, 

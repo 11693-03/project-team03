@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
- * Updated by JCasGen Fri Nov 28 15:46:42 EST 2014
+ * Updated by JCasGen Sat Nov 29 22:36:17 EST 2014
  * @generated */
 public class FinalQuery_Type extends TOP_Type {
   /** @generated 
@@ -47,26 +47,26 @@ public class FinalQuery_Type extends TOP_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
  
   /** @generated */
-  final Feature casFeat_queryWIthOp;
+  final Feature casFeat_queryWithOp;
   /** @generated */
-  final int     casFeatCode_queryWIthOp;
+  final int     casFeatCode_queryWithOp;
   /** @generated
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
-  public String getQueryWIthOp(int addr) {
-        if (featOkTst && casFeat_queryWIthOp == null)
-      jcas.throwFeatMissing("queryWIthOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_queryWIthOp);
+  public String getQueryWithOp(int addr) {
+        if (featOkTst && casFeat_queryWithOp == null)
+      jcas.throwFeatMissing("queryWithOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_queryWithOp);
   }
   /** @generated
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
-  public void setQueryWIthOp(int addr, String v) {
-        if (featOkTst && casFeat_queryWIthOp == null)
-      jcas.throwFeatMissing("queryWIthOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
-    ll_cas.ll_setStringValue(addr, casFeatCode_queryWIthOp, v);}
+  public void setQueryWithOp(int addr, String v) {
+        if (featOkTst && casFeat_queryWithOp == null)
+      jcas.throwFeatMissing("queryWithOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    ll_cas.ll_setStringValue(addr, casFeatCode_queryWithOp, v);}
     
   
  
@@ -93,6 +93,54 @@ public class FinalQuery_Type extends TOP_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_queryWithoutOp, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_originalQuery;
+  /** @generated */
+  final int     casFeatCode_originalQuery;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getOriginalQuery(int addr) {
+        if (featOkTst && casFeat_originalQuery == null)
+      jcas.throwFeatMissing("originalQuery", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_originalQuery);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setOriginalQuery(int addr, String v) {
+        if (featOkTst && casFeat_originalQuery == null)
+      jcas.throwFeatMissing("originalQuery", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    ll_cas.ll_setStringValue(addr, casFeatCode_originalQuery, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_queryID;
+  /** @generated */
+  final int     casFeatCode_queryID;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getQueryID(int addr) {
+        if (featOkTst && casFeat_queryID == null)
+      jcas.throwFeatMissing("queryID", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_queryID);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setQueryID(int addr, String v) {
+        if (featOkTst && casFeat_queryID == null)
+      jcas.throwFeatMissing("queryID", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    ll_cas.ll_setStringValue(addr, casFeatCode_queryID, v);}
+    
+  
 
 
 
@@ -106,12 +154,20 @@ public class FinalQuery_Type extends TOP_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_queryWIthOp = jcas.getRequiredFeatureDE(casType, "queryWIthOp", "uima.cas.String", featOkTst);
-    casFeatCode_queryWIthOp  = (null == casFeat_queryWIthOp) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_queryWIthOp).getCode();
+    casFeat_queryWithOp = jcas.getRequiredFeatureDE(casType, "queryWithOp", "uima.cas.String", featOkTst);
+    casFeatCode_queryWithOp  = (null == casFeat_queryWithOp) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_queryWithOp).getCode();
 
  
     casFeat_queryWithoutOp = jcas.getRequiredFeatureDE(casType, "queryWithoutOp", "uima.cas.String", featOkTst);
     casFeatCode_queryWithoutOp  = (null == casFeat_queryWithoutOp) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_queryWithoutOp).getCode();
+
+ 
+    casFeat_originalQuery = jcas.getRequiredFeatureDE(casType, "originalQuery", "uima.cas.String", featOkTst);
+    casFeatCode_originalQuery  = (null == casFeat_originalQuery) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_originalQuery).getCode();
+
+ 
+    casFeat_queryID = jcas.getRequiredFeatureDE(casType, "queryID", "uima.cas.String", featOkTst);
+    casFeatCode_queryID  = (null == casFeat_queryID) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_queryID).getCode();
 
   }
 }

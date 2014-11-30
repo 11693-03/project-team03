@@ -2,6 +2,7 @@ package util;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class MyUtils {
@@ -17,21 +18,29 @@ public class MyUtils {
   }
   public double computeCosineSimilarity(String str1,
           String str2) {
-    String[] tokens1 = str1.split("\\s+");
+    return computeCosineSimilarity(string2map(str1), string2map(str2));
+  }
+  private HashMap<String, Integer> string2map(String str){
+    HashMap<String, Integer> Vector = new HashMap<String, Integer>();
+    String[] tokens2 = str.split("\\s+");
+    for(String t : tokens2){
+      if(!Vector.containsKey(t))
+        Vector.put(t, 1);
+      Vector.put(t, Vector.get(t)+1);
+    }
+    return Vector;
+  }
+  public double computeCosineSimilarity(List<String>str1, String str2){
     HashMap<String, Integer> Vector1 = new HashMap<String, Integer>();
-    for(String t : tokens1){
+    for(String t : str1){
       if(!Vector1.containsKey(t))
         Vector1.put(t, 1);
       Vector1.put(t, Vector1.get(t)+1);
     }
-    
-    String[] tokens2 = str2.split("\\s+");
-    HashMap<String, Integer> Vector2 = new HashMap<String, Integer>();
-    for(String t : tokens2){
-      if(!Vector2.containsKey(t))
-        Vector2.put(t, 1);
-      Vector2.put(t, Vector2.get(t)+1);
-    }
+    HashMap<String, Integer> Vector2 = string2map(str2);
+    return computeCosineSimilarity(Vector1, Vector2);
+  }
+  public double computeCosineSimilarity(HashMap<String, Integer> Vector1, HashMap<String, Integer> Vector2){
     double cosine_similarity = 0.0;
     Iterator<String> wordInQuery = Vector1.keySet().iterator();
     int querySum = 0;

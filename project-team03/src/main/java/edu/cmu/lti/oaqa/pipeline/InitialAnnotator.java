@@ -32,8 +32,8 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
       TokenizerLingpipe ins = TokenizerLingpipe.getInstance();
       String modificatedQuery = originalQuery.replace("?", "");
       modificatedQuery = ins.tokenize(modificatedQuery);
-      //MyLemmatizer mLem = MyLemmatizer.getInstance();
-      //modificatedQuery = mLem.lemmatize(modificatedQuery);
+      MyLemmatizer mLem = MyLemmatizer.getInstance();
+      modificatedQuery = mLem.lemmatize(modificatedQuery);
 //      NERLingpipe ling = NERLingpipe.getInstance();
 //      try {
 //        modificatedQuery = ling.extractKeywords(modificatedQuery);
@@ -42,10 +42,19 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
 //      }
       System.out.println(originalQuery+"->"+modificatedQuery);
       for(String token : modificatedQuery.split("\\s+")){
+        if(token.length()<=1)
+          continue;
         AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
         atomic.setOriginalText(originalQuery);
         atomic.setText(token);
         atomic.addToIndexes(aJCas);
+//        if(!token.equals(mLem.lemmatize(token).trim())){
+//          token = mLem.lemmatize(token).trim();
+//          atomic = new AtomicQueryConcept(aJCas);
+//          atomic.setOriginalText(originalQuery);
+//          atomic.setText(token);
+//          atomic.addToIndexes(aJCas);
+//        }
       }        
   }  
 }

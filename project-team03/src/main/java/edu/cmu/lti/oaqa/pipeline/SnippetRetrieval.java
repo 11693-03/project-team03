@@ -28,6 +28,7 @@ import org.apache.uima.jcas.cas.TOP;
 import edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant;
 import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.Document;
+import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
 import edu.cmu.lti.oaqa.type.retrieval.Passage;
 import util.MyUtils;
 import util.SentenceChunker;
@@ -36,7 +37,7 @@ import util.TypeFactory;
 import util.TypeUtil;
 
 public class SnippetRetrieval extends JCasAnnotator_ImplBase {
-  private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
+  private static final String PREFIX = "http://localhost:30002/pmc/";
 
   // private static final String PREFIX = "http://www.ncbi.nlm.nih.gov/pubmed/";
 
@@ -44,22 +45,25 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
 
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
-    FSIterator<TOP> qIter = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
+    FSIterator<TOP> qIter = aJCas.getJFSIndexRepository().getAllIndexedFS(FinalQuery.type);
     String qText = null;
     if (qIter.isValid() && qIter.hasNext()) {
-      AtomicQueryConcept query = (AtomicQueryConcept) qIter.next();
-      qText = query.getText();
+      FinalQuery query = (FinalQuery) qIter.next();
+      //qText = query.getQueryWithOp();
+      //qText = query.getQueryWithoutOp();
+      qText = query.getOriginalQuery();
     }
     Collection<Document> docList = TypeUtil.getRankedDocuments(aJCas);
     List<String> pmids = new LinkedList<String>();
     for (Document doc : docList) {
       pmids.add(doc.getDocId());
-      System.out.println(doc.getDocId()+doc.getRank());
+      //System.out.println(doc.getDocId()+doc.getRank());
     }
     httpClient = HttpClients.createDefault();
     SentenceChunker ins = SentenceChunker.getInstance();
     for (String pmid : pmids) {
       String url = PREFIX + pmid;
+      System.out.println(url);
       HttpGet httpGet = new HttpGet(url);
       List<Snippet> snippets = new LinkedList<Snippet>();
       try {
@@ -90,7 +94,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
               snippets.add(snippet);
             }
           }
-          // System.out.println("Snippet:"+sectionSet);
+           System.out.println("Snippet:"+sectionSet);
         }
       } catch (IOException e) {
         e.printStackTrace();

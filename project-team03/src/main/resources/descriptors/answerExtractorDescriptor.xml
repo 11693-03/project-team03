@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.oaqa.pipeline.QueryCombiner</annotatorImplementationName>
+  <primitive>true</primitive>  <annotatorImplementationName>edu.cmu.lti.oaqa.pipeline.AnswerExtractor</annotatorImplementationName>
   <analysisEngineMetaData>
-    <name>queryCombinerDescriptor</name>
+    <name>answerExtractorDescriptor</name>
     <description/>
     <version>1.0</version>
     <vendor/>
     <configurationParameters/>
     <configurationParameterSettings/>
-    <typeSystemDescription>
-      <imports>
-        <import location="/home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml"/>
-      </imports>
-    </typeSystemDescription>
+    <typeSystemDescription/>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>

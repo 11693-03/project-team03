@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** 
- * Updated by JCasGen Fri Nov 28 15:46:42 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
+ * Updated by JCasGen Sat Nov 29 22:36:17 EST 2014
+ * XML source: /home/micz/project-team03/project-team03/src/main/resources/descriptors/aeDescriptor.xml
  * @generated */
 public class FinalQuery extends TOP {
   /** @generated
@@ -65,25 +65,25 @@ public class FinalQuery extends TOP {
  
     
   //*--------------*
-  //* Feature: queryWIthOp
+  //* Feature: queryWithOp
 
-  /** getter for queryWIthOp - gets 
+  /** getter for queryWithOp - gets 
    * @generated
    * @return value of the feature 
    */
-  public String getQueryWIthOp() {
-    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryWIthOp == null)
-      jcasType.jcas.throwFeatMissing("queryWIthOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryWIthOp);}
+  public String getQueryWithOp() {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryWithOp == null)
+      jcasType.jcas.throwFeatMissing("queryWithOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryWithOp);}
     
-  /** setter for queryWIthOp - sets  
+  /** setter for queryWithOp - sets  
    * @generated
    * @param v value to set into the feature 
    */
-  public void setQueryWIthOp(String v) {
-    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryWIthOp == null)
-      jcasType.jcas.throwFeatMissing("queryWIthOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
-    jcasType.ll_cas.ll_setStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryWIthOp, v);}    
+  public void setQueryWithOp(String v) {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryWithOp == null)
+      jcasType.jcas.throwFeatMissing("queryWithOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    jcasType.ll_cas.ll_setStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryWithOp, v);}    
    
     
   //*--------------*
@@ -106,6 +106,50 @@ public class FinalQuery extends TOP {
     if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryWithoutOp == null)
       jcasType.jcas.throwFeatMissing("queryWithoutOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
     jcasType.ll_cas.ll_setStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryWithoutOp, v);}    
+   
+    
+  //*--------------*
+  //* Feature: originalQuery
+
+  /** getter for originalQuery - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public String getOriginalQuery() {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_originalQuery == null)
+      jcasType.jcas.throwFeatMissing("originalQuery", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_originalQuery);}
+    
+  /** setter for originalQuery - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setOriginalQuery(String v) {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_originalQuery == null)
+      jcasType.jcas.throwFeatMissing("originalQuery", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    jcasType.ll_cas.ll_setStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_originalQuery, v);}    
+   
+    
+  //*--------------*
+  //* Feature: queryID
+
+  /** getter for queryID - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public String getQueryID() {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryID == null)
+      jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryID);}
+    
+  /** setter for queryID - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setQueryID(String v) {
+    if (FinalQuery_Type.featOkTst && ((FinalQuery_Type)jcasType).casFeat_queryID == null)
+      jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    jcasType.ll_cas.ll_setStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryID, v);}    
   }
 
     

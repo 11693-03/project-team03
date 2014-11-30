@@ -1,5 +1,7 @@
 package util;
 
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,19 +26,30 @@ public class JAWSApi {
   public List<String> getSynonyms(String text, int num) {
     WordNetDatabase database = WordNetDatabase.getFileInstance();
     Synset[] synsets = database.getSynsets(text);
-    List<String> syn = new LinkedList<String>();
+    List<String> res = new LinkedList<String>();
+    res.add(text);
+    HashSet<String> syn = new HashSet<String>();
+    int id = 0;
     if (synsets.length > 0) {
       for (int i = 0; i < synsets.length; i++) {
-        System.out.println("");
         String[] wordForms = synsets[i].getWordForms();
-        for (int j = 1; j < Math.min(wordForms.length, num + 1); j++) {
-          syn.add(wordForms[j]);
+        for (int j = 1; j <  wordForms.length; j++) {
+          if(!syn.contains(wordForms[j]) && (!wordForms[j].equals(text)) && wordForms[j].length()>1){
+            syn.add(wordForms[j].toLowerCase());
+            id++;
+            if(id==num)
+              break;
+          }          
         }
+        if(id==num)
+          break;
       }
-      return syn;
-    } else {
-      return null;
+      Iterator<String> iter = syn.iterator();
+      while(iter.hasNext()){
+        res.add(iter.next());
+      }
     }
+    return res;
   }
 
   /**
@@ -46,7 +59,7 @@ public class JAWSApi {
   public static void main(String[] args) {
     System.setProperty("wordnet.database.dir", "src/main/resources/dict");
     args = new String[1];
-    args[0] = "shit";
+    args[0] = "carbon dioxide";
     if (args.length > 0) {
       // Concatenate the command-line arguments
       StringBuffer buffer = new StringBuffer();
