@@ -53,6 +53,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
     if(iter.isValid() && iter.hasNext()){
       AtomicQueryConcept query = (AtomicQueryConcept)iter.next();
       String text = query.getText();
+      System.out.println("query text--"+text);
       List<OntologyServiceResponse.Finding> findings = new LinkedList<OntologyServiceResponse.Finding>();
       try {
         OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(text, 0);
@@ -110,12 +111,12 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   private void createConceptFromFindings(String query, JCas aJCas,List<OntologyServiceResponse.Finding>findings){
     TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
     MyUtils ins = MyUtils.getInstance();
-    
+    String test="";
     Concept concept = new Concept(aJCas);
     for(OntologyServiceResponse.Finding finding : findings){
       String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
       double score = ins.computeCosineSimilarity(query, keyword);
-        
+      test += " "+score;
       ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
               aJCas, concept, finding.getConcept().getUri().replace("2014", "2012"),score, 
               finding.getConcept().getLabel(), 0, query, 
@@ -123,5 +124,6 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       
       conceptSR.addToIndexes(aJCas);
     }
+    System.out.println(test);
   }
 }

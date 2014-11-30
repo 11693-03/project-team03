@@ -73,7 +73,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
           double score = ins.computeCosineSimilarity(text, keywords);
           Document doc = TypeFactory.createDocument(aJCas, url, text,
                   999, text, docs.getTitle(), docs.getPmid());
-          if(score < 0.1)
+          if(score < 0)
              continue;
           //System.out.println(score);
           doc.setScore(score);
@@ -84,7 +84,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       }
 
       System.out.println("Processing document retrieval");
-      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas, 50);
+      Collection<Document> documents = TypeUtil.getRankedDocumentByScore(aJCas,300);
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);
       int rank = 1;

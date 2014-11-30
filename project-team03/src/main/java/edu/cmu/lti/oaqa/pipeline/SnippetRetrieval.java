@@ -38,7 +38,7 @@ import util.TypeUtil;
 public class SnippetRetrieval extends JCasAnnotator_ImplBase {
   private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
 
-  // private static final String PREFIX = "http://www.ncbi.nlm.nih.gov/pubmed/";
+  private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
 
   private CloseableHttpClient httpClient;
 
@@ -53,10 +53,11 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     Collection<Document> docList = TypeUtil.getRankedDocuments(aJCas);
     List<String> pmids = new LinkedList<String>();
     for (Document doc : docList) {
-      if(doc.getRank()==999)
+      if (doc.getRank() == 999)
         break;
       pmids.add(doc.getDocId());
-      System.out.println("docID:"+doc.getDocId()+"rank:"+doc.getRank());
+      System.out.println("docID:" + doc.getDocId() + "rank:" + doc.getRank() + "score:"
+              + doc.getScore());
     }
     httpClient = HttpClients.createDefault();
     SentenceChunker ins = SentenceChunker.getInstance();
@@ -74,7 +75,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
           while ((line = buffer.readLine()) != null) {
             json += line;
           }
-          System.out.println("json:"+json);
+          System.out.println("json:" + json);
           SectionSet sectionSet = SectionSet.load(json);
           List<String> sections = sectionSet.getSections();
           for (int i = 0; i < sections.size(); i++) {
@@ -100,9 +101,9 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
       Collections.sort(snippets);
       int rank = 1;
       for (Snippet snippet : snippets) {
-        Passage p = TypeFactory.createPassage(aJCas, null, snippet.getConf(), snippet.getText(),
-                rank++, qText, null, new ArrayList<CandidateAnswerVariant>(), snippet.getTitle(), pmid,
-                snippet.getOffsetInBeginSection(), snippet.getOffsetInEndSection(),
+        Passage p = TypeFactory.createPassage(aJCas, PREFIX_NCBI+pmid, snippet.getConf(), snippet.getText(),
+                rank++, qText, null, new ArrayList<CandidateAnswerVariant>(), snippet.getTitle(),
+                pmid, snippet.getOffsetInBeginSection(), snippet.getOffsetInEndSection(),
                 snippet.getBeginSection(), snippet.getEndSection(), null);
         p.addToIndexes(aJCas);
       }

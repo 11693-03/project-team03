@@ -102,11 +102,15 @@ public class MyUtils {
      // System.out.println("Test!"+aTest.getBeginSection()+aTest.getOffsetInBeginSection()+aTest.getEndSection()+aTest.getOffsetInEndSection());
       List<Snippet> hits = new ArrayList<Snippet>();
       for (Snippet aGold : goldSnippets) {
+        System.out.println("----------------------------------------------");
+        System.out.println(aGold.getDocument()+"\n"+aTest.getDocument());
+        
+          
         if (aGold.getDocument().equals(aTest.getDocument())
                 && aGold.getBeginSection().equals(aTest.getBeginSection())) {
           hits.add(aGold);
-          //System.out.println("find!!!" + aGold.getBeginSection() + aGold.getOffsetInBeginSection()
-          //        + aGold.getEndSection() + aGold.getOffsetInEndSection());
+          System.out.println("hittttttttttttttttttttt!");
+          
         }
       }
       // sum of common characters
