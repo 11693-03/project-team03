@@ -18,7 +18,7 @@ import java.util.TreeMap;
 
 /**
  *  Named Entity Recognizer from Lingpipe, utilizing a trained data set
- *  @author Qiankun Zhuang
+ *  @author Michael Zhuang
  */
 public class NERLingpipe {
   /**

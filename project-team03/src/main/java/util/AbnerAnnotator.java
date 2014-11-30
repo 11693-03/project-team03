@@ -13,7 +13,7 @@ import abner.Tagger;
 
 /**
  * This class annotates the input sentence by calling the Abner NLP.
- * @author Qiankun Zhuang
+ * @author Michael Zhuang
  */
 public class AbnerAnnotator{
   private AbnerAnnotator(){

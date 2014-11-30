@@ -1,8 +1,6 @@
 package edu.cmu.lti.oaqa.pipeline;
 
-import java.util.LinkedList;
 import java.util.List;
-
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
@@ -14,6 +12,13 @@ import edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.ComplexQueryConcept;
 import edu.cmu.lti.oaqa.type.retrieval.QueryOperator;
 
+/**
+ *  This class gets each token of the query, then use wordNet to retrieve all synonyms 
+ *  of the token, and store them in complexQueryConcept.
+ *  
+ *  @author Michael Zhuang
+ *   
+ ***/
 public class ComplexQueryConstructor extends JCasAnnotator_ImplBase {
   private static int numOfSynonym = 1;
   @Override

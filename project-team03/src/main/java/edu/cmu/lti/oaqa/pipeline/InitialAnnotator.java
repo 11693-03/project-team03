@@ -23,8 +23,9 @@ import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 public class InitialAnnotator extends JCasAnnotator_ImplBase{
 /**
  *  This class receives Question type in JCas, 
- *  remove the question mark, and create a new type AtomicQuestion, 
- *  containing the original query and the modficated query.
+ *  remove the question mark, do lemmatization, remove stop words,
+ *  extract keyword. 
+ *  AtomicQueryConcept stores every token of the processed question and keyword.
  *  @author Michael Zhuang 
  * 
  **/
@@ -40,21 +41,16 @@ public class InitialAnnotator extends JCasAnnotator_ImplBase{
       modificatedQuery = mLem.lemmatize(modificatedQuery);
       Vector<String>keyWords = StanfordNER.getInstance().getGeneSpans(modificatedQuery);
       StringBuffer sb = new StringBuffer();
+      sb.append(keyWords.get(0));
       for(String v : keyWords){
-        sb.append(v+" OR ");
+        sb.append(" "+v);
       }
-//      NERLingpipe ling = NERLingpipe.getInstance();
-//      try {
-//        modificatedQuery = ling.extractKeywords(modificatedQuery);
-//      } catch (ClassNotFoundException | IOException e) {
-//        e.printStackTrace();
-//      }
       System.out.println(originalQuery+"->"+modificatedQuery);
       for(String token : modificatedQuery.split("\\s+")){
         if(token.length()<=1)
           continue;
         AtomicQueryConcept atomic = new AtomicQueryConcept(aJCas);
-        atomic.setOriginalText(sb.toString().substring(0, sb.lastIndexOf(" ")).trim());
+        atomic.setOriginalText(sb.toString().trim());
         atomic.setText(token);
         atomic.addToIndexes(aJCas);
 //        if(!token.equals(mLem.lemmatize(token).trim())){

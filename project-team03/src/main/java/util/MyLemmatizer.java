@@ -12,6 +12,13 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
 
+
+/**
+ *  Wrapper for Stanford lemmatizer
+ *  
+ *  @author Michael Zhuang
+ * 
+ **/
 public class MyLemmatizer {
 
   protected StanfordCoreNLP pipeline;

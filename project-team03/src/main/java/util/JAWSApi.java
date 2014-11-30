@@ -9,9 +9,9 @@ import edu.smu.tspell.wordnet.*;
 
 /**
  * Displays word forms and definitions for synsets containing the word form specified on the command
- * line. To use this application, specify the word form that you wish to view synsets for, as in the
- * following example which displays all synsets containing the word form "airplane": <br>
- * java TestJAWS airplane
+ * line. To use this application, specify the word form that you wish to view synsets for.
+ * 
+ * @author Michael Zhuang
  */
 public class JAWSApi {
   private JAWSApi(){

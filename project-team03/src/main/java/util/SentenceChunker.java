@@ -14,6 +14,14 @@ import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory;
 import com.aliasi.tokenizer.Tokenizer;
 import com.aliasi.tokenizer.TokenizerFactory;
 
+
+/**
+ * This class uses Lingpipe sentence chunker to extract sentences
+ * from passages as snippets.
+ * 
+ * @author Michael Zhuang
+ *     
+ **/
 public class SentenceChunker {
   static final TokenizerFactory TOKENIZER_FACTORY = IndoEuropeanTokenizerFactory.INSTANCE;
   static final SentenceModel SENTENCE_MODEL = new MedlineSentenceModel();

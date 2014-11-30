@@ -15,6 +15,14 @@ import com.aliasi.tokenizer.StopTokenizerFactory;
 import com.aliasi.tokenizer.Tokenizer;
 import com.aliasi.tokenizer.TokenizerFactory;
 
+
+/**
+ *  This class uses Lingpipe tokenizer to remove stop words
+ *  and do tokenization on given strings.
+ *  
+ *  @author Michael Zhuang
+ * 
+ **/
 public class TokenizerLingpipe {
   private static TokenizerLingpipe instance = null;
   public static TokenizerLingpipe getInstance(){
