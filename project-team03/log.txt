@@ -1,0 +1,178 @@
+Parsing CPE Descriptor
+Instantiating CPE
+Running CPE
+/questions.json
+To abort processing, type "abort" and press enter.
+CPM Initialization Complete
+Adding annotator tokenize
+Adding annotator ssplit
+Adding annotator pos
+Loading default properties from tagger edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.6 sec].
+Adding annotator lemma
+Is Rheumatoid Arthritis more common in men or women?->rheumatoid arthritis common man woman 
+query:(rheumatoid OR creaky) AND (arthritis) AND (common OR commons) AND (man OR adult male) AND (woman OR adult female)
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+In Annotator Concept 
+????
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+http://ur.lti.cs.cmu.edu:30002/pmc/23996293
+http://ur.lti.cs.cmu.edu:30002/pmc/23670331
+http://ur.lti.cs.cmu.edu:30002/pmc/24217671
+http://ur.lti.cs.cmu.edu:30002/pmc/22545356
+http://ur.lti.cs.cmu.edu:30002/pmc/23774408
+http://ur.lti.cs.cmu.edu:30002/pmc/23755969
+http://ur.lti.cs.cmu.edu:30002/pmc/23525531
+http://ur.lti.cs.cmu.edu:30002/pmc/23445704
+http://ur.lti.cs.cmu.edu:30002/pmc/23238605
+http://ur.lti.cs.cmu.edu:30002/pmc/22879462
+http://ur.lti.cs.cmu.edu:30002/pmc/22833513
+http://ur.lti.cs.cmu.edu:30002/pmc/22577060
+http://ur.lti.cs.cmu.edu:30002/pmc/23900228
+http://ur.lti.cs.cmu.edu:30002/pmc/23584985
+http://ur.lti.cs.cmu.edu:30002/pmc/23217568
+http://ur.lti.cs.cmu.edu:30002/pmc/22873530
+http://ur.lti.cs.cmu.edu:30002/pmc/22749821
+http://ur.lti.cs.cmu.edu:30002/pmc/22740421
+http://ur.lti.cs.cmu.edu:30002/pmc/23591348
+http://ur.lti.cs.cmu.edu:30002/pmc/23983768
+http://ur.lti.cs.cmu.edu:30002/pmc/23873887
+http://ur.lti.cs.cmu.edu:30002/pmc/23610983
+http://ur.lti.cs.cmu.edu:30002/pmc/23478596
+http://ur.lti.cs.cmu.edu:30002/pmc/23290983
+http://ur.lti.cs.cmu.edu:30002/pmc/22799756
+http://ur.lti.cs.cmu.edu:30002/pmc/22795504
+http://ur.lti.cs.cmu.edu:30002/pmc/22709494
+http://ur.lti.cs.cmu.edu:30002/pmc/22651246
+http://ur.lti.cs.cmu.edu:30002/pmc/22555877
+http://ur.lti.cs.cmu.edu:30002/pmc/23731644
+http://ur.lti.cs.cmu.edu:30002/pmc/24245495
+http://ur.lti.cs.cmu.edu:30002/pmc/24241034
+http://ur.lti.cs.cmu.edu:30002/pmc/23982537
+http://ur.lti.cs.cmu.edu:30002/pmc/23938142
+http://ur.lti.cs.cmu.edu:30002/pmc/23884026
+http://ur.lti.cs.cmu.edu:30002/pmc/23827409
+http://ur.lti.cs.cmu.edu:30002/pmc/23826623
+http://ur.lti.cs.cmu.edu:30002/pmc/23673438
+http://ur.lti.cs.cmu.edu:30002/pmc/23646852
+http://ur.lti.cs.cmu.edu:30002/pmc/23340834
+http://ur.lti.cs.cmu.edu:30002/pmc/22997721
+http://ur.lti.cs.cmu.edu:30002/pmc/22941131
+http://ur.lti.cs.cmu.edu:30002/pmc/22776021
+http://ur.lti.cs.cmu.edu:30002/pmc/22537824
+http://ur.lti.cs.cmu.edu:30002/pmc/24261761
+http://ur.lti.cs.cmu.edu:30002/pmc/24187110
+http://ur.lti.cs.cmu.edu:30002/pmc/24045692
+http://ur.lti.cs.cmu.edu:30002/pmc/23470089
+http://ur.lti.cs.cmu.edu:30002/pmc/23434568
+http://ur.lti.cs.cmu.edu:30002/pmc/23429352
+Processing snippet retrieval
+Loading BioCreative tagging module...
+docPrecision:0.06666666666666667
+ConceptPrecision:0.6428571428571428
+snippets golden standard size:16
+snippet precision:0.0
+snippet recall:0.0
+Done
+Are there any DNMT3 proteins present in plants?->dnmt3 protein present plant 
+query:(dnmt3) AND (protein) AND (present OR nowadays) AND (plant OR works)

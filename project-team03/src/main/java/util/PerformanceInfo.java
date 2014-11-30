@@ -13,6 +13,59 @@ public class PerformanceInfo {
   private double docMAP;
   private double conceptMAP;
   private double tripleMAP;
+  
+  public PerformanceInfo() {
+    docList = new LinkedList<Double>();
+    conceptList = new LinkedList<Double>();
+    tripleList = new LinkedList<Double>();
+  }
+
+  public void addDocAP(double precision) {
+    docList.add(precision);
+  }
+
+  public void addConceptAP(double precision) {
+    docList.add(precision);
+  }
+
+  public void addTripleAP(double precision) {
+    docList.add(precision);
+  }
+
+  private double computeMAP(List<Double> list) {
+    if (list.size() == 0)
+      return 0;
+    double total = 0;
+    for (Double d : list)
+      total += d;
+
+    return total / list.size();
+
+  }
+
+  public void setDocMap() {
+    docMAP = computeMAP(docList);
+  }
+
+  public void setConceptMap() {
+    conceptMAP = computeMAP(conceptList);
+  }
+
+  public void setTripleMap() {
+    tripleMAP = computeMAP(tripleList);
+  }
+  
+  public double getDocMAP(){
+    return docMAP;
+  }
+  
+  public double getConceptMAP(){
+    return conceptMAP;
+  }
+  
+  public double getTripleMAP(){
+    return tripleMAP;
+  }
 
 
 }

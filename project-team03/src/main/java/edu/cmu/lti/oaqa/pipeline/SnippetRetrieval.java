@@ -37,7 +37,7 @@ import util.TypeFactory;
 import util.TypeUtil;
 
 public class SnippetRetrieval extends JCasAnnotator_ImplBase {
-  private static final String PREFIX = "localhost:30002/pmc/";
+  private static final String PREFIX = "http://ur.lti.cs.cmu.edu:30002/pmc/";
 
   private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
 
