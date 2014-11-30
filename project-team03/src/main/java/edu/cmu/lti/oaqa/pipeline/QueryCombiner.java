@@ -49,10 +49,12 @@ public class QueryCombiner extends JCasAnnotator_ImplBase{
       }
     }
     StringBuffer sb = new StringBuffer();
+    String keyword = null;
     FSIterator<TOP> qit = aJCas.getJFSIndexRepository().getAllIndexedFS(AtomicQueryConcept.type);
     while (qit.isValid() && qit.hasNext()){
       AtomicQueryConcept aq = (AtomicQueryConcept)qit.next();
       sb.append(aq.getText()+" ");
+      keyword = aq.getOriginalText();
     }
     qit = aJCas.getJFSIndexRepository().getAllIndexedFS(Question.type);
     String qID = null;
@@ -65,6 +67,7 @@ public class QueryCombiner extends JCasAnnotator_ImplBase{
     fquery.setQueryWithoutOp(queryWithoutOp.toString().trim());
     fquery.setOriginalQuery(sb.toString().trim());
     fquery.setQueryID(qID);
+    fquery.setKeyword(keyword);
 //    System.out.println(queryWithOp.toString().trim());
 //    System.out.println(queryWithoutOp.toString().trim());
     

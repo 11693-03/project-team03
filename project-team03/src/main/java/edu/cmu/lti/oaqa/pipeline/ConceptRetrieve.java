@@ -64,7 +64,6 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         OntologyServiceResponse.Result uniprotResult = service.findUniprotEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : uniprotResult.getFindings()) {
           findings.add(finding);
-          System.err.println("In Annotator Concept ");
         }
         
         OntologyServiceResponse.Result diseaseOntologyResult = service
@@ -84,7 +83,6 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
         for (OntologyServiceResponse.Finding finding : jochemResult.getFindings()) {
           findings.add(finding);
         }
-        System.out.println("????");
         OntologyServiceResponse.Result meshResult = service.findMeshEntitiesPaged(queryText, 0);
         for (OntologyServiceResponse.Finding finding : meshResult.getFindings()) {
           findings.add(finding);
@@ -123,7 +121,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       score /= 2.0;
       Concept concept = new Concept(aJCas);
       concept.setName(finding.getConcept().getLabel());
-
+      //System.out.println("concept name:"+concept.getName());
       ConceptSearchResult conceptSR = TypeFactory.createConceptSearchResult(
               aJCas, concept, finding.getConcept().getUri().replace("2014", "2012"),score, 
               finding.getConcept().getLabel(), 0, query, 

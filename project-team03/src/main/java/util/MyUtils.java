@@ -110,11 +110,7 @@ public class MyUtils {
     for (Snippet aTest : testSnippets) {
      // System.out.println("Test!"+aTest.getBeginSection()+aTest.getOffsetInBeginSection()+aTest.getEndSection()+aTest.getOffsetInEndSection());
       List<Snippet> hits = new ArrayList<Snippet>();
-      for (Snippet aGold : goldSnippets) {
-        System.out.println("----------------------------------------------");
-        System.out.println(aGold.getDocument()+"\n"+aTest.getDocument());
-        
-          
+      for (Snippet aGold : goldSnippets) {          
         if (aGold.getDocument().equals(aTest.getDocument())
                 && aGold.getBeginSection().equals(aTest.getBeginSection())) {
           hits.add(aGold);

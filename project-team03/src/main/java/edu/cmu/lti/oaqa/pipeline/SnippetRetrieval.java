@@ -14,6 +14,8 @@ import java.util.List;
 import json.gson.SectionSet;
 import json.gson.Snippet;
 
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -38,10 +40,10 @@ import util.TypeFactory;
 import util.TypeUtil;
 
 public class SnippetRetrieval extends JCasAnnotator_ImplBase {
-  private static final String PREFIX = "http://ur.lti.cs.cmu.edu:30002/pmc/";
+  private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
 
   private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
-
+  private static final int timedout = 3000;
   private CloseableHttpClient httpClient;
 
   @Override
@@ -57,26 +59,25 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     Collection<Document> docList = TypeUtil.getRankedDocuments(aJCas);
     List<String> pmids = new LinkedList<String>();
     for (Document doc : docList) {
-
       pmids.add(doc.getDocId());
-      //System.out.println(doc.getDocId()+doc.getRank());
-
     }
     RequestConfig defaultRequestConfig = RequestConfig.custom()
-            .setSocketTimeout(5000)
-            .setConnectTimeout(5000)
-            .setConnectionRequestTimeout(5000)
+            .setSocketTimeout(timedout)
+            .setConnectTimeout(timedout)
+            .setConnectionRequestTimeout(timedout)
             .setStaleConnectionCheckEnabled(true)
             .build();
     httpClient = HttpClients.custom().setDefaultRequestConfig(defaultRequestConfig).build();
     SentenceChunker ins = SentenceChunker.getInstance();
     for (String pmid : pmids) {
       String url = PREFIX + pmid;
-      System.out.println(url);
+      //System.out.println(url);
       HttpGet httpGet = new HttpGet(url);
+      
       List<Snippet> snippets = new LinkedList<Snippet>();
       try {
         CloseableHttpResponse response = httpClient.execute(httpGet);
+        
         HttpEntity entity = response.getEntity();
         if (entity != null) {
           BufferedReader buffer = new BufferedReader(new InputStreamReader(entity.getContent()));
@@ -85,7 +86,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
           while ((line = buffer.readLine()) != null) {
             json += line;
           }
-          System.out.println("json:" + json);
+          //System.out.println("json:" + json);
           SectionSet sectionSet = SectionSet.load(json);
           List<String> sections = sectionSet.getSections();
           for (int i = 0; i < sections.size(); i++) {
@@ -103,10 +104,12 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
               snippets.add(snippet);
             }
           }
-           System.out.println("Snippet:"+sectionSet);
+           //System.out.println("Snippet:"+sectionSet);
+        }else {
+          System.out.println("status:"+response.getStatusLine());
         }
       } catch (IOException e) {
-        e.printStackTrace();
+        //e.printStackTrace();
       }
       Collections.sort(snippets);
       int rank = 1;

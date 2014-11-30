@@ -11,7 +11,11 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** A search result where the candidate answer is obtained as part of the search process and saved in the text field of the search result.
+<<<<<<< HEAD
+ * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
+=======
  * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
+>>>>>>> origin/master
  * @generated */
 public class AnswerSearchResult_Type extends SearchResult_Type {
   /** @generated 

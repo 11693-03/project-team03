@@ -47,6 +47,8 @@ public class TokenizerLingpipe {
     mTokenizerFactory = new StopTokenizerFactory(mTokenizerFactory, stopWords);
   }
   public String tokenize(String query){
+    if(query==null)
+      return "";
     Tokenizer tokenizer = mTokenizerFactory.tokenizer(query.toCharArray(), 0,
             query.length());
 

@@ -10,8 +10,13 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
+<<<<<<< HEAD
+ * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
+ * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
+=======
  * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
  * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
+>>>>>>> origin/master
  * @generated */
 public class Relation extends Concept {
   /** @generated

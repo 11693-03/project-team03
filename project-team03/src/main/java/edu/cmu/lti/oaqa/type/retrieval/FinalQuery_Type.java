@@ -14,7 +14,11 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
+<<<<<<< HEAD
+ * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
+=======
  * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
+>>>>>>> origin/master
  * @generated */
 public class FinalQuery_Type extends TOP_Type {
   /** @generated 
@@ -141,6 +145,30 @@ public class FinalQuery_Type extends TOP_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_queryID, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_keyword;
+  /** @generated */
+  final int     casFeatCode_keyword;
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
+  public String getKeyword(int addr) {
+        if (featOkTst && casFeat_keyword == null)
+      jcas.throwFeatMissing("keyword", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_keyword);
+  }
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
+  public void setKeyword(int addr, String v) {
+        if (featOkTst && casFeat_keyword == null)
+      jcas.throwFeatMissing("keyword", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
+    ll_cas.ll_setStringValue(addr, casFeatCode_keyword, v);}
+    
+  
 
 
 
@@ -168,6 +196,10 @@ public class FinalQuery_Type extends TOP_Type {
  
     casFeat_queryID = jcas.getRequiredFeatureDE(casType, "queryID", "uima.cas.String", featOkTst);
     casFeatCode_queryID  = (null == casFeat_queryID) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_queryID).getCode();
+
+ 
+    casFeat_keyword = jcas.getRequiredFeatureDE(casType, "keyword", "uima.cas.String", featOkTst);
+    casFeatCode_keyword  = (null == casFeat_keyword) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_keyword).getCode();
 
   }
 }
