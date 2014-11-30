@@ -39,6 +39,7 @@ import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
  ***/
 
 public class DocumentRetrieve extends JCasAnnotator_ImplBase {
+  private static int docLimits = 51;
   GoPubMedService service;
   public static final String uriPrefix = "http://www.ncbi.nlm.nih.gov/pubmed/";
   public static String Properties = "ProjectProperties";
@@ -101,7 +102,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       for(Document d : documentList){
         d.removeFromIndexes();
         d.setRank(rank++);
-        if(rank>51)
+        if(rank > docLimits)
           continue;
         d.addToIndexes(aJCas);
       }
