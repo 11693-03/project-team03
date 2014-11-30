@@ -31,9 +31,11 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.uimafit.util.FSCollectionFactory;
 
 import util.MyUtils;
 import util.TypeUtil;
+import edu.cmu.lti.oaqa.type.answer.Answer;
 import edu.cmu.lti.oaqa.type.input.Question;
 import edu.cmu.lti.oaqa.type.kb.Concept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
@@ -192,11 +194,16 @@ public class Consumer extends CasConsumer_ImplBase {
 
     System.out.println("Done");
     List<List<String>> exactAnswer = new LinkedList<List<String>>();
-    LinkedList<String> listString = new LinkedList<String>();
-    listString.add("abc");
-    listString.add("def");
-    exactAnswer.add(listString);
-    exactAnswer.add(listString);
+   
+    Collection<Answer>  answersFromCAS = TypeUtil.getAnswersByRank(jcas);
+    LinkedList<Answer> answerList = new LinkedList<Answer>(answersFromCAS);
+    for(Answer a :answerList){
+      LinkedList<String> listString = new LinkedList<String>();
+      listString.add(a.getText());
+      Collection<String> variants = FSCollectionFactory.create(a.getVariants());
+      listString.addAll(variants);
+    }
+    
     TestListQuestion answer = new TestListQuestion(curQId,body,type,docUriList,test,conceptUriList,tripleList,"pseudo ideal answer",exactAnswer);
     answers.add(answer);
   }
