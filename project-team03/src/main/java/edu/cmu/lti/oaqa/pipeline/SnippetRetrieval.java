@@ -43,7 +43,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
   private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
 
   private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
-  private static final int timedout = 3000;
+  private static final int timedout = 1000;
   private CloseableHttpClient httpClient;
 
   @Override
@@ -57,10 +57,6 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
       qText = query.getOriginalQuery();
     }
     Collection<Document> docList = TypeUtil.getRankedDocuments(aJCas);
-    List<String> pmids = new LinkedList<String>();
-    for (Document doc : docList) {
-      pmids.add(doc.getDocId());
-    }
     RequestConfig defaultRequestConfig = RequestConfig.custom()
             .setSocketTimeout(timedout)
             .setConnectTimeout(timedout)
@@ -68,8 +64,8 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
             .setStaleConnectionCheckEnabled(true)
             .build();
     httpClient = HttpClients.custom().setDefaultRequestConfig(defaultRequestConfig).build();
-    SentenceChunker ins = SentenceChunker.getInstance();
-    for (String pmid : pmids) {
+    for (Document doc : docList) {
+      String pmid = doc.getDocId();
       String url = PREFIX + pmid;
       //System.out.println(url);
       HttpGet httpGet = new HttpGet(url);
@@ -86,27 +82,14 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
           while ((line = buffer.readLine()) != null) {
             json += line;
           }
-          //System.out.println("json:" + json);
           SectionSet sectionSet = SectionSet.load(json);
           List<String> sections = sectionSet.getSections();
-          for (int i = 0; i < sections.size(); i++) {
-            HashMap<Integer, Integer> r = ins.chunk(sections.get(i));
-            Iterator<Integer> iter = r.keySet().iterator();
-            while (iter.hasNext()) {
-              int begin = iter.next();
-              int end = r.get(begin);
-              double conf = evaluateSimilarity(qText, sections.get(i).substring(begin, end));
-              if (conf < 0.1)
-                continue;
-              Snippet snippet = new Snippet(pmid, sections.get(i).substring(begin, end), begin,
-                      end, "sections." + String.valueOf(i), "sections." + String.valueOf(i),
-                      sectionSet.getTitle(), conf);
-              snippets.add(snippet);
-            }
-          }
+          makeSnippets(qText, pmid, snippets, sections,sectionSet.getTitle());
            //System.out.println("Snippet:"+sectionSet);
         }else {
-          System.out.println("status:"+response.getStatusLine());
+          List<String> abstractText = new LinkedList<String>();
+          abstractText.add(doc.getText());
+          makeSnippets(qText,pmid,snippets, abstractText,"abstact");
         }
       } catch (IOException e) {
         //e.printStackTrace();
@@ -123,7 +106,24 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     }
     System.out.println("Processing snippet retrieval");
   }
-
+  private void makeSnippets(String qText, String pmid, List<Snippet> snippets, List<String>sections, String title){
+    SentenceChunker ins = SentenceChunker.getInstance();
+    for (int i = 0; i < sections.size(); i++) {
+      HashMap<Integer, Integer> r = ins.chunk(sections.get(i));
+      Iterator<Integer> iter = r.keySet().iterator();
+      while (iter.hasNext()) {
+        int begin = iter.next();
+        int end = r.get(begin);
+        double conf = evaluateSimilarity(qText, sections.get(i).substring(begin, end));
+        if (conf < 0.1)
+          continue;
+        Snippet snippet = new Snippet(pmid, sections.get(i).substring(begin, end), begin,
+                end, "sections." + String.valueOf(i), "sections." + String.valueOf(i),
+                title, conf);
+        snippets.add(snippet);
+      }
+    }
+  }
   private double evaluateSimilarity(String query, String snippet) {
     TokenizerLingpipe ins = TokenizerLingpipe.getInstance();
     snippet = ins.tokenize(snippet);
