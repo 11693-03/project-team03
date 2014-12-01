@@ -1,0 +1,1803 @@
+Parsing CPE Descriptor
+Instantiating CPE
+Running CPE
+/questions-1.json
+To abort processing, type "abort" and press enter.
+CPM Initialization Complete
+Adding annotator tokenize
+Adding annotator ssplit
+Adding annotator pos
+Loading default properties from tagger edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger
+Reading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.7 sec].
+Adding annotator lemma
+Adding annotator tokenize
+Adding annotator ssplit
+Adding annotator pos
+What is the most prominent sequence consensus for the polyadenylation site?->prominent sequence consensus polyadenylation site 
+Processing concept retrieval
+Processing document retrieval
+Processing document retrieval
+Processing triple retrieval
+Processing snippet retrieval
+Loading BioCreative tagging module...
+docPrecision:0.5
+docRecall:0.3333333333333333
+ConceptPrecision:0.8333333333333333
+triplePrecision:0.0
+Which extra thyroid tissues have thyrotropin (TSH) receptors?->extra thyroid tissue thyrotropin tsh receptor 
+snippets golden standard size:7
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+hittttttttttttttttttttt!
+snippet precision:0.0025136773621174035
+snippet recall:0.4388586956521739
+Done
+exact answer [L1 poly]
+exact answer [L1 AAUAAA consensus sequence]
+exact answer [Base, base of operations, fundament, foot]
+exact answer [BPV early polyadenylation site]
+exact answer [Ig sec poly]
+exact answer [J. C.]
+exact answer [PAS motif]
+exact answer [SR protein]
+exact answer [SRp20]
+exact answer [fMLF-R gene]
+exact answer [Alu-repetitive elements]
+exact answer [AATAAA consensus polyadenylation signals]
+exact answer [laminin mRNA]
+exact answer [ATTTA motifs]
+exact answer [CA element]
+exact answer [AP-1 binding site]
+exact answer [SV40 enhancer core elements]
+exact answer [cAMP response element]
+exact answer [CRE]
+exact answer [CAP site]
+exact answer [p53 -binding DNA sequence]
+exact answer [wild-type p53]
+exact answer [CLN3]
+exact answer [CLN3 cDNA]
+exact answer [Sp1]
+exact answer [CREB]
+exact answer [estrogen receptor binding site]
+exact answer [cAMP-response element]
+exact answer [AP-1 -binding site]
+exact answer [IL-6 -response element]
+exact answer [AAUAAA polyadenylation consensus sequence]
+exact answer [PAI-1 mRNA]
+exact answer [pA2]
+exact answer [DGs alpha L )]
+exact answer [DGs alpha S]
+exact answer [Gs alpha]
+exact answer [COT gene]
+exact answer [IL7R]
+exact answer [H2B]
+exact answer [H2B -specific promoter element]
+exact answer [AP-1 consensus sequence]
+exact answer [RNA-binding proteins]
+exact answer [RBPs]
+exact answer [Tick-Box consensus sequence]
+exact answer [prothrombin mRNA]
+exact answer [TGA7]
+exact answer [G gene]
+exact answer [No interleukin-converting enzyme ( ICE ) cut site]
+exact answer [sbIL-1 beta]
+exact answer [Tyr87]
+exact answer [eIF4E1]
+exact answer [eIF4G]
+exact answer [consensus eIF4E -binding site]
+exact answer [Luc7L2 transcripts]
+exact answer [ORF34 -37 promoter region]
+exact answer [mammalian FSHbeta genes]
+exact answer [U11 snRNP]
+exact answer [U11 binding site]
+exact answer [Smf3]
+exact answer [actA gene]
+exact answer [NRSE / RE-1 site]
+exact answer [RNApII]
+exact answer [G X D E]
+exact answer [Asp, asp viper, vipera aspis, egyptian cobra]
+exact answer [Pb NAG1]
+exact answer [glycosyl hydrolase family 20]
+exact answer [U1 / U11 site]
+exact answer [Nrd1 -binding site]
+exact answer [RPCs]
+exact answer [Pira6]
+exact answer [TTP sequence]
+exact answer [cyclin binding site]
+exact answer [UL37 x1 polyadenylation ( PA )]
+exact answer [consensus histone downstream element]
+exact answer [histone mRNAs]
+exact answer [lef-8]
+exact answer [MMP-26 gene]
+exact answer [UL12 capping site]
+exact answer [SEalpha2]
+exact answer [FXYD2 gene]
+exact answer [zebrafish cDNA sequence]
+exact answer [CAYUG elements]
+exact answer [PART-1 promoter region]
+exact answer [homeobox gene]
+exact answer [androgen response element]
+exact answer [sterol-regulatory element binding sites]
+exact answer [L1 polyadenylation signal]
+exact answer [SIRE, engender, father, get]
+exact answer [UbcM4D eltaex2]
+exact answer [UbcM4]
+exact answer [ubiquitin thioester]
+exact answer [ubiquitin-conjugating enzyme]
+exact answer [NIPP-1 beta , gamma and delta]
+exact answer [U2AF]
+exact answer [TNFR2]
+exact answer [Inr motif]
+exact answer [M gene]
+exact answer [GATA motif]
+exact answer [NF-kappa B binding site]
+exact answer [CG30]
+exact answer [murine fVII gene]
+exact answer [C / EBP alpha]
+exact answer [C / EBP beta]
+exact answer [C / EBP consensus recognition site]
+exact answer [xTFIIS genes]
+exact answer [Alu repeat sequences]
+exact answer [MER1]
+exact answer [L1 element]
+exact answer [L3 poly ( A ) site]
+exact answer [BPV mRNA]
+exact answer [Ig sec poly ( A ) site]
+exact answer [guanosyl phosphotransferase gene]
+exact answer [RBDs]
+exact answer [CstF-64]
+exact answer [dbcAMP-differentiated U937 RNA]
+exact answer [protein VII lacks the consensus protease cleavage site]
+exact answer [beta-globin mRNA]
+exact answer [chicken lipoprotein lipase]
+exact answer [SV40 enhancer core element]
+exact answer [mammalian protamine gene family]
+exact answer [chicken protamine gene]
+exact answer [CLN3 gene]
+exact answer [TG transcripts]
+exact answer [cleavage stimulatory factor]
+exact answer [Opaque 2 binding site]
+exact answer [human B2R]
+exact answer [PSG076]
+exact answer [human PAI-1 gene]
+exact answer [mouse PAI-1 cDNA]
+exact answer [TART subfamily]
+exact answer [Sm protein complex-binding site]
+exact answer [human U1 RNA]
+exact answer [Genes Dev]
+exact answer [CTF / NF1 / CBP]
+exact answer [AP2 sites]
+exact answer [TGACCT]
+exact answer [peroxisome proliferator activated receptor]
+exact answer [PPAR]
+exact answer [CPSF1]
+exact answer [G+ T )]
+exact answer [epsilon transcripts]
+exact answer [S1 nuclease]
+exact answer [H4]
+exact answer [H3 genes]
+exact answer [histone genes]
+exact answer [TATA-like sequence CATAAA]
+exact answer [3' EcoRI site]
+exact answer [BamHI fragment]
+exact answer [topo II alpha gene]
+exact answer [nad1]
+exact answer [L1 endonuclease]
+exact answer [hnRNP-I / PTB-1]
+exact answer [CTH2 mRNA]
+exact answer [GT-AG]
+exact answer [CPEB ( cytoplasmic polyadenylation element-binding protein]
+exact answer [Scnm1]
+exact answer [Scn8]
+exact answer [E1]
+exact answer [NRS]
+exact answer [U1 small nuclear ribonucleoprotein]
+exact answer [snRNP]
+exact answer [gamma-actin]
+exact answer [chicken SCN8A]
+exact answer [RNA polymerase II]
+exact answer [Pb nag1]
+exact answer [U11 consensus sequence]
+exact answer [common RNA sequence motifs]
+exact answer [USF]
+exact answer [AP4]
+exact answer [MyoD]
+exact answer [luciferase]
+exact answer [Nat2]
+exact answer [Pira6 gene]
+exact answer [UL37 x2 acceptor]
+exact answer [HNF3 beta]
+exact answer [Nkx2 -5]
+exact answer [AP-4]
+exact answer [NrampC]
+exact answer [RNAP II )]
+exact answer [TRalpha1 -specific polyadenylation site]
+exact answer [TRalpha2]
+exact answer [USF binding site]
+exact answer [VDUP1 gene]
+exact answer [transcription factor binding sites]
+exact answer [FXYD2]
+exact answer [Double FYVE-containing protein 1]
+exact answer [DFCP1]
+exact answer [FYVE domains]
+exact answer [MAGP-2]
+exact answer [PART-1 cDNA]
+exact answer [UbcM4 transcripts]
+exact answer [UbcM4 polyadenylation sites]
+exact answer [SP-HSP70 protein sequence]
+exact answer [PTB binding site]
+exact answer [rabbit PIN cDNA]
+exact answer [RNA elements]
+exact answer [NIPSNAP1 mRNA]
+exact answer [AGTGTTTC]
+exact answer [COX-2]
+exact answer [TGA ( A / T ) AA ( A / G / T )]
+exact answer [somatic topoisomerase]
+exact answer [AT-AC]
+exact answer [xTFIIS.o B gene]
+exact answer [interferon-gamma response element]
+exact answer [NF-kappaB]
+exact answer [glucocorticoid response element]
+exact answer [corneal endothelial alpha 2 ( I ) mRNA]
+exact answer [alpha 2 ( I ) mRNA]
+exact answer [Alu repeat element]
+exact answer [L1 poly ( A ) site]
+exact answer [L3 poly]
+exact answer [UAAA tetranucleotide]
+exact answer [bovine papillomavirus type 1]
+exact answer [Ig gamma 2 b mRNA]
+exact answer [delta-Kpn]
+exact answer [IgM secretory poly ( A ) site]
+exact answer [mutant SRp20]
+exact answer [heterotrimeric polyadenylation factor CstF]
+exact answer [Oct I binding elements]
+exact answer [mammalian P1 family protamines]
+exact answer [chicken protamine galline]
+exact answer [HPV genes]
+exact answer [RNA polymerase]
+exact answer [AAUAAA]
+exact answer [Drosophila Gs alpha]
+exact answer [BamHI recognition site]
+exact answer [chloramphenicol acetyltransferase]
+exact answer [CAT, true cat, hombre, bozo]
+exact answer [CCAAT sequence motifs]
+exact answer [SP1]
+exact answer [AP1]
+exact answer [E2F]
+exact answer [AP2]
+exact answer [PEA-3]
+exact answer [trnL]
+exact answer [VACV]
+exact answer [GU3 – 5 ] 5 element]
+exact answer [IL-1 beta]
+exact answer [SCNM1]
+exact answer [LUC7L2]
+exact answer [mammalian homolog of a yeast protein]
+exact answer [P1]
+exact answer [GATA]
+exact answer [ets consensus sequences]
+exact answer [Sp1 -binding sites]
+exact answer [Inr sites]
+exact answer [EhPgp5 mRNA 3' -untranslated region]
+exact answer [EGF family]
+exact answer [AP-2]
+exact answer [mdg3]
+exact answer [LTR]
+exact answer [B2 repetitive element]
+exact answer [GR mRNA sequence]
+exact answer [NIPSNAP1 gene]
+exact answer [cg30]
+exact answer [restriction endonuclease, restriction nuclease, restriction enzyme]
+exact answer [An NcoI fragment ( 4.7 kb )]
+exact answer [lacZ]
+exact answer [UAA]
+exact answer [UAUAUA]
+exact answer [immunoglobulin, immune gamma globulin, immune serum globulin, ig]
+exact answer [IgM]
+exact answer [IRBP gene]
+exact answer [AP-1]
+exact answer [CK-2 consensus sequences]
+exact answer [Fos / Jun family]
+exact answer [NF-GMb]
+exact answer [CBP1]
+exact answer [AEP2 / ATP13]
+exact answer [RNA14]
+exact answer [SIR1]
+exact answer [DHFR-TS locus]
+exact answer [polyadenylation specificity factor 1]
+exact answer [murine epsilon chain isoforms]
+exact answer [20 K allele]
+exact answer [21 K allele]
+exact answer [core histone gene]
+exact answer [CAT gene]
+exact answer [SERCA2 gene]
+exact answer [human SSAT cDNA]
+exact answer [ACTB]
+exact answer [Nrd1 / Nab3 binding sites]
+exact answer [SLX4]
+exact answer [mouse SCN8A]
+exact answer [Rat1]
+exact answer [U11]
+exact answer [mono-snRNP]
+exact answer [U11 site]
+exact answer [RNA-protein complex]
+exact answer [EGF-motif]
+exact answer [Nramp]
+exact answer [TRalpha minigene]
+exact answer [human MAGP-2 proteins]
+exact answer [reverse transcriptase-RNase]
+exact answer [PTB]
+exact answer [cg30 gene]
+exact answer [p39 gene]
+exact answer [somatic topoisomerase I sequence]
+exact answer [Tad, shade]
+exact answer [L3 upstream region]
+exact answer [UAAA motif]
+exact answer [wild-type early polyadenylation site]
+exact answer [delta-Kpn gene]
+exact answer [IgM secretory poly]
+exact answer [immunoglobulin isotype secretory poly]
+exact answer [AAUAAA sequence]
+exact answer [U3 region]
+exact answer [R region]
+exact answer [U3 region )]
+exact answer [U5 region ) sequences]
+exact answer [PAS]
+exact answer [fMLF-R cDNA]
+exact answer [rat GPC1 gene]
+exact answer [human GPC3 gene]
+exact answer [LKR-SDH]
+exact answer [any omega-long fragment]
+exact answer [TART mRNA]
+exact answer [classical membrane IgE]
+exact answer [H2A genes]
+exact answer [Flury LEP]
+exact answer [CTH2]
+exact answer [Cth1]
+exact answer [CTD serine 2]
+exact answer [glycosyl hydrolase group of proteins]
+exact answer [U1 snRNP]
+exact answer [U6 small nuclear ribonucleoproteins]
+exact answer [snRNPs]
+exact answer [CT dinucleotide repeat sequence]
+exact answer [Tad element]
+exact answer [BPV late genes]
+exact answer [rat GPC1 sequence]
+exact answer [luciferase reporter gene]
+exact answer [E5 ORF]
+exact answer [TART-B1]
+exact answer [TART-A1]
+exact answer [epsilon mRNA variants]
+exact answer [epsilon chain transcripts]
+exact answer [Tick-Box-like sequence]
+exact answer [MnopA]
+exact answer [A+ U rich sequence element]
+exact answer [TTP]
+exact answer [chicken interferon-gamma ( ifn-gamma ) gene]
+exact answer [HPV-31 early transcripts]
+exact answer [ACT1 sequence]
+exact answer [HBB1 sequence]
+exact answer [ACTB sequence]
+exact answer [HPV-31 late gene]
+exact answer [DmTTF binding site]
+exact answer [LC8 binding site]
+exact answer [P-LC8]
+exact answer [LC8]
+exact answer [actin]
+exact answer [ACT1 -3 ) or globin]
+exact answer [HBB1 -3 ) poly]
+exact answer [CstF subunits]
+exact answer [Sp1 binding sites]
+exact answer [Tick-Box inside trnL]
+exact answer [HBB2]
+exact answer [HBB gene sequence]
+exact answer [HBB1]
+exact answer [Mtr4]
+exact answer [TRAMP4 complex.3]
+exact answer [CTH2 pre-mRNA]
+exact answer [Nrd1]
+exact answer [Nab3]
+exact answer [Sen1C]
+exact answer [Nrd1 / Nab3 heterodimer]
+exact answer [snRNAs]
+exact answer [snoRNAs]
+exact answer [sequence region encompassing mRNA cleavage site]
+exact answer [HPV-31 early polyadenylation sequences]
+exact answer [rrnL]
+exact answer [Self-cleaving ribozymes]
+exact answer [exonuclease]
+exact answer [DSE regions]
+exact answer [CDE.1]
+exact answer [L1]
+exact answer [Drosophila initiator , A / T / G-TCA-G / T-T-C / T-G]
+exact answer [rrnL genes]
+exact answer [A12 sequence]
+exact answer [Drosophila 3' UTRs]
+exact answer [HeT-A]
+exact answer [TART transcription initiation sitesWe]
+exact answer [trnQ-trnF NCR]
+exact answer [Tick-Box sequence.1 0.1371 / journal.p one.0 047538.g 005 Figure 5 Tick-Box motif]
+exact answer [trnQ]
+exact answer [trnF]
+exact answer [Metastriata.B]
+exact answer [Rna14]
+exact answer [human β − globin]
+exact answer [Human TTP]
+exact answer [Drosophila DSE.H]
+exact answer [TART-B1 site 3 a]
+exact answer [TART sequences]
+exact answer [polyA]
+exact answer [TART-C1 site 5 d )]
+exact answer [DmTTF]
+exact answer [MTERF protein family]
+exact answer [Doc, dr., md, physician]
+exact answer [F elements]
+exact answer [MnipA]
+exact answer [TART transcripts]
+exact answer [D. melanogaster nad1 gene]
+exact answer [DmTTF transcription termination factor]
+exact answer [trnE]
+exact answer [TART elements]
+exact answer [rrnL transcript]
+exact answer [TAN ACT1]
+exact answer [TART element]
+exact answer [TART-C1]
+exact answer [TART proteins]
+exact answer [rrnL 3 ′ -end]
+exact answer [Tick-Box motif]
+exact answer [rrnL polyA start site]
+exact answer [MnipA sequence]
+exact answer [Pap1]
+exact answer [Protein complexes]
+exact answer [polyadenylation specificity factor]
+exact answer [DSE recruits the cleavage stimulation factor]
+exact answer [CstF]
+exact answer [JN248424.P rotein coding genes]
+exact answer [ACTB sequences]
+exact answer [NAB2 gene]
+exact answer [A26 sequence]
+exact answer [Flp recombinase]
+exact answer [Cth2 -CDS-F-750 )]
+exact answer [TART-C elements]
+exact answer [GFP / CAT]
+exact answer [Nab4]
+exact answer [TH2 mRNA]
+exact answer [CTH2 transcripts]
+exact answer [CS region]
+exact answer [Tick-Box consensus motif]
+exact answer [FLUC RNA fragment]
+exact answer [ribozyme]
+exact answer [Pab1]
+exact answer [CV670417.1]
+exact answer [CV668181.1]
+exact answer [CV665773.1]
+exact answer [CV670284.1]
+exact answer [CV668879.1]
+exact answer [CV667130.1]
+exact answer [rrnL transcripts]
+exact answer [Nrd1 binding sites]
+exact answer [24 Nab3 binding sites]
+exact answer [Nrd1 / Nab3 complex]
+exact answer [nrd1 -102]
+exact answer [nab3]
+exact answer [rrnL polyadenylation sites]
+exact answer [downstream tRNA gene]
+exact answer [UUR]
+exact answer [mitochondrial transcription termination factor]
+exact answer [mini-PGK1 reporter]
+exact answer [Trypanosoma IRs]
+exact answer [hammerhead ribozymes]
+exact answer [hRLUC expressing RNA fragments]
+exact answer [ACT-200N otF primer]
+exact answer [ACT+ 200 NheR]
+exact answer [ACT+ 1100 NheR]
+exact answer [ACT+ 1800 NheR]
+exact answer [ACT1]
+exact answer [ACT2]
+exact answer [ACT3]
+exact answer [work.A minimal poly]
+exact answer [MniACT]
+exact answer [ACTB site]
+exact answer [Mni0ACT pA1   GGCCagttgAATATTagtgcacaccttaaaaatgaggccaagtgtgactttgtggtgtgMni0ACT pA2   CTAGcacaccacaaagtcacacttggcctcatttttaaggtgtgcactAATATTcaactThe poly]
+exact answer [Invitrogen Flp-In T-REx system]
+exact answer [Trf4/5]
+exact answer [Air1/2]
+exact answer [Hrp1]
+exact answer [DSE]
+exact answer [rRNA]
+exact answer [trnS ( UCN ) / trnE]
+exact answer [nad1 transcript]
+exact answer [human β -actin and β -globin polyadenylation sites]
+exact answer [Tick-Box-like sequences]
+exact answer [p3]
+exact answer [CR2]
+exact answer [rrnL gene]
+exact answer [NC_006078]
+exact answer [Tick-Boxes located inside trnL]
+exact answer [tRNA gene]
+exact answer [Tick-Box sequence inside trnL]
+exact answer [Small ( rrnS ) and large ( rrnL ) ribosomal subunit rRNAs]
+exact answer [Valverde ’ s rRNA]
+exact answer [oriL]
+exact answer [trnC]
+exact answer [trnL ( CUN ) gene]
+exact answer [rrnL polyA site]
+exact answer [nad1 polyA site]
+exact answer [trnL ( CUN ) elements]
+exact answer [poly-T]
+exact answer [nad1 3]
+exact answer [nad1 ESTs]
+exact answer [nad1 mRNA]
+test= L1 poly-----gold =AATAAA
+test= L1 AAUAAA consensus sequence-----gold =AATAAA
+test= Base-----gold =AATAAA
+test= base of operations-----gold =AATAAA
+test= fundament-----gold =AATAAA
+test= foot-----gold =AATAAA
+test= BPV early polyadenylation site-----gold =AATAAA
+test= Ig sec poly-----gold =AATAAA
+test= J. C.-----gold =AATAAA
+test= PAS motif-----gold =AATAAA
+test= SR protein-----gold =AATAAA
+test= SRp20-----gold =AATAAA
+test= fMLF-R gene-----gold =AATAAA
+test= Alu-repetitive elements-----gold =AATAAA
+test= AATAAA consensus polyadenylation signals-----gold =AATAAA
+test= laminin mRNA-----gold =AATAAA
+test= ATTTA motifs-----gold =AATAAA
+test= CA element-----gold =AATAAA
+test= AP-1 binding site-----gold =AATAAA
+test= SV40 enhancer core elements-----gold =AATAAA
+test= cAMP response element-----gold =AATAAA
+test= CRE-----gold =AATAAA
+test= CAP site-----gold =AATAAA
+test= p53 -binding DNA sequence-----gold =AATAAA
+test= wild-type p53-----gold =AATAAA
+test= CLN3-----gold =AATAAA
+test= CLN3 cDNA-----gold =AATAAA
+test= Sp1-----gold =AATAAA
+test= CREB-----gold =AATAAA
+test= estrogen receptor binding site-----gold =AATAAA
+test= cAMP-response element-----gold =AATAAA
+test= AP-1 -binding site-----gold =AATAAA
+test= IL-6 -response element-----gold =AATAAA
+test= AAUAAA polyadenylation consensus sequence-----gold =AATAAA
+test= PAI-1 mRNA-----gold =AATAAA
+test= pA2-----gold =AATAAA
+test= DGs alpha L )-----gold =AATAAA
+test= DGs alpha S-----gold =AATAAA
+test= Gs alpha-----gold =AATAAA
+test= COT gene-----gold =AATAAA
+test= IL7R-----gold =AATAAA
+test= H2B-----gold =AATAAA
+test= H2B -specific promoter element-----gold =AATAAA
+test= AP-1 consensus sequence-----gold =AATAAA
+test= RNA-binding proteins-----gold =AATAAA
+test= RBPs-----gold =AATAAA
+test= Tick-Box consensus sequence-----gold =AATAAA
+test= prothrombin mRNA-----gold =AATAAA
+test= TGA7-----gold =AATAAA
+test= G gene-----gold =AATAAA
+test= No interleukin-converting enzyme ( ICE ) cut site-----gold =AATAAA
+test= sbIL-1 beta-----gold =AATAAA
+test= Tyr87-----gold =AATAAA
+test= eIF4E1-----gold =AATAAA
+test= eIF4G-----gold =AATAAA
+test= consensus eIF4E -binding site-----gold =AATAAA
+test= Luc7L2 transcripts-----gold =AATAAA
+test= ORF34 -37 promoter region-----gold =AATAAA
+test= mammalian FSHbeta genes-----gold =AATAAA
+test= U11 snRNP-----gold =AATAAA
+test= U11 binding site-----gold =AATAAA
+test= Smf3-----gold =AATAAA
+test= actA gene-----gold =AATAAA
+test= NRSE / RE-1 site-----gold =AATAAA
+test= RNApII-----gold =AATAAA
+test= G X D E-----gold =AATAAA
+test= Asp-----gold =AATAAA
+test= asp viper-----gold =AATAAA
+test= vipera aspis-----gold =AATAAA
+test= egyptian cobra-----gold =AATAAA
+test= Pb NAG1-----gold =AATAAA
+test= glycosyl hydrolase family 20-----gold =AATAAA
+test= U1 / U11 site-----gold =AATAAA
+test= Nrd1 -binding site-----gold =AATAAA
+test= RPCs-----gold =AATAAA
+test= Pira6-----gold =AATAAA
+test= TTP sequence-----gold =AATAAA
+test= cyclin binding site-----gold =AATAAA
+test= UL37 x1 polyadenylation ( PA )-----gold =AATAAA
+test= consensus histone downstream element-----gold =AATAAA
+test= histone mRNAs-----gold =AATAAA
+test= lef-8-----gold =AATAAA
+test= MMP-26 gene-----gold =AATAAA
+test= UL12 capping site-----gold =AATAAA
+test= SEalpha2-----gold =AATAAA
+test= FXYD2 gene-----gold =AATAAA
+test= zebrafish cDNA sequence-----gold =AATAAA
+test= CAYUG elements-----gold =AATAAA
+test= PART-1 promoter region-----gold =AATAAA
+test= homeobox gene-----gold =AATAAA
+test= androgen response element-----gold =AATAAA
+test= sterol-regulatory element binding sites-----gold =AATAAA
+test= L1 polyadenylation signal-----gold =AATAAA
+test= SIRE-----gold =AATAAA
+test= engender-----gold =AATAAA
+test= father-----gold =AATAAA
+test= get-----gold =AATAAA
+test= UbcM4D eltaex2-----gold =AATAAA
+test= UbcM4-----gold =AATAAA
+test= ubiquitin thioester-----gold =AATAAA
+test= ubiquitin-conjugating enzyme-----gold =AATAAA
+test= NIPP-1 beta , gamma and delta-----gold =AATAAA
+test= U2AF-----gold =AATAAA
+test= TNFR2-----gold =AATAAA
+test= Inr motif-----gold =AATAAA
+test= M gene-----gold =AATAAA
+test= GATA motif-----gold =AATAAA
+test= NF-kappa B binding site-----gold =AATAAA
+test= CG30-----gold =AATAAA
+test= murine fVII gene-----gold =AATAAA
+test= C / EBP alpha-----gold =AATAAA
+test= C / EBP beta-----gold =AATAAA
+test= C / EBP consensus recognition site-----gold =AATAAA
+test= xTFIIS genes-----gold =AATAAA
+test= Alu repeat sequences-----gold =AATAAA
+test= MER1-----gold =AATAAA
+test= L1 element-----gold =AATAAA
+test= L3 poly ( A ) site-----gold =AATAAA
+test= BPV mRNA-----gold =AATAAA
+test= Ig sec poly ( A ) site-----gold =AATAAA
+test= guanosyl phosphotransferase gene-----gold =AATAAA
+test= RBDs-----gold =AATAAA
+test= CstF-64-----gold =AATAAA
+test= dbcAMP-differentiated U937 RNA-----gold =AATAAA
+test= protein VII lacks the consensus protease cleavage site-----gold =AATAAA
+test= beta-globin mRNA-----gold =AATAAA
+test= chicken lipoprotein lipase-----gold =AATAAA
+test= SV40 enhancer core element-----gold =AATAAA
+test= mammalian protamine gene family-----gold =AATAAA
+test= chicken protamine gene-----gold =AATAAA
+test= CLN3 gene-----gold =AATAAA
+test= TG transcripts-----gold =AATAAA
+test= cleavage stimulatory factor-----gold =AATAAA
+test= Opaque 2 binding site-----gold =AATAAA
+test= human B2R-----gold =AATAAA
+test= PSG076-----gold =AATAAA
+test= human PAI-1 gene-----gold =AATAAA
+test= mouse PAI-1 cDNA-----gold =AATAAA
+test= TART subfamily-----gold =AATAAA
+test= Sm protein complex-binding site-----gold =AATAAA
+test= human U1 RNA-----gold =AATAAA
+test= Genes Dev-----gold =AATAAA
+test= CTF / NF1 / CBP-----gold =AATAAA
+test= AP2 sites-----gold =AATAAA
+test= TGACCT-----gold =AATAAA
+test= peroxisome proliferator activated receptor-----gold =AATAAA
+test= PPAR-----gold =AATAAA
+test= CPSF1-----gold =AATAAA
+test= G+ T )-----gold =AATAAA
+test= epsilon transcripts-----gold =AATAAA
+test= S1 nuclease-----gold =AATAAA
+test= H4-----gold =AATAAA
+test= H3 genes-----gold =AATAAA
+test= histone genes-----gold =AATAAA
+test= TATA-like sequence CATAAA-----gold =AATAAA
+test= 3' EcoRI site-----gold =AATAAA
+test= BamHI fragment-----gold =AATAAA
+test= topo II alpha gene-----gold =AATAAA
+test= nad1-----gold =AATAAA
+test= L1 endonuclease-----gold =AATAAA
+test= hnRNP-I / PTB-1-----gold =AATAAA
+test= CTH2 mRNA-----gold =AATAAA
+test= GT-AG-----gold =AATAAA
+test= CPEB ( cytoplasmic polyadenylation element-binding protein-----gold =AATAAA
+test= Scnm1-----gold =AATAAA
+test= Scn8-----gold =AATAAA
+test= E1-----gold =AATAAA
+test= NRS-----gold =AATAAA
+test= U1 small nuclear ribonucleoprotein-----gold =AATAAA
+test= snRNP-----gold =AATAAA
+test= gamma-actin-----gold =AATAAA
+test= chicken SCN8A-----gold =AATAAA
+test= RNA polymerase II-----gold =AATAAA
+test= Pb nag1-----gold =AATAAA
+test= U11 consensus sequence-----gold =AATAAA
+test= common RNA sequence motifs-----gold =AATAAA
+test= USF-----gold =AATAAA
+test= AP4-----gold =AATAAA
+test= MyoD-----gold =AATAAA
+test= luciferase-----gold =AATAAA
+test= Nat2-----gold =AATAAA
+test= Pira6 gene-----gold =AATAAA
+test= UL37 x2 acceptor-----gold =AATAAA
+test= HNF3 beta-----gold =AATAAA
+test= Nkx2 -5-----gold =AATAAA
+test= AP-4-----gold =AATAAA
+test= NrampC-----gold =AATAAA
+test= RNAP II )-----gold =AATAAA
+test= TRalpha1 -specific polyadenylation site-----gold =AATAAA
+test= TRalpha2-----gold =AATAAA
+test= USF binding site-----gold =AATAAA
+test= VDUP1 gene-----gold =AATAAA
+test= transcription factor binding sites-----gold =AATAAA
+test= FXYD2-----gold =AATAAA
+test= Double FYVE-containing protein 1-----gold =AATAAA
+test= DFCP1-----gold =AATAAA
+test= FYVE domains-----gold =AATAAA
+test= MAGP-2-----gold =AATAAA
+test= PART-1 cDNA-----gold =AATAAA
+test= UbcM4 transcripts-----gold =AATAAA
+test= UbcM4 polyadenylation sites-----gold =AATAAA
+test= SP-HSP70 protein sequence-----gold =AATAAA
+test= PTB binding site-----gold =AATAAA
+test= rabbit PIN cDNA-----gold =AATAAA
+test= RNA elements-----gold =AATAAA
+test= NIPSNAP1 mRNA-----gold =AATAAA
+test= AGTGTTTC-----gold =AATAAA
+test= COX-2-----gold =AATAAA
+test= TGA ( A / T ) AA ( A / G / T )-----gold =AATAAA
+test= somatic topoisomerase-----gold =AATAAA
+test= AT-AC-----gold =AATAAA
+test= xTFIIS.o B gene-----gold =AATAAA
+test= interferon-gamma response element-----gold =AATAAA
+test= NF-kappaB-----gold =AATAAA
+test= glucocorticoid response element-----gold =AATAAA
+test= corneal endothelial alpha 2 ( I ) mRNA-----gold =AATAAA
+test= alpha 2 ( I ) mRNA-----gold =AATAAA
+test= Alu repeat element-----gold =AATAAA
+test= L1 poly ( A ) site-----gold =AATAAA
+test= L3 poly-----gold =AATAAA
+test= UAAA tetranucleotide-----gold =AATAAA
+test= bovine papillomavirus type 1-----gold =AATAAA
+test= Ig gamma 2 b mRNA-----gold =AATAAA
+test= delta-Kpn-----gold =AATAAA
+test= IgM secretory poly ( A ) site-----gold =AATAAA
+test= mutant SRp20-----gold =AATAAA
+test= heterotrimeric polyadenylation factor CstF-----gold =AATAAA
+test= Oct I binding elements-----gold =AATAAA
+test= mammalian P1 family protamines-----gold =AATAAA
+test= chicken protamine galline-----gold =AATAAA
+test= HPV genes-----gold =AATAAA
+test= RNA polymerase-----gold =AATAAA
+test= AAUAAA-----gold =AATAAA
+test= Drosophila Gs alpha-----gold =AATAAA
+test= BamHI recognition site-----gold =AATAAA
+test= chloramphenicol acetyltransferase-----gold =AATAAA
+test= CAT-----gold =AATAAA
+test= true cat-----gold =AATAAA
+test= hombre-----gold =AATAAA
+test= bozo-----gold =AATAAA
+test= CCAAT sequence motifs-----gold =AATAAA
+test= SP1-----gold =AATAAA
+test= AP1-----gold =AATAAA
+test= E2F-----gold =AATAAA
+test= AP2-----gold =AATAAA
+test= PEA-3-----gold =AATAAA
+test= trnL-----gold =AATAAA
+test= VACV-----gold =AATAAA
+test= GU3 – 5 ] 5 element-----gold =AATAAA
+test= IL-1 beta-----gold =AATAAA
+test= SCNM1-----gold =AATAAA
+test= LUC7L2-----gold =AATAAA
+test= mammalian homolog of a yeast protein-----gold =AATAAA
+test= P1-----gold =AATAAA
+test= GATA-----gold =AATAAA
+test= ets consensus sequences-----gold =AATAAA
+test= Sp1 -binding sites-----gold =AATAAA
+test= Inr sites-----gold =AATAAA
+test= EhPgp5 mRNA 3' -untranslated region-----gold =AATAAA
+test= EGF family-----gold =AATAAA
+test= AP-2-----gold =AATAAA
+test= mdg3-----gold =AATAAA
+test= LTR-----gold =AATAAA
+test= B2 repetitive element-----gold =AATAAA
+test= GR mRNA sequence-----gold =AATAAA
+test= NIPSNAP1 gene-----gold =AATAAA
+test= cg30-----gold =AATAAA
+test= restriction endonuclease-----gold =AATAAA
+test= restriction nuclease-----gold =AATAAA
+test= restriction enzyme-----gold =AATAAA
+test= An NcoI fragment ( 4.7 kb )-----gold =AATAAA
+test= lacZ-----gold =AATAAA
+test= UAA-----gold =AATAAA
+test= UAUAUA-----gold =AATAAA
+test= immunoglobulin-----gold =AATAAA
+test= immune gamma globulin-----gold =AATAAA
+test= immune serum globulin-----gold =AATAAA
+test= ig-----gold =AATAAA
+test= IgM-----gold =AATAAA
+test= IRBP gene-----gold =AATAAA
+test= AP-1-----gold =AATAAA
+test= CK-2 consensus sequences-----gold =AATAAA
+test= Fos / Jun family-----gold =AATAAA
+test= NF-GMb-----gold =AATAAA
+test= CBP1-----gold =AATAAA
+test= AEP2 / ATP13-----gold =AATAAA
+test= RNA14-----gold =AATAAA
+test= SIR1-----gold =AATAAA
+test= DHFR-TS locus-----gold =AATAAA
+test= polyadenylation specificity factor 1-----gold =AATAAA
+test= murine epsilon chain isoforms-----gold =AATAAA
+test= 20 K allele-----gold =AATAAA
+test= 21 K allele-----gold =AATAAA
+test= core histone gene-----gold =AATAAA
+test= CAT gene-----gold =AATAAA
+test= SERCA2 gene-----gold =AATAAA
+test= human SSAT cDNA-----gold =AATAAA
+test= ACTB-----gold =AATAAA
+test= Nrd1 / Nab3 binding sites-----gold =AATAAA
+test= SLX4-----gold =AATAAA
+test= mouse SCN8A-----gold =AATAAA
+test= Rat1-----gold =AATAAA
+test= U11-----gold =AATAAA
+test= mono-snRNP-----gold =AATAAA
+test= U11 site-----gold =AATAAA
+test= RNA-protein complex-----gold =AATAAA
+test= EGF-motif-----gold =AATAAA
+test= Nramp-----gold =AATAAA
+test= TRalpha minigene-----gold =AATAAA
+test= human MAGP-2 proteins-----gold =AATAAA
+test= reverse transcriptase-RNase-----gold =AATAAA
+test= PTB-----gold =AATAAA
+test= cg30 gene-----gold =AATAAA
+test= p39 gene-----gold =AATAAA
+test= somatic topoisomerase I sequence-----gold =AATAAA
+test= Tad-----gold =AATAAA
+test= shade-----gold =AATAAA
+test= L3 upstream region-----gold =AATAAA
+test= UAAA motif-----gold =AATAAA
+test= wild-type early polyadenylation site-----gold =AATAAA
+test= delta-Kpn gene-----gold =AATAAA
+test= IgM secretory poly-----gold =AATAAA
+test= immunoglobulin isotype secretory poly-----gold =AATAAA
+test= AAUAAA sequence-----gold =AATAAA
+test= U3 region-----gold =AATAAA
+test= R region-----gold =AATAAA
+test= U3 region )-----gold =AATAAA
+test= U5 region ) sequences-----gold =AATAAA
+test= PAS-----gold =AATAAA
+test= fMLF-R cDNA-----gold =AATAAA
+test= rat GPC1 gene-----gold =AATAAA
+test= human GPC3 gene-----gold =AATAAA
+test= LKR-SDH-----gold =AATAAA
+test= any omega-long fragment-----gold =AATAAA
+test= TART mRNA-----gold =AATAAA
+test= classical membrane IgE-----gold =AATAAA
+test= H2A genes-----gold =AATAAA
+test= Flury LEP-----gold =AATAAA
+test= CTH2-----gold =AATAAA
+test= Cth1-----gold =AATAAA
+test= CTD serine 2-----gold =AATAAA
+test= glycosyl hydrolase group of proteins-----gold =AATAAA
+test= U1 snRNP-----gold =AATAAA
+test= U6 small nuclear ribonucleoproteins-----gold =AATAAA
+test= snRNPs-----gold =AATAAA
+test= CT dinucleotide repeat sequence-----gold =AATAAA
+test= Tad element-----gold =AATAAA
+test= BPV late genes-----gold =AATAAA
+test= rat GPC1 sequence-----gold =AATAAA
+test= luciferase reporter gene-----gold =AATAAA
+test= E5 ORF-----gold =AATAAA
+test= TART-B1-----gold =AATAAA
+test= TART-A1-----gold =AATAAA
+test= epsilon mRNA variants-----gold =AATAAA
+test= epsilon chain transcripts-----gold =AATAAA
+test= Tick-Box-like sequence-----gold =AATAAA
+test= MnopA-----gold =AATAAA
+test= A+ U rich sequence element-----gold =AATAAA
+test= TTP-----gold =AATAAA
+test= chicken interferon-gamma ( ifn-gamma ) gene-----gold =AATAAA
+test= HPV-31 early transcripts-----gold =AATAAA
+test= ACT1 sequence-----gold =AATAAA
+test= HBB1 sequence-----gold =AATAAA
+test= ACTB sequence-----gold =AATAAA
+test= HPV-31 late gene-----gold =AATAAA
+test= DmTTF binding site-----gold =AATAAA
+test= LC8 binding site-----gold =AATAAA
+test= P-LC8-----gold =AATAAA
+test= LC8-----gold =AATAAA
+test= actin-----gold =AATAAA
+test= ACT1 -3 ) or globin-----gold =AATAAA
+test= HBB1 -3 ) poly-----gold =AATAAA
+test= CstF subunits-----gold =AATAAA
+test= Sp1 binding sites-----gold =AATAAA
+test= Tick-Box inside trnL-----gold =AATAAA
+test= HBB2-----gold =AATAAA
+test= HBB gene sequence-----gold =AATAAA
+test= HBB1-----gold =AATAAA
+test= Mtr4-----gold =AATAAA
+test= TRAMP4 complex.3-----gold =AATAAA
+test= CTH2 pre-mRNA-----gold =AATAAA
+test= Nrd1-----gold =AATAAA
+test= Nab3-----gold =AATAAA
+test= Sen1C-----gold =AATAAA
+test= Nrd1 / Nab3 heterodimer-----gold =AATAAA
+test= snRNAs-----gold =AATAAA
+test= snoRNAs-----gold =AATAAA
+test= sequence region encompassing mRNA cleavage site-----gold =AATAAA
+test= HPV-31 early polyadenylation sequences-----gold =AATAAA
+test= rrnL-----gold =AATAAA
+test= Self-cleaving ribozymes-----gold =AATAAA
+test= exonuclease-----gold =AATAAA
+test= DSE regions-----gold =AATAAA
+test= CDE.1-----gold =AATAAA
+test= L1-----gold =AATAAA
+test= Drosophila initiator , A / T / G-TCA-G / T-T-C / T-G-----gold =AATAAA
+test= rrnL genes-----gold =AATAAA
+test= A12 sequence-----gold =AATAAA
+test= Drosophila 3' UTRs-----gold =AATAAA
+test= HeT-A-----gold =AATAAA
+test= TART transcription initiation sitesWe-----gold =AATAAA
+test= trnQ-trnF NCR-----gold =AATAAA
+test= Tick-Box sequence.1 0.1371 / journal.p one.0 047538.g 005 Figure 5 Tick-Box motif-----gold =AATAAA
+test= trnQ-----gold =AATAAA
+test= trnF-----gold =AATAAA
+test= Metastriata.B-----gold =AATAAA
+test= Rna14-----gold =AATAAA
+test= human β − globin-----gold =AATAAA
+test= Human TTP-----gold =AATAAA
+test= Drosophila DSE.H-----gold =AATAAA
+test= TART-B1 site 3 a-----gold =AATAAA
+test= TART sequences-----gold =AATAAA
+test= polyA-----gold =AATAAA
+test= TART-C1 site 5 d )-----gold =AATAAA
+test= DmTTF-----gold =AATAAA
+test= MTERF protein family-----gold =AATAAA
+test= Doc-----gold =AATAAA
+test= dr.-----gold =AATAAA
+test= md-----gold =AATAAA
+test= physician-----gold =AATAAA
+test= F elements-----gold =AATAAA
+test= MnipA-----gold =AATAAA
+test= TART transcripts-----gold =AATAAA
+test= D. melanogaster nad1 gene-----gold =AATAAA
+test= DmTTF transcription termination factor-----gold =AATAAA
+test= trnE-----gold =AATAAA
+test= TART elements-----gold =AATAAA
+test= rrnL transcript-----gold =AATAAA
+test= TAN ACT1-----gold =AATAAA
+test= TART element-----gold =AATAAA
+test= TART-C1-----gold =AATAAA
+test= TART proteins-----gold =AATAAA
+test= rrnL 3 ′ -end-----gold =AATAAA
+test= Tick-Box motif-----gold =AATAAA
+test= rrnL polyA start site-----gold =AATAAA
+test= MnipA sequence-----gold =AATAAA
+test= Pap1-----gold =AATAAA
+test= Protein complexes-----gold =AATAAA
+test= polyadenylation specificity factor-----gold =AATAAA
+test= DSE recruits the cleavage stimulation factor-----gold =AATAAA
+test= CstF-----gold =AATAAA
+test= JN248424.P rotein coding genes-----gold =AATAAA
+test= ACTB sequences-----gold =AATAAA
+test= NAB2 gene-----gold =AATAAA
+test= A26 sequence-----gold =AATAAA
+test= Flp recombinase-----gold =AATAAA
+test= Cth2 -CDS-F-750 )-----gold =AATAAA
+test= TART-C elements-----gold =AATAAA
+test= GFP / CAT-----gold =AATAAA
+test= Nab4-----gold =AATAAA
+test= TH2 mRNA-----gold =AATAAA
+test= CTH2 transcripts-----gold =AATAAA
+test= CS region-----gold =AATAAA
+test= Tick-Box consensus motif-----gold =AATAAA
+test= FLUC RNA fragment-----gold =AATAAA
+test= ribozyme-----gold =AATAAA
+test= Pab1-----gold =AATAAA
+test= CV670417.1-----gold =AATAAA
+test= CV668181.1-----gold =AATAAA
+test= CV665773.1-----gold =AATAAA
+test= CV670284.1-----gold =AATAAA
+test= CV668879.1-----gold =AATAAA
+test= CV667130.1-----gold =AATAAA
+test= rrnL transcripts-----gold =AATAAA
+test= Nrd1 binding sites-----gold =AATAAA
+test= 24 Nab3 binding sites-----gold =AATAAA
+test= Nrd1 / Nab3 complex-----gold =AATAAA
+test= nrd1 -102-----gold =AATAAA
+test= nab3-----gold =AATAAA
+test= rrnL polyadenylation sites-----gold =AATAAA
+test= downstream tRNA gene-----gold =AATAAA
+test= UUR-----gold =AATAAA
+test= mitochondrial transcription termination factor-----gold =AATAAA
+test= mini-PGK1 reporter-----gold =AATAAA
+test= Trypanosoma IRs-----gold =AATAAA
+test= hammerhead ribozymes-----gold =AATAAA
+test= hRLUC expressing RNA fragments-----gold =AATAAA
+test= ACT-200N otF primer-----gold =AATAAA
+test= ACT+ 200 NheR-----gold =AATAAA
+test= ACT+ 1100 NheR-----gold =AATAAA
+test= ACT+ 1800 NheR-----gold =AATAAA
+test= ACT1-----gold =AATAAA
+test= ACT2-----gold =AATAAA
+test= ACT3-----gold =AATAAA
+test= work.A minimal poly-----gold =AATAAA
+test= MniACT-----gold =AATAAA
+test= ACTB site-----gold =AATAAA
+test= Mni0ACT pA1   GGCCagttgAATATTagtgcacaccttaaaaatgaggccaagtgtgactttgtggtgtgMni0ACT pA2   CTAGcacaccacaaagtcacacttggcctcatttttaaggtgtgcactAATATTcaactThe poly-----gold =AATAAA
+test= Invitrogen Flp-In T-REx system-----gold =AATAAA
+test= Trf4/5-----gold =AATAAA
+test= Air1/2-----gold =AATAAA
+test= Hrp1-----gold =AATAAA
+test= DSE-----gold =AATAAA
+test= rRNA-----gold =AATAAA
+test= trnS ( UCN ) / trnE-----gold =AATAAA
+test= nad1 transcript-----gold =AATAAA
+test= human β -actin and β -globin polyadenylation sites-----gold =AATAAA
+test= Tick-Box-like sequences-----gold =AATAAA
+test= p3-----gold =AATAAA
+test= CR2-----gold =AATAAA
+test= rrnL gene-----gold =AATAAA
+test= NC_006078-----gold =AATAAA
+test= Tick-Boxes located inside trnL-----gold =AATAAA
+test= tRNA gene-----gold =AATAAA
+test= Tick-Box sequence inside trnL-----gold =AATAAA
+test= Small ( rrnS ) and large ( rrnL ) ribosomal subunit rRNAs-----gold =AATAAA
+test= Valverde ’ s rRNA-----gold =AATAAA
+test= oriL-----gold =AATAAA
+test= trnC-----gold =AATAAA
+test= trnL ( CUN ) gene-----gold =AATAAA
+test= rrnL polyA site-----gold =AATAAA
+test= nad1 polyA site-----gold =AATAAA
+test= trnL ( CUN ) elements-----gold =AATAAA
+test= poly-T-----gold =AATAAA
+test= nad1 3-----gold =AATAAA
+test= nad1 ESTs-----gold =AATAAA
+test= nad1 mRNA-----gold =AATAAA
+test= L1 poly-----gold =AAUAAA
+test= L1 AAUAAA consensus sequence-----gold =AAUAAA
+test= Base-----gold =AAUAAA
+test= base of operations-----gold =AAUAAA
+test= fundament-----gold =AAUAAA
+test= foot-----gold =AAUAAA
+test= BPV early polyadenylation site-----gold =AAUAAA
+test= Ig sec poly-----gold =AAUAAA
+test= J. C.-----gold =AAUAAA
+test= PAS motif-----gold =AAUAAA
+test= SR protein-----gold =AAUAAA
+test= SRp20-----gold =AAUAAA
+test= fMLF-R gene-----gold =AAUAAA
+test= Alu-repetitive elements-----gold =AAUAAA
+test= AATAAA consensus polyadenylation signals-----gold =AAUAAA
+test= laminin mRNA-----gold =AAUAAA
+test= ATTTA motifs-----gold =AAUAAA
+test= CA element-----gold =AAUAAA
+test= AP-1 binding site-----gold =AAUAAA
+test= SV40 enhancer core elements-----gold =AAUAAA
+test= cAMP response element-----gold =AAUAAA
+test= CRE-----gold =AAUAAA
+test= CAP site-----gold =AAUAAA
+test= p53 -binding DNA sequence-----gold =AAUAAA
+test= wild-type p53-----gold =AAUAAA
+test= CLN3-----gold =AAUAAA
+test= CLN3 cDNA-----gold =AAUAAA
+test= Sp1-----gold =AAUAAA
+test= CREB-----gold =AAUAAA
+test= estrogen receptor binding site-----gold =AAUAAA
+test= cAMP-response element-----gold =AAUAAA
+test= AP-1 -binding site-----gold =AAUAAA
+test= IL-6 -response element-----gold =AAUAAA
+test= AAUAAA polyadenylation consensus sequence-----gold =AAUAAA
+test= PAI-1 mRNA-----gold =AAUAAA
+test= pA2-----gold =AAUAAA
+test= DGs alpha L )-----gold =AAUAAA
+test= DGs alpha S-----gold =AAUAAA
+test= Gs alpha-----gold =AAUAAA
+test= COT gene-----gold =AAUAAA
+test= IL7R-----gold =AAUAAA
+test= H2B-----gold =AAUAAA
+test= H2B -specific promoter element-----gold =AAUAAA
+test= AP-1 consensus sequence-----gold =AAUAAA
+test= RNA-binding proteins-----gold =AAUAAA
+test= RBPs-----gold =AAUAAA
+test= Tick-Box consensus sequence-----gold =AAUAAA
+test= prothrombin mRNA-----gold =AAUAAA
+test= TGA7-----gold =AAUAAA
+test= G gene-----gold =AAUAAA
+test= No interleukin-converting enzyme ( ICE ) cut site-----gold =AAUAAA
+test= sbIL-1 beta-----gold =AAUAAA
+test= Tyr87-----gold =AAUAAA
+test= eIF4E1-----gold =AAUAAA
+test= eIF4G-----gold =AAUAAA
+test= consensus eIF4E -binding site-----gold =AAUAAA
+test= Luc7L2 transcripts-----gold =AAUAAA
+test= ORF34 -37 promoter region-----gold =AAUAAA
+test= mammalian FSHbeta genes-----gold =AAUAAA
+test= U11 snRNP-----gold =AAUAAA
+test= U11 binding site-----gold =AAUAAA
+test= Smf3-----gold =AAUAAA
+test= actA gene-----gold =AAUAAA
+test= NRSE / RE-1 site-----gold =AAUAAA
+test= RNApII-----gold =AAUAAA
+test= G X D E-----gold =AAUAAA
+test= Asp-----gold =AAUAAA
+test= asp viper-----gold =AAUAAA
+test= vipera aspis-----gold =AAUAAA
+test= egyptian cobra-----gold =AAUAAA
+test= Pb NAG1-----gold =AAUAAA
+test= glycosyl hydrolase family 20-----gold =AAUAAA
+test= U1 / U11 site-----gold =AAUAAA
+test= Nrd1 -binding site-----gold =AAUAAA
+test= RPCs-----gold =AAUAAA
+test= Pira6-----gold =AAUAAA
+test= TTP sequence-----gold =AAUAAA
+test= cyclin binding site-----gold =AAUAAA
+test= UL37 x1 polyadenylation ( PA )-----gold =AAUAAA
+test= consensus histone downstream element-----gold =AAUAAA
+test= histone mRNAs-----gold =AAUAAA
+test= lef-8-----gold =AAUAAA
+test= MMP-26 gene-----gold =AAUAAA
+test= UL12 capping site-----gold =AAUAAA
+test= SEalpha2-----gold =AAUAAA
+test= FXYD2 gene-----gold =AAUAAA
+test= zebrafish cDNA sequence-----gold =AAUAAA
+test= CAYUG elements-----gold =AAUAAA
+test= PART-1 promoter region-----gold =AAUAAA
+test= homeobox gene-----gold =AAUAAA
+test= androgen response element-----gold =AAUAAA
+test= sterol-regulatory element binding sites-----gold =AAUAAA
+test= L1 polyadenylation signal-----gold =AAUAAA
+test= SIRE-----gold =AAUAAA
+test= engender-----gold =AAUAAA
+test= father-----gold =AAUAAA
+test= get-----gold =AAUAAA
+test= UbcM4D eltaex2-----gold =AAUAAA
+test= UbcM4-----gold =AAUAAA
+test= ubiquitin thioester-----gold =AAUAAA
+test= ubiquitin-conjugating enzyme-----gold =AAUAAA
+test= NIPP-1 beta , gamma and delta-----gold =AAUAAA
+test= U2AF-----gold =AAUAAA
+test= TNFR2-----gold =AAUAAA
+test= Inr motif-----gold =AAUAAA
+test= M gene-----gold =AAUAAA
+test= GATA motif-----gold =AAUAAA
+test= NF-kappa B binding site-----gold =AAUAAA
+test= CG30-----gold =AAUAAA
+test= murine fVII gene-----gold =AAUAAA
+test= C / EBP alpha-----gold =AAUAAA
+test= C / EBP beta-----gold =AAUAAA
+test= C / EBP consensus recognition site-----gold =AAUAAA
+test= xTFIIS genes-----gold =AAUAAA
+test= Alu repeat sequences-----gold =AAUAAA
+test= MER1-----gold =AAUAAA
+test= L1 element-----gold =AAUAAA
+test= L3 poly ( A ) site-----gold =AAUAAA
+test= BPV mRNA-----gold =AAUAAA
+test= Ig sec poly ( A ) site-----gold =AAUAAA
+test= guanosyl phosphotransferase gene-----gold =AAUAAA
+test= RBDs-----gold =AAUAAA
+test= CstF-64-----gold =AAUAAA
+test= dbcAMP-differentiated U937 RNA-----gold =AAUAAA
+test= protein VII lacks the consensus protease cleavage site-----gold =AAUAAA
+test= beta-globin mRNA-----gold =AAUAAA
+test= chicken lipoprotein lipase-----gold =AAUAAA
+test= SV40 enhancer core element-----gold =AAUAAA
+test= mammalian protamine gene family-----gold =AAUAAA
+test= chicken protamine gene-----gold =AAUAAA
+test= CLN3 gene-----gold =AAUAAA
+test= TG transcripts-----gold =AAUAAA
+test= cleavage stimulatory factor-----gold =AAUAAA
+test= Opaque 2 binding site-----gold =AAUAAA
+test= human B2R-----gold =AAUAAA
+test= PSG076-----gold =AAUAAA
+test= human PAI-1 gene-----gold =AAUAAA
+test= mouse PAI-1 cDNA-----gold =AAUAAA
+test= TART subfamily-----gold =AAUAAA
+test= Sm protein complex-binding site-----gold =AAUAAA
+test= human U1 RNA-----gold =AAUAAA
+test= Genes Dev-----gold =AAUAAA
+test= CTF / NF1 / CBP-----gold =AAUAAA
+test= AP2 sites-----gold =AAUAAA
+test= TGACCT-----gold =AAUAAA
+test= peroxisome proliferator activated receptor-----gold =AAUAAA
+test= PPAR-----gold =AAUAAA
+test= CPSF1-----gold =AAUAAA
+test= G+ T )-----gold =AAUAAA
+test= epsilon transcripts-----gold =AAUAAA
+test= S1 nuclease-----gold =AAUAAA
+test= H4-----gold =AAUAAA
+test= H3 genes-----gold =AAUAAA
+test= histone genes-----gold =AAUAAA
+test= TATA-like sequence CATAAA-----gold =AAUAAA
+test= 3' EcoRI site-----gold =AAUAAA
+test= BamHI fragment-----gold =AAUAAA
+test= topo II alpha gene-----gold =AAUAAA
+test= nad1-----gold =AAUAAA
+test= L1 endonuclease-----gold =AAUAAA
+test= hnRNP-I / PTB-1-----gold =AAUAAA
+test= CTH2 mRNA-----gold =AAUAAA
+test= GT-AG-----gold =AAUAAA
+test= CPEB ( cytoplasmic polyadenylation element-binding protein-----gold =AAUAAA
+test= Scnm1-----gold =AAUAAA
+test= Scn8-----gold =AAUAAA
+test= E1-----gold =AAUAAA
+test= NRS-----gold =AAUAAA
+test= U1 small nuclear ribonucleoprotein-----gold =AAUAAA
+test= snRNP-----gold =AAUAAA
+test= gamma-actin-----gold =AAUAAA
+test= chicken SCN8A-----gold =AAUAAA
+test= RNA polymerase II-----gold =AAUAAA
+test= Pb nag1-----gold =AAUAAA
+test= U11 consensus sequence-----gold =AAUAAA
+test= common RNA sequence motifs-----gold =AAUAAA
+test= USF-----gold =AAUAAA
+test= AP4-----gold =AAUAAA
+test= MyoD-----gold =AAUAAA
+test= luciferase-----gold =AAUAAA
+test= Nat2-----gold =AAUAAA
+test= Pira6 gene-----gold =AAUAAA
+test= UL37 x2 acceptor-----gold =AAUAAA
+test= HNF3 beta-----gold =AAUAAA
+test= Nkx2 -5-----gold =AAUAAA
+test= AP-4-----gold =AAUAAA
+test= NrampC-----gold =AAUAAA
+test= RNAP II )-----gold =AAUAAA
+test= TRalpha1 -specific polyadenylation site-----gold =AAUAAA
+test= TRalpha2-----gold =AAUAAA
+test= USF binding site-----gold =AAUAAA
+test= VDUP1 gene-----gold =AAUAAA
+test= transcription factor binding sites-----gold =AAUAAA
+test= FXYD2-----gold =AAUAAA
+test= Double FYVE-containing protein 1-----gold =AAUAAA
+test= DFCP1-----gold =AAUAAA
+test= FYVE domains-----gold =AAUAAA
+test= MAGP-2-----gold =AAUAAA
+test= PART-1 cDNA-----gold =AAUAAA
+test= UbcM4 transcripts-----gold =AAUAAA
+test= UbcM4 polyadenylation sites-----gold =AAUAAA
+test= SP-HSP70 protein sequence-----gold =AAUAAA
+test= PTB binding site-----gold =AAUAAA
+test= rabbit PIN cDNA-----gold =AAUAAA
+test= RNA elements-----gold =AAUAAA
+test= NIPSNAP1 mRNA-----gold =AAUAAA
+test= AGTGTTTC-----gold =AAUAAA
+test= COX-2-----gold =AAUAAA
+test= TGA ( A / T ) AA ( A / G / T )-----gold =AAUAAA
+test= somatic topoisomerase-----gold =AAUAAA
+test= AT-AC-----gold =AAUAAA
+test= xTFIIS.o B gene-----gold =AAUAAA
+test= interferon-gamma response element-----gold =AAUAAA
+test= NF-kappaB-----gold =AAUAAA
+test= glucocorticoid response element-----gold =AAUAAA
+test= corneal endothelial alpha 2 ( I ) mRNA-----gold =AAUAAA
+test= alpha 2 ( I ) mRNA-----gold =AAUAAA
+test= Alu repeat element-----gold =AAUAAA
+test= L1 poly ( A ) site-----gold =AAUAAA
+test= L3 poly-----gold =AAUAAA
+test= UAAA tetranucleotide-----gold =AAUAAA
+test= bovine papillomavirus type 1-----gold =AAUAAA
+test= Ig gamma 2 b mRNA-----gold =AAUAAA
+test= delta-Kpn-----gold =AAUAAA
+test= IgM secretory poly ( A ) site-----gold =AAUAAA
+test= mutant SRp20-----gold =AAUAAA
+test= heterotrimeric polyadenylation factor CstF-----gold =AAUAAA
+test= Oct I binding elements-----gold =AAUAAA
+test= mammalian P1 family protamines-----gold =AAUAAA
+test= chicken protamine galline-----gold =AAUAAA
+test= HPV genes-----gold =AAUAAA
+test= RNA polymerase-----gold =AAUAAA
+test= AAUAAA-----gold =AAUAAA
+test= Drosophila Gs alpha-----gold =AAUAAA
+test= BamHI recognition site-----gold =AAUAAA
+test= chloramphenicol acetyltransferase-----gold =AAUAAA
+test= CAT-----gold =AAUAAA
+test= true cat-----gold =AAUAAA
+test= hombre-----gold =AAUAAA
+test= bozo-----gold =AAUAAA
+test= CCAAT sequence motifs-----gold =AAUAAA
+test= SP1-----gold =AAUAAA
+test= AP1-----gold =AAUAAA
+test= E2F-----gold =AAUAAA
+test= AP2-----gold =AAUAAA
+test= PEA-3-----gold =AAUAAA
+test= trnL-----gold =AAUAAA
+test= VACV-----gold =AAUAAA
+test= GU3 – 5 ] 5 element-----gold =AAUAAA
+test= IL-1 beta-----gold =AAUAAA
+test= SCNM1-----gold =AAUAAA
+test= LUC7L2-----gold =AAUAAA
+test= mammalian homolog of a yeast protein-----gold =AAUAAA
+test= P1-----gold =AAUAAA
+test= GATA-----gold =AAUAAA
+test= ets consensus sequences-----gold =AAUAAA
+test= Sp1 -binding sites-----gold =AAUAAA
+test= Inr sites-----gold =AAUAAA
+test= EhPgp5 mRNA 3' -untranslated region-----gold =AAUAAA
+test= EGF family-----gold =AAUAAA
+test= AP-2-----gold =AAUAAA
+test= mdg3-----gold =AAUAAA
+test= LTR-----gold =AAUAAA
+test= B2 repetitive element-----gold =AAUAAA
+test= GR mRNA sequence-----gold =AAUAAA
+test= NIPSNAP1 gene-----gold =AAUAAA
+test= cg30-----gold =AAUAAA
+test= restriction endonuclease-----gold =AAUAAA
+test= restriction nuclease-----gold =AAUAAA
+test= restriction enzyme-----gold =AAUAAA
+test= An NcoI fragment ( 4.7 kb )-----gold =AAUAAA
+test= lacZ-----gold =AAUAAA
+test= UAA-----gold =AAUAAA
+test= UAUAUA-----gold =AAUAAA
+test= immunoglobulin-----gold =AAUAAA
+test= immune gamma globulin-----gold =AAUAAA
+test= immune serum globulin-----gold =AAUAAA
+test= ig-----gold =AAUAAA
+test= IgM-----gold =AAUAAA
+test= IRBP gene-----gold =AAUAAA
+test= AP-1-----gold =AAUAAA
+test= CK-2 consensus sequences-----gold =AAUAAA
+test= Fos / Jun family-----gold =AAUAAA
+test= NF-GMb-----gold =AAUAAA
+test= CBP1-----gold =AAUAAA
+test= AEP2 / ATP13-----gold =AAUAAA
+test= RNA14-----gold =AAUAAA
+test= SIR1-----gold =AAUAAA
+test= DHFR-TS locus-----gold =AAUAAA
+test= polyadenylation specificity factor 1-----gold =AAUAAA
+test= murine epsilon chain isoforms-----gold =AAUAAA
+test= 20 K allele-----gold =AAUAAA
+test= 21 K allele-----gold =AAUAAA
+test= core histone gene-----gold =AAUAAA
+test= CAT gene-----gold =AAUAAA
+test= SERCA2 gene-----gold =AAUAAA
+test= human SSAT cDNA-----gold =AAUAAA
+test= ACTB-----gold =AAUAAA
+test= Nrd1 / Nab3 binding sites-----gold =AAUAAA
+test= SLX4-----gold =AAUAAA
+test= mouse SCN8A-----gold =AAUAAA
+test= Rat1-----gold =AAUAAA
+test= U11-----gold =AAUAAA
+test= mono-snRNP-----gold =AAUAAA
+test= U11 site-----gold =AAUAAA
+test= RNA-protein complex-----gold =AAUAAA
+test= EGF-motif-----gold =AAUAAA
+test= Nramp-----gold =AAUAAA
+test= TRalpha minigene-----gold =AAUAAA
+test= human MAGP-2 proteins-----gold =AAUAAA
+test= reverse transcriptase-RNase-----gold =AAUAAA
+test= PTB-----gold =AAUAAA
+test= cg30 gene-----gold =AAUAAA
+test= p39 gene-----gold =AAUAAA
+test= somatic topoisomerase I sequence-----gold =AAUAAA
+test= Tad-----gold =AAUAAA
+test= shade-----gold =AAUAAA
+test= L3 upstream region-----gold =AAUAAA
+test= UAAA motif-----gold =AAUAAA
+test= wild-type early polyadenylation site-----gold =AAUAAA
+test= delta-Kpn gene-----gold =AAUAAA
+test= IgM secretory poly-----gold =AAUAAA
+test= immunoglobulin isotype secretory poly-----gold =AAUAAA
+test= AAUAAA sequence-----gold =AAUAAA
+test= U3 region-----gold =AAUAAA
+test= R region-----gold =AAUAAA
+test= U3 region )-----gold =AAUAAA
+test= U5 region ) sequences-----gold =AAUAAA
+test= PAS-----gold =AAUAAA
+test= fMLF-R cDNA-----gold =AAUAAA
+test= rat GPC1 gene-----gold =AAUAAA
+test= human GPC3 gene-----gold =AAUAAA
+test= LKR-SDH-----gold =AAUAAA
+test= any omega-long fragment-----gold =AAUAAA
+test= TART mRNA-----gold =AAUAAA
+test= classical membrane IgE-----gold =AAUAAA
+test= H2A genes-----gold =AAUAAA
+test= Flury LEP-----gold =AAUAAA
+test= CTH2-----gold =AAUAAA
+test= Cth1-----gold =AAUAAA
+test= CTD serine 2-----gold =AAUAAA
+test= glycosyl hydrolase group of proteins-----gold =AAUAAA
+test= U1 snRNP-----gold =AAUAAA
+test= U6 small nuclear ribonucleoproteins-----gold =AAUAAA
+test= snRNPs-----gold =AAUAAA
+test= CT dinucleotide repeat sequence-----gold =AAUAAA
+test= Tad element-----gold =AAUAAA
+test= BPV late genes-----gold =AAUAAA
+test= rat GPC1 sequence-----gold =AAUAAA
+test= luciferase reporter gene-----gold =AAUAAA
+test= E5 ORF-----gold =AAUAAA
+test= TART-B1-----gold =AAUAAA
+test= TART-A1-----gold =AAUAAA
+test= epsilon mRNA variants-----gold =AAUAAA
+test= epsilon chain transcripts-----gold =AAUAAA
+test= Tick-Box-like sequence-----gold =AAUAAA
+test= MnopA-----gold =AAUAAA
+test= A+ U rich sequence element-----gold =AAUAAA
+test= TTP-----gold =AAUAAA
+test= chicken interferon-gamma ( ifn-gamma ) gene-----gold =AAUAAA
+test= HPV-31 early transcripts-----gold =AAUAAA
+test= ACT1 sequence-----gold =AAUAAA
+test= HBB1 sequence-----gold =AAUAAA
+test= ACTB sequence-----gold =AAUAAA
+test= HPV-31 late gene-----gold =AAUAAA
+test= DmTTF binding site-----gold =AAUAAA
+test= LC8 binding site-----gold =AAUAAA
+test= P-LC8-----gold =AAUAAA
+test= LC8-----gold =AAUAAA
+test= actin-----gold =AAUAAA
+test= ACT1 -3 ) or globin-----gold =AAUAAA
+test= HBB1 -3 ) poly-----gold =AAUAAA
+test= CstF subunits-----gold =AAUAAA
+test= Sp1 binding sites-----gold =AAUAAA
+test= Tick-Box inside trnL-----gold =AAUAAA
+test= HBB2-----gold =AAUAAA
+test= HBB gene sequence-----gold =AAUAAA
+test= HBB1-----gold =AAUAAA
+test= Mtr4-----gold =AAUAAA
+test= TRAMP4 complex.3-----gold =AAUAAA
+test= CTH2 pre-mRNA-----gold =AAUAAA
+test= Nrd1-----gold =AAUAAA
+test= Nab3-----gold =AAUAAA
+test= Sen1C-----gold =AAUAAA
+test= Nrd1 / Nab3 heterodimer-----gold =AAUAAA
+test= snRNAs-----gold =AAUAAA
+test= snoRNAs-----gold =AAUAAA
+test= sequence region encompassing mRNA cleavage site-----gold =AAUAAA
+test= HPV-31 early polyadenylation sequences-----gold =AAUAAA
+test= rrnL-----gold =AAUAAA
+test= Self-cleaving ribozymes-----gold =AAUAAA
+test= exonuclease-----gold =AAUAAA
+test= DSE regions-----gold =AAUAAA
+test= CDE.1-----gold =AAUAAA
+test= L1-----gold =AAUAAA
+test= Drosophila initiator , A / T / G-TCA-G / T-T-C / T-G-----gold =AAUAAA
+test= rrnL genes-----gold =AAUAAA
+test= A12 sequence-----gold =AAUAAA
+test= Drosophila 3' UTRs-----gold =AAUAAA
+test= HeT-A-----gold =AAUAAA
+test= TART transcription initiation sitesWe-----gold =AAUAAA
+test= trnQ-trnF NCR-----gold =AAUAAA
+test= Tick-Box sequence.1 0.1371 / journal.p one.0 047538.g 005 Figure 5 Tick-Box motif-----gold =AAUAAA
+test= trnQ-----gold =AAUAAA
+test= trnF-----gold =AAUAAA
+test= Metastriata.B-----gold =AAUAAA
+test= Rna14-----gold =AAUAAA
+test= human β − globin-----gold =AAUAAA
+test= Human TTP-----gold =AAUAAA
+test= Drosophila DSE.H-----gold =AAUAAA
+test= TART-B1 site 3 a-----gold =AAUAAA
+test= TART sequences-----gold =AAUAAA
+test= polyA-----gold =AAUAAA
+test= TART-C1 site 5 d )-----gold =AAUAAA
+test= DmTTF-----gold =AAUAAA
+test= MTERF protein family-----gold =AAUAAA
+test= Doc-----gold =AAUAAA
+test= dr.-----gold =AAUAAA
+test= md-----gold =AAUAAA
+test= physician-----gold =AAUAAA
+test= F elements-----gold =AAUAAA
+test= MnipA-----gold =AAUAAA
+test= TART transcripts-----gold =AAUAAA
+test= D. melanogaster nad1 gene-----gold =AAUAAA
+test= DmTTF transcription termination factor-----gold =AAUAAA
+test= trnE-----gold =AAUAAA
+test= TART elements-----gold =AAUAAA
+test= rrnL transcript-----gold =AAUAAA
+test= TAN ACT1-----gold =AAUAAA
+test= TART element-----gold =AAUAAA
+test= TART-C1-----gold =AAUAAA
+test= TART proteins-----gold =AAUAAA
+test= rrnL 3 ′ -end-----gold =AAUAAA
+test= Tick-Box motif-----gold =AAUAAA
+test= rrnL polyA start site-----gold =AAUAAA
+test= MnipA sequence-----gold =AAUAAA
+test= Pap1-----gold =AAUAAA
+test= Protein complexes-----gold =AAUAAA
+test= polyadenylation specificity factor-----gold =AAUAAA
+test= DSE recruits the cleavage stimulation factor-----gold =AAUAAA
+test= CstF-----gold =AAUAAA
+test= JN248424.P rotein coding genes-----gold =AAUAAA
+test= ACTB sequences-----gold =AAUAAA
+test= NAB2 gene-----gold =AAUAAA
+test= A26 sequence-----gold =AAUAAA
+test= Flp recombinase-----gold =AAUAAA
+test= Cth2 -CDS-F-750 )-----gold =AAUAAA
+test= TART-C elements-----gold =AAUAAA
+test= GFP / CAT-----gold =AAUAAA
+test= Nab4-----gold =AAUAAA
+test= TH2 mRNA-----gold =AAUAAA
+test= CTH2 transcripts-----gold =AAUAAA
+test= CS region-----gold =AAUAAA
+test= Tick-Box consensus motif-----gold =AAUAAA
+test= FLUC RNA fragment-----gold =AAUAAA
+test= ribozyme-----gold =AAUAAA
+test= Pab1-----gold =AAUAAA
+test= CV670417.1-----gold =AAUAAA
+test= CV668181.1-----gold =AAUAAA
+test= CV665773.1-----gold =AAUAAA
+test= CV670284.1-----gold =AAUAAA
+test= CV668879.1-----gold =AAUAAA
+test= CV667130.1-----gold =AAUAAA
+test= rrnL transcripts-----gold =AAUAAA
+test= Nrd1 binding sites-----gold =AAUAAA
+test= 24 Nab3 binding sites-----gold =AAUAAA
+test= Nrd1 / Nab3 complex-----gold =AAUAAA
+test= nrd1 -102-----gold =AAUAAA
+test= nab3-----gold =AAUAAA
+test= rrnL polyadenylation sites-----gold =AAUAAA
+test= downstream tRNA gene-----gold =AAUAAA
+test= UUR-----gold =AAUAAA
+test= mitochondrial transcription termination factor-----gold =AAUAAA
+test= mini-PGK1 reporter-----gold =AAUAAA
+test= Trypanosoma IRs-----gold =AAUAAA
+test= hammerhead ribozymes-----gold =AAUAAA
+test= hRLUC expressing RNA fragments-----gold =AAUAAA
+test= ACT-200N otF primer-----gold =AAUAAA
+test= ACT+ 200 NheR-----gold =AAUAAA
+test= ACT+ 1100 NheR-----gold =AAUAAA
+test= ACT+ 1800 NheR-----gold =AAUAAA
+test= ACT1-----gold =AAUAAA
+test= ACT2-----gold =AAUAAA
+test= ACT3-----gold =AAUAAA
+test= work.A minimal poly-----gold =AAUAAA
+test= MniACT-----gold =AAUAAA
+test= ACTB site-----gold =AAUAAA
+test= Mni0ACT pA1   GGCCagttgAATATTagtgcacaccttaaaaatgaggccaagtgtgactttgtggtgtgMni0ACT pA2   CTAGcacaccacaaagtcacacttggcctcatttttaaggtgtgcactAATATTcaactThe poly-----gold =AAUAAA
+test= Invitrogen Flp-In T-REx system-----gold =AAUAAA
+test= Trf4/5-----gold =AAUAAA
+test= Air1/2-----gold =AAUAAA
+test= Hrp1-----gold =AAUAAA
+test= DSE-----gold =AAUAAA
+test= rRNA-----gold =AAUAAA
+test= trnS ( UCN ) / trnE-----gold =AAUAAA
+test= nad1 transcript-----gold =AAUAAA
+test= human β -actin and β -globin polyadenylation sites-----gold =AAUAAA
+test= Tick-Box-like sequences-----gold =AAUAAA
+test= p3-----gold =AAUAAA
+test= CR2-----gold =AAUAAA
+test= rrnL gene-----gold =AAUAAA
+test= NC_006078-----gold =AAUAAA
+test= Tick-Boxes located inside trnL-----gold =AAUAAA
+test= tRNA gene-----gold =AAUAAA
+test= Tick-Box sequence inside trnL-----gold =AAUAAA
+test= Small ( rrnS ) and large ( rrnL ) ribosomal subunit rRNAs-----gold =AAUAAA
+test= Valverde ’ s rRNA-----gold =AAUAAA
+test= oriL-----gold =AAUAAA
+test= trnC-----gold =AAUAAA
+test= trnL ( CUN ) gene-----gold =AAUAAA
+test= rrnL polyA site-----gold =AAUAAA
+test= nad1 polyA site-----gold =AAUAAA
+test= trnL ( CUN ) elements-----gold =AAUAAA
+test= poly-T-----gold =AAUAAA
+test= nad1 3-----gold =AAUAAA
+test= nad1 ESTs-----gold =AAUAAA
+test= nad1 mRNA-----gold =AAUAAA
+listsize2
+current doc MAP = 0.25
+listsize1
+current concept MAP = 0.8333333333333333
+gold answer size 2 TEST size496 answer precision = 0.009671179883945842
+Processing concept retrieval
+Processing document retrieval
+Processing triple retrieval
+Processing snippet retrieval
+docPrecision:0.0
+docRecall:0.0
+ConceptPrecision:0.022989889263360617
+triplePrecision:0.0
+snippets golden standard size:6
+snippet precision:0.0
+snippet recall:0.0
+Done
+exact answer [thyroid-stimulating hormone receptor]
+exact answer [thyrotropin receptor]
+exact answer [TSH, thyrotropic hormone, thyrotrophic hormone, thyrotrophin]
+exact answer [TSHR antibodies]
+exact answer [TSH-R]
+exact answer [full-length receptor]
+exact answer [extra-thyroid TSH receptor systems]
+exact answer [follicle-stimulating hormone, fsh]
+exact answer [luteinizing hormone, interstitial cell-stimulating hormone, lh, icsh]
+exact answer [protein G2 s]
+exact answer [thyroglobin]
+exact answer [TSHRab]
+exact answer [TSH receptor]
+exact answer [EOM]
+exact answer [Human thyrotropin]
+exact answer [luteotropin ( LH ) , follitropin]
+exact answer [FSH]
+exact answer [glycoprotein hormone family]
+exact answer [catfish LHR gene]
+exact answer [chicken thyrotropin receptor]
+exact answer [TSHR mRNA]
+exact answer [p32 labeled hTSH-R cDNA]
+exact answer [Recombinant A2 / B5 heterodimeric glycoproteins]
+exact answer [human TSH receptors]
+exact answer [LH, interstitial cell-stimulating hormone, icsh]
+exact answer [FSH receptors]
+exact answer [TSH receptors]
+exact answer [IGF-1R]
+exact answer [glycoprotein hormone]
+exact answer [insulin-like growth factor-1 receptor]
+exact answer [fibroblast activating antigen]
+exact answer [thyrostimulin]
+test= thyroid-stimulating hormone receptor-----gold =adipose tissue
+test= thyrotropin receptor-----gold =adipose tissue
+test= TSH-----gold =adipose tissue
+test= thyrotropic hormone-----gold =adipose tissue
+test= thyrotrophic hormone-----gold =adipose tissue
+test= thyrotrophin-----gold =adipose tissue
+test= TSHR antibodies-----gold =adipose tissue
+test= TSH-R-----gold =adipose tissue
+test= full-length receptor-----gold =adipose tissue
+test= extra-thyroid TSH receptor systems-----gold =adipose tissue
+test= follicle-stimulating hormone-----gold =adipose tissue
+test= fsh-----gold =adipose tissue
+test= luteinizing hormone-----gold =adipose tissue
+test= interstitial cell-stimulating hormone-----gold =adipose tissue
+test= lh-----gold =adipose tissue
+test= icsh-----gold =adipose tissue
+test= protein G2 s-----gold =adipose tissue
+test= thyroglobin-----gold =adipose tissue
+test= TSHRab-----gold =adipose tissue
+test= TSH receptor-----gold =adipose tissue
+test= EOM-----gold =adipose tissue
+test= Human thyrotropin-----gold =adipose tissue
+test= luteotropin ( LH ) , follitropin-----gold =adipose tissue
+test= FSH-----gold =adipose tissue
+test= glycoprotein hormone family-----gold =adipose tissue
+test= catfish LHR gene-----gold =adipose tissue
+test= chicken thyrotropin receptor-----gold =adipose tissue
+test= TSHR mRNA-----gold =adipose tissue
+test= p32 labeled hTSH-R cDNA-----gold =adipose tissue
+test= Recombinant A2 / B5 heterodimeric glycoproteins-----gold =adipose tissue
+test= human TSH receptors-----gold =adipose tissue
+test= LH-----gold =adipose tissue
+test= interstitial cell-stimulating hormone-----gold =adipose tissue
+test= icsh-----gold =adipose tissue
+test= FSH receptors-----gold =adipose tissue
+test= TSH receptors-----gold =adipose tissue
+test= IGF-1R-----gold =adipose tissue
+test= glycoprotein hormone-----gold =adipose tissue
+test= insulin-like growth factor-1 receptor-----gold =adipose tissue
+test= fibroblast activating antigen-----gold =adipose tissue
+test= thyrostimulin-----gold =adipose tissue
+test= thyroid-stimulating hormone receptor-----gold =fibrotic tissue
+test= thyrotropin receptor-----gold =fibrotic tissue
+test= TSH-----gold =fibrotic tissue
+test= thyrotropic hormone-----gold =fibrotic tissue
+test= thyrotrophic hormone-----gold =fibrotic tissue
+test= thyrotrophin-----gold =fibrotic tissue
+test= TSHR antibodies-----gold =fibrotic tissue
+test= TSH-R-----gold =fibrotic tissue
+test= full-length receptor-----gold =fibrotic tissue
+test= extra-thyroid TSH receptor systems-----gold =fibrotic tissue
+test= follicle-stimulating hormone-----gold =fibrotic tissue
+test= fsh-----gold =fibrotic tissue
+test= luteinizing hormone-----gold =fibrotic tissue
+test= interstitial cell-stimulating hormone-----gold =fibrotic tissue
+test= lh-----gold =fibrotic tissue
+test= icsh-----gold =fibrotic tissue
+test= protein G2 s-----gold =fibrotic tissue
+test= thyroglobin-----gold =fibrotic tissue
+test= TSHRab-----gold =fibrotic tissue
+test= TSH receptor-----gold =fibrotic tissue
+test= EOM-----gold =fibrotic tissue
+test= Human thyrotropin-----gold =fibrotic tissue
+test= luteotropin ( LH ) , follitropin-----gold =fibrotic tissue
+test= FSH-----gold =fibrotic tissue
+test= glycoprotein hormone family-----gold =fibrotic tissue
+test= catfish LHR gene-----gold =fibrotic tissue
+test= chicken thyrotropin receptor-----gold =fibrotic tissue
+test= TSHR mRNA-----gold =fibrotic tissue
+test= p32 labeled hTSH-R cDNA-----gold =fibrotic tissue
+test= Recombinant A2 / B5 heterodimeric glycoproteins-----gold =fibrotic tissue
+test= human TSH receptors-----gold =fibrotic tissue
+test= LH-----gold =fibrotic tissue
+test= interstitial cell-stimulating hormone-----gold =fibrotic tissue
+test= icsh-----gold =fibrotic tissue
+test= FSH receptors-----gold =fibrotic tissue
+test= TSH receptors-----gold =fibrotic tissue
+test= IGF-1R-----gold =fibrotic tissue
+test= glycoprotein hormone-----gold =fibrotic tissue
+test= insulin-like growth factor-1 receptor-----gold =fibrotic tissue
+test= fibroblast activating antigen-----gold =fibrotic tissue
+test= thyrostimulin-----gold =fibrotic tissue
+listsize4
+current doc MAP = 0.125
+current concept MAP = 0.42816161129834696
+listsize2
+gold answer size 2 TEST size32 answer precision = 0.0
+listsize4
+final doc MAP = 0.125
+listsize2
+final concept MAP = 0.42816161129834696
+Completed 2 documents
+Total Time Elapsed: 12572 ms 
+Initialization Time: 1520 ms
+Processing Time: 11052 ms
+
+
+ ------------------ PERFORMANCE REPORT ------------------
+
+Component Name: questionReaderDescriptor
+Event Type: Process
+Duration: 105ms (0.95%)
+Result: success
+Component Name: aeDescriptor
+Event Type: Analysis
+Duration: 10882ms (98.22%)
+Sub-events:
+	Component Name: tripleRetrieveDescriptor
+	Event Type: Analysis
+	Duration: 23ms (0.21%)
+
+	Component Name: queryCombinerDescriptor
+	Event Type: Analysis
+	Duration: 5ms (0.05%)
+
+	Component Name: conceptRetrieveDescriptorxml
+	Event Type: Analysis
+	Duration: 295ms (2.66%)
+
+	Component Name: ComplexQueryConstructorDescriptor
+	Event Type: Analysis
+	Duration: 114ms (1.03%)
+
+	Component Name: initialDescriptor
+	Event Type: Analysis
+	Duration: 1903ms (17.18%)
+
+	Component Name: answerExtractorDescriptor
+	Event Type: Analysis
+	Duration: 6371ms (57.51%)
+
+	Component Name: documentRetrieveDescriptor
+	Event Type: Analysis
+	Duration: 1099ms (9.92%)
+
+	Component Name: snippetDescriptor
+	Event Type: Analysis
+	Duration: 1067ms (9.63%)
+
+	Component Name: Fixed Flow Controller
+	Event Type: Analysis
+	Duration: 3ms (0.03%)
+
+Component Name: aeDescriptor
+Event Type: End of Batch
+Duration: 1ms (0.01%)
+Component Name: casConsumerDescriptor
+Event Type: Analysis
+Duration: 46ms (0.42%)
+Component Name: casConsumerDescriptor
+Event Type: End of Batch
+Duration: 45ms (0.41%)
+
