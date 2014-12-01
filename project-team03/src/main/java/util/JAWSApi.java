@@ -15,6 +15,8 @@ import edu.smu.tspell.wordnet.*;
  */
 public class JAWSApi {
   private JAWSApi(){
+    //String path = this.getClass().getResource("src/main/resources/dict").getPath();
+    //System.out.println(path);
     System.setProperty("wordnet.database.dir", "src/main/resources/dict");    
   }
   private static JAWSApi instance = null;
@@ -57,6 +59,7 @@ public class JAWSApi {
    * and used as the word form to look up.
    */
   public static void main(String[] args) {
+    //JAWSApi a = new JAWSApi();
     System.setProperty("wordnet.database.dir", "src/main/resources/dict");
     args = new String[1];
     args[0] = "carbon dioxide";
