@@ -34,7 +34,7 @@ public class JAWSApi {
       for (int i = 0; i < synsets.length; i++) {
         String[] wordForms = synsets[i].getWordForms();
         for (int j = 1; j <  wordForms.length; j++) {
-          if(!syn.contains(wordForms[j]) && (!wordForms[j].equals(text)) && wordForms[j].length()>1){
+          if(!syn.contains(wordForms[j]) && (!wordForms[j].equals(text.toLowerCase())) && wordForms[j].length()>1){
             syn.add(wordForms[j].toLowerCase());
             id++;
             if(id==num)

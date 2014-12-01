@@ -1,5 +1,6 @@
 package edu.cmu.lti.oaqa.pipeline;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Vector;
 
@@ -46,23 +47,27 @@ public class AnswerExtractor extends JCasAnnotator_ImplBase{
     FSIterator<TOP> Iter = aJCas.getJFSIndexRepository().getAllIndexedFS(Passage.type);
     AbnerAnnotator ner = AbnerAnnotator.getInstance();
     JAWSApi syn = JAWSApi.getInstance();    
+    HashSet<String> answerSoFar = new HashSet<String>();
     while(Iter.isValid() && Iter.hasNext()){
       Passage p = (Passage) Iter.next();
       String text = p.getText();
-
       Vector<String> namedEntities = ner.getGeneSpan(text);
       for(String namedEntity : namedEntities){
+        if(answerSoFar.contains(namedEntity))
+          continue;
+        answerSoFar.add(namedEntity);
         Answer answer = new Answer(aJCas);
         answer.setRank(p.getRank());
         List<String>synonyms = syn.getSynonyms(namedEntity, numOfSyn);
         answer.setText(synonyms.get(0));
-        synonyms.remove(0); //The first element in the synonyms is the original text
+        synonyms.remove(0);
         for(int i = 0; i < synonyms.size(); i++){
-          if(isExistedInQuestion(synonyms.get(i), query)){
+          if(isExistedInQuestion(synonyms.get(i), query)||
+                  synonyms.get(i).equals(answer.getText().toLowerCase())){
             synonyms.remove(i);
           }
         }
-        answer.setVariants(Utils.createStringList(aJCas, namedEntities));
+        answer.setVariants(Utils.createStringList(aJCas, synonyms));
         answer.addToIndexes(aJCas);
       }
     }

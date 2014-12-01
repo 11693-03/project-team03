@@ -57,7 +57,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       //String queryText = query.getQueryWithoutOp();
       String queryText = query.getQueryWithOp();
       //String queryText = query.getOriginalQuery();
-      System.out.println("query:"+queryText);
+      //System.out.println("query:"+queryText);
 
       List<OntologyServiceResponse.Finding> findings = new LinkedList<OntologyServiceResponse.Finding>();
       try {
@@ -106,7 +106,8 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
   /**
    *   Create concepts from findings. 
    *   Use cosine similarity to compute the relevance between the query and concept's label
-   *   and concept's matched lable.
+   *   and concept's matched label.
+   *   
    *   @author Michael Zhuang
    * 
    ***/
@@ -117,7 +118,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       if(finding.getScore() < 0.1)
         continue;
 //      System.out.println("Matched Lable:"+finding.getMatchedLabel());
-//      System.out.println("concept.lable:"+finding.getConcept().getLabel());
+      System.out.println("concept.lable:"+finding.getConcept().getLabel());
       String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
       double score = ins.computeCosineSimilarity(query, keyword);
 
