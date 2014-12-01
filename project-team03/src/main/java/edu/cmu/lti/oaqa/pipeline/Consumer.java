@@ -190,13 +190,35 @@ public class Consumer extends CasConsumer_ImplBase {
     System.out.println("ConceptPrecision:" + conceptPrecision);
 
     /** compute triple performance **/
+    int tripleTotalPositive = 0;
+    double tripletotalPrecision = 0.0;
+    double triplePrecision = 0.0;
     Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);
     LinkedList<TripleSearchResult> tripleSRList = new LinkedList<TripleSearchResult>();
     tripleSRList.addAll(triples);
-    LinkedList<Triple> tripleList = new LinkedList<Triple>();
-    for (TripleSearchResult tripleSR : tripleSRList)
-      tripleList.add(new Triple(tripleSR.getTriple().getSubject(), tripleSR.getTriple()
-              .getPredicate(), tripleSR.getTriple().getObject()));
+    // gain the tripList for this query
+    List<Triple> tripleList = new ArrayList<Triple>();
+    tripleList = tripleMaps.get(curQId);
+
+    for (int i = 0; i < tripleSRList.size(); i++) {
+      String oresult = tripleSRList.get(i).getTriple().getObject();
+      String presult = tripleSRList.get(i).getTriple().getPredicate();
+      String sresult = tripleSRList.get(i).getTriple().getSubject();
+      for (int j = 0; j < tripleList.size(); j++) {
+        if (tripleList.get(j).getO().equals(oresult) && tripleList.get(j).getP().equals(presult)
+                && tripleList.get(j).getS().equals(sresult)) {
+          tripleTotalPositive++;
+          tripletotalPrecision += (tripleTotalPositive * 1.0) / ((i + 1) * 1.0);
+        }
+      }
+    }
+    if (tripleTotalPositive == 0) {
+      triplePrecision = 0.0;
+    } else {
+      triplePrecision = tripletotalPrecision / (tripleTotalPositive * 1.0);
+    }
+    metrics.addTripleAP(triplePrecision);
+    System.out.println("triplePrecision:" + triplePrecision);
 
     // System.out.println("--------------I'm a hualiliful segmentation line-------------");
     Collection<Passage> snippets = TypeUtil.getRankedPassages(jcas);
@@ -233,17 +255,16 @@ public class Consumer extends CasConsumer_ImplBase {
       answerPrecision = PerformanceInfo.computeAnswerPrecision(exactAnswer, goldAnswerList);
     else
       answerPrecision = 0;
-    
-    
-    
+
     TestListQuestion answer = new TestListQuestion(curQId, body, type, docUriList, test,
             conceptUriList, tripleList, "pseudo ideal answer", exactAnswer);
     answers.add(answer);
 
     System.out.println("current doc MAP = " + metrics.getDocMAP());
     System.out.println("current concept MAP = " + metrics.getConceptMAP());
-    
-    System.err.println("gold answer size "+ goldAnswerList.size()+" TEST size"+exactAnswer.size()+" answer precision = " + answerPrecision);
+
+    System.err.println("gold answer size " + goldAnswerList.size() + " TEST size"
+            + exactAnswer.size() + " answer precision = " + answerPrecision);
   }
 
   @Override
