@@ -64,6 +64,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       MyUtils ins = MyUtils.getInstance();
       TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
       Collection<Document> documents = null;
+      
       do {
         try {
           PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(queryText,
@@ -83,7 +84,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
                       .computeCosineSimilarity(docs.getMeshHeading(), query.getKeyword());
               score /= 2.0;
             }
-            Document doc = TypeFactory.createDocument(aJCas, url, docs.getTitle(), 999,
+            Document doc = TypeFactory.createDocument(aJCas, url, docs.getDocumentAbstract(), 999,
                     query.getOriginalQuery(), docs.getTitle(), docs.getPmid());
             // System.out.println(score);
             doc.setScore(score);
