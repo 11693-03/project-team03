@@ -199,24 +199,26 @@ public class Consumer extends CasConsumer_ImplBase {
     // gain the tripList for this query
     List<Triple> tripleList = new ArrayList<Triple>();
     tripleList = tripleMaps.get(curQId);
-
-    for (int i = 0; i < tripleSRList.size(); i++) {
-      String oresult = tripleSRList.get(i).getTriple().getObject();
-      String presult = tripleSRList.get(i).getTriple().getPredicate();
-      String sresult = tripleSRList.get(i).getTriple().getSubject();
-      for (int j = 0; j < tripleList.size(); j++) {
-        if (tripleList.get(j).getO().equals(oresult) && tripleList.get(j).getP().equals(presult)
-                && tripleList.get(j).getS().equals(sresult)) {
-          tripleTotalPositive++;
-          tripletotalPrecision += (tripleTotalPositive * 1.0) / ((i + 1) * 1.0);
+    if (tripleList != null) {
+      for (int i = 0; i < tripleSRList.size(); i++) {
+        String oresult = tripleSRList.get(i).getTriple().getObject();
+        String presult = tripleSRList.get(i).getTriple().getPredicate();
+        String sresult = tripleSRList.get(i).getTriple().getSubject();
+        for (int j = 0; j < tripleList.size(); j++) {
+          if (tripleList.get(j).getO().equals(oresult) && tripleList.get(j).getP().equals(presult)
+                  && tripleList.get(j).getS().equals(sresult)) {
+            tripleTotalPositive++;
+            tripletotalPrecision += (tripleTotalPositive * 1.0) / ((i + 1) * 1.0);
+          }
         }
       }
+      if (tripleTotalPositive == 0) {
+        triplePrecision = 0.0;
+      } else {
+        triplePrecision = tripletotalPrecision / (tripleTotalPositive * 1.0);
+      }
     }
-    if (tripleTotalPositive == 0) {
-      triplePrecision = 0.0;
-    } else {
-      triplePrecision = tripletotalPrecision / (tripleTotalPositive * 1.0);
-    }
+    triplePrecision = 0;
     metrics.addTripleAP(triplePrecision);
     System.out.println("triplePrecision:" + triplePrecision);
 
