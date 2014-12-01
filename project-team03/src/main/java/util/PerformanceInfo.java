@@ -88,7 +88,25 @@ public class PerformanceInfo {
     return answerMAR;
   }
   
-  
+  public static double computeAnswerPrecision(List<List<String>> test, List<List<String>> gold){
+    double count = 0;
+    double size = 0;
+    for(List<String> tl: test)
+      for(String ts: tl)
+        size++;
+    
+    for(List<String> l: gold){
+      for(String s: l){
+        for(List<String> tl: test)
+          for(String ts: tl){
+            System.err.println("test= "+ts+"-----gold ="+s );
+            if(ts.contains(s))
+              count++;
+          }
+      }
+    }
+    return count*1.0/size;
+  }
 
 
 }

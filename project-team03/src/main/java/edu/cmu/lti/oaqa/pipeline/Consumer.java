@@ -1,5 +1,7 @@
 package edu.cmu.lti.oaqa.pipeline;
 
+import static java.util.stream.Collectors.toList;
+
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.collection.CasConsumer_ImplBase;
@@ -23,6 +25,8 @@ import json.gson.Snippet;
 import json.gson.TestListQuestion;
 import json.gson.TestQuestion;
 import json.gson.TestSet;
+import json.gson.TrainingListQuestion;
+import json.gson.TrainingSet;
 import json.gson.Triple;
 
 import org.apache.uima.cas.CASException;
@@ -48,7 +52,7 @@ public class Consumer extends CasConsumer_ImplBase {
   static final String PUBPREFIX = "http://www.ncbi.nlm.nih.gov/pubmed/";
 
   // File golden_file;//refer to the file that has golden standard answer
-  String goldPath, outputPath;
+  String outputPath;
 
   Map<String, List<String>> docMaps;
 
@@ -58,15 +62,26 @@ public class Consumer extends CasConsumer_ImplBase {
 
   Map<String, List<Snippet>> snippetMaps;
 
+  Map<String, List<List<String>>> answerMap;
+
   List<TestQuestion> goldStandards;
+
+  List<TestListQuestion> goldStandardsForExactAnswer;
 
   JsonCollectionReaderHelper jsHelper;
 
   List<TestListQuestion> answers;
 
   ListAnswerSet answerSet;
-  
+
   PerformanceInfo metrics;
+
+  String goldStandardPath;
+
+  /**
+   * Name of configuration parameter that must be set to the path of an input file.
+   */
+  public static final String PARAM_INPUTPATH = "InputFile";
 
   @Override
   public void initialize() throws ResourceInitializationException {
@@ -74,6 +89,9 @@ public class Consumer extends CasConsumer_ImplBase {
     // read goldStandard by JsonCollectionReader
     jsHelper = new JsonCollectionReaderHelper();
     goldStandards = jsHelper.testRun();
+    goldStandardPath = ((String) getConfigParameterValue(PARAM_INPUTPATH)).trim();
+    goldStandardsForExactAnswer = (List<TestListQuestion>) TestSet
+            .load(getClass().getResourceAsStream(goldStandardPath)).stream().collect(toList());
 
     // for each question, we store the documents, concepts, triple info corresponding to each
     // question
@@ -81,12 +99,18 @@ public class Consumer extends CasConsumer_ImplBase {
     conceptMaps = new HashMap<String, List<String>>();
     tripleMaps = new HashMap<String, List<Triple>>();
     snippetMaps = new HashMap<String, List<Snippet>>();
+    answerMap = new HashMap<String, List<List<String>>>();
     metrics = new PerformanceInfo();
     for (int i = 0; i < goldStandards.size(); i++) {
       docMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getDocuments());
       conceptMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getConcepts());
       tripleMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getTriples());
       snippetMaps.put(goldStandards.get(i).getId(), goldStandards.get(i).getSnippets());
+
+    }
+    for (int i = 0; i < goldStandardsForExactAnswer.size(); i++) {
+      answerMap.put(goldStandardsForExactAnswer.get(i).getId(), goldStandardsForExactAnswer.get(i)
+              .getExactAnswer());
     }
     answers = new LinkedList<TestListQuestion>();
 
@@ -96,7 +120,7 @@ public class Consumer extends CasConsumer_ImplBase {
   public void processCas(CAS aCAS) throws ResourceProcessException {
 
     outputPath = "MyOutput.json";// the path of output file
-    
+
     JCas jcas = null;
     try {
       jcas = aCAS.getJCas();
@@ -107,24 +131,23 @@ public class Consumer extends CasConsumer_ImplBase {
     String curQId = question.getId();
     String body = question.getText();
     QuestionType type = JsonCollectionReaderHelper.convertQuestionType(question.getQuestionType());
-    
 
     /** Compute Documents Performance **/
     Collection<Document> documents = TypeUtil.getRankedDocuments(jcas);
     LinkedList<Document> documentList = new LinkedList<Document>();
     documentList.addAll(documents);
     LinkedList<String> docUriList = new LinkedList<String>();
-    for(Document doc :documentList)
+    for (Document doc : documentList)
       docUriList.add(doc.getUri());
     List<String> docResult = docMaps.get(curQId);
-    //System.out.println(documentList.size());
+    // System.out.println(documentList.size());
     int docTotalPositive = 0;
     double totalPrecision = 0.0;
     double docPrecision = 0.0;
-    double docRecall=0.0;
+    double docRecall = 0.0;
     for (int i = 0; i < documentList.size(); i++) {
       if (docResult.contains(documentList.get(i).getUri())) {
-//        System.out.println(documentList.get(i).getRank()+":"+documentList.get(i).getUri());
+        // System.out.println(documentList.get(i).getRank()+":"+documentList.get(i).getUri());
         docTotalPositive++;
         totalPrecision += (docTotalPositive * 1.0) / ((i + 1) * 1.0);
       }
@@ -136,25 +159,24 @@ public class Consumer extends CasConsumer_ImplBase {
     }
     metrics.addDocAP(docPrecision);
     System.out.println("docPrecision:" + docPrecision);
-    System.out.println("docRecall:"+(double)docTotalPositive/(double)docResult.size());
+    System.out.println("docRecall:" + (double) docTotalPositive / (double) docResult.size());
     // For the Concepts:
     Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
     LinkedList<ConceptSearchResult> conceptList = new LinkedList<ConceptSearchResult>();
     conceptList.addAll(concepts);
     LinkedList<String> conceptUriList = new LinkedList<String>();
-    for(ConceptSearchResult concept :conceptList)
+    for (ConceptSearchResult concept : conceptList)
       conceptUriList.add(concept.getUri());
-    
 
     List<String> collectionResult = conceptMaps.get(curQId);
-    //System.out.println("curID:" + curQId);
+    // System.out.println("curID:" + curQId);
     int conceptTotalPositive = 0;
     double concepttotalPrecision = 0.0;
     double conceptPrecision = 0.0;
 
     for (int i = 0; i < conceptList.size(); i++) {
       if (collectionResult.contains(conceptList.get(i).getUri())) {
-        //System.out.println(i + ":" + conceptList.get(i).getUri());
+        // System.out.println(i + ":" + conceptList.get(i).getUri());
         conceptTotalPositive++;
         concepttotalPrecision += (conceptTotalPositive * 1.0) / ((i + 1) * 1.0);
       }
@@ -172,55 +194,66 @@ public class Consumer extends CasConsumer_ImplBase {
     LinkedList<TripleSearchResult> tripleSRList = new LinkedList<TripleSearchResult>();
     tripleSRList.addAll(triples);
     LinkedList<Triple> tripleList = new LinkedList<Triple>();
-    for(TripleSearchResult tripleSR: tripleSRList )
-      tripleList.add(new Triple(tripleSR.getTriple().getSubject(),tripleSR.getTriple().getPredicate(),tripleSR.getTriple().getObject()));
-    
+    for (TripleSearchResult tripleSR : tripleSRList)
+      tripleList.add(new Triple(tripleSR.getTriple().getSubject(), tripleSR.getTriple()
+              .getPredicate(), tripleSR.getTriple().getObject()));
 
-    //System.out.println("--------------I'm a hualiliful segmentation line-------------");
+    // System.out.println("--------------I'm a hualiliful segmentation line-------------");
     Collection<Passage> snippets = TypeUtil.getRankedPassages(jcas);
     LinkedList<Passage> snippetList = new LinkedList<Passage>();
     snippetList.addAll(snippets);
     LinkedList<Snippet> test = new LinkedList<Snippet>();
-    for(Passage p:snippetList)
-      test.add(new Snippet(p.getUri(), p.getText(), p.getOffsetInBeginSection(), p.getOffsetInEndSection(),
-              p.getBeginSection(), p.getEndSection(),p.getTitle(), p.getScore()));
+    for (Passage p : snippetList)
+      test.add(new Snippet(p.getUri(), p.getText(), p.getOffsetInBeginSection(), p
+              .getOffsetInEndSection(), p.getBeginSection(), p.getEndSection(), p.getTitle(), p
+              .getScore()));
     List<Snippet> gold = snippetMaps.get(curQId);
-    System.out.println("snippets golden standard size:"+gold.size());
+    System.out.println("snippets golden standard size:" + gold.size());
     double precision = MyUtils.calcSnippetPrecision(gold, test);
     double recall = MyUtils.calcSnippetRecall(gold, test);
-    System.out.println("snippet precision:"+precision);
-    System.out.println("snippet recall:"+recall);
-    
+    System.out.println("snippet precision:" + precision);
+    System.out.println("snippet recall:" + recall);
 
     System.out.println("Done");
     List<List<String>> exactAnswer = new LinkedList<List<String>>();
-   
-    Collection<Answer>  answersFromCAS = TypeUtil.getAnswersByRank(jcas);
+
+    Collection<Answer> answersFromCAS = TypeUtil.getAnswersByRank(jcas);
     LinkedList<Answer> answerList = new LinkedList<Answer>(answersFromCAS);
-    for(Answer a :answerList){
+    for (Answer a : answerList) {
       LinkedList<String> listString = new LinkedList<String>();
       listString.add(a.getText());
       Collection<String> variants = FSCollectionFactory.create(a.getVariants());
       listString.addAll(variants);
       exactAnswer.add(listString);
-      System.err.println("exact answer "+ listString);
+      System.err.println("exact answer " + listString);
     }
+    List<List<String>> goldAnswerList = answerMap.get(curQId);
+    double answerPrecision;
+    if (goldAnswerList != null)
+      answerPrecision = PerformanceInfo.computeAnswerPrecision(exactAnswer, goldAnswerList);
+    else
+      answerPrecision = 0;
     
-    TestListQuestion answer = new TestListQuestion(curQId,body,type,docUriList,test,conceptUriList,tripleList,"pseudo ideal answer",exactAnswer);
+    
+    
+    TestListQuestion answer = new TestListQuestion(curQId, body, type, docUriList, test,
+            conceptUriList, tripleList, "pseudo ideal answer", exactAnswer);
     answers.add(answer);
 
-    System.out.println("current doc MAP = "+ metrics.getDocMAP());
-    System.out.println("current concept MAP = "+metrics.getConceptMAP());
+    System.out.println("current doc MAP = " + metrics.getDocMAP());
+    System.out.println("current concept MAP = " + metrics.getConceptMAP());
+    
+    System.err.println("gold answer size "+ goldAnswerList.size()+" TEST size"+exactAnswer.size()+" answer precision = " + answerPrecision);
   }
 
   @Override
   public void destroy() {
-    //output results
+    // output results
     answerSet = new ListAnswerSet(answers);
     String output = answerSet.dump();
-    System.out.println("final doc MAP = "+ metrics.getDocMAP());
-    System.out.println("final concept MAP = "+metrics.getConceptMAP());
-    
+    System.out.println("final doc MAP = " + metrics.getDocMAP());
+    System.out.println("final concept MAP = " + metrics.getConceptMAP());
+
     try {
       PrintWriter out = new PrintWriter(outputPath);
       out.println(output);
