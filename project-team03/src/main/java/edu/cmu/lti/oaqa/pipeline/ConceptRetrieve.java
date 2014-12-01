@@ -118,7 +118,7 @@ public class ConceptRetrieve extends JCasAnnotator_ImplBase{
       if(finding.getScore() < 0.1)
         continue;
 //      System.out.println("Matched Lable:"+finding.getMatchedLabel());
-      System.out.println("concept.lable:"+finding.getConcept().getLabel());
+//      System.out.println("concept.lable:"+finding.getConcept().getLabel());
       String keyword = tokenizer.tokenize(finding.getConcept().getLabel());
       double score = ins.computeCosineSimilarity(query, keyword);
 
