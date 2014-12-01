@@ -36,7 +36,7 @@ import edu.cmu.lti.oaqa.type.retrieval.FinalQuery;
  ***/
 
 public class DocumentRetrieve extends JCasAnnotator_ImplBase {
-  private static int docLimits = 101;
+  private static int docLimits = 151;
 
   GoPubMedService service;
 
@@ -74,9 +74,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
             String keywords = docs.getTitle();
             // System.out.println("Title:"+docs.getTitle());
             // System.out.println("Mesh Headings:"+docs.getMeshHeading());
-            // System.out.println("Mesh Annotation:"+docs.getMeshAnnotations());
             keywords = tokenizer.tokenize(keywords);
-
             double score = 0;
             score += ins.computeCosineSimilarity(keywords, query.getKeyword());
             if (docs.getMeshHeading() != null) {
@@ -100,7 +98,7 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
           break;
         else
           queryText = query.getKeyword();
-        System.out.println("KEYWORD:"+queryText);
+        //System.out.println("KEYWORD:"+queryText);
       } while (documents.size()==0);
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);
