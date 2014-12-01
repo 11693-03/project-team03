@@ -202,6 +202,8 @@ public class Consumer extends CasConsumer_ImplBase {
       listString.add(a.getText());
       Collection<String> variants = FSCollectionFactory.create(a.getVariants());
       listString.addAll(variants);
+      exactAnswer.add(listString);
+      System.err.println("exact answer "+ listString);
     }
     
     TestListQuestion answer = new TestListQuestion(curQId,body,type,docUriList,test,conceptUriList,tripleList,"pseudo ideal answer",exactAnswer);
