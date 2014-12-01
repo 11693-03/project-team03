@@ -1,25 +1,13 @@
 {
     "questions": [
-  	{
-            "body": "Are there any DNMT3 proteins present in plants?", 
-            "type": "yesno", 
-            "id": "511a16f9df1ebcce7d000005"
-        }, 
+  	
         {
             "body": "What is the most prominent sequence consensus for the polyadenylation site?", 
             "type": "list", 
             "id": "5133b9455274a5fb0700000c"
         }, 
-        {
-            "body": "What is the function of the mammalian gene Irg1?", 
-            "type": "summary", 
-            "id": "513832a75274a5fb07000012"
-        }, 
-        {
-            "body": "Is thrombophilia related to increased risk of miscarriage?", 
-            "type": "yesno", 
-            "id": "513cdc38bee46bd34c000007"
-        }, 
+    
+ 
         {
             "body": "Which extra thyroid tissues have thyrotropin (TSH) receptors?", 
             "type": "list", 
