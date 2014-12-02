@@ -14,19 +14,15 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** Annotation on a token, which may have arguments if they are predicates; useful in transforming text into a "logical form", with affordances similar to the ones provided in Extended WordNet and the like. --- Source: Murdock
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class Token_Type extends Annotation_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -42,19 +38,19 @@ public class Token_Type extends Annotation_Type {
         } else return new Token(addr, Token_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Token.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.nlp.Token");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_arguments;
-  /** @generated */
+  /**  */
   final int     casFeatCode_arguments;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -63,7 +59,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("arguments", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getRefValue(addr, casFeatCode_arguments);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -72,7 +68,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("arguments", "edu.cmu.lti.oaqa.type.nlp.Token");
     ll_cas.ll_setRefValue(addr, casFeatCode_arguments, v);}
     
-   /** @generated
+   /** 
    * @param addr low level Feature Structure reference
    * @param i index of item in the array
    * @return value at index i in the array 
@@ -86,7 +82,7 @@ public class Token_Type extends Annotation_Type {
   return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i);
   }
    
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param i index of item in the array
    * @param v value to set
@@ -101,11 +97,11 @@ public class Token_Type extends Annotation_Type {
   }
  
  
-  /** @generated */
+  /**  */
   final Feature casFeat_argumentLabels;
-  /** @generated */
+  /**  */
   final int     casFeatCode_argumentLabels;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -114,7 +110,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("argumentLabels", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getRefValue(addr, casFeatCode_argumentLabels);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -123,7 +119,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("argumentLabels", "edu.cmu.lti.oaqa.type.nlp.Token");
     ll_cas.ll_setRefValue(addr, casFeatCode_argumentLabels, v);}
     
-   /** @generated
+   /** 
    * @param addr low level Feature Structure reference
    * @param i index of item in the array
    * @return value at index i in the array 
@@ -137,7 +133,7 @@ public class Token_Type extends Annotation_Type {
   return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_argumentLabels), i);
   }
    
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param i index of item in the array
    * @param v value to set
@@ -152,11 +148,11 @@ public class Token_Type extends Annotation_Type {
   }
  
  
-  /** @generated */
+  /**  */
   final Feature casFeat_parse;
-  /** @generated */
+  /**  */
   final int     casFeatCode_parse;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -165,7 +161,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("parse", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getRefValue(addr, casFeatCode_parse);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -176,11 +172,11 @@ public class Token_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_semanticType;
-  /** @generated */
+  /**  */
   final int     casFeatCode_semanticType;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -189,7 +185,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("semanticType", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_semanticType);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -200,11 +196,11 @@ public class Token_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_partOfSpeech;
-  /** @generated */
+  /**  */
   final int     casFeatCode_partOfSpeech;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -213,7 +209,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("partOfSpeech", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_partOfSpeech);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -224,11 +220,11 @@ public class Token_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_lemmaForm;
-  /** @generated */
+  /**  */
   final int     casFeatCode_lemmaForm;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -237,7 +233,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("lemmaForm", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_lemmaForm);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -248,11 +244,11 @@ public class Token_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_isMainReference;
-  /** @generated */
+  /**  */
   final int     casFeatCode_isMainReference;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -261,7 +257,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("isMainReference", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getBooleanValue(addr, casFeatCode_isMainReference);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -272,11 +268,11 @@ public class Token_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_isVariable;
-  /** @generated */
+  /**  */
   final int     casFeatCode_isVariable;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -285,7 +281,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("isVariable", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getBooleanValue(addr, casFeatCode_isVariable);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -296,11 +292,11 @@ public class Token_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_determiner;
-  /** @generated */
+  /**  */
   final int     casFeatCode_determiner;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -309,7 +305,7 @@ public class Token_Type extends Annotation_Type {
       jcas.throwFeatMissing("determiner", "edu.cmu.lti.oaqa.type.nlp.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_determiner);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -323,7 +319,7 @@ public class Token_Type extends Annotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

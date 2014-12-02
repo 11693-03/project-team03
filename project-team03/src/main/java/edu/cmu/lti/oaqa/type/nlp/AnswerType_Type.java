@@ -14,19 +14,15 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** A Named Entity type that represents the type of the answer being sought.
-<<<<<<< HEAD
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class AnswerType_Type extends Annotation_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -42,19 +38,19 @@ public class AnswerType_Type extends Annotation_Type {
         } else return new AnswerType(addr, AnswerType_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = AnswerType.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.nlp.AnswerType");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_label;
-  /** @generated */
+  /**  */
   final int     casFeatCode_label;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -63,7 +59,7 @@ public class AnswerType_Type extends Annotation_Type {
       jcas.throwFeatMissing("label", "edu.cmu.lti.oaqa.type.nlp.AnswerType");
     return ll_cas.ll_getStringValue(addr, casFeatCode_label);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -74,11 +70,11 @@ public class AnswerType_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_targetType;
-  /** @generated */
+  /**  */
   final int     casFeatCode_targetType;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -87,7 +83,7 @@ public class AnswerType_Type extends Annotation_Type {
       jcas.throwFeatMissing("targetType", "edu.cmu.lti.oaqa.type.nlp.AnswerType");
     return ll_cas.ll_getRefValue(addr, casFeatCode_targetType);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -101,7 +97,7 @@ public class AnswerType_Type extends Annotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

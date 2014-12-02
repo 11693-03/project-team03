@@ -11,37 +11,32 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** The Question and any associated meta-data.
-<<<<<<< HEAD
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
  * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Question extends Annotation {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Question.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected Question() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +45,7 @@ public class Question extends Annotation {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public Question(JCas jcas) {
@@ -58,7 +53,7 @@ public class Question extends Annotation {
     readObject();   
   } 
 
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
@@ -75,7 +70,7 @@ public class Question extends Annotation {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -85,7 +80,7 @@ public class Question extends Annotation {
   //* Feature: id
 
   /** getter for id - gets A unique id for the question.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getId() {
@@ -94,7 +89,7 @@ public class Question extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Question_Type)jcasType).casFeatCode_id);}
     
   /** setter for id - sets A unique id for the question. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setId(String v) {
@@ -107,7 +102,7 @@ public class Question extends Annotation {
   //* Feature: source
 
   /** getter for source - gets The source of the question, e.g., TREC11, Jeopardy, etc.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getSource() {
@@ -116,7 +111,7 @@ public class Question extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Question_Type)jcasType).casFeatCode_source);}
     
   /** setter for source - sets The source of the question, e.g., TREC11, Jeopardy, etc. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setSource(String v) {
@@ -129,7 +124,7 @@ public class Question extends Annotation {
   //* Feature: questionType
 
   /** getter for questionType - gets The class of the question, determined by either an automatic question classification process or human judgment.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getQuestionType() {
@@ -138,7 +133,7 @@ public class Question extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Question_Type)jcasType).casFeatCode_questionType);}
     
   /** setter for questionType - sets The class of the question, determined by either an automatic question classification process or human judgment. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setQuestionType(String v) {
@@ -151,7 +146,7 @@ public class Question extends Annotation {
   //* Feature: text
 
   /** getter for text - gets The question content.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getText() {
@@ -160,7 +155,7 @@ public class Question extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Question_Type)jcasType).casFeatCode_text);}
     
   /** setter for text - sets The question content. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setText(String v) {

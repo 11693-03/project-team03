@@ -64,7 +64,6 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
       MyUtils ins = MyUtils.getInstance();
       TokenizerLingpipe tokenizer = TokenizerLingpipe.getInstance();
       Collection<Document> documents = null;
-      
       do {
         try {
           PubMedSearchServiceResponse.Result pubmedResult = service.findPubMedCitations(queryText,
@@ -72,8 +71,6 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
           for (PubMedSearchServiceResponse.Document docs : pubmedResult.getDocuments()) {
             String url = uriPrefix + docs.getPmid();
             String keywords = docs.getTitle();
-            // System.out.println("Title:"+docs.getTitle());
-            // System.out.println("Mesh Headings:"+docs.getMeshHeading());
             keywords = tokenizer.tokenize(keywords);
             double score = 0;
             score += ins.computeCosineSimilarity(keywords, query.getKeyword());
@@ -84,7 +81,6 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
             }
             Document doc = TypeFactory.createDocument(aJCas, url, docs.getDocumentAbstract(), 999,
                     query.getOriginalQuery(), docs.getTitle(), docs.getPmid());
-            // System.out.println(score);
             doc.setScore(score);
             doc.addToIndexes();
           }
@@ -98,7 +94,6 @@ public class DocumentRetrieve extends JCasAnnotator_ImplBase {
           break;
         else
           queryText = query.getKeyword();
-        //System.out.println("KEYWORD:"+queryText);
       } while (documents.size()==0);
       LinkedList<Document> documentList = new LinkedList<Document>();
       documentList.addAll(documents);

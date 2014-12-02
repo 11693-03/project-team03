@@ -11,37 +11,31 @@ import org.apache.uima.jcas.cas.FSList;
 
 
 /** A hierarchical query concept represented by a query operation on a list of concepts
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class ComplexQueryConcept extends QueryConcept {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(ComplexQueryConcept.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected ComplexQueryConcept() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +44,7 @@ public class ComplexQueryConcept extends QueryConcept {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public ComplexQueryConcept(JCas jcas) {
@@ -63,7 +57,7 @@ public class ComplexQueryConcept extends QueryConcept {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -73,7 +67,7 @@ public class ComplexQueryConcept extends QueryConcept {
   //* Feature: operator
 
   /** getter for operator - gets The operator associated with this concept.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public QueryOperator getOperator() {
@@ -82,7 +76,7 @@ public class ComplexQueryConcept extends QueryConcept {
     return (QueryOperator)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((ComplexQueryConcept_Type)jcasType).casFeatCode_operator)));}
     
   /** setter for operator - sets The operator associated with this concept. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setOperator(QueryOperator v) {
@@ -95,7 +89,7 @@ public class ComplexQueryConcept extends QueryConcept {
   //* Feature: operatorArgs
 
   /** getter for operatorArgs - gets The operator arguments in a complex query concept.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public FSList getOperatorArgs() {
@@ -104,7 +98,7 @@ public class ComplexQueryConcept extends QueryConcept {
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((ComplexQueryConcept_Type)jcasType).casFeatCode_operatorArgs)));}
     
   /** setter for operatorArgs - sets The operator arguments in a complex query concept. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setOperatorArgs(FSList v) {

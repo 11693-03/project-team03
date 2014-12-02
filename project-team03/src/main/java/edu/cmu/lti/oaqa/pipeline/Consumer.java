@@ -242,7 +242,7 @@ public class Consumer extends CasConsumer_ImplBase {
               .getOffsetInEndSection(), p.getBeginSection(), p.getEndSection(), p.getTitle(), p
               .getScore()));
     List<Snippet> gold = snippetMaps.get(curQId);
-    System.out.println("snippets golden standard size:" + gold.size());
+    //System.out.println("snippets golden standard size:" + gold.size());
     double precision = MyUtils.calcSnippetPrecision(gold, test);
     double recall = MyUtils.calcSnippetRecall(gold, test);
     System.out.println("snippet precision:" + precision);
@@ -262,20 +262,23 @@ public class Consumer extends CasConsumer_ImplBase {
       System.err.println("exact answer " + listString);
     }
     List<List<String>> goldAnswerList = answerMap.get(curQId);
-    double answerPrecision;
-    if (goldAnswerList != null)
+    double answerPrecision = 0.0;
+    int goldAnswerSize = 0;
+    if (goldAnswerList != null){
       answerPrecision = PerformanceInfo.computeAnswerPrecision(exactAnswer, goldAnswerList);
+      goldAnswerSize = goldAnswerList.size();
+    }
     else
       answerPrecision = 0;
     metrics.addAnswerPrecision(answerPrecision);
     TestListQuestion answer = new TestListQuestion(curQId, body, type, docUriList, test,
-            conceptUriList, tripleList, "pseudo ideal answer", exactAnswer);
+            conceptUriList, tripleList, snippetList.get(0).getText(), exactAnswer);
     answers.add(answer);
 
     System.out.println("current doc MAP = " + metrics.getDocMAP());
     System.out.println("current concept MAP = " + metrics.getConceptMAP());
 
-    System.err.println("gold answer size " + goldAnswerList.size() + " TEST size"
+    System.err.println("gold answer size " + goldAnswerSize + " TEST size"
             + exactAnswer.size() + " answer precision = " + answerPrecision);
   }
 

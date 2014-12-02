@@ -11,37 +11,31 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Annotates a span of text identified as a candidate answer.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class CandidateAnswerOccurrence extends Annotation {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(CandidateAnswerOccurrence.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected CandidateAnswerOccurrence() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +44,7 @@ public class CandidateAnswerOccurrence extends Annotation {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public CandidateAnswerOccurrence(JCas jcas) {
@@ -58,7 +52,7 @@ public class CandidateAnswerOccurrence extends Annotation {
     readObject();   
   } 
 
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
@@ -75,7 +69,7 @@ public class CandidateAnswerOccurrence extends Annotation {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -85,7 +79,7 @@ public class CandidateAnswerOccurrence extends Annotation {
   //* Feature: text
 
   /** getter for text - gets The candidate answer string.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getText() {
@@ -94,7 +88,7 @@ public class CandidateAnswerOccurrence extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((CandidateAnswerOccurrence_Type)jcasType).casFeatCode_text);}
     
   /** setter for text - sets The candidate answer string. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setText(String v) {
@@ -107,7 +101,7 @@ public class CandidateAnswerOccurrence extends Annotation {
   //* Feature: mentionType
 
   /** getter for mentionType - gets The manner in which covered text refers to some entity, e.g.  NAME, NOMINAL, PRONOUN
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getMentionType() {
@@ -116,7 +110,7 @@ public class CandidateAnswerOccurrence extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((CandidateAnswerOccurrence_Type)jcasType).casFeatCode_mentionType);}
     
   /** setter for mentionType - sets The manner in which covered text refers to some entity, e.g.  NAME, NOMINAL, PRONOUN 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setMentionType(String v) {

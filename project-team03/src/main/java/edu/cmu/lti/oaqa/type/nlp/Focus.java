@@ -11,37 +11,31 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** The phrase in the question that indicates the answer variable.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class Focus extends Annotation {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Focus.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected Focus() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +44,7 @@ public class Focus extends Annotation {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public Focus(JCas jcas) {
@@ -58,7 +52,7 @@ public class Focus extends Annotation {
     readObject();   
   } 
 
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
@@ -75,7 +69,7 @@ public class Focus extends Annotation {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -85,7 +79,7 @@ public class Focus extends Annotation {
   //* Feature: token
 
   /** getter for token - gets The corresponding token for the focus.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public Token getToken() {
@@ -94,7 +88,7 @@ public class Focus extends Annotation {
     return (Token)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Focus_Type)jcasType).casFeatCode_token)));}
     
   /** setter for token - sets The corresponding token for the focus. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setToken(Token v) {
@@ -107,7 +101,7 @@ public class Focus extends Annotation {
   //* Feature: label
 
   /** getter for label - gets String representation of the Question Focus.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getLabel() {
@@ -116,7 +110,7 @@ public class Focus extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Focus_Type)jcasType).casFeatCode_label);}
     
   /** setter for label - sets String representation of the Question Focus. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setLabel(String v) {

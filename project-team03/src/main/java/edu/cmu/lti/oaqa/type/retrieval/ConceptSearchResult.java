@@ -11,37 +11,31 @@ import edu.cmu.lti.oaqa.type.kb.Concept;
 
 
 /** A search result from an ontology.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class ConceptSearchResult extends AnswerSearchResult {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(ConceptSearchResult.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected ConceptSearchResult() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +44,7 @@ public class ConceptSearchResult extends AnswerSearchResult {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public ConceptSearchResult(JCas jcas) {
@@ -63,7 +57,7 @@ public class ConceptSearchResult extends AnswerSearchResult {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -73,7 +67,7 @@ public class ConceptSearchResult extends AnswerSearchResult {
   //* Feature: concept
 
   /** getter for concept - gets The relevant concept searched in the ontology.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public Concept getConcept() {
@@ -82,7 +76,7 @@ public class ConceptSearchResult extends AnswerSearchResult {
     return (Concept)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((ConceptSearchResult_Type)jcasType).casFeatCode_concept)));}
     
   /** setter for concept - sets The relevant concept searched in the ontology. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setConcept(Concept v) {

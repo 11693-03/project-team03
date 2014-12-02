@@ -14,19 +14,15 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** The Question and any associated meta-data.
-<<<<<<< HEAD
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Question_Type extends Annotation_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -42,19 +38,19 @@ public class Question_Type extends Annotation_Type {
         } else return new Question(addr, Question_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Question.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.input.Question");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_id;
-  /** @generated */
+  /**  */
   final int     casFeatCode_id;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -63,7 +59,7 @@ public class Question_Type extends Annotation_Type {
       jcas.throwFeatMissing("id", "edu.cmu.lti.oaqa.type.input.Question");
     return ll_cas.ll_getStringValue(addr, casFeatCode_id);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -74,11 +70,11 @@ public class Question_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_source;
-  /** @generated */
+  /**  */
   final int     casFeatCode_source;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -87,7 +83,7 @@ public class Question_Type extends Annotation_Type {
       jcas.throwFeatMissing("source", "edu.cmu.lti.oaqa.type.input.Question");
     return ll_cas.ll_getStringValue(addr, casFeatCode_source);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -98,11 +94,11 @@ public class Question_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_questionType;
-  /** @generated */
+  /**  */
   final int     casFeatCode_questionType;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -111,7 +107,7 @@ public class Question_Type extends Annotation_Type {
       jcas.throwFeatMissing("questionType", "edu.cmu.lti.oaqa.type.input.Question");
     return ll_cas.ll_getStringValue(addr, casFeatCode_questionType);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -122,11 +118,11 @@ public class Question_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_text;
-  /** @generated */
+  /**  */
   final int     casFeatCode_text;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -135,7 +131,7 @@ public class Question_Type extends Annotation_Type {
       jcas.throwFeatMissing("text", "edu.cmu.lti.oaqa.type.input.Question");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -149,7 +145,7 @@ public class Question_Type extends Annotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

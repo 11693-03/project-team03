@@ -86,11 +86,11 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
           List<String> sections = sectionSet.getSections();
           makeSnippets(qText, pmid, snippets, sections,sectionSet.getTitle());
            //System.out.println("Snippet:"+sectionSet);
-        }else {
+        }
           List<String> abstractText = new LinkedList<String>();
           abstractText.add(doc.getText());
-          makeSnippets(qText,pmid,snippets, abstractText,"abstact");
-        }
+          makeSnippets(qText,pmid,snippets, abstractText, "abstact");
+        
       } catch (IOException e) {
         //e.printStackTrace();
       }

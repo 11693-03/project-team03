@@ -14,19 +14,17 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** A variant of a candidate answer.  A variant may have multiple occurrences, all of which are collected in a variant object.
-<<<<<<< HEAD
+
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class CandidateAnswerVariant_Type extends TOP_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -42,19 +40,19 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
         } else return new CandidateAnswerVariant(addr, CandidateAnswerVariant_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = CandidateAnswerVariant.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_occurrences;
-  /** @generated */
+  /**  */
   final int     casFeatCode_occurrences;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -63,7 +61,7 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
       jcas.throwFeatMissing("occurrences", "edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant");
     return ll_cas.ll_getRefValue(addr, casFeatCode_occurrences);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -74,11 +72,11 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_candidateId;
-  /** @generated */
+  /**  */
   final int     casFeatCode_candidateId;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -87,7 +85,7 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
       jcas.throwFeatMissing("candidateId", "edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant");
     return ll_cas.ll_getStringValue(addr, casFeatCode_candidateId);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -98,11 +96,11 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_text;
-  /** @generated */
+  /**  */
   final int     casFeatCode_text;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -111,7 +109,7 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
       jcas.throwFeatMissing("text", "edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -122,11 +120,11 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_alternativeNames;
-  /** @generated */
+  /**  */
   final int     casFeatCode_alternativeNames;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -135,7 +133,7 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
       jcas.throwFeatMissing("alternativeNames", "edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant");
     return ll_cas.ll_getRefValue(addr, casFeatCode_alternativeNames);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -146,11 +144,11 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_uri;
-  /** @generated */
+  /**  */
   final int     casFeatCode_uri;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -159,7 +157,7 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
       jcas.throwFeatMissing("uri", "edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant");
     return ll_cas.ll_getStringValue(addr, casFeatCode_uri);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -170,11 +168,11 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_docId;
-  /** @generated */
+  /**  */
   final int     casFeatCode_docId;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -183,7 +181,7 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
       jcas.throwFeatMissing("docId", "edu.cmu.lti.oaqa.type.answer.CandidateAnswerVariant");
     return ll_cas.ll_getStringValue(addr, casFeatCode_docId);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -197,7 +195,7 @@ public class CandidateAnswerVariant_Type extends TOP_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */
