@@ -271,8 +271,11 @@ public class Consumer extends CasConsumer_ImplBase {
     else
       answerPrecision = 0;
     metrics.addAnswerPrecision(answerPrecision);
+    String idealAnswer = "";
+    if(snippetList!=null && snippetList.size()!=0)
+      idealAnswer = snippetList.get(0).getText();
     TestListQuestion answer = new TestListQuestion(curQId, body, type, docUriList, test,
-            conceptUriList, tripleList, snippetList.get(0).getText(), exactAnswer);
+            conceptUriList, tripleList, idealAnswer, exactAnswer);
     answers.add(answer);
 
     System.out.println("current doc MAP = " + metrics.getDocMAP());
@@ -295,7 +298,6 @@ public class Consumer extends CasConsumer_ImplBase {
       out.println(output);
       out.close();
     } catch (FileNotFoundException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }

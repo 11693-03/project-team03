@@ -43,7 +43,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
   private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
 
   private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
-  private static final int timedout = 1000;
+  private static final int timedout = 10000;
   private CloseableHttpClient httpClient;
 
   @Override
@@ -67,7 +67,6 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
     for (Document doc : docList) {
       String pmid = doc.getDocId();
       String url = PREFIX + pmid;
-      //System.out.println(url);
       HttpGet httpGet = new HttpGet(url);
       
       List<Snippet> snippets = new LinkedList<Snippet>();
@@ -85,14 +84,12 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
           SectionSet sectionSet = SectionSet.load(json);
           List<String> sections = sectionSet.getSections();
           makeSnippets(qText, pmid, snippets, sections,sectionSet.getTitle());
-           //System.out.println("Snippet:"+sectionSet);
         }
           List<String> abstractText = new LinkedList<String>();
           abstractText.add(doc.getText());
           makeSnippets(qText,pmid,snippets, abstractText, "abstact");
-        
       } catch (IOException e) {
-        //e.printStackTrace();
+        e.printStackTrace();
       }
       Collections.sort(snippets);
       int rank = 1;

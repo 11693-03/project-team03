@@ -12,7 +12,6 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 import util.AbnerAnnotator;
 import util.MyLemmatizer;
-import util.NERLingpipe;
 import util.StanfordNER;
 import util.TokenizerLingpipe;
 import util.TypeUtil;

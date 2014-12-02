@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -24,6 +26,7 @@ import com.aliasi.tokenizer.TokenizerFactory;
  * 
  **/
 public class TokenizerLingpipe {
+  String filePath = "stopwords.txt";
   private static TokenizerLingpipe instance = null;
   public static TokenizerLingpipe getInstance(){
     if(instance == null)
@@ -34,10 +37,10 @@ public class TokenizerLingpipe {
   HashSet<String>stopWords;
   private TokenizerLingpipe(){
     stopWords = new HashSet<String>();
-    File storeFile = new File("src/main/resources/stopwords.txt");
-    BufferedReader reader = null;
+    InputStream is = TokenizerLingpipe.class.getClassLoader().getResourceAsStream(filePath);
+    
     try {
-      reader = new BufferedReader(new FileReader(storeFile));
+      BufferedReader reader = new BufferedReader(new InputStreamReader(is, "utf-8"));
       String line = null;
       while((line=reader.readLine())!=null){
         if(line.charAt(0)=='#')

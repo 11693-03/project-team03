@@ -17,6 +17,7 @@ import abner.Tagger;
  */
 public class AbnerAnnotator{
   private AbnerAnnotator(){
+    System.setProperty("wordnet.database.dir", "src/main/resources/dict");  
     try{
       tagger = new Tagger(Tagger.BIOCREATIVE);
     }catch(Exception e){
