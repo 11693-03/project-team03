@@ -91,7 +91,7 @@ public class Consumer extends CasConsumer_ImplBase {
     jsHelper = new JsonCollectionReaderHelper();
     goldStandards = jsHelper.testRun();
     goldStandardPath = ((String) getConfigParameterValue(PARAM_INPUTPATH)).trim();
-    goldStandardsForExactAnswer = (List<TestListQuestion>) TestSet
+    goldStandardsForExactAnswer = TestSet
             .load(getClass().getResourceAsStream(goldStandardPath)).stream().collect(toList());
 
     // for each question, we store the documents, concepts, triple info corresponding to each
