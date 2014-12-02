@@ -83,6 +83,7 @@ public class Consumer extends CasConsumer_ImplBase {
    */
   public static final String PARAM_INPUTPATH = "InputFile";
 
+  @SuppressWarnings("unchecked")
   @Override
   public void initialize() throws ResourceInitializationException {
 
