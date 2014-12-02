@@ -38,7 +38,7 @@ public class RelationMention_Type extends ConceptMention_Type {
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = RelationMention.typeIndexID;
   /**  
-     @modifiable */
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.kb.RelationMention");
 

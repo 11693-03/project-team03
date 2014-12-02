@@ -48,6 +48,11 @@ import edu.cmu.lti.oaqa.type.retrieval.Document;
 import edu.cmu.lti.oaqa.type.retrieval.Passage;
 import edu.cmu.lti.oaqa.type.retrieval.TripleSearchResult;
 
+/**
+ * This the consumer of the system, which will evaluate performance of each part and output the
+ * result
+ * 
+ */
 public class Consumer extends CasConsumer_ImplBase {
   static final String PUBPREFIX = "http://www.ncbi.nlm.nih.gov/pubmed/";
 
@@ -83,7 +88,6 @@ public class Consumer extends CasConsumer_ImplBase {
    */
   public static final String PARAM_INPUTPATH = "InputFile";
 
-  @SuppressWarnings("unchecked")
   @Override
   public void initialize() throws ResourceInitializationException {
 
@@ -92,9 +96,9 @@ public class Consumer extends CasConsumer_ImplBase {
     goldStandards = jsHelper.testRun();
     goldStandardPath = ((String) getConfigParameterValue(PARAM_INPUTPATH)).trim();
 
-    goldStandardsForExactAnswer =  TestSet
+    goldStandardsForExactAnswer = TestSet
 
-            .load(getClass().getResourceAsStream(goldStandardPath)).stream().collect(toList());
+    .load(getClass().getResourceAsStream(goldStandardPath)).stream().collect(toList());
 
     // for each question, we store the documents, concepts, triple info corresponding to each
     // question
@@ -113,8 +117,8 @@ public class Consumer extends CasConsumer_ImplBase {
     }
     for (int i = 0; i < goldStandardsForExactAnswer.size(); i++) {
 
-      answerMap.put(goldStandardsForExactAnswer.get(i).getId(), ((TestListQuestion) goldStandardsForExactAnswer.get(i))
-              .getExactAnswer());
+      answerMap.put(goldStandardsForExactAnswer.get(i).getId(),
+              ((TestListQuestion) goldStandardsForExactAnswer.get(i)).getExactAnswer());
 
     }
     answers = new LinkedList<TestListQuestion>();
@@ -162,9 +166,10 @@ public class Consumer extends CasConsumer_ImplBase {
     } else {
       docPrecision = totalPrecision / (docTotalPositive * 1.0);
     }
+    docRecall = (double) docTotalPositive / (double) docResult.size();
     metrics.addDocAP(docPrecision);
     System.out.println("docPrecision:" + docPrecision);
-    System.out.println("docRecall:" + (double) docTotalPositive / (double) docResult.size());
+    System.out.println("docRecall:" + docRecall);
     // For the Concepts:
     Collection<ConceptSearchResult> concepts = TypeUtil.getRankedConceptSearchResults(jcas);
     LinkedList<ConceptSearchResult> conceptList = new LinkedList<ConceptSearchResult>();
@@ -262,7 +267,7 @@ public class Consumer extends CasConsumer_ImplBase {
       answerPrecision = PerformanceInfo.computeAnswerPrecision(exactAnswer, goldAnswerList);
     else
       answerPrecision = 0;
-
+    metrics.addAnswerPrecision(answerPrecision);
     TestListQuestion answer = new TestListQuestion(curQId, body, type, docUriList, test,
             conceptUriList, tripleList, "pseudo ideal answer", exactAnswer);
     answers.add(answer);
@@ -281,7 +286,7 @@ public class Consumer extends CasConsumer_ImplBase {
     String output = answerSet.dump();
     System.out.println("final doc MAP = " + metrics.getDocMAP());
     System.out.println("final concept MAP = " + metrics.getConceptMAP());
-
+    System.out.println("final answer MAP = " + metrics.getAnswerMAP());
     try {
       PrintWriter out = new PrintWriter(outputPath);
       out.println(output);

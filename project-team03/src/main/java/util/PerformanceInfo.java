@@ -14,12 +14,15 @@ public class PerformanceInfo {
   
   private List<Double> answerRecalList;
   
+  private List<Double> answerFMeasureList;
+  
   
   private double docMAP;
   private double conceptMAP;
   private double tripleMAP;
   private double answerMAP;
   private double answerMAR;
+  private double answerFMAP;
   
   public PerformanceInfo() {
     docPrecisionList = new LinkedList<Double>();
@@ -38,7 +41,15 @@ public class PerformanceInfo {
   }
 
   public void addTripleAP(double precision) {
-    docPrecisionList.add(precision);
+    tripleList.add(precision);
+  }
+  
+  public void addAnswerPrecision(double precision) {
+    answerPrecisionList.add(precision);
+  }
+  
+  public void addAnswerFMeasure(double d){
+    answerFMeasureList.add(d);
   }
 
   private double computeMAP(List<Double> list) {
@@ -65,6 +76,14 @@ public class PerformanceInfo {
     tripleMAP = computeMAP(tripleList);
   }
   
+  public void setAnswerMap(){
+    answerMAP = computeMAP(answerPrecisionList);
+  }
+  
+  public void setAnswerFMap(){
+    answerFMAP = computeMAP(answerFMeasureList);
+  }
+  
   public double getDocMAP(){
     this.setDocMap();
     return docMAP;
@@ -81,12 +100,14 @@ public class PerformanceInfo {
   }
   
   public double getAnswerMAP(){
+    this.setAnswerMap();
     return answerMAP;
   }
-  
-  public double getAnswerMAR(){
-    return answerMAR;
+  public double getAnswerFMAP(){
+    this.setAnswerFMap();
+    return answerFMAP;
   }
+  
   
   public static double computeAnswerPrecision(List<List<String>> test, List<List<String>> gold){
     double count = 0;
