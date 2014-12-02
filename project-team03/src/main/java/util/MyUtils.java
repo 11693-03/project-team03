@@ -118,9 +118,7 @@ public class MyUtils {
       for (Snippet aGold : goldSnippets) {          
         if (aGold.getDocument().equals(aTest.getDocument())
                 && aGold.getBeginSection().equals(aTest.getBeginSection())) {
-          hits.add(aGold);
-          System.out.println("hittttttttttttttttttttt!");
-          
+          hits.add(aGold);          
         }
       }
       // sum of common characters

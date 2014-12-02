@@ -38,7 +38,7 @@ public class PerformanceInfo {
   }
 
   public void addTripleAP(double precision) {
-    docPrecisionList.add(precision);
+    tripleList.add(precision);
   }
 
   private double computeMAP(List<Double> list) {

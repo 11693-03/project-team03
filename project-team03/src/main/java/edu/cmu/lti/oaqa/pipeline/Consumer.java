@@ -257,9 +257,12 @@ public class Consumer extends CasConsumer_ImplBase {
       System.err.println("exact answer " + listString);
     }
     List<List<String>> goldAnswerList = answerMap.get(curQId);
-    double answerPrecision;
-    if (goldAnswerList != null)
+    double answerPrecision = 0.0;
+    int goldAnswerSize = 0;
+    if (goldAnswerList != null){
       answerPrecision = PerformanceInfo.computeAnswerPrecision(exactAnswer, goldAnswerList);
+      goldAnswerSize = goldAnswerList.size();
+    }
     else
       answerPrecision = 0;
 
@@ -270,7 +273,7 @@ public class Consumer extends CasConsumer_ImplBase {
     System.out.println("current doc MAP = " + metrics.getDocMAP());
     System.out.println("current concept MAP = " + metrics.getConceptMAP());
 
-    System.err.println("gold answer size " + goldAnswerList.size() + " TEST size"
+    System.err.println("gold answer size " + goldAnswerSize + " TEST size"
             + exactAnswer.size() + " answer precision = " + answerPrecision);
   }
 
