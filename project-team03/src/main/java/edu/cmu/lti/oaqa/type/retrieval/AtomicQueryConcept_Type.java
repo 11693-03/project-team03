@@ -13,19 +13,15 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** A primitive query concept represented by a single text string
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class AtomicQueryConcept_Type extends QueryConcept_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -41,19 +37,19 @@ public class AtomicQueryConcept_Type extends QueryConcept_Type {
         } else return new AtomicQueryConcept(addr, AtomicQueryConcept_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = AtomicQueryConcept.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_text;
-  /** @generated */
+  /**  */
   final int     casFeatCode_text;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -62,7 +58,7 @@ public class AtomicQueryConcept_Type extends QueryConcept_Type {
       jcas.throwFeatMissing("text", "edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -73,11 +69,11 @@ public class AtomicQueryConcept_Type extends QueryConcept_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_originalText;
-  /** @generated */
+  /**  */
   final int     casFeatCode_originalText;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -86,7 +82,7 @@ public class AtomicQueryConcept_Type extends QueryConcept_Type {
       jcas.throwFeatMissing("originalText", "edu.cmu.lti.oaqa.type.retrieval.AtomicQueryConcept");
     return ll_cas.ll_getStringValue(addr, casFeatCode_originalText);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -100,7 +96,7 @@ public class AtomicQueryConcept_Type extends QueryConcept_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

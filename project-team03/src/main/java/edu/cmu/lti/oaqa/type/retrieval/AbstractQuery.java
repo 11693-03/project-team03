@@ -12,37 +12,31 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** An abstract search query for the question that represents query concepts and query operators over those concepts.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class AbstractQuery extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(AbstractQuery.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected AbstractQuery() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -51,7 +45,7 @@ public class AbstractQuery extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public AbstractQuery(JCas jcas) {
@@ -64,7 +58,7 @@ public class AbstractQuery extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -74,7 +68,7 @@ public class AbstractQuery extends TOP {
   //* Feature: concepts
 
   /** getter for concepts - gets The list of query concepts that make up this abstract query.  The list is ordered.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public FSList getConcepts() {
@@ -83,7 +77,7 @@ public class AbstractQuery extends TOP {
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((AbstractQuery_Type)jcasType).casFeatCode_concepts)));}
     
   /** setter for concepts - sets The list of query concepts that make up this abstract query.  The list is ordered. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setConcepts(FSList v) {

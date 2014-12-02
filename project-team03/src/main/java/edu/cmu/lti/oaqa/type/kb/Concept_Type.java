@@ -44,7 +44,7 @@ public class Concept_Type extends TOP_Type {
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Concept.typeIndexID;
   /**  
-     @modifiable */
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.kb.Concept");
  

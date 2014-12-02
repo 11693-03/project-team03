@@ -10,37 +10,31 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** A primitive query concept represented by a single text string
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class AtomicQueryConcept extends QueryConcept {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(AtomicQueryConcept.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected AtomicQueryConcept() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -49,7 +43,7 @@ public class AtomicQueryConcept extends QueryConcept {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public AtomicQueryConcept(JCas jcas) {
@@ -62,7 +56,7 @@ public class AtomicQueryConcept extends QueryConcept {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -72,7 +66,7 @@ public class AtomicQueryConcept extends QueryConcept {
   //* Feature: text
 
   /** getter for text - gets The keyword text.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getText() {
@@ -81,7 +75,7 @@ public class AtomicQueryConcept extends QueryConcept {
     return jcasType.ll_cas.ll_getStringValue(addr, ((AtomicQueryConcept_Type)jcasType).casFeatCode_text);}
     
   /** setter for text - sets The keyword text. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setText(String v) {
@@ -94,7 +88,7 @@ public class AtomicQueryConcept extends QueryConcept {
   //* Feature: originalText
 
   /** getter for originalText - gets The lexical string in the question.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getOriginalText() {
@@ -103,7 +97,7 @@ public class AtomicQueryConcept extends QueryConcept {
     return jcasType.ll_cas.ll_getStringValue(addr, ((AtomicQueryConcept_Type)jcasType).casFeatCode_originalText);}
     
   /** setter for originalText - sets The lexical string in the question. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setOriginalText(String v) {

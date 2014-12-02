@@ -39,7 +39,7 @@ public class Entity_Type extends Concept_Type {
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Entity.typeIndexID;
   /**  
-     @modifiable */
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.kb.Entity");
 

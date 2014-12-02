@@ -13,19 +13,15 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** A search result from an ontology.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+
+ *  */
 public class ConceptSearchResult_Type extends AnswerSearchResult_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -41,19 +37,19 @@ public class ConceptSearchResult_Type extends AnswerSearchResult_Type {
         } else return new ConceptSearchResult(addr, ConceptSearchResult_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = ConceptSearchResult.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_concept;
-  /** @generated */
+  /**  */
   final int     casFeatCode_concept;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -62,7 +58,7 @@ public class ConceptSearchResult_Type extends AnswerSearchResult_Type {
       jcas.throwFeatMissing("concept", "edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult");
     return ll_cas.ll_getRefValue(addr, casFeatCode_concept);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -76,7 +72,7 @@ public class ConceptSearchResult_Type extends AnswerSearchResult_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

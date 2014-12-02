@@ -13,37 +13,34 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A variant of a candidate answer.  A variant may have multiple occurrences, all of which are collected in a variant object.
-<<<<<<< HEAD
+
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.x
+
+ *  */
 public class CandidateAnswerVariant extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(CandidateAnswerVariant.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected CandidateAnswerVariant() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -52,7 +49,7 @@ public class CandidateAnswerVariant extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public CandidateAnswerVariant(JCas jcas) {
@@ -65,7 +62,7 @@ public class CandidateAnswerVariant extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -75,7 +72,7 @@ public class CandidateAnswerVariant extends TOP {
   //* Feature: occurrences
 
   /** getter for occurrences - gets The occurrences of this variant.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public FSList getOccurrences() {
@@ -84,7 +81,7 @@ public class CandidateAnswerVariant extends TOP {
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((CandidateAnswerVariant_Type)jcasType).casFeatCode_occurrences)));}
     
   /** setter for occurrences - sets The occurrences of this variant. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setOccurrences(FSList v) {
@@ -97,7 +94,7 @@ public class CandidateAnswerVariant extends TOP {
   //* Feature: candidateId
 
   /** getter for candidateId - gets Unique id of this candidate answer variant.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getCandidateId() {
@@ -106,7 +103,7 @@ public class CandidateAnswerVariant extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((CandidateAnswerVariant_Type)jcasType).casFeatCode_candidateId);}
     
   /** setter for candidateId - sets Unique id of this candidate answer variant. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setCandidateId(String v) {
@@ -119,7 +116,7 @@ public class CandidateAnswerVariant extends TOP {
   //* Feature: text
 
   /** getter for text - gets The candidate answer string.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getText() {
@@ -128,7 +125,7 @@ public class CandidateAnswerVariant extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((CandidateAnswerVariant_Type)jcasType).casFeatCode_text);}
     
   /** setter for text - sets The candidate answer string. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setText(String v) {
@@ -141,7 +138,7 @@ public class CandidateAnswerVariant extends TOP {
   //* Feature: alternativeNames
 
   /** getter for alternativeNames - gets alternative names for a given candidate answer variant, e.g. Tandy, Tandy Inc. for candidate answer Variant Tandy Incorporated
-   * @generated
+   * 
    * @return value of the feature 
    */
   public StringList getAlternativeNames() {
@@ -150,7 +147,7 @@ public class CandidateAnswerVariant extends TOP {
     return (StringList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((CandidateAnswerVariant_Type)jcasType).casFeatCode_alternativeNames)));}
     
   /** setter for alternativeNames - sets alternative names for a given candidate answer variant, e.g. Tandy, Tandy Inc. for candidate answer Variant Tandy Incorporated 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setAlternativeNames(StringList v) {
@@ -163,7 +160,7 @@ public class CandidateAnswerVariant extends TOP {
   //* Feature: uri
 
   /** getter for uri - gets A unique identifier for this candidate.  All candidate answers in the same candidate answer group will have the same uri.  A candidate answer group is formed at candidate generation time when additional derived candidate answers are created from the root candidate answer.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getUri() {
@@ -172,7 +169,7 @@ public class CandidateAnswerVariant extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((CandidateAnswerVariant_Type)jcasType).casFeatCode_uri);}
     
   /** setter for uri - sets A unique identifier for this candidate.  All candidate answers in the same candidate answer group will have the same uri.  A candidate answer group is formed at candidate generation time when additional derived candidate answers are created from the root candidate answer. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setUri(String v) {
@@ -185,7 +182,7 @@ public class CandidateAnswerVariant extends TOP {
   //* Feature: docId
 
   /** getter for docId - gets The unique id of the document (if any) from which this candidate answer was generated.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getDocId() {
@@ -194,7 +191,7 @@ public class CandidateAnswerVariant extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((CandidateAnswerVariant_Type)jcasType).casFeatCode_docId);}
     
   /** setter for docId - sets The unique id of the document (if any) from which this candidate answer was generated. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setDocId(String v) {

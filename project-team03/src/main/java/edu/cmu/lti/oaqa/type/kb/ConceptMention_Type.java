@@ -42,7 +42,7 @@ public class ConceptMention_Type extends Annotation_Type {
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = ConceptMention.typeIndexID;
   /**  
-     @modifiable */
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.kb.ConceptMention");
  
