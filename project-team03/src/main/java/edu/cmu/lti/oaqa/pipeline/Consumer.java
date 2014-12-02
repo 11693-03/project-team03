@@ -83,6 +83,7 @@ public class Consumer extends CasConsumer_ImplBase {
    */
   public static final String PARAM_INPUTPATH = "InputFile";
 
+  @SuppressWarnings("unchecked")
   @Override
   public void initialize() throws ResourceInitializationException {
 
@@ -90,7 +91,11 @@ public class Consumer extends CasConsumer_ImplBase {
     jsHelper = new JsonCollectionReaderHelper();
     goldStandards = jsHelper.testRun();
     goldStandardPath = ((String) getConfigParameterValue(PARAM_INPUTPATH)).trim();
+<<<<<<< HEAD
     goldStandardsForExactAnswer =  TestSet
+=======
+    goldStandardsForExactAnswer = TestSet
+>>>>>>> upstream/master
             .load(getClass().getResourceAsStream(goldStandardPath)).stream().collect(toList());
 
     // for each question, we store the documents, concepts, triple info corresponding to each
@@ -109,8 +114,13 @@ public class Consumer extends CasConsumer_ImplBase {
 
     }
     for (int i = 0; i < goldStandardsForExactAnswer.size(); i++) {
+<<<<<<< HEAD
       answerMap.put(goldStandardsForExactAnswer.get(i).getId(), ((TestListQuestion) goldStandardsForExactAnswer.get(i))
               .getExactAnswer());
+=======
+      answerMap.put(goldStandardsForExactAnswer.get(i).getId(), ((TestListQuestion)goldStandardsForExactAnswer.get(i)
+              ).getExactAnswer());
+>>>>>>> upstream/master
     }
     answers = new LinkedList<TestListQuestion>();
 
