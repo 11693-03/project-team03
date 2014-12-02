@@ -183,12 +183,13 @@ public class Consumer extends CasConsumer_ImplBase {
     int conceptTotalPositive = 0;
     double concepttotalPrecision = 0.0;
     double conceptPrecision = 0.0;
-
+    double conceptRecall = 0.0;
     for (int i = 0; i < conceptList.size(); i++) {
       if (collectionResult.contains(conceptList.get(i).getUri())) {
         // System.out.println(i + ":" + conceptList.get(i).getUri());
         conceptTotalPositive++;
         concepttotalPrecision += (conceptTotalPositive * 1.0) / ((i + 1) * 1.0);
+        conceptRecall = conceptTotalPositive / (collectionResult.size() * 1.0);
       }
     }
     if (conceptTotalPositive == 0) {
@@ -203,6 +204,7 @@ public class Consumer extends CasConsumer_ImplBase {
     int tripleTotalPositive = 0;
     double tripletotalPrecision = 0.0;
     double triplePrecision = 0.0;
+    double tripleRecall = 0.0;
     Collection<TripleSearchResult> triples = TypeUtil.getRankedTripleSearchResults(jcas);
     LinkedList<TripleSearchResult> tripleSRList = new LinkedList<TripleSearchResult>();
     tripleSRList.addAll(triples);
@@ -219,6 +221,7 @@ public class Consumer extends CasConsumer_ImplBase {
                   && tripleList.get(j).getS().equals(sresult)) {
             tripleTotalPositive++;
             tripletotalPrecision += (tripleTotalPositive * 1.0) / ((i + 1) * 1.0);
+            tripleRecall = tripleTotalPositive / (tripleList.size() * 1.0);
           }
         }
       }
@@ -263,14 +266,20 @@ public class Consumer extends CasConsumer_ImplBase {
     }
     List<List<String>> goldAnswerList = answerMap.get(curQId);
     double answerPrecision = 0.0;
+    double answerRecall = 0.0;
     int goldAnswerSize = 0;
     if (goldAnswerList != null){
       answerPrecision = PerformanceInfo.computeAnswerPrecision(exactAnswer, goldAnswerList);
+      answerRecall = PerformanceInfo.computeAnswerRecall(exactAnswer, goldAnswerList);
       goldAnswerSize = goldAnswerList.size();
     }
     else
       answerPrecision = 0;
+    
+    double fMeasure = PerformanceInfo.getFMeasure(answerPrecision, answerRecall);
     metrics.addAnswerPrecision(answerPrecision);
+    
+    metrics.addAnswerFMeasure(fMeasure);
     TestListQuestion answer = new TestListQuestion(curQId, body, type, docUriList, test,
             conceptUriList, tripleList, snippetList.get(0).getText(), exactAnswer);
     answers.add(answer);
@@ -280,6 +289,7 @@ public class Consumer extends CasConsumer_ImplBase {
 
     System.err.println("gold answer size " + goldAnswerSize + " TEST size"
             + exactAnswer.size() + " answer precision = " + answerPrecision);
+    System.out.println("exact answer recall:" + answerRecall);
   }
 
   @Override
