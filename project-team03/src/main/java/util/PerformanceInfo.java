@@ -1,5 +1,6 @@
 package util;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class PerformanceInfo {
     tripleList = new LinkedList<Double>();
     answerPrecisionList = new LinkedList<Double>();
     answerRecalList = new LinkedList<Double>();
+    answerFMeasureList = new LinkedList<Double>();
   }
 
   public void addDocAP(double precision) {
@@ -47,6 +49,12 @@ public class PerformanceInfo {
   public void addAnswerPrecision(double precision) {
     answerPrecisionList.add(precision);
   }
+  
+  public void addAnswerRecalList(double d){
+    answerRecalList.add(d);
+  }
+  
+  
   
   public void addAnswerFMeasure(double d){
     answerFMeasureList.add(d);
@@ -84,6 +92,10 @@ public class PerformanceInfo {
     answerFMAP = computeMAP(answerFMeasureList);
   }
   
+  public void setAnswerMar(){
+    answerMAR = computeMAP(answerRecalList);
+  }
+  
   public double getDocMAP(){
     this.setDocMap();
     return docMAP;
@@ -102,6 +114,11 @@ public class PerformanceInfo {
   public double getAnswerMAP(){
     this.setAnswerMap();
     return answerMAP;
+  }
+  
+  public double getAnswerMAR(){
+    this.setAnswerMar();
+    return answerMAR;
   }
   public double getAnswerFMAP(){
     this.setAnswerFMap();
@@ -128,6 +145,30 @@ public class PerformanceInfo {
     }
     return count*1.0/size;
   }
-
+  
+  public static double getFMeasure(double a, double b){
+    return 2*a*b/(a+b);
+  }
+  
+  public static double computeAnswerRecall(List<List<String>> test, List<List<String>> gold) {
+    int count = 0;
+    int size = 0;
+    HashSet<String> testAnswer = new HashSet<String>();
+    for (List<String> tests : test) {
+      for (String t : tests) {
+        testAnswer.add(t);
+      }
+    }
+    for (List<String> goldens : gold){
+      for (String golden : goldens)
+        if (testAnswer.contains(golden))
+          count++;
+    }
+    
+    for (List<String> tl : gold)
+      for (String ts : tl)
+        size++;
+    return count / (size * 1.0);
+  }
 
 }
