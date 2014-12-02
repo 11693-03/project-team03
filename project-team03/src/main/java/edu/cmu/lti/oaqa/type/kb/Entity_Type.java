@@ -11,19 +11,15 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** An abstract normalized entity, which may have various surface forms (alternative representations).
-<<<<<<< HEAD
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Entity_Type extends Concept_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -39,10 +35,10 @@ public class Entity_Type extends Concept_Type {
         } else return new Entity(addr, Entity_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Entity.typeIndexID;
-  /** @generated 
+  /**  
      @modifiable */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.kb.Entity");
@@ -50,7 +46,7 @@ public class Entity_Type extends Concept_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

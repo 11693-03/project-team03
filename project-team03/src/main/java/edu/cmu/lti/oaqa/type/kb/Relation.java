@@ -10,37 +10,30 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Relation extends Concept {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Relation.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected Relation() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -49,7 +42,7 @@ public class Relation extends Concept {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public Relation(JCas jcas) {
@@ -62,7 +55,7 @@ public class Relation extends Concept {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      

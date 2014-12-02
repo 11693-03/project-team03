@@ -14,19 +14,14 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** A search result.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class SearchResult_Type extends TOP_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -42,19 +37,19 @@ public class SearchResult_Type extends TOP_Type {
         } else return new SearchResult(addr, SearchResult_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = SearchResult.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.retrieval.SearchResult");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_uri;
-  /** @generated */
+  /**  */
   final int     casFeatCode_uri;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -63,7 +58,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("uri", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     return ll_cas.ll_getStringValue(addr, casFeatCode_uri);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -74,11 +69,11 @@ public class SearchResult_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_score;
-  /** @generated */
+  /**  */
   final int     casFeatCode_score;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -87,7 +82,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("score", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     return ll_cas.ll_getDoubleValue(addr, casFeatCode_score);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -98,11 +93,11 @@ public class SearchResult_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_text;
-  /** @generated */
+  /**  */
   final int     casFeatCode_text;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -111,7 +106,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("text", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -122,11 +117,11 @@ public class SearchResult_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_rank;
-  /** @generated */
+  /**  */
   final int     casFeatCode_rank;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -135,7 +130,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("rank", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     return ll_cas.ll_getIntValue(addr, casFeatCode_rank);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -146,11 +141,11 @@ public class SearchResult_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_queryString;
-  /** @generated */
+  /**  */
   final int     casFeatCode_queryString;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -159,7 +154,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("queryString", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     return ll_cas.ll_getStringValue(addr, casFeatCode_queryString);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -170,11 +165,11 @@ public class SearchResult_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_searchId;
-  /** @generated */
+  /**  */
   final int     casFeatCode_searchId;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -183,7 +178,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("searchId", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     return ll_cas.ll_getStringValue(addr, casFeatCode_searchId);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -194,11 +189,11 @@ public class SearchResult_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_candidateAnswers;
-  /** @generated */
+  /**  */
   final int     casFeatCode_candidateAnswers;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -207,7 +202,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("candidateAnswers", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     return ll_cas.ll_getRefValue(addr, casFeatCode_candidateAnswers);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -216,7 +211,7 @@ public class SearchResult_Type extends TOP_Type {
       jcas.throwFeatMissing("candidateAnswers", "edu.cmu.lti.oaqa.type.retrieval.SearchResult");
     ll_cas.ll_setRefValue(addr, casFeatCode_candidateAnswers, v);}
     
-   /** @generated
+   /** 
    * @param addr low level Feature Structure reference
    * @param i index of item in the array
    * @return value at index i in the array 
@@ -230,7 +225,7 @@ public class SearchResult_Type extends TOP_Type {
   return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_candidateAnswers), i);
   }
    
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param i index of item in the array
    * @param v value to set
@@ -248,7 +243,7 @@ public class SearchResult_Type extends TOP_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

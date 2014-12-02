@@ -14,19 +14,14 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** 
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class FinalQuery_Type extends TOP_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -42,19 +37,19 @@ public class FinalQuery_Type extends TOP_Type {
         } else return new FinalQuery(addr, FinalQuery_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = FinalQuery.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_queryWithOp;
-  /** @generated */
+  /**  */
   final int     casFeatCode_queryWithOp;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -63,7 +58,7 @@ public class FinalQuery_Type extends TOP_Type {
       jcas.throwFeatMissing("queryWithOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
     return ll_cas.ll_getStringValue(addr, casFeatCode_queryWithOp);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -74,11 +69,11 @@ public class FinalQuery_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_queryWithoutOp;
-  /** @generated */
+  /**  */
   final int     casFeatCode_queryWithoutOp;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -87,7 +82,7 @@ public class FinalQuery_Type extends TOP_Type {
       jcas.throwFeatMissing("queryWithoutOp", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
     return ll_cas.ll_getStringValue(addr, casFeatCode_queryWithoutOp);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -98,11 +93,11 @@ public class FinalQuery_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_originalQuery;
-  /** @generated */
+  /**  */
   final int     casFeatCode_originalQuery;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -111,7 +106,7 @@ public class FinalQuery_Type extends TOP_Type {
       jcas.throwFeatMissing("originalQuery", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
     return ll_cas.ll_getStringValue(addr, casFeatCode_originalQuery);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -122,11 +117,11 @@ public class FinalQuery_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_queryID;
-  /** @generated */
+  /**  */
   final int     casFeatCode_queryID;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -135,7 +130,7 @@ public class FinalQuery_Type extends TOP_Type {
       jcas.throwFeatMissing("queryID", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
     return ll_cas.ll_getStringValue(addr, casFeatCode_queryID);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -146,11 +141,11 @@ public class FinalQuery_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_keyword;
-  /** @generated */
+  /**  */
   final int     casFeatCode_keyword;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -159,7 +154,7 @@ public class FinalQuery_Type extends TOP_Type {
       jcas.throwFeatMissing("keyword", "edu.cmu.lti.oaqa.type.retrieval.FinalQuery");
     return ll_cas.ll_getStringValue(addr, casFeatCode_keyword);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -173,7 +168,7 @@ public class FinalQuery_Type extends TOP_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

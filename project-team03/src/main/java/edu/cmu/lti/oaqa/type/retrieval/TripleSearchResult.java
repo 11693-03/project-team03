@@ -11,37 +11,30 @@ import edu.cmu.lti.oaqa.type.kb.Triple;
 
 
 /** A search result from a triple store, e.g., an RDF store.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class TripleSearchResult extends AnswerSearchResult {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(TripleSearchResult.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected TripleSearchResult() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +43,7 @@ public class TripleSearchResult extends AnswerSearchResult {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public TripleSearchResult(JCas jcas) {
@@ -63,7 +56,7 @@ public class TripleSearchResult extends AnswerSearchResult {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -73,7 +66,7 @@ public class TripleSearchResult extends AnswerSearchResult {
   //* Feature: triple
 
   /** getter for triple - gets The relevant triple searched in the RDF store.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public Triple getTriple() {
@@ -82,7 +75,7 @@ public class TripleSearchResult extends AnswerSearchResult {
     return (Triple)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((TripleSearchResult_Type)jcasType).casFeatCode_triple)));}
     
   /** setter for triple - sets The relevant triple searched in the RDF store. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setTriple(Triple v) {

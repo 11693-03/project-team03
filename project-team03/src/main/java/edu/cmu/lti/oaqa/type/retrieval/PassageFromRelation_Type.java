@@ -13,19 +13,14 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** A passage search result that was the result of a search from the subject and object of a triple
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class PassageFromRelation_Type extends Passage_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -41,19 +36,19 @@ public class PassageFromRelation_Type extends Passage_Type {
         } else return new PassageFromRelation(addr, PassageFromRelation_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = PassageFromRelation.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.retrieval.PassageFromRelation");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_sourceRelation;
-  /** @generated */
+  /**  */
   final int     casFeatCode_sourceRelation;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -62,7 +57,7 @@ public class PassageFromRelation_Type extends Passage_Type {
       jcas.throwFeatMissing("sourceRelation", "edu.cmu.lti.oaqa.type.retrieval.PassageFromRelation");
     return ll_cas.ll_getRefValue(addr, casFeatCode_sourceRelation);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -76,7 +71,7 @@ public class PassageFromRelation_Type extends Passage_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

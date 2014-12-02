@@ -12,37 +12,30 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A container that integrates Concepts and ConceptMentions.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Interpretation extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Interpretation.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected Interpretation() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -51,7 +44,7 @@ public class Interpretation extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public Interpretation(JCas jcas) {
@@ -64,7 +57,7 @@ public class Interpretation extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -74,7 +67,7 @@ public class Interpretation extends TOP {
   //* Feature: concepts
 
   /** getter for concepts - gets A list of all concepts mentioned in the corresponding text.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public FSList getConcepts() {
@@ -83,7 +76,7 @@ public class Interpretation extends TOP {
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Interpretation_Type)jcasType).casFeatCode_concepts)));}
     
   /** setter for concepts - sets A list of all concepts mentioned in the corresponding text. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setConcepts(FSList v) {
@@ -96,7 +89,7 @@ public class Interpretation extends TOP {
   //* Feature: mentions
 
   /** getter for mentions - gets A list of all mentions in the text.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public FSList getMentions() {
@@ -105,7 +98,7 @@ public class Interpretation extends TOP {
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Interpretation_Type)jcasType).casFeatCode_mentions)));}
     
   /** setter for mentions - sets A list of all mentions in the text. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setMentions(FSList v) {

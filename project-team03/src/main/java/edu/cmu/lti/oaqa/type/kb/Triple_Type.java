@@ -14,19 +14,14 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** A triple, e.g., and RDF triple.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Triple_Type extends TOP_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -42,19 +37,19 @@ public class Triple_Type extends TOP_Type {
         } else return new Triple(addr, Triple_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Triple.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.kb.Triple");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_subject;
-  /** @generated */
+  /**  */
   final int     casFeatCode_subject;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -63,7 +58,7 @@ public class Triple_Type extends TOP_Type {
       jcas.throwFeatMissing("subject", "edu.cmu.lti.oaqa.type.kb.Triple");
     return ll_cas.ll_getStringValue(addr, casFeatCode_subject);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -74,11 +69,11 @@ public class Triple_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_predicate;
-  /** @generated */
+  /**  */
   final int     casFeatCode_predicate;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -87,7 +82,7 @@ public class Triple_Type extends TOP_Type {
       jcas.throwFeatMissing("predicate", "edu.cmu.lti.oaqa.type.kb.Triple");
     return ll_cas.ll_getStringValue(addr, casFeatCode_predicate);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -98,11 +93,11 @@ public class Triple_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_object;
-  /** @generated */
+  /**  */
   final int     casFeatCode_object;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -111,7 +106,7 @@ public class Triple_Type extends TOP_Type {
       jcas.throwFeatMissing("object", "edu.cmu.lti.oaqa.type.kb.Triple");
     return ll_cas.ll_getStringValue(addr, casFeatCode_object);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -122,11 +117,11 @@ public class Triple_Type extends TOP_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_isObjUri;
-  /** @generated */
+  /**  */
   final int     casFeatCode_isObjUri;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -135,7 +130,7 @@ public class Triple_Type extends TOP_Type {
       jcas.throwFeatMissing("isObjUri", "edu.cmu.lti.oaqa.type.kb.Triple");
     return ll_cas.ll_getBooleanValue(addr, casFeatCode_isObjUri);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -149,7 +144,7 @@ public class Triple_Type extends TOP_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

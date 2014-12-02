@@ -12,37 +12,30 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A query concept in the abstract search query model.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class QueryConcept extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(QueryConcept.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected QueryConcept() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -51,7 +44,7 @@ public class QueryConcept extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public QueryConcept(JCas jcas) {
@@ -64,7 +57,7 @@ public class QueryConcept extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -74,7 +67,7 @@ public class QueryConcept extends TOP {
   //* Feature: namedEntityTypes
 
   /** getter for namedEntityTypes - gets List of Named Entity types associated with this concept.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public StringList getNamedEntityTypes() {
@@ -83,7 +76,7 @@ public class QueryConcept extends TOP {
     return (StringList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((QueryConcept_Type)jcasType).casFeatCode_namedEntityTypes)));}
     
   /** setter for namedEntityTypes - sets List of Named Entity types associated with this concept. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setNamedEntityTypes(StringList v) {
@@ -96,7 +89,7 @@ public class QueryConcept extends TOP {
   //* Feature: conceptType
 
   /** getter for conceptType - gets The type of this concept.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getConceptType() {
@@ -105,7 +98,7 @@ public class QueryConcept extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((QueryConcept_Type)jcasType).casFeatCode_conceptType);}
     
   /** setter for conceptType - sets The type of this concept. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setConceptType(String v) {

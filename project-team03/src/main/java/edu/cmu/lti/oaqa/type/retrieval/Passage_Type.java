@@ -13,19 +13,14 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** A passage search result.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Passage_Type extends SearchResult_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -41,19 +36,19 @@ public class Passage_Type extends SearchResult_Type {
         } else return new Passage(addr, Passage_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Passage.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.oaqa.type.retrieval.Passage");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_title;
-  /** @generated */
+  /**  */
   final int     casFeatCode_title;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -62,7 +57,7 @@ public class Passage_Type extends SearchResult_Type {
       jcas.throwFeatMissing("title", "edu.cmu.lti.oaqa.type.retrieval.Passage");
     return ll_cas.ll_getStringValue(addr, casFeatCode_title);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -73,11 +68,11 @@ public class Passage_Type extends SearchResult_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_docId;
-  /** @generated */
+  /**  */
   final int     casFeatCode_docId;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -86,7 +81,7 @@ public class Passage_Type extends SearchResult_Type {
       jcas.throwFeatMissing("docId", "edu.cmu.lti.oaqa.type.retrieval.Passage");
     return ll_cas.ll_getStringValue(addr, casFeatCode_docId);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -97,11 +92,11 @@ public class Passage_Type extends SearchResult_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_offsetInBeginSection;
-  /** @generated */
+  /**  */
   final int     casFeatCode_offsetInBeginSection;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -110,7 +105,7 @@ public class Passage_Type extends SearchResult_Type {
       jcas.throwFeatMissing("offsetInBeginSection", "edu.cmu.lti.oaqa.type.retrieval.Passage");
     return ll_cas.ll_getIntValue(addr, casFeatCode_offsetInBeginSection);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -121,11 +116,11 @@ public class Passage_Type extends SearchResult_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_offsetInEndSection;
-  /** @generated */
+  /**  */
   final int     casFeatCode_offsetInEndSection;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -134,7 +129,7 @@ public class Passage_Type extends SearchResult_Type {
       jcas.throwFeatMissing("offsetInEndSection", "edu.cmu.lti.oaqa.type.retrieval.Passage");
     return ll_cas.ll_getIntValue(addr, casFeatCode_offsetInEndSection);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -145,11 +140,11 @@ public class Passage_Type extends SearchResult_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_beginSection;
-  /** @generated */
+  /**  */
   final int     casFeatCode_beginSection;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -158,7 +153,7 @@ public class Passage_Type extends SearchResult_Type {
       jcas.throwFeatMissing("beginSection", "edu.cmu.lti.oaqa.type.retrieval.Passage");
     return ll_cas.ll_getStringValue(addr, casFeatCode_beginSection);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -169,11 +164,11 @@ public class Passage_Type extends SearchResult_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_endSection;
-  /** @generated */
+  /**  */
   final int     casFeatCode_endSection;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -182,7 +177,7 @@ public class Passage_Type extends SearchResult_Type {
       jcas.throwFeatMissing("endSection", "edu.cmu.lti.oaqa.type.retrieval.Passage");
     return ll_cas.ll_getStringValue(addr, casFeatCode_endSection);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -193,11 +188,11 @@ public class Passage_Type extends SearchResult_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_aspects;
-  /** @generated */
+  /**  */
   final int     casFeatCode_aspects;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -206,7 +201,7 @@ public class Passage_Type extends SearchResult_Type {
       jcas.throwFeatMissing("aspects", "edu.cmu.lti.oaqa.type.retrieval.Passage");
     return ll_cas.ll_getStringValue(addr, casFeatCode_aspects);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -220,7 +215,7 @@ public class Passage_Type extends SearchResult_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

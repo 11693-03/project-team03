@@ -12,37 +12,30 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** An object that holds a query and results for a search (text search, fact search, KB search, etc.)
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Search extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Search.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected Search() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -51,7 +44,7 @@ public class Search extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public Search(JCas jcas) {
@@ -64,7 +57,7 @@ public class Search extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -74,7 +67,7 @@ public class Search extends TOP {
   //* Feature: query
 
   /** getter for query - gets The query in the native syntax of the corresponding search engine.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getQuery() {
@@ -83,7 +76,7 @@ public class Search extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Search_Type)jcasType).casFeatCode_query);}
     
   /** setter for query - sets The query in the native syntax of the corresponding search engine. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setQuery(String v) {
@@ -96,7 +89,7 @@ public class Search extends TOP {
   //* Feature: hitList
 
   /** getter for hitList - gets Hit list of search results, sorted in descreasing order of relevance score.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public FSArray getHitList() {
@@ -105,7 +98,7 @@ public class Search extends TOP {
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Search_Type)jcasType).casFeatCode_hitList)));}
     
   /** setter for hitList - sets Hit list of search results, sorted in descreasing order of relevance score. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setHitList(FSArray v) {
@@ -114,7 +107,7 @@ public class Search extends TOP {
     jcasType.ll_cas.ll_setRefValue(addr, ((Search_Type)jcasType).casFeatCode_hitList, jcasType.ll_cas.ll_getFSRef(v));}    
     
   /** indexed getter for hitList - gets an indexed value - Hit list of search results, sorted in descreasing order of relevance score.
-   * @generated
+   * 
    * @param i index in the array to get
    * @return value of the element at index i 
    */
@@ -125,7 +118,7 @@ public class Search extends TOP {
     return (SearchResult)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Search_Type)jcasType).casFeatCode_hitList), i)));}
 
   /** indexed setter for hitList - sets an indexed value - Hit list of search results, sorted in descreasing order of relevance score.
-   * @generated
+   * 
    * @param i index in the array to set
    * @param v value to set into the array 
    */
@@ -140,7 +133,7 @@ public class Search extends TOP {
   //* Feature: abstractQuery
 
   /** getter for abstractQuery - gets The abstract query from which this actual query was generated.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public AbstractQuery getAbstractQuery() {
@@ -149,7 +142,7 @@ public class Search extends TOP {
     return (AbstractQuery)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Search_Type)jcasType).casFeatCode_abstractQuery)));}
     
   /** setter for abstractQuery - sets The abstract query from which this actual query was generated. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setAbstractQuery(AbstractQuery v) {
@@ -162,7 +155,7 @@ public class Search extends TOP {
   //* Feature: searchId
 
   /** getter for searchId - gets An identifier for this search result.  Used to collect hit-list objects that belong to this search result after they've been split out for parallel processing then gathered up again.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getSearchId() {
@@ -171,7 +164,7 @@ public class Search extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Search_Type)jcasType).casFeatCode_searchId);}
     
   /** setter for searchId - sets An identifier for this search result.  Used to collect hit-list objects that belong to this search result after they've been split out for parallel processing then gathered up again. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setSearchId(String v) {

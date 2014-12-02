@@ -11,37 +11,32 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** A superclass for EntityMention and RelationMention.
-<<<<<<< HEAD
  * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
  * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:57 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class ConceptMention extends Annotation {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(ConceptMention.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected ConceptMention() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +45,7 @@ public class ConceptMention extends Annotation {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public ConceptMention(JCas jcas) {
@@ -58,7 +53,7 @@ public class ConceptMention extends Annotation {
     readObject();   
   } 
 
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
@@ -75,7 +70,7 @@ public class ConceptMention extends Annotation {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -85,7 +80,7 @@ public class ConceptMention extends Annotation {
   //* Feature: concept
 
   /** getter for concept - gets The abstract concept that the text span conveys.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public Concept getConcept() {
@@ -94,7 +89,7 @@ public class ConceptMention extends Annotation {
     return (Concept)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((ConceptMention_Type)jcasType).casFeatCode_concept)));}
     
   /** setter for concept - sets The abstract concept that the text span conveys. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setConcept(Concept v) {

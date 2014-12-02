@@ -11,37 +11,30 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A triple, e.g., and RDF triple.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class Triple extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Triple.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected Triple() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +43,7 @@ public class Triple extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public Triple(JCas jcas) {
@@ -63,7 +56,7 @@ public class Triple extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -73,7 +66,7 @@ public class Triple extends TOP {
   //* Feature: subject
 
   /** getter for subject - gets The subject of the triple - always a URI.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getSubject() {
@@ -82,7 +75,7 @@ public class Triple extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Triple_Type)jcasType).casFeatCode_subject);}
     
   /** setter for subject - sets The subject of the triple - always a URI. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setSubject(String v) {
@@ -95,7 +88,7 @@ public class Triple extends TOP {
   //* Feature: predicate
 
   /** getter for predicate - gets The predicate of the triple - always a URI.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getPredicate() {
@@ -104,7 +97,7 @@ public class Triple extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Triple_Type)jcasType).casFeatCode_predicate);}
     
   /** setter for predicate - sets The predicate of the triple - always a URI. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setPredicate(String v) {
@@ -117,7 +110,7 @@ public class Triple extends TOP {
   //* Feature: object
 
   /** getter for object - gets The object of the triple - may be a URI or an xml datatype (string, int, etc.).  See isObjeUri to determine if object is a URI.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getObject() {
@@ -126,7 +119,7 @@ public class Triple extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Triple_Type)jcasType).casFeatCode_object);}
     
   /** setter for object - sets The object of the triple - may be a URI or an xml datatype (string, int, etc.).  See isObjeUri to determine if object is a URI. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setObject(String v) {
@@ -139,7 +132,7 @@ public class Triple extends TOP {
   //* Feature: isObjUri
 
   /** getter for isObjUri - gets Boolean flag - true of object field is a URI, false otherwise.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public boolean getIsObjUri() {
@@ -148,7 +141,7 @@ public class Triple extends TOP {
     return jcasType.ll_cas.ll_getBooleanValue(addr, ((Triple_Type)jcasType).casFeatCode_isObjUri);}
     
   /** setter for isObjUri - sets Boolean flag - true of object field is a URI, false otherwise. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setIsObjUri(boolean v) {

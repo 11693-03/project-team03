@@ -11,37 +11,30 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** 
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class FinalQuery extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(FinalQuery.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected FinalQuery() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -50,7 +43,7 @@ public class FinalQuery extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public FinalQuery(JCas jcas) {
@@ -63,7 +56,7 @@ public class FinalQuery extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -73,7 +66,7 @@ public class FinalQuery extends TOP {
   //* Feature: queryWithOp
 
   /** getter for queryWithOp - gets 
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getQueryWithOp() {
@@ -82,7 +75,7 @@ public class FinalQuery extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryWithOp);}
     
   /** setter for queryWithOp - sets  
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setQueryWithOp(String v) {
@@ -95,7 +88,7 @@ public class FinalQuery extends TOP {
   //* Feature: queryWithoutOp
 
   /** getter for queryWithoutOp - gets 
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getQueryWithoutOp() {
@@ -104,7 +97,7 @@ public class FinalQuery extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryWithoutOp);}
     
   /** setter for queryWithoutOp - sets  
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setQueryWithoutOp(String v) {
@@ -117,7 +110,7 @@ public class FinalQuery extends TOP {
   //* Feature: originalQuery
 
   /** getter for originalQuery - gets 
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getOriginalQuery() {
@@ -126,7 +119,7 @@ public class FinalQuery extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_originalQuery);}
     
   /** setter for originalQuery - sets  
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setOriginalQuery(String v) {
@@ -139,7 +132,7 @@ public class FinalQuery extends TOP {
   //* Feature: queryID
 
   /** getter for queryID - gets 
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getQueryID() {
@@ -148,7 +141,7 @@ public class FinalQuery extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_queryID);}
     
   /** setter for queryID - sets  
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setQueryID(String v) {
@@ -161,7 +154,7 @@ public class FinalQuery extends TOP {
   //* Feature: keyword
 
   /** getter for keyword - gets 
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getKeyword() {
@@ -170,7 +163,7 @@ public class FinalQuery extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((FinalQuery_Type)jcasType).casFeatCode_keyword);}
     
   /** setter for keyword - sets  
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setKeyword(String v) {

@@ -12,37 +12,30 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** A query operator in the abstract search query model.
-<<<<<<< HEAD
- * Updated by JCasGen Sun Nov 30 14:39:29 EST 2014
- * XML source: /home/micz/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
-=======
- * Updated by JCasGen Sat Nov 29 23:31:58 EST 2014
- * XML source: /Users/handixu/git/project-team03/project-team03/src/main/resources/type/OAQATypes.xml
->>>>>>> origin/master
- * @generated */
+ *  */
 public class QueryOperator extends TOP {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(QueryOperator.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected QueryOperator() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -51,7 +44,7 @@ public class QueryOperator extends TOP {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public QueryOperator(JCas jcas) {
@@ -64,7 +57,7 @@ public class QueryOperator extends TOP {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -74,7 +67,7 @@ public class QueryOperator extends TOP {
   //* Feature: name
 
   /** getter for name - gets The name (kind) of the operator.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getName() {
@@ -83,7 +76,7 @@ public class QueryOperator extends TOP {
     return jcasType.ll_cas.ll_getStringValue(addr, ((QueryOperator_Type)jcasType).casFeatCode_name);}
     
   /** setter for name - sets The name (kind) of the operator. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setName(String v) {
@@ -96,7 +89,7 @@ public class QueryOperator extends TOP {
   //* Feature: args
 
   /** getter for args - gets The arguments for the operator.
-   * @generated
+   * 
    * @return value of the feature 
    */
   public StringList getArgs() {
@@ -105,7 +98,7 @@ public class QueryOperator extends TOP {
     return (StringList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((QueryOperator_Type)jcasType).casFeatCode_args)));}
     
   /** setter for args - sets The arguments for the operator. 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setArgs(StringList v) {
