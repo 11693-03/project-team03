@@ -147,6 +147,8 @@ public class PerformanceInfo {
   }
   
   public static double getFMeasure(double a, double b){
+    if((a+b)==0)
+      return 0;
     return 2*a*b/(a+b);
   }
   
