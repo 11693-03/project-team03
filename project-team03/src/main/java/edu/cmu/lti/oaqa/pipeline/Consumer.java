@@ -66,7 +66,7 @@ public class Consumer extends CasConsumer_ImplBase {
 
   List<TestQuestion> goldStandards;
 
-  List<TestListQuestion> goldStandardsForExactAnswer;
+  List<? extends TestQuestion> goldStandardsForExactAnswer;
 
   JsonCollectionReaderHelper jsHelper;
 
@@ -110,8 +110,8 @@ public class Consumer extends CasConsumer_ImplBase {
 
     }
     for (int i = 0; i < goldStandardsForExactAnswer.size(); i++) {
-      answerMap.put(goldStandardsForExactAnswer.get(i).getId(), goldStandardsForExactAnswer.get(i)
-              .getExactAnswer());
+      answerMap.put(goldStandardsForExactAnswer.get(i).getId(), ((TestListQuestion)goldStandardsForExactAnswer.get(i)
+              ).getExactAnswer());
     }
     answers = new LinkedList<TestListQuestion>();
 
