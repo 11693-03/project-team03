@@ -7,13 +7,11 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.collection.CasConsumer_ImplBase;
 import org.apache.uima.resource.ResourceProcessException;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -25,15 +23,10 @@ import json.gson.Snippet;
 import json.gson.TestListQuestion;
 import json.gson.TestQuestion;
 import json.gson.TestSet;
-import json.gson.TrainingListQuestion;
-import json.gson.TrainingSet;
 import json.gson.Triple;
 
 import org.apache.uima.cas.CASException;
-import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.cas.TOP;
-import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.util.FSCollectionFactory;
 
@@ -42,7 +35,6 @@ import util.PerformanceInfo;
 import util.TypeUtil;
 import edu.cmu.lti.oaqa.type.answer.Answer;
 import edu.cmu.lti.oaqa.type.input.Question;
-import edu.cmu.lti.oaqa.type.kb.Concept;
 import edu.cmu.lti.oaqa.type.retrieval.ConceptSearchResult;
 import edu.cmu.lti.oaqa.type.retrieval.Document;
 import edu.cmu.lti.oaqa.type.retrieval.Passage;
@@ -262,13 +254,13 @@ public class Consumer extends CasConsumer_ImplBase {
       Collection<String> variants = FSCollectionFactory.create(a.getVariants());
       listString.addAll(variants);
       exactAnswer.add(listString);
-      System.err.println("exact answer " + listString);
+      //System.err.println("exact answer " + listString);
     }
     List<List<String>> goldAnswerList = answerMap.get(curQId);
     double answerPrecision = 0.0;
     double answerRecall = 0.0;
     int goldAnswerSize = 0;
-    if (goldAnswerList != null){
+    if (goldAnswerList != null && exactAnswer.size()!=0){
       answerPrecision = PerformanceInfo.computeAnswerPrecision(exactAnswer, goldAnswerList);
       answerRecall = PerformanceInfo.computeAnswerRecall(exactAnswer, goldAnswerList);
       goldAnswerSize = goldAnswerList.size();
@@ -278,6 +270,7 @@ public class Consumer extends CasConsumer_ImplBase {
     
     double fMeasure = PerformanceInfo.getFMeasure(answerPrecision, answerRecall);
     metrics.addAnswerPrecision(answerPrecision);
+    metrics.addAnswerRecalList(answerRecall);
     String idealAnswer = "";
     if(snippetList!=null && snippetList.size()!=0)
       idealAnswer = snippetList.get(0).getText();    
@@ -289,8 +282,8 @@ public class Consumer extends CasConsumer_ImplBase {
     System.out.println("current doc MAP = " + metrics.getDocMAP());
     System.out.println("current concept MAP = " + metrics.getConceptMAP());
 
-    System.err.println("gold answer size " + goldAnswerSize + " TEST size"
-            + exactAnswer.size() + " answer precision = " + answerPrecision);
+//    System.err.println("gold answer size " + goldAnswerSize + " TEST size"
+//            + exactAnswer.size() + " answer precision = " + answerPrecision);
     System.out.println("exact answer recall:" + answerRecall);
   }
 
@@ -302,6 +295,8 @@ public class Consumer extends CasConsumer_ImplBase {
     System.out.println("final doc MAP = " + metrics.getDocMAP());
     System.out.println("final concept MAP = " + metrics.getConceptMAP());
     System.out.println("final answer MAP = " + metrics.getAnswerMAP());
+    System.out.println("final answer MAR = "+metrics.getAnswerMAR());
+    System.out.println("final answer MAF = "+metrics.getAnswerFMAP());
     try {
       PrintWriter out = new PrintWriter(outputPath);
       out.println(output);

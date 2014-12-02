@@ -61,7 +61,7 @@ public class PerformanceInfo {
   }
 
   private double computeMAP(List<Double> list) {
-    System.err.println("listsize"+list.size());
+    //System.err.println("listsize"+list.size());
     if (list.size() == 0)
       return 0;
     double total = 0;
@@ -137,7 +137,7 @@ public class PerformanceInfo {
       for(String s: l){
         for(List<String> tl: test)
           for(String ts: tl){
-            System.err.println("test= "+ts+"-----gold ="+s );
+            //System.err.println("test= "+ts+"-----gold ="+s );
             if(ts.contains(s))
               count++;
           }

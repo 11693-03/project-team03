@@ -43,7 +43,7 @@ public class SnippetRetrieval extends JCasAnnotator_ImplBase {
   private static final String PREFIX = "http://metal.lti.cs.cmu.edu:30002/pmc/";
 
   private static final String PREFIX_NCBI = "http://www.ncbi.nlm.nih.gov/pubmed/";
-  private static final int timedout = 20000;
+  private static final int timedout = 5000;
   private CloseableHttpClient httpClient;
 
   @Override
