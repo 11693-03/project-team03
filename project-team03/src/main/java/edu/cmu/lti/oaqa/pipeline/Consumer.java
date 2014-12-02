@@ -66,7 +66,7 @@ public class Consumer extends CasConsumer_ImplBase {
 
   List<TestQuestion> goldStandards;
 
-  List<TestListQuestion> goldStandardsForExactAnswer;
+  List<? extends TestQuestion> goldStandardsForExactAnswer;
 
   JsonCollectionReaderHelper jsHelper;
 
@@ -90,7 +90,7 @@ public class Consumer extends CasConsumer_ImplBase {
     jsHelper = new JsonCollectionReaderHelper();
     goldStandards = jsHelper.testRun();
     goldStandardPath = ((String) getConfigParameterValue(PARAM_INPUTPATH)).trim();
-    goldStandardsForExactAnswer = (List<TestListQuestion>) TestSet
+    goldStandardsForExactAnswer =  TestSet
             .load(getClass().getResourceAsStream(goldStandardPath)).stream().collect(toList());
 
     // for each question, we store the documents, concepts, triple info corresponding to each
@@ -109,7 +109,7 @@ public class Consumer extends CasConsumer_ImplBase {
 
     }
     for (int i = 0; i < goldStandardsForExactAnswer.size(); i++) {
-      answerMap.put(goldStandardsForExactAnswer.get(i).getId(), goldStandardsForExactAnswer.get(i)
+      answerMap.put(goldStandardsForExactAnswer.get(i).getId(), ((TestListQuestion) goldStandardsForExactAnswer.get(i))
               .getExactAnswer());
     }
     answers = new LinkedList<TestListQuestion>();
